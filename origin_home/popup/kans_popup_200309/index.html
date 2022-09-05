@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>한국원자력안전아카데미</title>
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<link rel="shortcut icon" href="/static/front/images/favicon/favicon.png" type="image/x-icon">
+<meta name="description" content="한국원자력안전아카데미" />
+<meta name="keywords" content="한국원자력안전아카데미" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="한국원자력안전아카데미" />
+<meta property="og:description" content="한국원자력안전아카데미" />
+<style type="text/css">
+	body, div, p {margin:0; padding:0; font-family:"맑은 고딕", "NanumGothic", sans-serif; color:#333; overflow:hidden;}
+	.wrap img {width:100%;}
+	.wrap a {display:block;}
+</style>
+</head>
+<body style=" overflow: scroll">
+    <div class="wrap">
+		<p><a href="http://www.kans.re.kr/edu/edu_sub_06.html" target="_blank"><img src="popup_200309.png" alt="한국원자력안전아카데미 - 온라인 직장교육 개시" /></a></p>
+		<div class="footer">
+			<input type="checkbox" id="close_popup">
+			<label for="close_popup">하루동안 이 창을 열지 않음</label>
+		</div>
+    </div>
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script>
+        function setCookie (name, value, expires) {
+            document.cookie = name + "=" + escape (value) +"; path=/; expires=" + expires.toGMTString();
+        }
+
+        function getCookie(Name) {
+            var search = Name + "="
+            if (document.cookie.length > 0) { // 쿠키가 설정되어 있다면
+                offset = document.cookie.indexOf(search)
+                if (offset != -1) { // 쿠키가 존재하면
+                    offset += search.length
+                // set index of beginning of value
+                    end = document.cookie.indexOf(";", offset)
+                // 쿠키 값의 마지막 위치 인덱스 번호 설정
+                    if (end == -1)
+                        end = document.cookie.length
+                    return unescape(document.cookie.substring(offset, end))
+                }
+            }
+            return "";
+        }
+
+        $("#close_popup").click(function(){
+            var today = new Date();
+            today.setDate(today.getDate() + 1);
+            setCookie("kans_popup_200309", "Y", today);
+            self.close();
+        });
+    </script>
+</body>
+</html>

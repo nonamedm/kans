@@ -1,0 +1,275 @@
+<?
+include "../conf/dbconn.inc";
+
+
+if($uid !=''){
+	$sql = "update board set visit=visit+1 where  uid=$uid";
+	mysql_query($sql);
+
+	$sql="select * from board where uid=$uid";
+	$res=mysql_query($sql);
+	$row=mysql_fetch_object($res);
+	$fid = $row->fid;
+	$thread = $row->thread;
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<link href="../css/font.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+
+<script language=javascript src="../js/drop_menu_sc.js" ></script>
+<script language=javascript src="../js/common_s.js" ></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/gnb.js"></script>
+
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<div class="header">
+	<? include "../inc/header.php"; ?>
+</div>
+
+<div class="sub_visual">
+	<img src="../image/sub_visual.jpg">
+</div>
+
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  톱메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+							<!--<tr>-->
+								<!--<td rowspan="2" width="235" height="60"><a href="../index.html"><img src="../image_s/logo.gif" width="235" height="60" /></a></td>-->
+								<!--<td colspan="5" width="789" height="30"></td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td width="540" height="30"></td>-->
+								<!--<td width="60" height="30" align="left"><a href="../index.html">· HOME</a></td>-->
+								<!--<td width="100" height="30" align="left"><a href="mailto:kans@kans.re.kr">· CONTACT US</a></td>-->
+								<!--<td width="70" height="30" align="left"><a href="../map/map01.html">· SITEMAP</a></td>-->
+								<!--<td width="19" height="30"></td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  톱메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  로컬메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" height="60" border="0" cellpadding="0" cellspacing="0">-->
+							<!--<tr>-->
+								<!--<td>-->
+									<!--<div id="flashContent">-->
+										<!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1024" height="60" id="indexmenuA" align="middle">-->
+											<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+											<!--<param name="quality" value="high" />-->
+											<!--<param name="bgcolor" value="#ffffff" />-->
+											<!--<param name="play" value="true" />-->
+											<!--<param name="loop" value="true" />-->
+											<!--<param name="wmode" value="transparent" />-->
+											<!--<param name="scale" value="showall" />-->
+											<!--<param name="menu" value="true" />-->
+											<!--<param name="devicefont" value="false" />-->
+											<!--<param name="salign" value="" />-->
+											<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--<object type="application/x-shockwave-flash" data="../swf/indexmenuA.swf" width="1024" height="60">-->
+												<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+												<!--<param name="quality" value="high" />-->
+												<!--<param name="bgcolor" value="#ffffff" />-->
+												<!--<param name="play" value="true" />-->
+												<!--<param name="loop" value="true" />-->
+												<!--<param name="wmode" value="transparent" />-->
+												<!--<param name="scale" value="showall" />-->
+												<!--<param name="menu" value="true" />-->
+												<!--<param name="devicefont" value="false" />-->
+												<!--<param name="salign" value="" />-->
+												<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+											<!--<a href="http://www.adobe.com/go/getflash">-->
+												<!--<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />-->
+											<!--</a>-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--</object>-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+										<!--</object>-->
+									<!--</div>-->
+								<!--</td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  로컬메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<!--&lt;!&ndash;  상단 끝  &ndash;&gt;-->
+	<!--&lt;!&ndash;  왼쪽메뉴 및 메뉴콘텐츠내용 시작  &ndash;&gt;-->
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellpadding="0" cellspacing="0">-->
+				<!--<tr>-->
+					<!--<td><img src="images/faq_title.jpg" width="185"></td>-->
+					<!--<td><img src="images/faq_main_img.jpg" width="839"></td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<!-- 왼쪽메뉴 시작  -->	
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="info01.html"><img src="images/sub_info01_off.gif" width="185" height="35" border="0"></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+						</table>
+						<!-- 왼쪽메뉴 끝  -->
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<!-- 메뉴콘텐츠내용 시작  -->
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/faq_subbar_01.jpg"></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td>
+									<table width="720" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF">
+										<tr>
+											<td height="5" colspan="4" background="images/board_bg02A.gif"></td>
+										</tr>
+										<tr>
+											<td height="5" colspan="4"></td>
+										</tr>
+										<tr align="center" class="text-h">
+											<td height="1" colspan="4" background="images/jom01.gif"></td>
+										</tr>
+										<tr align="center" class="text-h">
+											<td width="20%" height="40" align="center" bgcolor="#b8d8ff"><font color="#000000">작성자</font></td>
+											<td width="30%"><?=$row->writer?></td>
+											<td width="20%" bgcolor="#b8d8ff"><font color="#000000">조회수 </font></td>
+											<td width="30%"><span class="back_dotline"><?=$row->visit?></span></td>
+										</tr>
+										<tr align="center" class="text-h">
+											<td height="1" colspan="4" background="images/jom01.gif"></td>
+										</tr>
+										<tr align="center" class="text-h">
+											<td width="20%" height="40" align="center" bgcolor="#b8d8ff"><font color="#000000">작성일</font></td>
+											<td width="30%"><span class="back_dotline"><?=$row->reg_date?></span></td>
+											<td width="20%" bgcolor="#b8d8ff"><font color="#000000">첨부파일</font></td>
+											<td width="30%"><?
+												if($row->filename) echo "<a href='../board_files/".$row->filename."' target='_blank'>".$row->filename."</a>";
+												else echo "-";
+												?></td>
+										</tr>
+										<tr align="center" class="text-h">
+											<td height="1" colspan="4" background="images/jom01.gif"></td>
+										</tr>
+										<tr align="center" class="text-h">
+											<td width="20%" height="40" bgcolor="#b8d8ff"><font color="#000000">제 목</font></td>
+											<td colspan="3" align="left">&nbsp;&nbsp;<strong><?=$row->title?></strong></td>
+										</tr>
+										<tr align="center">
+											<td height="1" colspan="4" background="images/jom01.gif"></td>
+										</tr>
+									</table>
+									<table width="720" border="0" align="center" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="5"></td>
+										</tr>
+										<tr>
+											<td height="1" bgcolor="b8d8ff"></td>
+										</tr>
+										<tr>
+											<td height="150" align="left" valign="top" class="text-h"><br>
+											<?=nl2br($row->content)?>                          <br></td>
+										</tr>
+										<tr>
+											<td height="20"></td>
+										</tr>
+									</table>
+									<!--글 읽기 끝-->
+									<table width="720" border="0" align="center" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="1" bgcolor="b8d8ff"></td>
+										</tr>
+										<tr>
+											<td height="5"></td>
+										</tr>
+										<tr>
+											<td height="5" colspan="4" background="images/board_bg02A.gif"></td>
+										</tr>
+									</table>
+									<!--버튼 시작-->
+									<table width="720" border="0" align="center" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="50%" height="50" align="right"><a href="info01.html?page=<?=$page?>&amp;search=<?=$search?>&amp;keyword=<?=$keyword?>" onfocus="this.blur();"><img src="./images/btt_list.gif" width="33" height="31" hspace="2" border="0" /></a></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+						</table>
+					</td>
+                </tr>
+						<!-- 메뉴콘텐츠내용 끝  -->
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

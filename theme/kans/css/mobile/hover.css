@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+@media (min-width:800px){
+/* header */
+	.header .gnb > ul > li:hover > a{color: #1d9bea;}
+	.header .gnb .dep2 > ul > li:hover > a{font-weight: 500; color: #1d9bea; }
+}

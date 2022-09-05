@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방사선안전관리자포럼</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/blog.css" rel="stylesheet">
+
+    <!-- 리포트2.0 로그분석코드 시작 -->
+    <script type="text/javascript">
+      var sTime = new Date().getTime();
+      (function(i,s,o,g,r,a,m){i['webObject']=g;i['webUid']=r;a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+      (window,document,'script','//kans1.weblog.cafe24.com/weblog.js?v='+sTime,'kans1_2');
+      </script>
+    <!-- 리포트2.0 로그분석코드 완료 -->
+
+</head>
+<body>
+  <!--header START-->
+  <div class="container">
+    <header class="blog-header py-3">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">KANS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            </ul>
+            <div class="d-flex">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        방사선안전관리자포럼
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="./info.html">행사개요</a></li>
+                        <li><a class="dropdown-item" href="#">행사일정</a></li>
+                        <li><a class="dropdown-item" href="./forum.html">행사성과</a></li>
+                        <li><a class="dropdown-item" href="./notice.html">공지사항</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="../safety/index.html">방사선안전이해</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  
+    <div class="nav-scroller py-1 mb-2">
+      <nav class="nav d-flex justify-content-between">
+
+      </nav>
+    </div>
+  </div>
+  <!--header END-->
+  <!--main START-->
+  <main class="container">
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="bootstrap" viewBox="0 0 118 94">
+        <title>Bootstrap</title>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+      </symbol>
+      <symbol id="home" viewBox="0 0 16 16">
+        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+      </symbol>
+      <symbol id="speedometer2" viewBox="0 0 16 16">
+        <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+        <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+      </symbol>
+      <symbol id="table" viewBox="0 0 16 16">
+        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+      </symbol>
+      <symbol id="people-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+      </symbol>
+      <symbol id="grid" viewBox="0 0 16 16">
+        <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+      </symbol>
+      <symbol id="collection" viewBox="0 0 16 16">
+        <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+      </symbol>
+      <symbol id="calendar3" viewBox="0 0 16 16">
+        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+      </symbol>
+      <symbol id="chat-quote-fill" viewBox="0 0 16 16">
+        <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+      </symbol>
+      <symbol id="cpu-fill" viewBox="0 0 16 16">
+        <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+        <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z"/>
+      </symbol>
+      <symbol id="gear-fill" viewBox="0 0 16 16">
+        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+      </symbol>
+      <symbol id="speedometer" viewBox="0 0 16 16">
+        <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+        <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+      </symbol>
+      <symbol id="toggles2" viewBox="0 0 16 16">
+        <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z"/>
+        <path d="M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.535-10a3.975 3.975 0 0 1-.409-1H4a1 1 0 0 1 0-2h2.126c.091-.355.23-.69.41-1H4a2 2 0 1 0 0 4h2.535z"/>
+        <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+      </symbol>
+      <symbol id="tools" viewBox="0 0 16 16">
+        <path d="M1 0L0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"/>
+      </symbol>
+      <symbol id="chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+      </symbol>
+      <symbol id="geo-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
+      </symbol>
+    </svg>
+
+    <content class="col-md-8 col-lg-8 col-sm-8">
+    <div class="card bg-dark text-black text-end">
+      <img src="img/main.png" class="img-responsive img-rounded" alt="...">
+      <div class="overlay">
+        <div class="description">
+          <div class="card-img-overlay">
+            <h3 class="card-title">이 곳은 “언제나, 어디서나, 간편하게“ 방사선 안전에 관하여 알아볼 수 있는 정보의 장입니다.</h3>
+            <p class="card-text">자주 방문하셔서 방사선안전에 관한 궁금증을 해소하시고
+              방사선안전문화 확산에 동참해주세요.</p>
+            <p class="card-text">원자력안전아카데미</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </content>
+
+    <div class="album py-5">
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-150 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <h3 class="mb-0">내가지킨 방사선안전수칙</h3>
+                <h3 class="mb-0">자리잡는 방사선안전문화</h3>
+                <a href="#" class="stretched-link">자세히보기</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-150 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <h3 class="mb-0">방사선 안전관리자 포럼</h3>
+                <h3 class="mb-0">&nbsp;</h3>
+                <a href="./info.html" class="stretched-link">자세히보기</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img src="img/main_01.png" class="bd-placeholder-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="row g-5">
+      <div class="col-md-8">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          방사선안전관리자 포럼
+        </h3>
+        
+        <a id='20210817'></a>
+        <article class="blog-post">
+          <h2 class="blog-post-title">[8/17] 영남권 방사선안전관리자 포럼</h2>
+          <p class="blog-post-meta">Agust 18, 2021 by <a href="#">KANS</a></p>
+  
+          <p>일시 | 2021년 8월 17일 오후 4시-6시</p>
+          <hr>
+          <p>참석인원: 오프라인(21명) / 온라인(11명)</p>
+          <h3>행사구성</h3>
+          <blockquote class="blockquote">
+            <p>- 제염전문가, KORAD 재직자 주제발표 후 질의응답
+            <br>- 온라인/오프라인 동시진행</p>
+          </blockquote>
+
+          <h3>행사내용</h3>
+          <p>■ <방사능 제염 이론과 실무>, 김희근(위덕대학교 에너지전기공학부 교수)</p>
+          <ol>
+            <li>방사성오염과 제염</li>
+            <li>정지 화학처리와 계통제염</li>
+            <li>원전해체 공정과 역무</li>
+            <li>제염 기술개발 동향</li>
+            <li>제염과 방폐물관리의 중요성</li>
+          </ol>   
+          <p>■ <방사성폐기물 인수기준과 적용>, 장현기(한국원자력환경공단 품질보증실 실장)</p>
+          <ol>
+            <li>방사성폐기물 인수 관련 법령</li>
+            <li>인수기준 개요<br>
+              – 방폐물 특성 품질보증 요구사항 및 요건<br>
+              – 방폐물 인수기준 현행, 개선방향, 최적화 등
+            </li>
+          </ol> 
+
+          <h3>발굴과제</h3>
+          <p>■ 향후 포럼에서 다루었으면 하는 내용</p>
+          <ul>
+            <li>방사성폐기물 외적으로도 기술적인 부분에 대한 온라인 교육을 진행하면 접근성이 좋아 도움을 받을 수 있을 것</li>
+            <li>원자력환경공단에서 위탁처분 시 처리 절차 개선 필요</li>
+            <li>방사성폐기물 누적선원 관리에 대한 대책 강구 및 협조 요청</li>
+          </ul> 
+          <p>■ 추가 의견</p>
+          <ul>
+            <li>주기적인 포럼 개최</li>
+            <li>포럼 일정을 좀 더 길게(종일 일정으로 추진)</li>
+          </ul> 
+
+          <h3>현장사진</h3>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="photo/210817/KakaoTalk_20210818_105644953_24.jpg" class="img-responsive img-rounded" alt="...">
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="photo/210817/KakaoTalk_20210818_105644953_10.jpg" class="img-responsive img-rounded" alt="...">
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="photo/210817/KakaoTalk_20210818_105644953_07.jpg" class="img-responsive img-rounded" alt="...">
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="photo/210817/KakaoTalk_20210818_105644953.jpg" class="img-responsive img-rounded" alt="...">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <a id='20210723'></a>
+        <article class="blog-post">
+          <h2 class="blog-post-title">[7/23] 호남권 방사선안전관리자 포럼</h2>
+          <p class="blog-post-meta">July 26, 2021 by <a href="#">KANS</a></p>
+  
+          <p>일시 | 2021년 7월 23일 오후 4시-6시</p>
+          <hr>
+          <p>참석인원: 오프라인(16명) / 온라인(8명)</p>
+          <h3>행사구성</h3>
+          <blockquote class="blockquote">
+            <p>- KINS 재직자, 방사선안전관리자 발표 후 질의응답<br>
+               - 온라인/오프라인 동시진행</p>
+          </blockquote>
+
+          <h3>행사내용</h3>
+          <p>■ <방사선안전규제 사례 및 제도 개선 현황>, 이기복(KINS 의료방사선평가실 책임기술원)</p>
+          <ol>
+            <li>방사선 이용 현황 소개</li>
+            <li>2020년도 정기검사 결과(업종별/유형별 지적사항 및 권고사항) 소개</li>
+            <li>오염, 피폭, 분실 등 방사선 사건·사고 사례 및 교훈(안전관리 규정 준수, 적절한 초동 대응의 중요성, 방사성 동위원소의 보안관리, 방사선작업종사자 대상 철저한 교육 등)</li>
+            <li>안전문화 확립 방안 제시(강력한 리더십, 작업자 및 관련자들에 대한 교육과 훈련, 방사선 방호에 대한 긍정적이고 종합적인 의식 고취, 안전관리 시스템 등을 통해 작업자 간 적절한/적합한 의사소통 프로세스 확립)</li>
+          </ol>   
+          <p>■ <2021년 RI등 사용 정기검사 위주 방사선안전관리 사례>, 강명원(전남대학교-교육/연구분야)</p>
+          <ol>
+            <li>‘18, ’21 정기검사 결과 공유</li>
+            <li>전남대학교 방사선안전관리의 역사, 현황, 사업 소개</li>
+            <li>방사선장해방지를 중점으로 방사선 안전관리 활동 강화 및 안정적인 방사선안전관리 사업을 위한 예산 확보 필요</li>
+          </ol> 
+          <p>■ <방사선안전관리 사례(의료)>, 정규영(전북대학교병원-의료분야)</p>
+          <ol>
+            <li>전북대학교병원 방사선안전관리 조직도 및 안전관리실 신설 현황</li>
+            <li>RI등 생산 및 사용 현황</li>
+            <li>방사선작업종사자 및 수시출입자 현황</li>
+            <li>측정장비 내역 및 방사성폐기물 관리 현황 등 소개</li>
+          </ol>
+          <p>■ <광양제철소 방사선기기 비상대응 현황>, 최만중(포스코 광양제철소-산업분야)</p>
+          <ol>
+            <li>방사선 관련 표준 현황</li>
+            <li>방사선기기 사고 비상대응 지침</li>
+            <li>방사선 사고 비상대응 훈련</li>
+            <li>방사선기기 복구 공정표 등 소개</li>
+          </ol> 
+          <p>■ <방사선투과검사 – 방사선투과검사 작업장>, 최명숙(금호기술검사-투과검사분야)</p>
+          <ol>
+            <li>방사선투과검사 작업장 관련 법령 소개</li>
+            <li>방사선투과검사 작업장 안전관리 체계 및 유형 소개</li>
+            <li>방사선투과검사 작업 향후(현 규제 내에서 종사자의 자발적 참여 독려 및 종사자의 방사선안전에 대한 의식 고취)</li>
+          </ol> 
+
+          <h3>발굴과제</h3>
+          <p>■ 향후 포럼에서 다루었으면 하는 내용</p>
+          <ul>
+            <li>폐기물 자체처분</li>
+            <li>정기검사 점검사항 및 준비사항</li>
+            <li>타기관 안전관리 업무 사례</li>
+          </ul> 
+          <p>■ 추가 의견</p>
+          <ul>
+            <li>거리두기 단계 격상으로 행사가 감축되었으나 코로나 이후 확대 시행</li>
+          </ul> 
+
+          <h3>현장사진</h3>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="photo/210723/KakaoTalk_20210727_174616090_01.jpg" class="img-responsive img-rounded" alt="...">
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="photo/210723/KakaoTalk_20210727_174616090_03.jpg" class="img-responsive img-rounded" alt="...">
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="photo/210723/KakaoTalk_20210727_174616090_04.jpg" class="img-responsive img-rounded" alt="...">
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="photo/210723/KakaoTalk_20210727_174616090_17.jpg" class="img-responsive img-rounded" alt="...">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <a id='20210714'></a>
+        <article class="blog-post">
+          <h2 class="blog-post-title">[7/14] 충청권 방사선안전관리자 포럼</h2>
+          <p class="blog-post-meta">July 15, 2021 by <a href="#">KANS</a></p>
+  
+          <p>일시 | 2021년 7월 14일 오후 4시-6시</p>
+          <hr>
+          <p>참석인원: 오프라인(24명) / 온라인(3명)</p>
+          <h3>행사구성</h3>
+          <blockquote class="blockquote">
+            <p>- KINS 재직자, 방사선안전관리자 발표 후 질의응답<br>
+               - 온라인/오프라인 동시진행</p>
+          </blockquote>
+
+          <h3>행사내용</h3>
+          <p>■ <방사선안전규제와 안전관리의 동행>, 심호섭(전 KINS 규제업무 경력자)</p>  
+          <p>■ <신약개발 지원 위한 방사선기술이용 및 방사선안전관리>, 조희문(오송첨단의료산업진흥재단-교육/연구분야)</p>
+          <ol>
+            <li>오송첨단의료산업진흥재단, 방사선기술 이용한 신약개발 지원, 총괄 방사선안전관리 소개</li>
+            <li>방사선시설 환경 개선추진 및 방사선안전 우수사례와 모범 방사선 인프라 시설 벤치마킹을 통한 방사선안전관리 문화 전파</li>
+          </ol> 
+          <p>■ <방사선안전관리-의료분야>, 이현국(대전을지대학교병원-의료분야)</p>
+          <ol>
+            <li>의료 방사선안전관리 개요</li>
+            <li>대전을지대학교병원 방사선 시설현황</li>
+            <li>대테러 대응훈련 사례 소개</li>
+            <li>의료분야 규제 현안 논의(방사성폐기물 처분, 제너레이터 폐칼럼 안전규제, 치료용 가속기 품질관리, 방사화 부품 안전규제 등)</li>
+          </ol>
+          <p>■ <방사선안전관리 사례-산업분야>, 이강수(대륙테크놀로지-산업분야)</p>
+          <ol>
+            <li>시설현황, 방사선 안전관리 현황 소개</li>
+            <li>방사선안전관리자 대리자 지정제도 문제점</li>
+          </ol> 
+          <p>■ <측정 표준과 방사선안전관리>, 박영재(한국표준과학연구원)</p>
+          <ol>
+            <li>측정표준에 대한 소개</li>
+            <li>밀봉선원 폐기용 시험성적서 발급에 관한 안전관리 사례</li>
+            <li>향후 포럼 방향</li>
+          </ol> 
+
+          <h3>발굴과제</h3>
+          <p>■ 향후 포럼에서 다루었으면 하는 내용</p>
+          <ul>
+            <li>대리자 지정제도 개선 방안</li>
+            <li>폐기물 자체처분 방법</li>
+            <li>정기검사 점검사항 및 준비사항</li>
+            <li>면허 취소 및 정지 사례</li>
+            <li>규제기관에서 효율적인 방사선안전관리를 위한 설명회 개최</li>
+            <li>교차점검 실시 방법에 대한 포괄적 내용을 주제로 포럼 개최</li>
+            <li>각 기관의 안전관리자 정보교환을 통한 방사선안전관리 수준 향상으로 방사선안전문화 정착</li>
+            <li>주기적인 안전관리자 간 소통의 자리 마련</li>
+          </ul> 
+          <p>■ 추가 의견</p>
+          <ul>
+            <li>안전관리에 관한 주제로 자유로운 토론 시간 필요</li>
+            <li>적극적인 행사 홍보</li>
+          </ul> 
+
+          <h3>현장사진</h3>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <a id='20210712'></a>
+        <article class="blog-post">
+          <h2 class="blog-post-title">[7/12] 업무대행 분야 방사선안전관리자 포럼</h2>
+          <p class="blog-post-meta">July 15, 2021 by <a href="#">KANS</a></p>
+  
+          <p>일시 | 2021년 7월 12일 오후 4시-6시</p>
+          <hr>
+          <p>참석인원: 온라인(21명)</p>
+          <h3>행사구성</h3>
+          <blockquote class="blockquote">
+            <p>- 전 KINS 규제업무 경력자, 업무대행자 발표<br>
+               - 거리두기 단계 격상에 따라 온라인 진행</p>
+          </blockquote>
+
+          <h3>행사내용</h3>
+          <p>■ <안전규제와 안전관리의 동행>, 심호섭(전 KINS 규제업무 경력자)</p>  
+          <ul>
+            <li>방사성동위원소 규제면제, 방사선측정 장비관리, 운반시 필요 서류, 방사선기기 설계승인과 식별체계, 신고사용 분야 방사선안전관리 특성, 방사선작업종사자 교육·훈련 입법예고안, 방사선안전관리자 대리자 지정, 방사선발생장치 성능표기 관리</li>
+          </ul>
+          <p>■ <업무대행자 실무현황 및 개선방안>, 김창범(전 KINS 규제업무 경력자)</p>
+          <ol>
+            <li>대행업무 분야별 등록체계, 대행업무의 적합성, 형평성 및 타당성 등의 법령체계 검토</li>
+            <li>대행업무 실적 및 업무대행자에 대한 규제기관의 정기검사 결과 등 분석</li>
+            <li>국내 다른 부청에서 시행하고 있는 업무대행 등의 유사제도 검토</li>
+            <li>27개 업무대행기관 및 업무대행자를 이용하는 100개 방사선사업소를 대상으로 한 설문조사</li>
+            <li>향후 업무대행자와 규제기관과의 긴밀성을 유지하기 위한 업무대행자포럼 구성방안 모색</li>
+          </ol> 
+          <p>■ <업무대행 사례발표 1>, 민기열(가온원자력 업무대행자)</p>
+          <ol>
+            <li>안전관리 업무대행 사례와 교훈 및 대처방법 등</li>
+            <li>기타 규제기관 심사기준에 대한 건의사항</li>
+          </ol>
+          <p>■ <업무대행 사례발표 2>, 고상기(한일원자력 업무대행자)</p>
+          <ul>
+            <li>사건사고시 업무대행 사례, 방사선 특별승인 운반사례, 생방법에 따른 유의물질 처리 사례, 기타 선원 판매, 폐기관련 사례</li>
+          </ul> 
+
+          <h3>발굴과제</h3>
+          <p>■ 향후 포럼에서 다루었으면 하는 내용</p>
+          <ul>
+            <li>정기적인 업무대행자 포럼 추진 필요</li>
+          </ul> 
+
+          <h3>현장사진</h3>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <a id='20210706'></a>
+        <article class="blog-post">
+          <h2 class="blog-post-title">[7/6] 수도권 방사선안전관리자 포럼</h2>
+          <p class="blog-post-meta">July 15, 2021 by <a href="#">KANS</a></p>
+  
+          <p>일시 | 2021년 7월 6일 오후 4시-6시</p>
+          <hr>
+          <p>참석인원: 오프라인(14명)</p>
+          <h3>행사구성</h3>
+          <blockquote class="blockquote">
+            <p>- 방사선안전관리자 사례 발표 및 FGI를 통한 상호소통<br>
+               - 오프라인 진행</p>
+          </blockquote>
+
+          <h3>행사내용</h3>
+          <p>■ <방사선안전관리 총람>, 복영민(서울과학기술대학교-교육/연구분야)</p>  
+          <ul>
+            <li>다양한 분야(원자력, 산업, 공공기관, 교육/연구기관 등)에서의 안전관리 업무 경험 및 노하우 공유</li>
+          </ul>
+          <p>■ <FGI>, 한국원자력안전아카데미</p>
+          <ul>
+            <li>직업만족도, 권한, 책임, 안전문화, 희망사항에 대한 의견 공유</li>
+          </ul> 
+
+          <h3>발굴과제</h3>
+          <p>■ 향후 포럼에서 다루었으면 하는 내용</p>
+          <ul>
+            <li>안전문화 형성을 위한 방사선안전관리자 간의 네트워크 형성</li>
+            <li>규제기관과 소통의 자리 마련 혹은 규제기관과 소통 창구 역할을 할 수 있는 방사선안전관리자 포럼 문화 정착</li>
+          </ul> 
+
+          <h3>현장사진</h3>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <a id='20210702'></a>
+        <article class="blog-post">
+          <h2 class="blog-post-title">[7/2] 영남권 방사선안전관리자 포럼</h2>
+          <p class="blog-post-meta">July 5, 2021 by <a href="#">KANS</a></p>
+  
+          <p>일시 | 2021년 7월 2일 오후 4시-6시</p>
+          <hr>
+          <p>참석인원: 오프라인(26명) / 온라인(9명)</p>
+          <h3>행사구성</h3>
+          <blockquote class="blockquote">
+            <p>- KINS 재직자, 방사선안전관리자 발표 후 질의응답<br>
+               - 온라인/오프라인 동시진행</p>
+          </blockquote>
+
+          <h3>행사내용</h3>
+          <p>■ <방사선 사고 사례 소개>, 이복형(KINS 방사선규제총괄실 실장)</p>  
+          <p>■ <교육/연구 방사선 안전관리 현황>, 이화형(경북대학교-교육/연구분야)</p>
+          <ol>
+            <li>분야별 차등규제 도입, 방사선안전관리자 대리자 지정 제도, 학생에 대한 수시출입자 등록 제도, 정기검사, 방사성폐기물 처분 등의 문제점과 개선방안</li>
+            <li>규제기관, 사용기관, 개인의 책임과 역할 강조</li>
+          </ol> 
+          <p>■ <방사능측정기 기기보정인자의 이해>, 박철서(케이비이엔지-산업분야)</p>
+          <ol>
+            <li>방사능측정기 교정성적서의 교정 결과 해석<br>
+              - 면적보정 표준선원 베타방출률, 교정인자, 선원효율, 기기보정인자 등
+            </li>
+          </ol> 
+
+          <h3>발굴과제</h3>
+          <p>■ 향후 포럼에서 다루었으면 하는 내용<br>
+          <ul>
+            <li>정기검사 점검사항 및 준비사항</li>
+            <li>타기관 안전관리 업무 사례</li>
+            <li>반감기 핵종 위탁처분 문제해결</li>
+            <li>정기검사 설명회 개최</li>
+            <li>특수면허 폐지 등</li>
+            <li>규제기관과 소통의 자리 마련</li>
+            <li>포럼에서 나온 의견이 규제기관에 전달될 수 있는 시스템 마련</li>
+            <li>다양한 주제로 주기적인 포럼 개최</li>
+            <li>여러 분야별 정보 제공</li>
+            <li>방사선안전관리자들의 네트워크 형성과 정보 교류를 위한 시간 마련</li>
+          </ul> 
+          <p>■ 추가 의견</p>
+            <ul>
+              <li>방사선안전관리자 간 소통의 자리 마련(질의응답 시간을 좀 더 길게)</li>
+              <li>온라인 참석자를 위한 음질 개선</li>
+            </ul> 
+          </p>
+
+          <h3>현장사진</h3>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <a id='20210701'></a>
+        <article class="blog-post">
+          <h2 class="blog-post-title">[7/1] 비파괴검사 분야 방사선안전관리자 포럼</h2>
+          <p class="blog-post-meta">July 5, 2021 by <a href="#">KANS</a></p>
+  
+          <p>일시 | 2021년 7월 1일 오후 4시-6시</p>
+          <hr>
+          <p>참석인원: 오프라인(52명)</p>
+          <h3>행사구성</h3>
+          <blockquote class="blockquote">
+            <p>- 비파괴검사협회 워크숍과 연계<br>
+               - FGI 방식 도입<br>
+               - 오프라인 진행
+            </p>
+          </blockquote>
+          <ul>
+            <li>※ FGI; Focus Group Interview, 초점집단면접법
+            집단면접법의 대표적인 방법으로, 분야의 주제나 관심의 대상이 되는 동질적인 집단 구성원들을 초청하여 한자리에 모아 의견을 청취한다.</li>
+          </ul>
+
+          <h3>행사내용</h3>
+          <ul>
+            <li>방사선안전관리자의 법적 권한과 실제적 권한 행사의 괴리에 대한 토론</li>
+            <li>FGI 형식을 통해 직업만족도, 권한, 안전문화, 희망사항에 대한 의견교류</li>
+            <li>비파괴검사 분야 특수성으로 인한 규제와 현장 반영에서 발생하는 문제</li>
+            <li>규제기관과 방사선안전관리자 간 소통의 자리 필요성</li>
+          </ul> 
+
+          <h3>현장사진</h3>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <a id='20210615'></a>
+        <article class="blog-post">
+          <h2 class="blog-post-title">[6/15] 수도권 방사선안전관리자 포럼</h2>
+          <p class="blog-post-meta">July 5, 2021 by <a href="#">KANS</a></p>
+  
+          <p>일시 | 2021년 6월 15일 오후 4시-6시</p>
+          <hr>
+          <p>참석인원: 오프라인(20명) / 온라인(11명)</p>
+          <h3>행사구성</h3>
+          <blockquote class="blockquote">
+            <p>- KINS 재직자, 방사선안전관리자 발표 후 질의응답<br>
+               - 온라인/오프라인 동시진행</p>
+          </blockquote>
+
+          <h3>행사내용</h3>
+          <p>■ <방사선 사고 사례 소개>, 이복형(KINS 방사선규제총괄실 실장)</p>  
+          <ol>
+            <li>안전관리 규정의 준수</li>
+            <li>적절한 초동대응의 중요성</li>
+            <li>방사성 동위원소의 보안관리</li>
+            <li>방사선작업종사자 대상 철저한 교육/li>
+          </ol>
+          
+          <p>■ <방사선 안전관리 현황>, 오기백(연세대학교의료원-의료분야)</p>
+          <ol>
+            <li>대리자 지정 제도 운영 개선</li>
+            <li>판매기관 직원 등의 출입관리</li>
+            <li>수시출입자에 대한 기준 완화</li>
+            <li>방사성폐기물 분류 기준 완화</li>
+            <li>I-125 오염폐액의 처분 방법 및 잔류 비율 기준 마련</li>
+            <li>기본 교육의 독점운영으로 인한 문제점 개선</li>
+            <li>의료기관 방사선안전관리자 선임 기준 강화</li>
+            <li>시설 검사 면제 기준 확대</li>
+            <li>벌칙, 원자력안전관리 부담금 조정</li>
+          </ol> 
+          <p>■ <서울대학교 방사선 안전관리 현황>, 양기각(서울대학교-교육/연구분야)</p>
+          <ol>
+            <li>서울대학교 방사선 안전관리 조직</li>
+            <li>방사선안전관리 규정 제/개정 현황</li>
+            <li>방사선 사용 실험실 현황</li>
+            <li>개봉선원 구매(사용) 현황</li>
+            <li>방사성폐기물 관리</li>
+            <li>방사선작업종사자 관리(교육, 검진, 피폭)</li>
+            <li>방사선실험실 안전점검</li>
+            <li>서울대학교 방사선안전관리 시스템</li>
+            <li>방사선안전관리 추진사업 등 소개</li>
+          </ol> 
+
+          <h3>발굴과제</h3>
+          <p>■ 향후 포럼에서 다루었으면 하는 내용<br>
+          <ul>
+            <li>최신 규제 내용, 전년도 정기검사 지적 사례 자세히</li>
+            <li>실제 정기검사에서 다루는 내용 구체적으로</li>
+            <li>방사성폐기물 분야</li>
+            <li>안전관리자의 권익과 책임</li>
+            <li>업무대행자의 업무영역 및 조건에 대한 법 조항 확대</li>
+            <li>장반감기 핵종(H-3, C-14) 폐기물 처분 방안, 액체폐기물 처분 방안</li>
+          </ul> 
+          <p>■ 추가 의견</p>
+            <ul>
+              <li>온라인 참석 활성화</li>
+              <li>향후 포럼에서 질의나 건의 내용 반영하여 발표</li>
+              <li>분야별 포럼 개최</li>
+            </ul> 
+          </p>
+
+          <h3>현장사진</h3>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <a id='20210429'></a>
+        <article class="blog-post">
+          <h2 class="blog-post-title">[4/29] 방사선안전관리자 포럼 발대식</h2>
+          <p class="blog-post-meta">July 5, 2021 by <a href="#">KANS</a></p>
+  
+          <p>일시 | 2021년 4월 29일 오후 4시-6시</p>
+          <hr>
+          <p>참석인원: 오프라인(9명) / 온라인(16명)</p>
+          <h3>행사구성</h3>
+          <blockquote class="blockquote">
+            <p>- 업종별(산업, 교육연구, 의료, 비파괴검사, 기타) 분과위원 5인 위촉<br>
+               - 온라인/오프라인 동시진행
+            </p>
+          </blockquote>
+
+          <h3>행사내용</h3>
+          <p>2021년도 방사선안전관리자 포럼 실행 계획 설명 및 의견수렴</p>
+
+          <h3>현장사진</h3>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+  
+
+  
+        <nav class="blog-pagination" aria-label="Pagination">
+          <a class="btn btn-outline-primary" href="#">Older</a>
+          <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+        </nav>
+  
+      </div>
+  
+      <div class="col-md-4">
+        <div class="position-sticky" style="top: 2rem;">
+          <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="fst-italic">권역별 추진 실적</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>구분</th>
+                  <th>누적횟수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>전국</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>수도권</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>영남권</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>충청권</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>호남권</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>분야별</td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>합계</td>
+                  <td>11</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <div class="p-4">
+            <h4 class="fst-italic">지난포럼</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="#20210429">[4/29] 방사선안전관리자 포럼 발대식</a></li>
+              <li><a href="#20210615">[6/15] 수도권 방사선안전관리자 포럼</a></li>
+              <li><a href="#20210701">[7/1] 투과검사분야 방사선안전관리자 포럼</a></li>
+              <li><a href="#20210702">[7/2] 영남권 방사선안전관리자 포럼</a></li>
+              <li><a href="#20210706">[7/6] 수도권 방사선안전관리자 포럼</a></li>
+              <li><a href="#20210712">[7/12] 업무대행분야 방사선안전관리자 포럼</a></li>
+              <li><a href="#20210714">[7/14] 충청권 방사선안전관리자 포럼</a></li>
+              <li><a href="#20210723">[7/23] 호남권 방사선안전관리자 포럼</a></li>
+              <li><a href="#20210817">[8/17] 영남권 방사선안전관리자 포럼</a></li>
+              <li><a href="#20210827">[8/27] 호남권 방사선안전관리자 포럼</a></li>
+            </ol>
+          </div>
+          <div class="p-4">
+            <h4 class="fst-italic">향후포럼</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">[9/3][전국(제주)] - 2021년 방사선안전관리자 포럼 수행 평가 / 방향논의</a></li>
+              <li><a href="#">[9/28][충청권(대전)] 발표&그룹토론 – 대리자 지정제도</a></li>
+              <li><a href="#">[11/23][전국(서울)] - 포럼 결과 발표</a></li>
+              <li><a href="#">[10월중][의료분야(서울)] - 미정</a></li>
+              <li><a href="#">[10월중][업무대행분야(서울)] - 미정</a></li>
+              <li><a href="#">[미정][투과검사분야(부산)] - 미정</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="b-example-divider"></div>
+
+    <div class="container px-4 py-5 bg-light" id="hanging-icons">
+      <h2 class="pb-2 border-bottom">방사선안전이해</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+          </div>
+          <div>
+            <h2>초중고</h2>
+            <p>이 페이지에서는 초중고 학생들을 주 대상으로 방사선 기초 및 방사선안전 등에 관한 정보를 제공하고 있습니다.</p>
+            <a class="btn btn-warning btn-lg float-right" href="../safety/student/std01.html" role="button">상세보기</a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+          </div>
+          <div>
+            <h2>예비방사선이용자</h2>
+            <p>이 페이지에서는 대학생 등 예비방사선이용자를 대상으로 방사선이용기관에서 전문업무 수행시 필요한 실무적 지식과 방사선방호 등에 관한 정보를 제공하고 있습니다.</p>
+            <a class="btn btn-info btn-lg float-right" href="../safety/radiation/radi01.html" role="button">상세보기</a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+          </div>
+          <div>
+            <h2>산업현장</h2>
+            <p>이 페이지에서는 방사선이용 신고기관 등 교육기회가 부족한 방사선취급자를 주 대상으로 방사선안전에 대한 이해도 및 의전의식 제고를 위한 정보를 제공하고 있습니다.</p>
+            <a class="btn btn-primary btn-lg float-right" href="../safety/industry/indu01.html" role="button">상세보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+  </main>
+  <!--main END-->
+  <!-- FOOTER START -->
+  <nav class="navbar fixed-bottom navbar-expand-sm navbar-secondary bg-secondary">
+    <footer class="container text-light ">
+      <p>&copy;2021 &middot; <a href="http://www.kans.re.kr" target="_blank" class="text-light stretched-link">KANS</a></p>  
+      <p class="float-right" ><a href="#" class="text-light stretched-link">Back to top</a></p>
+    </footer>
+  </nav>
+  <!-- FOOTER END -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

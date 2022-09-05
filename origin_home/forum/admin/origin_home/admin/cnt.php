@@ -1,0 +1,1 @@
+<? $cnt_total=921; $cnt_yday=1; $cnt_today=1; $cnt_date="11"; ?>

@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+.wrap-all{position: relative;width: 1024px;height: 768px;}
+
+/*.wrap-header*/
+.wrap-header{position: relative;height: 68px;background-image: url("../../../kans_edu/assets/images/bg_header.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/bg_header.png',sizingMethod='scale');}
+.area-logo{position: absolute;top: 50%;margin-top: -20px;left: 18px;width: 42px;height: 40px;}
+.area-logo a{width: 100%;height: 100%;text-indent: -999999px;background-image: url("../../../kans_edu/assets/images/img_logo.png");background-repeat: no-repeat;-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img_logo02.png',sizingMethod='scale');}
+.header-tit{position: absolute;top: 50%;margin-top: -19px;right: 37px;font-size: 26px;color: #fff;font-weight: 900;}
+
+/*.wrap-navi*/
+.wrap-navi{position: absolute;top: 77px;left: -254px;width: 254px;height: 679px;background-image: url("../../../kans_edu/assets/images/img_list.png");z-index: 99;-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img_list.png',sizingMethod='scale');}
+body.en .wrap-navi {background-image: url("../../../kans_edu/assets/images/img_list_en.png");}
+.btn-hide-nav{position: absolute;top: 13px;right: 11px;width: 27px;height: 26px;text-indent: -999999px;}
+.btn-list{position: absolute;top: 48px;left: 254px;width: 38px;height: 103px;text-indent: -999999px;background-image: url("../../../kans_edu/assets/images/btn_list.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/btn_list.png',sizingMethod='scale');}
+body.en .btn-list {background-image: url("../../../kans_edu/assets/images/btn_list_en.png");}
+.wrap-navi > ol{position: relative;height: 619px;margin-top: 60px;box-sizing: border-box;}
+.wrap-navi > ol > li { margin-bottom: 19px;}
+.wrap-navi > ol > li > a{display: block;width: 211px; text-indent: -9999px;}
+.wrap-header .lang-change {position: absolute; left: 80px; top: 25px; width: 170px; height: 18px; background: url('../../../kans_edu/assets/images/language_select_bar.png') 0 0 no-repeat; background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/language_select_bar.png',sizingMethod='scale');}
+.wrap-header .lang-change button {position: absolute; width: 50%; height: 18px; background: url('../../../kans_edu/assets/images/language_select.png') 0 0 no-repeat; background-size: auto 18px; opacity: 0.3; text-indent: -9999px;}
+.wrap-header .lang-change button.on {opacity: 1;}
+.wrap-header .lang-change button.on.kr{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/language_select_kr.png',sizingMethod='scale') alpha(opacity=100);}
+.wrap-header .lang-change button.on.en{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/language_select_en.png',sizingMethod='scale') alpha(opacity=100);}
+.wrap-header .lang-change button.kr {left: 0;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/language_select_kr.png',sizingMethod='scale') alpha(opacity=30);}
+.wrap-header .lang-change button.en {right: 0; background-position:right top;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/language_select_en.png',sizingMethod='scale') alpha(opacity=30);}
+.naviTit01{height: 43px;}
+.naviTit02{height: 43px;}
+.naviTit03{height: 82px;}
+.naviTit04{height: 43px;}
+.naviTit05{height: 43px;}
+
+.wrap-navi > ol > li li { height: 20px; text-indent: -9999px;cursor: pointer;}
+
+/*.container*/
+.container{height: 618px;background: url("../../../kans_edu/assets/images/bg_container.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/bg_container.png',sizingMethod='scale');}
+.area-tab{width: 927px;height: 596px;margin: 0 auto;padding-top: 23px;}
+.tabList > li{float: left;}
+.tabList > li > h3 {display: table; width: 166px;height: 45px;margin-left: 28px;  -webkit-background-size: 100%;background-size: 100%;background-repeat: no-repeat; background-image: url("../../../kans_edu/assets/images/txt_tab.png");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/txt_tab.png',sizingMethod='scale');}
+.tabList > li > h3 > a{display: table-cell; vertical-align: middle; text-align: center; letter-spacing: -1px; word-spacing: -2px; font-size: 13px; font-weight: bold; color: #38b6fa;}
+.tabList > li.current > h3 {/*margin-left: 28px;*/background-image: url("../../../kans_edu/assets/images/txt_tab_on.png");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/txt_tab_on.png',sizingMethod='scale');}
+.tabList > li.current > h3 a {color: #043a84;}
+.tabList > .tabList02 > h3 {margin-left: 9px;}
+.tabList > .tabList03 > h3 {margin-left: 10px;}
+.tabList > .tabList04 > h3 {margin-left: 9px;}
+.tabList > .tabList05 > h3 {margin-left: 10px;}
+/*
+.tabList > .tabList02 > h3 > a{background-image: url("../../../kans_edu/assets/images/txt_tab02.png");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/txt_tab02.png',sizingMethod='scale');}
+.tabList > .tabList03 > h3 > a{background-image: url("../../../kans_edu/assets/images/txt_tab03.png");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/txt_tab03.png',sizingMethod='scale');}
+.tabList > .tabList04 > h3 > a{background-image: url("../../../kans_edu/assets/images/txt_tab04.png");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/txt_tab04.png',sizingMethod='scale');}
+.tabList > .tabList05 > h3 > a{background-image: url("../../../kans_edu/assets/images/txt_tab05.png");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/txt_tab05.png',sizingMethod='scale');}
+.tabList > .current.tabList01 > h3 > a{background: url("../../../kans_edu/assets/images/txt_tab01_on.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/txt_tab01_on.png',sizingMethod='scale');}
+.tabList > .current.tabList02 > h3 > a{background: url("../../../kans_edu/assets/images/txt_tab02_on.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/txt_tab02_on.png',sizingMethod='scale');}
+.tabList > .current.tabList03 > h3 > a{background: url("../../../kans_edu/assets/images/txt_tab03_on.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/txt_tab03_on.png',sizingMethod='scale');}
+.tabList > .current.tabList04 > h3 > a{background: url("../../../kans_edu/assets/images/txt_tab04_on.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/txt_tab04_on.png',sizingMethod='scale');}
+.tabList > .current.tabList05 > h3 > a{background: url("../../../kans_edu/assets/images/txt_tab05_on.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/txt_tab05_on.png',sizingMethod='scale');}
+*/
+.tabContent{position: absolute;left: 51px;top: 135px;width: 922px;height: 551px;padding: 25px;box-sizing: border-box;}
+.tabList > .tabList01 > .tabContent{background: url("../../../kans_edu/assets/images/bg_tabContent.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/bg_tabContent.png',sizingMethod='scale');}
+.tabList > .tabList02 > .tabContent{background: url("../../../kans_edu/assets/images/bg_tabContent02.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/bg_tabContent02.png',sizingMethod='scale');}
+.tabList > .tabList03 > .tabContent{background: url("../../../kans_edu/assets/images/bg_tabContent03.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/bg_tabContent03.png',sizingMethod='scale');}
+.tabList > .tabList04 > .tabContent{background: url("../../../kans_edu/assets/images/bg_tabContent04.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/bg_tabContent04.png',sizingMethod='scale');}
+.tabList > .tabList05 > .tabContent{background: url("../../../kans_edu/assets/images/bg_tabContent05.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/bg_tabContent05.png',sizingMethod='scale');}
+
+/*황인재 ol, li 페이지 스타일 추가*/
+.tabList .area-scroll { height: 100%; }
+.tabList .area-scroll > ol {}
+.tabList .area-scroll > ol > li { display: none; }
+.tabList .area-scroll > ol > li > ol {margin-bottom: 10px; }
+.tabList .area-scroll > ol > li.on { display: block;}
+
+h4.styBg{height: 35px;margin-bottom: 14px;font-size: 21px;color: #043a84;font-weight: 900;text-align: center;line-height: 35px;letter-spacing: -0.5px;background-color: #92d3f4;}
+h4.styRound{font-size: 18px;color: #04377f;font-weight: 900;}
+h5{margin-bottom: 5px;font-size: 18px;color: #04377f;font-weight: 900;letter-spacing: -0.5px;line-height: 1.2;}
+.sub-fst > li{margin-bottom: 5px;margin-left: 25px;line-height: 1.4;list-style: disc;}
+.sub-snd > li{padding-left: 10px;font-family: 'Noto Sans KR L';font-size: 14px;line-height: 1.6;font-weight: 600;background-image: url("../../../kans_edu/assets/images/bul_subSnd.png");background-repeat: no-repeat;background-position: left 10px;}
+.sub-fstBrac > li{padding-left: 25px;padding-top: 10px;}
+
+.imgTit01{display: block;position: absolute;bottom: 0;width: 100%;font-family: 'Noto Sans KR L';font-size: 14px;text-align: center;}
+.imgTit02{width: 100%;font-family: 'Noto Sans KR L';font-size: 14px;text-align: center;}
+.fl-l, .fl-r{position: relative;}
+.fl-l > button, .fl-r > button{text-indent: -999999px;-webkit-background-size: 100%;background-size: 100%;}
+
+.area-img0101{width: 792px;height: 257px;margin: 30px auto 0;}
+.area-img0101 .fl-l{width: 344px;height: 100%;}
+.img0101{width: 100%;height: 231px;background: url("../../../kans_edu/assets/images/img001.jpg");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img001.jpg',sizingMethod='scale');}
+.area-img0101 .fl-r{width: 403px;height: 100%;}
+.img0102{width: 100%;height: 143px;margin-top: 37px;background: url("../../../kans_edu/assets/images/img002.jpg");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img002.jpg',sizingMethod='scale');}
+.area-img0102{width: 561px;height: 228px;margin: 25px auto 0;}
+.area-img0102 .fl-l{width: 201px;height: 100%;}
+.img0103{width: 100%;height: 198px;background: url("../../../kans_edu/assets/images/img003.jpg");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img003.jpg',sizingMethod='scale');}
+.area-img0102 .fl-r{width: 304px;height: 100%;}
+.img0104{width: 100%;height: 198px;background: url("../../../kans_edu/assets/images/img004.jpg");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img004.jpg',sizingMethod='scale');}
+.area-img0103{width: 549px;height: 156px;margin: 15px auto 0;}
+.area-img0103 .fl-l{width: 281px;height: 100%;}
+.img0105{width: 100%;height: 100%;background: url("../../../kans_edu/assets/images/img005.jpg");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img005.jpg',sizingMethod='scale');}
+.area-img0103 .fl-r{width: 209px;height: 100%;}
+.img0106{width: 100%;height: 100%;background: url("../../../kans_edu/assets/images/img006.jpg");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img006.jpg',sizingMethod='scale');}
+.area-img0104{width: 717px;height: 260px;}
+.area-img0104 .sub-fst{float: left;width: 338px;height: 100%;margin-right: 12px;}
+.area-img0104 .sub-fst li{line-height: 1.5;word-break: keep-all;}
+.area-img0104 .fl-r{width: 303px;height: 100%;}
+.img0107{width: 100%;height: 229px;background: url("../../../kans_edu/assets/images/img007.jpg");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img007.jpg',sizingMethod='scale');}
+
+.area-img0201{width: 506px;height: 196px;margin: 5px auto 0;}
+.area-img0201 .fl-l{width: 237px;}
+.img0201{width: 100%;height: 159px;background-image: url("../../../kans_edu/assets/images/img008.jpg");background-repeat: no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img008.jpg',sizingMethod='scale');}
+.area-img0201 .fl-r{width: 203px;}
+.img0202{width: 100%;height: 159px;background-image: url("../../../kans_edu/assets/images/img009.jpg");background-repeat: no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img009.jpg',sizingMethod='scale');}
+.area-img0202{width: 708px;height: 385px;margin-top: 13px;}
+.area-img0202 .fl-l{width: 335px;height: 100%;}
+.area-img0202 .fl-r{width: 271px;height: 100%;}
+.img0203{width: 100%;height: 357px;background: url("../../../kans_edu/assets/images/img010.jpg");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img010.jpg',sizingMethod='scale');}
+
+.area-img0301 .fl-l{width: 446px;}
+.area-img0301 .fl-r{width: 277px;height: 325px;margin-right: 110px;}
+.img0301{width: 100%;height: 100%;background: url("../../../kans_edu/assets/images/img011.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img011.jpg',sizingMethod='scale');}
+.area-img0302{width: 286px;height: 276px;margin: 0 auto;}
+.img0302{width: 100%;height: 254px;background: url("../../../kans_edu/assets/images/img012.jpg")no-repeat;-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img012.jpg',sizingMethod='scale');}
+.area-img0303{width: 357px;height: 220px;margin: 15px auto 20px;}
+.img0303{width: 100%;height: 196px;background: url("../../../kans_edu/assets/images/img013.jpg")no-repeat;-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img013.jpg',sizingMethod='scale');}
+.area-img0304{width: 674px;height: 169px;margin-left: 35px;margin-top: 15px;}
+.img0304{width: 100%;height: 144px;background: url("../../../kans_edu/assets/images/img014.jpg");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img014.jpg',sizingMethod='scale');}
+.area-img0305 .fl-l{width: 505px;}
+.area-img0305 .fl-r{width: 268px;height: 208px;margin-top: -75px;margin-right: 80px;}
+.img0305{width: 100%;height: 237px;text-indent: -999999px;background: url("../../../kans_edu/assets/images/img015.jpg")no-repeat;-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img015.jpg',sizingMethod='scale');}
+.area-img0306{width: 246px;height: 296px;margin: 0 auto;}
+.img0306{width: 100%;height: 274px;text-indent: -999999px;background: url("../../../kans_edu/assets/images/img016.jpg")no-repeat;;-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img016.jpg',sizingMethod='scale');}
+.area-img0307{width: 577px;height: 255px;margin: 0 auto 13px;}
+.img0307{width: 100%;height: 233px;background: url("../../../kans_edu/assets/images/img017.jpg")no-repeat;-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img017.jpg',sizingMethod='scale');}
+.area-img0308{margin-bottom: 5px;}
+.area-img0308 li{float: left;height: 152px;margin-right: 8px;}
+.area-img0308 .first{width: 155px;}
+.area-img0308 .nth2{width: 230px;}
+.area-img0308 .nth3{width: 227px;}
+.area-img0308 .nth4{width: 227px;}
+.area-img0308 li button{width: 100%;height: 136px;-webkit-background-size: 100%;background-size: 100%;}
+.img0309{background: url("../../../kans_edu/assets/images/img018.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img018.jpg',sizingMethod='scale');}
+.img0310{background: url("../../../kans_edu/assets/images/img019.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img019.jpg',sizingMethod='scale');}
+.img0311{background: url("../../../kans_edu/assets/images/img021.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img021.jpg',sizingMethod='scale');}
+.img0312{background: url("../../../kans_edu/assets/images/img020.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img020.jpg',sizingMethod='scale');}
+.area-img0310{width: 734px;margin-left: 35px;margin-top: 10px;}
+.area-img0310 .fl-l{width: 384px;height: 204px;}
+.img0313{width: 100%;height: 179px;background-image: url("../../../kans_edu/assets/images/img022.jpg");background-repeat: no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img022.jpg',sizingMethod='scale');}
+.area-img0310 .fl-r{width: 321px;height: 204px;}
+.img0314{width: 100%;height: 179px;background-image: url("../../../kans_edu/assets/images/img023.jpg");background-repeat: no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img023.jpg',sizingMethod='scale');}
+
+.area-img0501{width: 508px;margin: 0 auto;}
+.area-img0501 .fl-l, .area-img0501 .fl-r{width: 239px;height: 179px;}
+.img0501{width: 100%;height: 100%;background: url("../../../kans_edu/assets/images/img025.jpg");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img025.jpg',sizingMethod='scale');}
+.img0502{width: 100%;height: 100%;background: url("../../../kans_edu/assets/images/img026.jpg");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img026.jpg',sizingMethod='scale');}
+.area-img0502{width: 609px;height: 280px;margin: 15px auto 0;}
+.area-img0502 .fl-l, .area-img0502 .fl-r{height: 100%;}
+.img0503{width: 374px;height: 100%;margin-right: 15px;background: url("../../../kans_edu/assets/images/img027.jpg");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img027.jpg',sizingMethod='scale');}
+.img0504{width: 214px;height: 100%;background: url("../../../kans_edu/assets/images/img028.jpg");filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img028.jpg',sizingMethod='scale');}
+
+.art01{margin-bottom: 25px;color: #04377f;font-weight: 900;line-height: 24px;letter-spacing: -.5px;}
+.art02{width: 430px;margin-bottom: 25px;color: #04377f;font-weight: 900;line-height: 24px;letter-spacing: -.5px;word-break: keep-all;}
+.art03{margin-left: 28px;padding: 3px 0 17px 0;font-family: 'Noto Sans KR L';font-weight: 600;line-height: 1.4;}
+.art04{font-size: 18px;color: #04377f;font-weight: 900;letter-spacing: -0.5px;line-height: 1.2;}
+.art05{padding-left: 15px;font-family: 'Noto Sans KR L';font-weight: 600;}
+.art06{padding-left: 10px;font-family: 'Noto Sans KR L';font-size: 14px;font-weight: 600;line-height: 1.5;}
+
+.pagination{position: absolute;right: 51px;bottom: 39px;width: 338px;height: 44px;font-size: 17px;color: #fff;text-shadow: 1.5px 1.5px rgba(1, 1, 1, .3 );letter-spacing: -.5px;background-image: url("../../../kans_edu/assets/images/bg_pagination.png");background-repeat: no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/bg_pagination.png',sizingMethod='scale');-webkit-background-size: 100%;background-size: 100%;}
+.pagination > a{position: absolute;top: 50%;margin-top: -14px;width: 75px;height: 28px;-webkit-background-size: 28px;background-size: 28px;}
+.btn-prev{left: 12px;text-align: right;}
+.btn-prev > span {position: absolute;left:0;top:0;width:28px;height:28px;background-image: url("../../../kans_edu/assets/images/btn_prev.png");background-repeat: no-repeat;background-position: left center;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/btn_prev02.png',sizingMethod='scale');}
+.btn-next{left: 160px;}
+.btn-next > span {position: absolute;right:0;top:0;width:28px;height:28px;background-image: url("../../../kans_edu/assets/images/btn_next.png");background-repeat: no-repeat;background-position: right center;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/btn_prev.jpg',sizingMethod='scale');}
+.pagiNum{position: absolute;bottom: 8px;left: 91px;width: 65px;height: 28px;text-align: center;}
+.pagiNum span:first-child:after {content:' / '; display: inline-block; padding:0 2px 0 5px;}
+.btn-hide-page{position: absolute;right: 12px;top: 50%;margin-top: -15px;width: 72px;height: 28px;color: inherit;text-align: left;text-shadow: 1.5px 1.5px rgba(1, 1, 1, .3 );vertical-align: middle;}
+.btn-hide-page > span {position: absolute;right:0;top:0;width:18px;height:18px;margin:7px 0;background-image: url("../../../kans_edu/assets/images/btn_hide_page.png");background-repeat: no-repeat;background-position: right center;-webkit-background-size: 18px;background-size: 18px;}
+
+.area-cha{position: absolute;-z-index: 99;}
+.c01{right: 23px;bottom: 15px;width: 152px;height: 174px;background: url("../../../kans_edu/assets/images/img_c01.png");background-repeat: no-repeat;webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img_c01.jpg',sizingMethod='scale');}
+.c02{right: 23px;bottom: 15px;width: 143px;height: 183px;background: url("../../../kans_edu/assets/images/img_c02.png");background-repeat: no-repeat;webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img_c02.jpg',sizingMethod='scale');}
+.c03{right: 23px;bottom: 15px;width: 128px;height: 181px;background: url("../../../kans_edu/assets/images/img_c03.png");background-repeat: no-repeat;webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img_c03.jpg',sizingMethod='scale');}
+.c04{right: 23px;bottom: 20px;width: 141px;height: 179px;background: url("../../../kans_edu/assets/images/img_c04.png");background-repeat: no-repeat;webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img_c04.jpg',sizingMethod='scale');}
+.c05{right: 23px;bottom: 20px;width: 178px;height: 180px;background: url("../../../kans_edu/assets/images/img_c05.png");background-repeat: no-repeat;webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img_c05.jpg',sizingMethod='scale');}
+.c06{right: 23px;bottom: 20px;width: 115px;height: 181px;background: url("../../../kans_edu/assets/images/img_c06.png");background-repeat: no-repeat;webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img_c06.jpg',sizingMethod='scale');}
+
+.area-table{/*text-indent: -999999px;*/ width: 846px; margin: 10px auto; overflow: hidden;}
+.area-table caption {display: none;}
+.area-table table {border-top: 1px solid #3e79ba; width: 848px; position: relative; left: -1px;}
+.area-table table thead {}
+.area-table table thead th, .area-table table tbody td {padding: 8px 0;}
+.area-table table thead th {border: 1px solid #3e79ba; text-align: center; background: #abeffa; font-weight: bold; font-size: 16px;}
+.area-table table tbody {}
+.area-table table tbody td {border: 1px solid #3e79ba; text-align: center; background: #f1f9fe; padding: 8px 4px;}
+
+.sty01{width: 82%;-ms-word-break: keep-all;word-break: keep-all;}
+.sty02{width: 85%;-ms-word-break: keep-all;word-break: keep-all;}
+
+/*.wrap-footer*/
+.wrap-footer{height: 81px;padding-top: 19px;box-sizing: border-box;background: url("../../../kans_edu/assets/images/bg_footer.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/bg_footer.png',sizingMethod='scale');}
+.area-fLogo{width: 211px;height: 42px;margin-left: 34px;text-indent: -9999999px;background: url("../../../kans_edu/assets/images/img_fLogo.png");-webkit-background-size: 100%;background-size: 100%;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/img_fLogo.png',sizingMethod='scale');}
+
+/*.area-pop*/
+.area-pop{display: none;position: absolute;top: 66px;left: 0;bottom: 0;right: 0;background-color: rgba(0, 0, 0, .7);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B4000000,endColorstr=#B4000000);z-index: 999;}
+.btn-hide-pop{position: absolute;top: 19px;right: 19px;width: 35px;height: 34px;text-indent: -999999px;background: url("../../../kans_edu/assets/images/btn_hide_pop.png"); background-size:35px 34px;}
+.popimgTxt{width: 100%;font-family: 'Noto Sans KR L';font-size: 18px;color: #fff;text-align: center;font-weight: 600;}
+.popContent{display: table;width: 100%;height: 100%;}
+.popContent li{display: table-cell;vertical-align: middle;}
+.popContent li > div{width: 782px;height: 526px; margin: 0 auto 30px;-webkit-background-size: contain;background-size: contain; background-position: center;}
+
+/*kr image*/
+.popImg0101{background: url("../../../kans_edu/assets/images/pop_kr/img001.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img001.jpg',sizingMethod='scale');}
+.popImg0102{background: url("../../../kans_edu/assets/images/pop_kr/img002.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img002.jpg',sizingMethod='scale');}
+.popImg0103{background: url("../../../kans_edu/assets/images/pop_kr/img003.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img003.jpg',sizingMethod='scale');}
+.popImg0104{background: url("../../../kans_edu/assets/images/pop_kr/img004.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img004.jpg',sizingMethod='scale');}
+.popImg0105{background: url("../../../kans_edu/assets/images/pop_kr/img005.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img005.jpg',sizingMethod='scale');}
+.popImg0106{background: url("../../../kans_edu/assets/images/pop_kr/img006.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img006.jpg',sizingMethod='scale');}
+.popImg0107{background: url("../../../kans_edu/assets/images/pop_kr/img007.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img007.jpg',sizingMethod='scale');}
+
+.popImg0201{background: url("../../../kans_edu/assets/images/pop_kr/img008.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img008.jpg',sizingMethod='scale');}
+.popImg0202{background: url("../../../kans_edu/assets/images/pop_kr/img009.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img009.jpg',sizingMethod='scale');}
+.popImg0203{background: url("../../../kans_edu/assets/images/pop_kr/img010.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img010.jpg',sizingMethod='scale');}
+
+.popImg0301{background: url("../../../kans_edu/assets/images/pop_kr/img011.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img011.jpg',sizingMethod='scale');}
+.popImg0302{background: url("../../../kans_edu/assets/images/pop_kr/img012.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img012.jpg',sizingMethod='scale');}
+.popImg0303{background: url("../../../kans_edu/assets/images/pop_kr/img013.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img013.jpg',sizingMethod='scale');}
+.popImg0304{background: url("../../../kans_edu/assets/images/pop_kr/img014.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img014.jpg',sizingMethod='scale');}
+.popImg0305{background: url("../../../kans_edu/assets/images/pop_kr/img015.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img015.jpg',sizingMethod='scale');}
+.popImg0306{background: url("../../../kans_edu/assets/images/pop_kr/img016.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img016.jpg',sizingMethod='scale');}
+.popImg0307{background: url("../../../kans_edu/assets/images/pop_kr/img017.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img017.jpg',sizingMethod='scale');}
+.popImg0308{background: url("../../../kans_edu/assets/images/pop_kr/img018.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img018.jpg',sizingMethod='scale');}
+.popImg0309{background: url("../../../kans_edu/assets/images/pop_kr/img019.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img019.jpg',sizingMethod='scale');}
+.popImg0310{background: url("../../../kans_edu/assets/images/pop_kr/img021.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img021.jpg',sizingMethod='scale');}
+.popImg0311{background: url("../../../kans_edu/assets/images/pop_kr/img020.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img020.jpg',sizingMethod='scale');}
+.popImg0312{background: url("../../../kans_edu/assets/images/pop_kr/img022.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img022.jpg',sizingMethod='scale');}
+.popImg0313{background: url("../../../kans_edu/assets/images/pop_kr/img023.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img023.jpg',sizingMethod='scale');}
+
+.popImg0501{width: 1142px;height: 858px;background: url("../../../kans_edu/assets/images/pop_kr/img025.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img025.jpg',sizingMethod='scale');}
+.popImg0502{width: 1142px;height: 858px;background: url("../../../kans_edu/assets/images/pop_kr/img026.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img026.jpg',sizingMethod='scale');}
+.popImg0503{width: 1144px;height: 860px;background: url("../../../kans_edu/assets/images/pop_kr/img027.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img027.jpg',sizingMethod='scale');}
+.popImg0504{width: 838px;height: 1108px;background: url("../../../kans_edu/assets/images/pop_kr/img028.jpg")no-repeat;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../kans_edu/assets/images/pop_kr/img028.jpg',sizingMethod='scale');}
+
+/*en image*/
+body.en .tabList .area-scroll > ol > li .clearFix {width: auto; height: auto;}
+body.en .popup {display: block; text-indent: 0; background: none; margin: 10px auto;}
+body.en .popup img {width: 100%;}
+body.en .buttons {overflow: hidden;}
+body.en .buttons > button {display: block; width: 46%; margin: 2%; float: left; text-align: center;}
+body.en .buttons.three > button {width: 30%; margin: 1%;}
+body.en .popContent li > div {height: auto;  text-align: center;}
+body.en .popContent li > div img {height: auto; max-width: 100%; max-height: 526px;}
+
+/*ie8..*/
+.no-canvas {}
+.no-canvas .tabList h3, .no-canvas .tabList .current h3, .no-canvas .lang-change, .no-canvas .lang-change button, .no-canvas .pagination {background: none;}

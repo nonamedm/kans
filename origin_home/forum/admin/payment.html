@@ -1,0 +1,364 @@
+<html>
+<head>
+<title>한국원자력안전아카데미 - 교육비 결제</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Cache-Control" content="no-cache"/> 
+<meta http-equiv="Expires" content="0"/> 
+<meta http-equiv="Pragma" content="no-cache"/>
+<style>
+	* {padding:0; margin:0; box-sizing:border-box; font-size:14px; font-family:"맑은 고딕"; color:#333;}
+	.wrap {width:400px; margin:0 auto;}
+	h1 {font-size:16px; font-weight:bold; text-align:center; margin-top:20px;}
+	table {width:100%; table-layout:fixed; border-collapse:collapse;margin-top:10px;}
+	th {background:#ccc; font-weight:bold;}
+	td, th {padding:10px; border:1px solid #ccc; text-align:left; font-size:14px; border:1px solid #333;}
+	input[type=text] {max-width:100%;}
+	input[type=button] {display:block; margin:0 auto; width:80px; margin-top:10px;}
+</style>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script language="javascript"> 
+	var pf;
+	 
+	function init() {
+		pf = document.frmConfirm
+		pf.ORDERNO.value= getTimeStamp();
+		
+		$('*[name=PRODUCTNAME]').on('change', function(){
+			var price = $('*[name=PRODUCTNAME] option:selected').data('price');
+			
+			if (price == '') {
+				$('*[name=AMOUNT]').hide();
+				$('#tr_persons').hide();
+				$('#direct').show();
+			} else {
+				$('#tr_persons').show();
+				$('#persons').val(1);
+				$('*[name=AMOUNT]').show();
+				$('*[name=AMOUNT]').val(price);
+				$('#direct').hide();
+			}
+		});
+	}
+	 
+	function fnSubmit() {
+		var isValid = fnCheck();
+
+		if (isValid) {
+			var fileName;
+			//fileName = "https://ssltest.kiwoompay.co.kr/creditCard/DaouCreditCardMng.jsp";		
+			fileName = "https://ssl.kiwoompay.co.kr/creditCard/DaouCreditCardMng.jsp";		
+			/*모바일
+			fileName = "https://ssltest2.kiwoompay.co.kr/m/creditCard/DaouCreditCardMng.jsp";	
+			*/
+			
+			pf = document.frmConfirm
+			
+			//KIWOOMPAY = window.open("", "KIWOOMPAY", "width=469,height=507");
+			//KIWOOMPAY.focus();
+		 
+			//pf.target = "KIWOOMPAY";
+			pf.action = fileName;
+			pf.method = "post";
+			pf.submit();
+		}
+	}
+	
+	function fnCheck() {	
+		var frm = document.frmConfirm;
+		var isValid = true;
+		
+		// 결제금액
+		if (trim(frm.AMOUNT.value) == "") {
+			alert("결제금액을 입력하세요.");
+			frm.AMOUNT.focus();
+			isValid = false;
+			return isValid;
+		}
+		
+		// 교육명
+		if (trim(frm.PRODUCTNAME.value) == "") {
+			alert("교육명을 선택하세요.");
+			frm.PRODUCTNAME.focus();
+			isValid = false;
+			return isValid;
+		}
+		
+		// 고객명
+		if (trim(frm.USERNAME.value) == "") {
+			alert("고객명을 입력하세요.");
+			frm.USERNAME.focus();
+			isValid = false;
+			return isValid;
+		}
+		
+		// 전화번호
+		if (trim(frm.TELNO1.value) == "") {
+			alert("전화번호를 입력하세요.");
+			frm.TELNO1.focus();
+			isValid = false;
+			return isValid;
+		}
+		
+		// 이메일
+		if (trim(frm.EMAIL.value) == "") {
+			alert("이메일을 입력하세요.");
+			frm.EMAIL.focus();
+			isValid = false;
+			return isValid;
+		}
+		
+		return isValid;
+	}
+
+	function trim(txt) {
+		while (txt.indexOf(' ') >= 0) {
+			txt = txt.replace(' ','');
+		}
+		return txt;
+	}
+	 
+	function getTimeStamp() {
+		var d = new Date();
+		var month = d.getMonth() + 1;
+		var date = d.getDate();
+		var hour = d.getHours();
+		var minute = d.getMinutes();
+		var second = d.getSeconds();
+	 
+		month = (month < 10 ? "0" : "") + month;
+		date = (date < 10 ? "0" : "") + date;
+		hour = (hour < 10 ? "0" : "") + hour;
+		minute = (minute < 10 ? "0" : "") + minute;
+		second = (second < 10 ? "0" : "") + second;
+	 
+		var s = d.getFullYear() + month + date + hour + minute + second;
+	 
+		return s;
+	}
+	 
+	function getByteLen(p_val) {
+		var onechar;
+		var tcount = 0;
+		
+		for(i = 0; i < p_val.length; i++) {
+			onechar = p_val.charAt(i);
+			if(escape(onechar).length > 4)
+				tcount += 2;
+			else if(onechar != '\r')
+				tcount++;
+		}
+		return tcount;
+	}
+	 
+	function fnNumCheck() {
+		if(event.keyCode >= 48 && event.keyCode <= 57)
+			event.returnValue = true;
+		else
+			event.returnValue = false;
+	}
+	
+	$(function(){
+		$('#direct').on('focusout', function() {
+			var amount = $(this).val();
+			$('*[name=AMOUNT]').val(amount);
+		});
+		
+		$('#persons').on('focusout', function() {
+			var persons = $(this).val();
+			var price = $('*[name=PRODUCTNAME] option:selected').data('price');
+			$('*[name=AMOUNT]').val(Number(persons) * Number(price));
+		});
+	});
+</script>
+</head>
+<body onLoad="init();">
+<div class="wrap">
+	<h1>한국원자력안전아카데미 - 교육비 결제</h1>
+	<form name="frmConfirm"> 
+		<table>
+			<colgroup>
+				<col width="150">
+				<col width="*">
+			</colgroup>
+			<tbody>
+				<!-- CPID : 상점ID [필수항목] -->
+				<tr style="display:none">
+					<th>상점ID</th>
+					<td><input type="text" name="CPID" size="50" maxlength="50" value="CKW16037" style="IME-MODE:disabled"><br></td>
+				</tr>
+				<!-- ORDERNO : 주문번호 [필수항목] -->
+				<tr style="display:none">
+					<th>주문번호</th>
+					<td><input type="text" name="ORDERNO" size="50" maxlength="50" value="" style="IME-MODE:disabled"></td>
+				</tr>
+				<!-- PRODUCTTYPE : 상품구분 [필수항목] -->
+				<tr style="display:none">
+					<th>상품구분</th>
+					<td><input type="text" name="PRODUCTTYPE" size="10" maxlength="2" value="1" style="IME-MODE:disabled"></td>
+				</tr>
+				<!-- BILLTYPE : 과금유형(1:일반) -->
+				<tr style="display:none">
+					<th>과금유형</th>
+					<td><input type="text" name="BILLTYPE" size="10" maxlength="2" value="1" style="IME-MODE:disabled"></td>
+				</tr>
+				<!-- PRODUCTNAME : 상품명[선택항목] -->
+				<tr>
+					<th>교육명</th>
+					<td>
+						<select name="PRODUCTNAME">
+							<option value="">-- 선택하세요 --</option>
+							<option value="일반 신규 교육" data-price="30000">일반 신규 교육</option>
+							<option value="일반 정기 교육" data-price="25000">일반 정기 교육</option>
+							<option value="비파괴 신규 교육" data-price="47000">비파괴 신규 교육</option>
+							<option value="비파괴 정기 교육" data-price="40000">비파괴 정기 교육</option>
+							<option value="보수 교육" data-price="70000">보수 교육</option>
+							<option value="직접입력" data-price="">결제금액 직접 입력</option>
+						</select>
+					</td>
+				</tr>
+				<tr id="tr_persons" style="display:none;">
+					<th>인원수</th>
+					<td><input type="text" id="persons" size="3" maxlength="3" value="1" style="width:30px; text-align:right; IME-MODE:disabled" onkeypress="fnNumCheck();">명</td>
+				</tr>
+				<!-- AMOUNT : 결제금액[필수항목] -->
+				<tr>
+					<th>결제금액</th>
+					<td>
+						<input type="text" id="direct" size="10" maxlength="10" onkeypress="fnNumCheck();" style="display:none; width:60px; text-align:right;">
+						<input type="text" name="AMOUNT" size="10" maxlength="10" value="" style="width:60px; text-align:right; IME-MODE:disabled" onkeypress="fnNumCheck();" readonly>원
+					</td>
+				</tr>
+				<!-- USERID : 고객ID [선택항목] -->
+				<tr style="display:none">
+					<th>고객아이디</th>
+					<td><input type="text" name="USERID" size="30" maxlength="30" value=""></td>
+				</tr>
+				<!-- USERNAME : 고객명 [선택항목] -->
+				<tr>
+					<th>고객명</th>
+					<td><input type="text" name="USERNAME" size="50" maxlength="50" value=""></td>
+				</tr>
+				<!-- TELNO1 : 고객전화번호[선택항목] -->
+				<tr>
+					<th>고객전화번호</th>
+					<td><input type="text" name="TELNO1" size="50" value=""></td>
+				</tr>
+				<!-- EMAIL : 고객 E-MAIL(결제결과 통보 Default) [선택항목] -->
+				<tr>
+					<th>고객 E-MAIL</th>
+					<td><input type="text" name="EMAIL" size="100" maxlength="100" value=""></td>
+				</tr>
+				<!-- PRODUCTCODE : 상품코드 [선택항목] -->
+				<!--
+				<tr>
+					<th>상품코드</th>
+					<td><input type="text" name="PRODUCTCODE" size="10" value=""></td>
+				</tr>
+				-->
+				<!-- TELNO2 : 고객휴대폰번호[선택항목] -->
+				<!--
+				<tr>
+					<th>고객휴대폰번호</th>
+					<td><input type="text" name="TELNO2" size="50" value=""></td>
+				</tr>
+				-->
+				<!-- RESERVEDINDEX1 : 예약항목1(내부에서 INDEX로 관리)[선택항목] -->
+				<!--
+				<tr>
+					<th>예약항목1</th>
+					<td><input type="text" name="RESERVEDINDEX1" size="20" value="RESERVEDATA1"></td>
+				</tr>
+				-->
+				<!-- RESERVEDINDEX2 : 예약항목2(내부에서 INDEX로 관리)[선택항목] -->
+				<!--
+				<tr>
+					<th>예약항목2</th>
+					<td><input type="text" name="RESERVEDINDEX2" size="20" value="RESERVEDATA2"></td>
+				</tr>
+				-->
+				<!-- RESERVEDSTRING : 예약항목(내부에서 INDEX로 관리)[선택항목] -->
+				<!--
+				<tr>
+					<th>예약항목</th>
+					<td><input type="text" name="RESERVEDSTRING" size="100" value="RESERVESTRING"></td>
+				</tr>
+				-->
+				<!-- RETURNURL : 결제완료 url[선택항목] -->
+				<!--
+				<tr>
+					<th>RETURNURL</th>
+					<td><input type=text name=RETURNURL value=""></td>
+				</tr>
+				-->
+				<!-- HOMEURL : 결제완료 url[선택항목] -->
+				<!--
+				<tr>
+					<th>HOMEURL</th>
+					<td><input type=text name=HOMEURL value=""></td>
+				</tr>
+				-->
+				<!-- DIRECTRESULTFLAG : 결제완료 url[필수항목] -->
+				<tr style="display:none">
+					<th>DIRECTRESULTFLAG</th>
+					<td><input type="text" name="DIRECTRESULTFLAG" value="N"></td>
+				</tr>
+				<!--------------------------------------------------------------------------------------------
+				 *  : 비과세결제유무[선택항목]
+				 * 결제하려는 금액의 과세유무
+				---------------------------------------------------------------------------------------------->
+				<tr style="display:none">
+					<th>비과세결제유무(과세 테스트 00, 비과세 테스트 : 01)</th>
+					<td><input type="text" name="TAXFREECD" value="01"></td>
+				</tr>
+				<tr style="display:none">
+					<th>quotaopt</th>
+					<td><input type="text" name="quotaopt" value="12"></td>
+				</tr>
+				<tr style="display:none">
+					<th>fix_inst</th>
+					<td><input type="text" name="fix_inst" value=""></td>
+				</tr>
+				<tr style="display:none">
+					<th>not_used_card</th>
+					<td><input type="text" name="not_used_card" value=""></td>
+				</tr>
+				<tr style="display:none">
+					<th>used_card_YN</th>
+					<td><input type="text" name="used_card_YN" value=""></td>
+				</tr>
+				<tr style="display:none">
+					<th>used_card</th>
+					<td><input type="text" name="used_card" value=""></td>
+				</tr>
+				<tr style="display:none">
+					<th>eng_flag</th>
+					<td><input type="text" name="eng_flag" value=""></td>
+				</tr>
+				<tr style="display:none">
+					<th>kcp_site_logo</th>
+					<td>
+						<input type="text" name="kcp_site_logo" value=""><br>
+						(카드결제창 좌측상단 노출될 이미지(미입력시 다우페이 이미지  출력))
+					</td>
+				</tr>
+				<tr style="display:none">
+					<th>kcp_site_img</th>
+					<td>
+						<input type="text" name="kcp_site_img" value=""><br>
+						(카드결제창 좌측하당 노출될 이미지(미입력시 다우페이 이미지 출력))
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<input name="btnSubmit" type="button" value="결제하기" onclick="fnSubmit()" width="63" height="30"><br>
+	</form>
+	<div style="border-top:1px solid #999; padding-top:20px; text-align:center; color:#555;">
+		서울특별시 강남구 테헤란로7길 22(역삼1동 635-4)<br>
+		한국과학기술회관 신관 307호<br>
+		TEL:02)554-7330 / FAX:02)508-7941<br>
+		(사)한국원자력안전아카데미 / 이사장 이승구<br>
+		사업자등록번호 220-82-05167
+	</div>
+</div>
+</body>
+</html>

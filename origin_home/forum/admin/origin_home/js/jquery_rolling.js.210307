@@ -1,0 +1,27 @@
+     
+    jQuery(function() {
+    
+    var data = [
+      "<a href='http://www.kans.re.kr/edu/edu_sub_05.html'><img src='image_s/b_com_32.jpg' width='342' height='100'></a>",
+	  "<a href='http://www.kans.re.kr/edu/edu03.html'><img src='image_s/b_com_33.jpg' width='342' height='100'></a>",
+	  "<a href='http://www.kans.re.kr/edu/edu_sub_04.html' target='_blank'><img src='image_s/b_com_34.jpg' width='342' height='100'></a>",  
+	  "<a href='http://www.kans.re.kr/data/data03_view.html?uid=9312&page=1&search=&keyword='><img src='image_s/b_com_28.jpg' width='342' height='100'></a>",
+	  
+	
+	//슬라이드이미지는 여기에 추가    
+    
+	];
+    
+   // 좌우 자동 슬라이드 소스
+    jQuery("#srolling").srolling({
+      data : data,
+      auto : true,
+      width : 342,
+      height : 100, 
+	  delay : 3000,
+      delay_frame : 1000,
+      move : 'left',
+    
+    });
+
+  });

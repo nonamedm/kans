@@ -1,0 +1,379 @@
+<?
+include "../conf/dbconn.inc";
+
+if($rx == '' || $gx == ''){
+?>
+<script language="javascript">
+	alert("비정상적인 접근입니다.");
+	history.back();
+</script>	
+<?
+}else{
+
+$today = getdate(); 
+
+if(!$sYear) { $sYear = $today['year']; }
+if(!$sMonth) { $sMonth = $today['mon']; }
+if(!$sDay) { $sDay = $today['mday']; }
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="../css/font.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+<script language=javascript src="../js/drop_menu_sc.js"></script>
+<script language=javascript src="../js/common_s.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/gnb.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#input1").keyup(function(event){
+			if(event.keyCode !=8){
+				var result = "keycode="+ event.keyCode + " value="+ String.fromCharCode(event.keyCode);
+				var preHtml = $("#result").html();
+				$("#result").html(preHtml+ "<br />" +result);
+			}
+			if($(this).val() ==""){
+				$("#result").empty();
+			}
+
+		});
+		$("#onlyNumber").keyup(function(event){
+			if (!(event.keyCode >=37 && event.keyCode<=40)) {
+				var inputVal = $(this).val();
+				$(this).val(inputVal.replace(/[^0-9]/gi,''));
+			}
+		});
+		$("#onlyAlphabet").keyup(function(event){
+			if (!(event.keyCode >=37 && event.keyCode<=40)) {
+				var inputVal = $(this).val();
+				$(this).val(inputVal.replace(/[^a-z]/gi,''));    
+			}
+		});
+		$("#notHangul").keyup(function(event){
+			if (!(event.keyCode >=37 && event.keyCode<=40)) {
+				var inputVal = $(this).val();
+				$(this).val(inputVal.replace(/[^a-z0-9]/gi,''));
+			}
+		});
+		$("#onlyHangul").keyup(function(event){
+			if (!(event.keyCode >=37 && event.keyCode<=40)) {
+				var inputVal = $(this).val();
+				$(this).val(inputVal.replace(/[a-z0-9]/gi,''));
+			}
+		});
+	});
+</script>
+
+<script language="javascript">
+function click() {
+	if (event.button==2) {
+	alert('마우스 오른클릭을 사용하실 수 없습니다.');
+	return false;
+	} 
+} 
+
+document.onmousedown=click 
+
+
+function viewPrint(lno){
+	var theURL='./edu07_cert_view.html?lno='+lno;
+	var features='left=280,top=250,width=700,height=550,toolbars=no,menubar=no,scrollbars=yes,status=no,resizable=no';
+	window.open(theURL,"",features);
+}
+
+
+function loginCheck(){
+	alert('잠시 서비스를 중단합니다.');
+	return false;
+}
+
+function Only_Korean(input_key) { 
+  for (i = 0; i < x.name.value.length; i++) 
+  { 
+    var CodeNum = x.name.value.charCodeAt(i); 
+    if (CodeNum < 128) { 
+    x.name.value=""; 
+    x.name.focus(); 
+    return; 
+    } 
+  } 
+}
+
+function form_Check(){ 
+	if(f1.agree1[1].checked == true && f1.agree1[1].value == "0"){ 
+		alert("개인정보를 수집·이용에 동의하지 않으셨습니다"); 
+		f1.agree1.focus(); 
+		return; 
+	} 
+
+	if(f1.agree2[1].checked == true && f1.agree2[1].value == "0"){ 
+		alert("개인정보 제3자 제공 동의에 동의하지 않으셨습니다"); 
+		f1.agree2.focus(); 
+		return; 
+	} 
+
+	if(f1.name.value == ''){ 
+		alert("작성자에 이름(동의서명)을 입력해주십시오."); 
+		f1.name.focus(); 
+		return; 
+	}
+	f1.submit();
+}
+
+</script>
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+.style2 {
+	color: #4B4B4B;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<div class="header">
+	<? include "../inc/header.php"; ?>
+</div>
+
+<div class="sub_visual">
+	<img src="../image/sub_visual.jpg">
+</div>
+
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td colspan="5">
+			<!-- 왼쪽메뉴 시작  -->
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif"> 
+						<!-- 왼쪽메뉴 시작  -->	
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="edu01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image01','','images/sub_edu01_on.gif',1)"><img src="images/sub_edu01_off.gif" name="Image01" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image02','','images/sub_edu02_on.gif',1)"><img src="images/sub_edu02_off.gif" name="Image02" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image03','','images/sub_edu03_on.gif',1)"><img src="images/sub_edu03_off.gif" name="Image03" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image04','','images/sub_edu04_on.gif',1)"><img src="images/sub_edu04_off.gif" name="Image04" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+						</table>
+						<!-- 왼쪽메뉴 끝  -->
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<!-- 내용 시작 -->
+									<form name="f1" method="post" action="edu_rev_reg.html" enctype='multipart/form-data'>
+									<input type=hidden name='rx' value='<?=$rx?>'>
+									<input type=hidden name='nm' value='<?=$name?>'>
+									<input type=hidden name='gx' value='<?=$gx?>'>
+									<table width="650" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td>
+												<table width="650" border="0" align="center" cellpadding="0" cellspacing="0">
+													<tr>
+														<td align="center"><b><font color="#0000ff"></td>
+													</tr>
+													<tr>
+														<td align="center"><b><h2 style="text-align: center;"><strong>교육신청서</strong></h2></td>
+													</tr>
+													<tr>
+														<td align="center">
+															<table width: 600px; style="border: 1px solid #000000">
+															<tbody>
+															<tr>
+															<td>
+															</td>
+															</tr>
+															<tr>
+															<td>
+															<p><strong>개인정보의 수집</strong><strong>&middot;</strong><strong>이용에 관한 동의서</strong></p>
+															<p>(사)한국원자력안전아카데미에서는 교육업무 관리 등을 위하여 개인정보보호법령에 따라 아래와 같이 개인정보 수집&middot;이용에 대한 귀하의 동의를 받고자 합니다.</p>
+															<p>&nbsp;</p>
+															<p><strong>&lt;</strong><strong>개인정보 수집</strong><strong>&middot;</strong><strong>이용에 대한 동의</strong><strong>&gt; </strong></p>
+															<p>1. 개인정보의 수집?이용 목적 : 원자력안전법령에 의한 면허소지자 보수교육 관련 업무 처리 및 기록관리</p>
+															<p>2. 수집하려는 개인정보의 항목 : 면허종류, 면허번호, 기관명, 성명, 생년월일, 성별, 연락처, 메일주소</p>
+															<p>3. <strong>개인정보의 보유 기간 </strong><strong>: </strong><strong>본 교육 폐지시 까지</strong></p>
+															<p>4. 귀하는 개인정보 수집&middot;이용에 동의하지 않으실 수 있습니다. 동의 거부시 해당 교육정보 안내 및 수료기록 확인이 제한될 수 있습니다.</p>
+															<p>■ 위와 같이 개인정보를 수집&middot;이용하는데 동의하십니까?</p>
+															<table style="width: 600px;">
+															<tbody>
+															<tr> 
+															<td style="width: 150px; text-align: center;">
+																<p style="text-align: right;">동의함</p>
+															</td>
+															<td style="width: 150px; text-align: center;">
+															<p><input type="radio" name="agree1" id="agree1" style="border:0" value="1" /></p>
+															</td>
+															<td style="width: 150px; text-align: center;">
+																<p style="text-align: right;">동의하지 않음</p>
+															</td>
+															<td style="width: 150px; text-align: center;">
+															<p><input type="radio" name="agree1" id="agree1" style="border:0" value="0" checked></p>
+															</td>
+															</tr>
+															</tbody>
+															</table>
+															<p><strong>&lt;</strong><strong>개인정보 제</strong><strong>3</strong><strong>자 제공 동의</strong><strong>&gt;</strong></p>
+															<p>1. <strong>개인정보를 제공받을 수 있는 자 </strong><strong>: </strong><strong>본인 소속기관</strong><strong>, </strong><strong>원자력안전위원회</strong><strong>, </strong><strong>원자력안전기술원</strong><strong>, </strong><strong>원자력안전재단</strong></p>
+															<p>2. <strong>제공 받는 자의 이용 목적 </strong><strong>: </strong><strong>원자력안전법에 따른 조치 여부 확인</strong></p>
+															<p>3. 제공하는 개인정보 항목 : 면허종류, 면허번호, 기관명, 성명, 생년월일, 성별, 연락처</p>
+															<p>4. 제공 받는 자의 보유&middot;이용 기간 : 본 교육 폐지시 까지</p>
+															<p>5. 개인정보를 제3자에게 제공 하는 것에 대한 동의를 거부할 권리가 있습니다. 단, 제3자에게 개인정보 제공에 동의하지 않는 경우 원자력안전규제업무 관련 교육결과기록 검색 및 확인 등의 서비스가 제한됩니다.</p>
+															<p>■ 위와 같이 개인정보를 제3자에게 제공하는데 동의하십니까?</p>
+															<table style="width: 600px;">
+															<tbody>
+															<tr>
+															<td style="width: 150px; text-align: center;">
+																<p style="text-align: right;">동의함</p>
+															</td>
+															<td style="width: 150px; text-align: center;">
+															<p><input type="radio" name="agree2" id="agree2" style="border:0" value="1" /></p>
+															</td>
+															<td style="width: 150px; text-align: center;">
+																<p style="text-align: right;">동의하지 않음</p>
+															</td>
+															<td style="width: 150px; text-align: center;">
+															<p><input type="radio" name="agree2" id="agree2" style="border:0" value="0" checked /></p>
+															</td>
+															</tr>
+															</tbody>
+															</table>
+															<p>&nbsp;</p>
+															<p>■ 위와 같이 개인정보를 수집&middot;이용하는데 동의합니다.</p>
+															<table style="height: 22px; width: 582px;">
+															<tbody>
+															<tr>
+															<td style="width: 123px; text-align: right;"><?=$sYear?>년</td>
+															<td style="width: 52px; text-align: right;"><?=$sMonth?>월&nbsp;</td>
+															<td style="width: 46px; text-align: right;"><?=$sDay?>일&nbsp;</td>
+															<td style="width: 84px; text-align: right;">작성자</td>
+															<td style="width: 81px; text-align: right;"><input text name="name" maxlength="5" id="onlyHangul"></td>
+															<td style="width: 81px; text-align: center;">(이름/서명)</td>
+															</tr>
+															</tbody>
+															</table>
+															</td>
+															</tr>
+															</tbody>
+															</table>
+															<p>&nbsp;</p>
+														</td> 
+													</tr>
+													<tr>
+														<td align="center"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td align="center"><input type="button" value="교육신청서 작성하기" onClick="form_Check();"></td>
+										</tr>
+										<tr>
+											<td height="30"></td>
+										</tr>
+									</table>
+								</form>
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
+<?
+}
+?>
+<?
+include "../conf/dbconn_close.inc";
+?>

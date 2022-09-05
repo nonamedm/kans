@@ -1,0 +1,424 @@
+<?
+include "../conf/dbconn.inc";
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=16 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,3 ";
+	$pho_res=mysql_query($sql);
+	$pho_total = mysql_affected_rows();
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=14 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$notice_res=mysql_query($sql);
+	$notice_total =mysql_affected_rows();
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=15 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$edu_res=mysql_query($sql);
+	$edu_total = mysql_affected_rows();
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=18 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$rec_res=mysql_query($sql);
+	$rec_total = mysql_affected_rows();	
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=4 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$pds_res=mysql_query($sql);
+	$pds_total = mysql_affected_rows();
+
+	
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<link href="../css/font.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+
+<script language=javascript src="../js/drop_menu_sc.js" ></script>
+<script language=javascript src="../js/common_s.js" ></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/gnb.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<div class="header">
+	<? include "../inc/header.php"; ?>
+</div>
+
+<div class="sub_visual">
+	<img src="../image/sub_visual.jpg">
+</div>
+
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  톱메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+							<!--<tr>-->
+								<!--<td rowspan="2" width="235" height="60"><a href="../index.html"><img src="../image_s/logo.gif" width="235" height="60" /></a></td>-->
+								<!--<td colspan="5" width="789" height="30"></td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td width="540" height="30"></td>-->
+								<!--<td width="60" height="30" align="left"><a href="../index.html">· HOME</a></td>-->
+								<!--<td width="100" height="30" align="left"><a href="mailto:kans@kans.re.kr">· CONTACT US</a></td>-->
+								<!--<td width="70" height="30" align="left"><a href="../map/map01.html">· SITEMAP</a></td>-->
+								<!--<td width="19" height="30"></td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  톱메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  로컬메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" height="60" border="0" cellpadding="0" cellspacing="0">-->
+							<!--<tr>-->
+								<!--<td>-->
+									<!--<div id="flashContent">-->
+										<!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1024" height="60" id="indexmenuA" align="middle">-->
+											<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+											<!--<param name="quality" value="high" />-->
+											<!--<param name="bgcolor" value="#ffffff" />-->
+											<!--<param name="play" value="true" />-->
+											<!--<param name="loop" value="true" />-->
+											<!--<param name="wmode" value="transparent" />-->
+											<!--<param name="scale" value="showall" />-->
+											<!--<param name="menu" value="true" />-->
+											<!--<param name="devicefont" value="false" />-->
+											<!--<param name="salign" value="" />-->
+											<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--<object type="application/x-shockwave-flash" data="../swf/indexmenuA.swf" width="1024" height="60">-->
+												<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+												<!--<param name="quality" value="high" />-->
+												<!--<param name="bgcolor" value="#ffffff" />-->
+												<!--<param name="play" value="true" />-->
+												<!--<param name="loop" value="true" />-->
+												<!--<param name="wmode" value="transparent" />-->
+												<!--<param name="scale" value="showall" />-->
+												<!--<param name="menu" value="true" />-->
+												<!--<param name="devicefont" value="false" />-->
+												<!--<param name="salign" value="" />-->
+												<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+											<!--<a href="http://www.adobe.com/go/getflash">-->
+												<!--<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />-->
+											<!--</a>-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--</object>-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+										<!--</object>-->
+									<!--</div>-->
+								<!--</td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  로컬메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<!--&lt;!&ndash;  상단 끝  &ndash;&gt;-->
+	<!--&lt;!&ndash;  왼쪽메뉴 및 메뉴콘텐츠내용 시작  &ndash;&gt;-->
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellpadding="0" cellspacing="0">-->
+				<!--<tr>-->
+					<!--<td><img src="images/data_title.jpg" width="185"></td>-->
+					<!--<td><img src="images/data_main_img.jpg" width="839"></td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<? include "../inc/lnb_data.php"; ?>
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<!-- 메뉴콘텐츠내용 시작  -->
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/data_subbar_07.jpg"></td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table width="600" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="110"></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="100" align="center"><a href="data07_sub01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image08','','images/sub01_on.gif',1)"><img src="images/sub01_off.gif" name="Image08" width="90" height="25" border="0"></a></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="100" align="center"><a href="data07_sub02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image09','','images/sub02_on.gif',1)"><img src="images/sub02_off.gif" name="Image09" width="90" height="25" border="0"></a></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="100" align="center"><a href="data07_sub03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/sub03_on.gif',1)"><img src="images/sub03_off.gif" name="Image10" width="90" height="25" border="0"></a></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="110"></td>
+										</tr>
+									</table>	
+								</td>
+							</tr>
+							<tr>
+								<td height="40"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<!-- 내용 시작 -->
+									<table width="650" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td><img src="images/data07sub01_title.gif"></td>
+										</tr>
+										<tr>
+											<td><img src="images/5_title.gif" /></td>
+										</tr>
+										<tr>
+											<td height="7"></td>
+										</tr>
+										<tr>
+											<td align="right"><img height="12" src="images/5_blet.gif" width="12"> 불활성기체 (Noble gas)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="600" border="8" align="center" cellpadding="2" cellspacing="0" bordercolor="efebef">
+													<tr>
+														<td>
+															<table width="600" align="center" cellpadding="2" cellspacing="1">
+																<tr>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>1A </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>2A </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>3A </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>4A </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>5A </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>6A </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>7A </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>8 </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>8 </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>8 </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>1B </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>2B </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>3B </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>4B </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>5B </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>6B </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>7B </strong></td>
+																	<td width="25" bgcolor="efe7de" class="td-bg-brown"><strong>8B </strong></td>
+																</tr>
+																<tr>
+																	<td width="25" bgcolor="#e8f7f4"><strong>H </strong>1 </td>
+																	<td class="td-bg-g-c" width="30" colspan="16"><br /></td>
+																	<td width="25" bgcolor="#ddeac8"><strong>He </strong>2 </td>
+																</tr>
+																<tr>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Li </strong>3 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Be </strong>4 </td>
+																	<td class="td-bg-g-c" width="30" colspan="10"><br /></td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>B </strong>5 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>C </strong>6 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>N </strong>7 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>O </strong>8 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>F </strong>9 </td>
+																	<td width="25" bgcolor="#ddeac8"><strong>Ne </strong>10 </td>
+																</tr>
+																<tr>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Na </strong>11 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Mg </strong>12 </td>
+																	<td class="td-bg-g-c" width="30" colspan="10"><br /></td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Al </strong>13 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Si </strong>14 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>P </strong>15 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>S </strong>16 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ci </strong>17 </td>
+																	<td width="25" bgcolor="#ddeac8"><strong>Ar </strong>18 </td>
+																</tr>
+																<tr>
+																	<td width="25" bgcolor="#e8f7f4"><strong>K </strong>19 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ca </strong>20 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Sc </strong>21 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ti </strong>22 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>V </strong>23 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Cr </strong>24 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Mn </strong>25 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Fe </strong>26 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Co </strong>27 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ni </strong>28 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Cu </strong>29 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Zn </strong>30 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ga </strong>31 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ge </strong>32 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>As </strong>33 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Se </strong>34 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Br </strong>35 </td>
+																	<td width="25" bgcolor="#ddeac8"><strong>Kr </strong>36 </td>
+																</tr>
+																<tr>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Rb </strong>37 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Sr </strong>38 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Y </strong>39 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Zr </strong>40 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Nb </strong>41 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Mo </strong>42 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Tc </strong>43 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ru </strong>44 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Rh </strong>45 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Pd </strong>46 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ag </strong>47 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Cd </strong>48 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>In </strong>49 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Sn </strong>50 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Sb </strong>51 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Te </strong>52 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>I </strong>53 </td>
+																	<td width="25" bgcolor="#ddeac8"><strong>Xe </strong>54 </td>
+																</tr>
+																<tr>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Cs </strong>55 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ba </strong>56 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>La </strong>57 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Hf </strong>72 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ta </strong>73 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>W </strong>74 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Re </strong>75 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Os </strong>76 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ir </strong>77 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Pt </strong>78 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Au </strong>79 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Hg </strong>80 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ti </strong>81 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Pb </strong>82 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Bi </strong>83 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Po </strong>84 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>At </strong>85 </td>
+																	<td width="25" bgcolor="#ddeac8"><strong>Rn </strong>86 </td>
+																</tr>
+																<tr>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Fr </strong>87 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ra </strong>88 </td>
+																	<td width="25" bgcolor="#e8f7f4"><strong>Ac </strong>89 </td>
+																	<td class="td-bg-g-c" colspan="15"><br /></td>
+																</tr>
+																<tr>
+																	<td class="td-bg-brown" align="right" bgcolor="efe7de" colspan="2"><div align="center"><strong>란탄<br>
+																	계열</strong> </div></td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Ce </strong>58 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Pr </strong>59 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Nd </strong>60 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Pm </strong>61 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Sm </strong>62 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Eu </strong>63 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Gd </strong>64 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Tb </strong>65 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Dy </strong>66 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Ho </strong>67 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Er </strong>68 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Tm </strong>69 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Yb </strong>70 </td>
+																	<td width="25" bgcolor="#e1f3f7"><strong>Lu </strong>71 </td>
+																	<td class="td-bg-g-c" colspan="2"><br /></td>
+																</tr>
+																<tr>
+																	<td colspan="2" align="right" bgcolor="efe7de" class="td-bg-brown"><div align="center"><strong>악티늄<br>
+																	계열</strong></div></td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Th </strong>90 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Pa </strong>91 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>U </strong>92 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Np </strong>93 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Pu </strong>94 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Am </strong>95 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Cm </strong>96 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Bk </strong>97 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Cf </strong>98 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Es </strong>99 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Fm </strong>100 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Md </strong>101 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>No </strong>102 </td>
+																	<td width="25" bgcolor="#cce2ee"><strong>Lr </strong>103 </td>
+																	<td class="td-bg-g-c" colspan="2"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="50"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						<!-- 메뉴콘텐츠내용 끝  -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

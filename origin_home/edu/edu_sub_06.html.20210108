@@ -1,0 +1,417 @@
+<?
+include "../conf/dbconn.inc";
+
+$today = getdate(); 
+
+if(!$sYear) { $sYear = $today['year']; }
+if(!$sMonth) { $sMonth = $today['mon']; }
+if(!$sDay) { $sDay = $today['mday']; }
+
+$display_year = $sYear;
+$display_month = $sMonth;
+$display_day = 1;
+
+if($display_month == 0) {
+	$display_year = $display_year - 1;
+	$display_month = 12;
+}
+if($display_month == 13) {
+	$display_year = $display_year + 1;
+	$display_month = 1;
+}
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="../css/font.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+<script language=javascript src="../js/drop_menu_sc.js"></script>
+<script language=javascript src="../js/common_s.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/gnb.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script>
+	function goLogin(){
+		document.location.href="./edu_on_login.html";
+	}
+
+	function loginCheck(){
+		var f = document.edu_on_edu;
+
+		if(f.sec_code.value==''){
+			alert('비밀번호를 입력해 주세요~');
+			f.sec_code.focus();
+			return false;
+		}
+			
+		return true;
+	}
+
+	function logOut(){
+		document.location.href="./logout.php";
+	}
+
+	function main(){
+		document.location.href="./edu_on_list.html";
+	}
+
+	
+</script>
+
+
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<div class="header">
+	<? include "../inc/header.php"; ?>
+</div>
+
+<div class="sub_visual">
+	<img src="../image/sub_visual.jpg">
+</div>
+
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td colspan="5">
+			<!-- 왼쪽메뉴 시작  -->
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<!-- 왼쪽메뉴 시작  -->	
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="edu01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image01','','images/sub_edu01_on.gif',1)"><img src="images/sub_edu01_off.gif" name="Image01" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image02','','images/sub_edu02_on.gif',1)"><img src="images/sub_edu02_off.gif" name="Image02" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image03','','images/sub_edu03_on.gif',1)"><img src="images/sub_edu03_off.gif" name="Image03" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image04','','images/sub_edu04_on.gif',1)"><img src="images/sub_edu04_off.gif" name="Image04" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/account.png"></td>
+							</tr>
+						</table>
+						<!-- 왼쪽메뉴 끝  -->
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/edu_subbar_07.jpg"></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table width="605" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td align="center"><a href="edu03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image08','','images/sub07_on.gif',1)"><img src="images/sub07_off.gif" name="Image08" width="112" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td align="center"><a href="edu_sub_05.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image06','','images/sub04_on.gif',1)"><img src="images/sub04_off.gif" name="Image06" width="112" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td align="center"><a href="edu_sub_04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image05','','images/sub05_on.gif',1)"><img src="images/sub05_off.gif" name="Image05" width="112" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td align="center"><a href="edu_sub_06.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image07','','images/sub06_on.gif',1)"><img src="images/sub06_off.gif" name="Image07" width="135" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+										</tr>
+									</table>	
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<!-- 내용 시작 -->
+									<table width="650" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td></td>
+										</tr>
+										<tr>
+											<td><img src="images/edu_on_title.png">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table width="650" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+													<tr align="center" bgcolor="#e1e1e1">
+														<td width="120" height="24">구 분</td>
+														<td width="530">내 용</td>
+													</tr>
+													<!--
+													<tr>
+														<td height="24" align="center" bgcolor="#F7F7F7"><strong>수강 절차 요약</strong></td>
+														<td bgcolor="#ffffff"><br>
+														&nbsp;&nbsp;신청서 제출(자필 작성) 및 수강료 납부 → 교육장 입장(※ 접속용 비밀번호 교육당일 문자전송)<br>
+														&nbsp;&nbsp;&nbsp;→ 수강 및 과제물 작성(자필) → 스마트폰 촬영 또는 스캔 → 제출(메일, 팩스, 카톡)<br>
+														<br>
+														</td>
+													</tr>-->
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>1. 수강자 신청서<br>제출</strong></td>
+														<td bgcolor="#ffffff"><br>
+														&nbsp;&nbsp;- 흰종이(복사용지) 또는 온라인직장교육 신청서 양식 이용<br>
+														<br>
+														&nbsp;&nbsp;- 필수 작성 사항(아래의 9가지를 <font color='red'>자필</font>로 알아보기 쉽게 또박또박 기재) : <br>
+														&nbsp;&nbsp;&nbsp;① 제목(<font color='red'>온라인 직장교육 신청</font>)<br>
+														&nbsp;&nbsp;&nbsp;② 교육구분(<font color='red'>일반신규, 일반정기, 수시, 비파괴신규, 비파괴정기</font>)<br>
+														&nbsp;&nbsp;&nbsp;③ 교육희망일(<font color='red'>2021. 00. 00.</font>) (<a href="http://www.kans.re.kr/edu/edu01.html" target="_blank"><b>"교육일정 보기"</b></a>) ← 클릭<br>
+														&nbsp;&nbsp;&nbsp;④ 본인소속(<font color='red'>000 주식회사</font>) <br>
+														&nbsp;&nbsp;&nbsp;⑤ 성명(<font color='red'>홍길동</font>)<br>
+														&nbsp;&nbsp;&nbsp;⑥ 주민번호 앞 7자리(<font color='red'>790322-1</font>)<br>
+														&nbsp;&nbsp;&nbsp;⑦ 핸드폰번호(<font color='red'>010-1234-1234</font>)<br>
+														&nbsp;&nbsp;&nbsp;⑧ 정보동의문구(<font color='red'>상기 개인정보 제공에 동의합니다</font>)<br>
+														&nbsp;&nbsp;&nbsp;⑨ 작성일자(<font color='red'>2021. 00. 00.</font>)<br>
+														<br><!--
+														&nbsp;&nbsp;※ 신청서 양식 다운받아서 자필로 작성해도 됩니다 (<img src="http://www.kans.re.kr/edu/images/236705_1_1_s.jpg"><a href='http://www.kans.re.kr/신청서_온라인직장교육(반드시_자필로_작성).pdf' target="_blank"><b>신청서 다운로드</b></a>)<br>
+														<br>-->
+														</td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>2. 신청서 제출<br>방법<br>※ 3가지 중 택일</strong></td>
+														<td bgcolor="#ffffff"><br>
+														&nbsp;&nbsp;① 카카오톡 (작성한 신청서를 스마트폰 사진촬영 <br>
+														&nbsp;&nbsp;&nbsp;&nbsp;→ 카톡 ‘친구찾기’에서 ‘한국원자력안전아카데미’를 검색하여 ‘친구추가’ <br>
+														&nbsp;&nbsp;&nbsp;&nbsp;→ 대화창에서 첨부파일로 제출)<br>
+														&nbsp;&nbsp;② 팩스 (02-508-7941)<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;카톡에서 첨부파일로 제출<br>
+														&nbsp;&nbsp;③ 메일 (스마트폰 촬영 또는 스캔 파일을 전송 kans@kans.re.kr)<br>
+														<br>
+														</td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>3. 수강료 납부방법<br>※ 2가지 중 택일</strong></td>
+														<td bgcolor="#ffffff"><br>
+														&nbsp;&nbsp;1. 계좌이체 (씨티은행, 102-53627-246, (사)한국원자력안전아카데미)<br>
+														&nbsp;&nbsp;2. 카드결제 (<a href="http://www.kans.re.kr/payment.html" target="_blank"><b>“카드결제 바로가기”</b></a>) ← 클릭<br>	
+														&nbsp;&nbsp;&nbsp;※ 계산서 등 증빙자료 필요시 문의처 : 02-554-7330<br>
+														&nbsp;&nbsp;&nbsp;※ 소속기관 별납의 경우 등은 협의하여 조치<br>
+														<br>
+														&nbsp;&nbsp;&nbsp;※ 교육별 수강료 내역 <br>
+														&nbsp;&nbsp;&nbsp;&nbsp; - 일반분야 : 신규 3만원, 정기 2만5천원<br>
+														&nbsp;&nbsp;&nbsp;&nbsp; - 비파괴 업종 : 신규 4만7천원, 정기 4만원<br>
+														<br>
+														</td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>4. 수강을 위한 준비</strong></td>
+														<td bgcolor="#ffffff"><br>
+														&nbsp;&nbsp;- 컴퓨터 또는 스마트폰<br>
+														&nbsp;&nbsp;- 이어폰 (음성 청취에 도움이 됨)<br>
+														&nbsp;&nbsp;- 비밀번호 확인 (교육희망일 오전 9시에 수강생 본인의 핸드폰으로 문자 전송됨)<br>
+														<br>
+														</td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>5. 과제물 작성준비</strong></td>
+														<td bgcolor="#ffffff"><br>
+														&nbsp;&nbsp;과제물작성을 위한 준비 (필기구, 복사용지 몇장 또는 작성용지)<br>
+														<!--&nbsp;&nbsp;준비물: ‘필기구’ 및 ‘흰 종이 5~6장’ (과제물 양식 다운받아서 작성해도 됨 <img src="http://www.kans.re.kr/edu/images/236705_1_1_s.jpg"><a href='http://www.kans.re.kr/양식_온라인교육_과제물(교육전_프린트하여_자필_작성).pdf' target="_blank"><b>양식다운로드</b></a>) <br>-->
+														&nbsp;&nbsp;※ 용지 상단에 아래사항 ‘자필’ 작성<br><br>
+														&nbsp;&nbsp;&nbsp;① 제목(<font color='red'>온라인 직장교육 과제물</font>)<br>
+														&nbsp;&nbsp;&nbsp;② 교육구분(<font color='red'>일반신규, 일반정기, 수시, 비파괴신규, 비파괴정기</font>)<br>
+														&nbsp;&nbsp;&nbsp;③ 교육 수강일(<font color='red'>2021. 00. 00.</font>)<br>
+														&nbsp;&nbsp;&nbsp;④ 본인소속(<font color='red'>000 주식회사</font>) <br>
+														&nbsp;&nbsp;&nbsp;⑤ 성명(<font color='red'>홍길동</font>)<br>
+														&nbsp;&nbsp;&nbsp;⑥ 주민번호 앞 7자리(<font color='red'>790322-1</font>)<br>
+														&nbsp;&nbsp;&nbsp;⑦ 핸드폰번호(<font color='red'>010-1234-1234</font>)<br>
+														<br>	
+														</td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>6.교육접속</strong></td>
+														<td bgcolor="#ffffff"><br>
+														&nbsp;&nbsp;교육홈페이지(<font color='red'>현재화면</font>) 접속 및 비밀번호 입력(<font color='red'>맨하단</font>)<br>
+														<br>	
+														</td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>7.교육수강</strong></td>
+														<td bgcolor="#ffffff"><br>
+														&nbsp;&nbsp;- 1강부터 순서대로 수강 (수강가능시간은 09:00-24:00)<br>
+														&nbsp;&nbsp;- 영상마다 제시되는 과제물의 답안을 준비한 과제물용지에 순서대로 작성<br> 
+														&nbsp;&nbsp;&nbsp;※ 수강가능시간 중에 편한 방법으로 수강하고 과제물 작성하면 됨. <br> 
+														&nbsp;&nbsp;&nbsp;※ 시간이 더 필요하거나 기타 애로사항 발생시 담당자(010 3488 3308)에게 연락하면 됨.<br> 
+														<br>	
+														</td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>8. 작성한 과제물<br>제출 방법<br>※ 3가지 중 택일</strong></td>
+														<td bgcolor="#ffffff"><br>
+														&nbsp;&nbsp;① 카카오톡(작성한 과제물을 스마트폰 사진촬영 <br>
+														&nbsp;&nbsp;&nbsp;&nbsp;→ 카톡에서 ‘한국원자력안전아카데미’를 검색하여 대화창에서 첨부파일로 제출)<br>
+														&nbsp;&nbsp;② 팩스 (02-508-7941)<br>
+														&nbsp;&nbsp;③ 메일 (스마트폰 촬영 또는 스캔 파일을 전송 kans@kans.re.kr)<br>
+														<br>
+														</td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>9. 수강 처리 등</strong></td>
+														<td bgcolor="#ffffff"><br>
+														&nbsp;&nbsp;- 신청서 자필대조 등 작성내용 확인 후 수료처리<br>
+														&nbsp;&nbsp;&nbsp;(요건 충족시 1일 이내 조치, 연휴 경우 다음 첫 근무일에 처리)<br>
+														&nbsp;&nbsp;- 수료증 출력<br>
+														&nbsp;&nbsp;&nbsp;※ <b><font color='red'><a href="http://www.kans.re.kr/edu/edu04.html" target="_blank">수료증 출력 바로가기</a></font></b>← 클릭<br>
+														<br>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="20"></td>
+										</tr>
+										<tr>
+											<td height="20">온라인교육은 신청자에 한해 정해진 일시(<font color='red'><b>교육당일 09:00~24:00</b></font>)에만 수강이 가능합니다.</td>
+										</tr>
+										<tr>
+											<td align="center">
+												<!--로그인부분 시작-->
+												<table width="550" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF">
+													<tr align="center" bgcolor="#FFFFFF">
+														<td align="center">
+														<table width="520" border="0" cellpadding="0" cellspacing="0" >
+															<tr>
+																<td></td>
+															</tr>
+															<tr align="center">
+																<td align="center">
+																	<iframe name='hFrame' height='0' width='0'></iframe>
+																	<? if(!$sec) {?>
+																	<form name='edu_on_edu' method='post' action='edu_on_login_cmd.php' onsubmit='javascript:return loginCheck();' target='hFrame'>
+																		<table width="500" height="127" border="0" align="center" cellpadding="0" cellspacing="0">
+																		<tr>
+																			<td height="25" colspan="2">
+																				<div align="center"></div></td>
+																		</tr>
+																		<tr>
+																			<td colspan="2"><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> → 핸드폰 문자로 받으신 온라인 교육 비밀번호를 입력해 주세요.</b></div></td>
+																		</tr>
+																		<tr>
+																			<td width="400"><div align="right">비밀번호:
+																			<input type=password size='25' name='sec_code' maxlength='25' style='width:300px;height:40px;font-size:13px;border-width:1;border-color:#6d6d6d; border-style:solid;' tabindex="1" placeholder="이곳에 문자로 받으신 번호를 입력하세요!">
+																			</div></td>
+																			<td width="186">&nbsp;&nbsp;<input type='image' src="../image/login.gif" border='0' onFocus="this.blur();" tabindex="2"></td>
+																		</tr>
+																		<tr>
+																			<td colspan="2">&nbsp;</td>
+																		</tr>
+																		</table>
+																	</form>
+																	<? }else{?>
+																	<br><br>
+																	이미 로그인 하셨습니다. <a href="logout.php">로그아웃</a> 하시겠습니까?
+																	<br><br>
+																	<center><input name="logoutBtn" type='button' onclick="javascript:logOut();" value=" 로그아웃 " >&nbsp;&nbsp;
+																		<input name="mainBtn" type='button' onclick="javascript:main();" value=" 교육장 재입장 "></center>
+																	<?}?>
+																</td>
+															</tr>
+															<tr>
+																<td height="20"></td>
+															</tr>
+															<tr>
+																<td align="center">
+																</td>
+															</tr>
+														</table>
+														</td>
+													</tr>
+												</table>
+												<!--로그인부분 종료-->
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

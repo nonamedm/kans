@@ -1,0 +1,525 @@
+<?
+include "../conf/dbconn.inc";
+
+$today = getdate(); 
+
+if(!$sYear) { $sYear = $today['year']; }
+if(!$sMonth) { $sMonth = $today['mon']; }
+if(!$sDay) { $sDay = $today['mday']; }
+
+$display_year = $sYear;
+$display_month = $sMonth;
+$display_day = 1;
+
+if($display_month == 0) {
+	$display_year = $display_year - 1;
+	$display_month = 12;
+}
+if($display_month == 13) {
+	$display_year = $display_year + 1;
+	$display_month = 1;
+}
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="../css/font.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+<script language=javascript src="../js/drop_menu_sc.js"></script>
+<script language=javascript src="../js/common_s.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/gnb.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<div class="header">
+	<? include "../inc/header.php"; ?>
+</div>
+
+<div class="sub_visual">
+	<img src="../image/sub_visual.jpg">
+</div>
+
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  톱메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+							<!--<tr>-->
+								<!--<td rowspan="2" width="235" height="60"><a href="../index.html"><img src="../image_s/logo.gif" width="235" height="60" /></a></td>-->
+								<!--<td colspan="5" width="789" height="30"></td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td width="540" height="30"></td>-->
+								<!--<td width="60" height="30" align="left"><a href="../index.html">· HOME</a></td>-->
+								<!--<td width="100" height="30" align="left"><a href="mailto:kans@kans.re.kr">· CONTACT US</a></td>-->
+								<!--<td width="70" height="30" align="left"><a href="../map/map01.html">· SITEMAP</a></td>-->
+								<!--<td width="19" height="30"></td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  톱메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  로컬메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" height="60" border="0" cellpadding="0" cellspacing="0">-->
+							<!--<tr>-->
+								<!--<td>-->
+									<!--<div id="flashContent">-->
+										<!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1024" height="60" id="indexmenuA" align="middle">-->
+											<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+											<!--<param name="quality" value="high" />-->
+											<!--<param name="bgcolor" value="#ffffff" />-->
+											<!--<param name="play" value="true" />-->
+											<!--<param name="loop" value="true" />-->
+											<!--<param name="wmode" value="transparent" />-->
+											<!--<param name="scale" value="showall" />-->
+											<!--<param name="menu" value="true" />-->
+											<!--<param name="devicefont" value="false" />-->
+											<!--<param name="salign" value="" />-->
+											<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--<object type="application/x-shockwave-flash" data="../swf/indexmenuA.swf" width="1024" height="60">-->
+												<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+												<!--<param name="quality" value="high" />-->
+												<!--<param name="bgcolor" value="#ffffff" />-->
+												<!--<param name="play" value="true" />-->
+												<!--<param name="loop" value="true" />-->
+												<!--<param name="wmode" value="transparent" />-->
+												<!--<param name="scale" value="showall" />-->
+												<!--<param name="menu" value="true" />-->
+												<!--<param name="devicefont" value="false" />-->
+												<!--<param name="salign" value="" />-->
+												<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+											<!--<a href="http://www.adobe.com/go/getflash">-->
+												<!--<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />-->
+											<!--</a>-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--</object>-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+										<!--</object>-->
+									<!--</div>-->
+								<!--</td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  로컬메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<!--&lt;!&ndash;  상단 끝  &ndash;&gt;-->
+	<!--&lt;!&ndash;  왼쪽메뉴 및 콘텐츠내용 시작  &ndash;&gt;-->
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellpadding="0" cellspacing="0">-->
+				<!--<tr>-->
+					<!--<td><img src="images/edu_title.jpg" width="185"></td>-->
+					<!--<td><img src="images/edu_main_img.jpg" width="839"></td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<tr>
+		<td colspan="5">
+			<!-- 왼쪽메뉴 시작  -->
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<!-- 왼쪽메뉴 시작  -->	
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="edu01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image01','','images/sub_edu01_on.gif',1)"><img src="images/sub_edu01_off.gif" name="Image01" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image02','','images/sub_edu02_on.gif',1)"><img src="images/sub_edu02_off.gif" name="Image02" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image03','','images/sub_edu03_on.gif',1)"><img src="images/sub_edu03_off.gif" name="Image03" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image04','','images/sub_edu04_on.gif',1)"><img src="images/sub_edu04_off.gif" name="Image04" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/account.png"></td>
+							</tr>
+						</table>
+						<!-- 왼쪽메뉴 끝  -->
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/edu_subbar_04.jpg"></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table width="671" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="30"><img src="images/bar_s_a.gif"></td>
+											<td><a href="edu02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image05','','images/sub01_on.gif',1)"><img src="images/sub01_off.gif" name="Image05" width="219" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s_a.gif"></td>
+											<td><a href="edu_sub_02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image06','','images/sub02_on.gif',1)"><img src="images/sub02_off.gif" name="Image06" width="180" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s_a.gif"></td>
+											<td><a href="edu_sub_08.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image08','','images/sub08_on.gif',1)"><img src="images/sub08_off.gif" name="Image08" width="160" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s_a.gif"></td>
+											<td><a href="edu_sub_03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image07','','images/sub03_on.gif',1)"><img src="images/sub03_off.gif" name="Image07" width="112" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s_a.gif"></td>
+										</tr>
+									</table>	
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<!-- 내용 시작 -->
+									<table width="650" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td><img src="images/edusub03_title.gif"></td>
+										</tr>
+										<tr>
+											<td height="20"></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="650" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+													<tr align="center" bgcolor="#e1e1e1">
+														<td width="150" height="24">구 분</td>
+														<td width="500">내 용</td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>관계규정<br>(법적근거)</strong></td>
+														<td bgcolor="#ffffff">
+															<table width="500" border="0" cellpadding="0" cellspacing="1" align="center">
+																<tr>
+																	<td colspan="3" height="10"></td>
+																</tr>
+																<tr>
+																	<td height="25">&nbsp;&nbsp;◎ 원자력시설 등의 방호 및 방사능방재대책법 제36조</td>
+																	<td valign="middle">
+																	<a href='#' onclick="window.open('popup/safety06.html','','scrollbars=yes, width=550,height=420,left=400,top=100');return false"><img src="images/view.gif"></a></td>
+																	<td width="50"></td>
+																</tr>
+																<tr>
+																	<td height="25">&nbsp;&nbsp;◎ 원자력시설 등의 방호 및 방사능방재대책법 시행령 제33조</td>
+																	<td><a href='#' onclick="window.open('popup/safety07.html','','scrollbars=yes, width=550,height=380,left=400,top=100');return false"><img src="images/view.gif"></a></td>
+																	<td width="50"></td>
+																</tr>
+																<tr>
+																	<td height="25">&nbsp;&nbsp;◎ 원자력시설 등의 방호 및 방사능방재대책법 시행규칙 제19조</td>
+																	<td><a href='#' onclick="window.open('popup/safety08.html','','scrollbars=yes, width=550,height=180,left=400,top=100');return false"><img src="images/view.gif"></a></td>
+																	<td width="50"></td>
+																</tr>
+																<tr>
+																	<td colspan="3" height="10"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="30"></td>
+										</tr>
+										<tr>
+											<td><strong><font color="#cc6666">- 교육일시 및 장소(2019년도) -</font></strong></td>
+										</tr>
+										<tr>
+											<td height="10"></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="650" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+													<tr align="center" bgcolor="#e1e1e1">
+														<td width="150" height="24">구분 </td>
+														<td width="180">일시</td>
+														<td width="320">교육장소</td>
+													</tr>
+													<tr align="center">
+														<td height="24" bgcolor="#F7F7F7">비방재 신규<br>(4시간)</td>
+														<td bgcolor="#ffffff">07. 23(화)<br>13:00~17:00</td>
+														<td bgcolor="#ffffff"><br>(울산)<br>
+															울산대학교 18호관 204호<br><br>
+														</td>
+													</tr>
+													<tr align="center">
+														<td height="24" bgcolor="#F7F7F7">방재 보수<br>(8시간)</td>
+														<td bgcolor="#ffffff">07. 24(목)<br>09:00~18:00</td>
+														<td bgcolor="#ffffff"><br>(울산)<br>
+															울산대 18호관 204호<br><br></td>
+													</tr>
+													<tr align="center">
+														<td height="24" bgcolor="#F7F7F7">비방재 신규<br>(4시간)</td>
+														<td bgcolor="#ffffff">07. 26(금)<br>13:00~17:00</td>
+														<td bgcolor="#ffffff"><br>(서울/경기)<br>
+															서울대 97동 3층 교육장 <br><br></td>
+													</tr>
+													<tr align="center">
+														<td height="30" bgcolor="#F7F7F7">계</td>
+														<td bgcolor="#ffffff">총 3회</td>
+														<td bgcolor="#ffffff">&nbsp;</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td><br>&nbsp;&nbsp;* 상기 교육일정의 조정 및 수요에 따른 일정 신설 운영이 있을 수 있음.<br><br><br></td>
+										</tr>
+										<tr>
+											<td><strong><font color="#cc6666">- 방사능방재교육의 교육시간 및 교육내용 (제19조관련) -</font></strong><p></td>
+										</tr>
+										<tr>
+											<td><b>◎ 교육시간</b><p></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="650" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+													<tr align="center" bgcolor="#e1e1e1">
+														<td colspan="2" rowspan="2" align="center">교 육 대 상</td>
+														<td height="24" colspan="2" align="center">교 육 시 간</td>
+													</tr>
+													<tr align="center" bgcolor="#e1e1e1">
+														<td height="24" align="center">신규교육</div></td>
+														<td height="24" align="center">보수교육</div></td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td rowspan="2"><p>원자력사업자의 종업원 <p></td>
+														<td width="150" height="80"><p>방사능방재업무를<br>
+																					담당하는 종업원 <p></td>
+														<td width="150" bgcolor="#ffffff"><p>방사능방재업무를<br>
+																		담당하는 종업원으로<br>
+																		임용된지 6개월 이내에<br>
+																		18시간 이상</td>
+														<td width="150" bgcolor="#ffffff"><p>매년 8시간 이상.<br>
+																		다만, 3회 이상 보수교육을<br>
+																		이수한 경우에는<br>
+																		매년 2시간 이상</td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td height="80"><p>방사능방재업무를<br>
+																		담당하지 아니하는 종업원 <p></td>
+														<td bgcolor="#ffffff"><p>종업원으로 임용된지<br>
+															6개월 이내에 4시간 이상</td>
+														<td bgcolor="#ffffff"><p>3년마다 2시간 이상</td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td height="80" colspan="2"><p>방사선비상계획구역의<br>
+																					전부 또는 일부를 관할구역으로 하는 <br>
+																					시,도지사&nbsp; 및 시장,군수,구청장이<br> 
+																					지정한 방사능방재요원 <p></td>
+														<td bgcolor="#ffffff"><p>방사능방재요원으로<br>
+															지정된 후 6개월 이내에<br>
+															18시간 이상 <p></td>
+														<td bgcolor="#ffffff"><p> 매년 8시간 이상 <p></td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td height="80" colspan="2"><p>법 제39조제2항의 규정에 따른 <br>
+																					1차 및 2차 방사선비상진료기관의 장이 <br>
+																					지정한 방사선비상진료요원 <p></td>
+														<td bgcolor="#ffffff"><p>방사신비상진료요원으로<br>
+															지정된 후 6개월 이내에<br>
+															18시간 이상<p></td>
+														<td bgcolor="#ffffff"><p>매년 8시간 이상 <p></td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td rowspan="2"><p>원자력안전위원회 위원장이<br>
+																		정하여 고시하는<br>
+																		단체 또는 기관의 직원</td>
+														<td height="80"><p>방사능방재업무를<br>
+																		담당하는 직원 </td>
+														<td bgcolor="#ffffff"><p>방사능방재업무를<br>
+															담당하는 직원으로<br>
+															임용된지 6개월 이내에<br>
+															8시간 이상</td>
+														<td bgcolor="#ffffff"><p>매년 4시간 이상.<br>
+															다만, 3회 이상 보수교육을<br>
+															이수한 경우에는<br>
+															매년 2시간 이상</td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td height="80">방사능방재업무를<br>
+																		담당하지 아니하는 직원 </td>
+														<td bgcolor="#ffffff"><p>직원으로 임용된지<br>
+															6개월 이내에 2시간 이상 <p></td>
+														<td bgcolor="#ffffff"><p>3년마다 2시간 이상 <p></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="30"></td>
+										</tr>
+										<tr>
+											<td><b>◎교육내용</b><p></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="650" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+													<tr align="center" bgcolor="#e1e1e1">
+														<td colspan="2">교 육 대 상</td>
+														<td height="33">교 육 내 용</td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td rowspan="2" width="150"><p>원자력사업자의 종업원</td>
+														<td width="150">방사능방재업무를<br>
+															담당하는 종업원 </td>
+														<td width="300" height="139" bgcolor="#ffffff"><p> 방사능방재에 관한 법령<br>
+																		방사능방재에 관한 일반사항<br>
+																		방사선사고 확대방지를 위한 응급조치에 관한 사항<br>
+																		사고분석 및 평가에 관한 사항<br>
+																		방사선측정 및 방사능감시에 관한 사항<br>
+																		방사선방호조치에 관한 사항<br>
+																		화재진압에 관한 사항<br>
+																		긴급구조에 관한 사항 </td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td>방사능방재업무를 <br>
+															담당하지 아니하는 종업원 </td>
+														<td height="80" bgcolor="#ffffff"><p> 방사능방재에 관한 법령<br>
+																		방사능방재에 관한 일반사항</td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td height="110" colspan="2"><p>방사선비상계획구역의<br>
+																					전부 또는 일부를 관할구역으로 하는<br>
+																					시,도지사 및 시장,군수,구청장이<br>
+																					지정한 방사능방재요원</td>
+														<td bgcolor="#ffffff"><p> 방사능방재에 관한 법령<br>
+														방사능방재에 관한 일반사항<br>
+														방사능재난관리에 관한 사항<br>
+														방사선측정 및 방사능감시에 관한 사항<br>
+														방사선방호조치에 관한 사항<br>
+														주민보호에 관한 사항 </td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td height="80" colspan="2"><p>법 제39조제2항의 규정에 따른 <br>
+																					1차 및 2차 방사선비상진료기관의 장이<br>
+																					지정한 방사선비상진료요원 </td>
+														<td bgcolor="#ffffff"><p>방사능방재에 관한 법령<br>
+															방사능방재에 관한 일반사항<br>
+															방사선방호조치에 관한 사항<br>
+															방사선비상진료에 관한 사항 </td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td rowspan="2">원자력안전위원회 위원장이<br>
+																		정하여 고시하는<br>
+																		단체 또는 기관의 직원 </td>
+														<td height="85">방사능방재업무를<br>
+																		담당하는 직원 </td>
+														<td bgcolor="#ffffff"><p>방사능방재에 관한 법령<br>
+															방사능방재에 관한 일반사항<br>
+															방사능재난관리에 관한 사항<br>
+															방사선방호조치에 관한 사항<br>
+															주민보호에 관한 사항 </td>
+													</tr>
+													<tr align="center" bgcolor="#F7F7F7">
+														<td height="80">방사능방재업무를<br>
+																		담당하지 아니하는 직원 </td>
+														<td bgcolor="#ffffff">방사능방재에 관한 법령<br>
+															방사능방재에 관한 일반사항 </td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="30"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

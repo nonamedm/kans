@@ -1,0 +1,639 @@
+<?
+include "../conf/dbconn.inc";
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=16 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,3 ";
+	$pho_res=mysql_query($sql);
+	$pho_total = mysql_affected_rows();
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=14 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$notice_res=mysql_query($sql);
+	$notice_total =mysql_affected_rows();
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=15 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$edu_res=mysql_query($sql);
+	$edu_total = mysql_affected_rows();
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=18 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$rec_res=mysql_query($sql);
+	$rec_total = mysql_affected_rows();	
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=4 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$pds_res=mysql_query($sql);
+	$pds_total = mysql_affected_rows();
+
+	
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<link href="../css/font.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+
+<script language=javascript src="../js/drop_menu_sc.js" ></script>
+<script language=javascript src="../js/common_s.js" ></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<!--  톱메뉴 시작  -->
+						<table width="1024" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td rowspan="2" width="235" height="60"><a href="../index.html"><img src="../image_s/logo.gif" width="235" height="60" /></a></td>
+								<td colspan="5" width="789" height="30"></td>
+							</tr>
+							<tr>
+								<td width="540" height="30"></td>
+								<td width="60" height="30" align="left"><a href="../index.html">· HOME</a></td>
+								<td width="100" height="30" align="left"><a href="mailto:kans@kans.re.kr">· CONTACT US</a></td>
+								<td width="70" height="30" align="left"><a href="../map/map01.html">· SITEMAP</a></td>
+								<td width="19" height="30"></td>
+							</tr>
+						</table>
+						<!--  톱메뉴 끝  -->
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!--  로컬메뉴 시작  -->
+						<table width="1024" height="60" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td>
+									<div id="flashContent">
+										<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1024" height="60" id="indexmenuA" align="middle">
+											<param name="movie" value="../swf/indexmenuA.swf" />
+											<param name="quality" value="high" />
+											<param name="bgcolor" value="#ffffff" />
+											<param name="play" value="true" />
+											<param name="loop" value="true" />
+											<param name="wmode" value="transparent" />
+											<param name="scale" value="showall" />
+											<param name="menu" value="true" />
+											<param name="devicefont" value="false" />
+											<param name="salign" value="" />
+											<param name="allowScriptAccess" value="sameDomain" />
+											<!--[if !IE]>-->
+											<object type="application/x-shockwave-flash" data="../swf/indexmenuA.swf" width="1024" height="60">
+												<param name="movie" value="../swf/indexmenuA.swf" />
+												<param name="quality" value="high" />
+												<param name="bgcolor" value="#ffffff" />
+												<param name="play" value="true" />
+												<param name="loop" value="true" />
+												<param name="wmode" value="transparent" />
+												<param name="scale" value="showall" />
+												<param name="menu" value="true" />
+												<param name="devicefont" value="false" />
+												<param name="salign" value="" />
+												<param name="allowScriptAccess" value="sameDomain" />
+											<!--<![endif]-->
+											<a href="http://www.adobe.com/go/getflash">
+												<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+											</a>
+											<!--[if !IE]>-->
+											</object>
+											<!--<![endif]-->
+										</object>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<!--  로컬메뉴 끝  -->
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!--  상단 끝  -->
+	<!--  왼쪽메뉴 및 메뉴콘텐츠내용 시작  -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><img src="images/data_title.jpg" width="185"></td>
+					<td><img src="images/data_main_img.jpg" width="839"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<!-- 왼쪽메뉴 시작  -->	
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="data01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image01','','images/sub_data01_on.gif',1)"><img src="images/sub_data01_off.gif" name="Image01" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image02','','images/sub_data02_on.gif',1)"><img src="images/sub_data02_off.gif" name="Image02" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image03','','images/sub_data03_on.gif',1)"><img src="images/sub_data03_off.gif" name="Image03" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image04','','images/sub_data04_on.gif',1)"><img src="images/sub_data04_off.gif" name="Image04" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data05.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image05','','images/sub_data05_on.gif',1)"><img src="images/sub_data05_off.gif" name="Image05" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data08.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image06','','images/sub_data06_on.gif',1)"><img src="images/sub_data06_off.gif" name="Image06" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data07.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image07','','images/sub_data07_on.gif',1)"><img src="images/sub_data07_off.gif" name="Image07" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+						</table>
+						<!-- 왼쪽메뉴 끝  -->
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<!-- 메뉴콘텐츠내용 시작  -->
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/data_subbar_07.jpg"></td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table width="600" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="110"></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="100" align="center"><a href="data07_sub01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image08','','images/sub01_on.gif',1)"><img src="images/sub01_off.gif" name="Image08" width="90" height="25" border="0"></a></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="100" align="center"><a href="data07_sub02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image09','','images/sub02_on.gif',1)"><img src="images/sub02_off.gif" name="Image09" width="90" height="25" border="0"></a></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="100" align="center"><a href="data07_sub03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/sub03_on.gif',1)"><img src="images/sub03_off.gif" name="Image10" width="90" height="25" border="0"></a></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="110"></td>
+										</tr>
+									</table>	
+								</td>
+							</tr>
+							<tr>
+								<td height="40"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<!-- 내용 시작 -->
+									<table width="700" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td>
+												<table width="700" border="0" cellpadding="0" cellspacing="0" align="center">
+													<tr>
+														<td>&nbsp;<img src="images/6_title.gif" /></td>
+													</tr>
+													<tr>
+														<td><br>&nbsp;&nbsp;<img height="10" src="images/dot.gif" width="10" /> 국제단위계(SI)의 기본단위, 보충단위, 유도단위 및 접두사 <br>
+														&nbsp;&nbsp;<img height="10" src="images/dot.gif" width="10" /> 근거 : 법률 제3492호(1991. 12)계량법 및 국제 도량형 총회(CGPM)결정사항<br><br></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="30"></td>
+										</tr>
+										<tr>
+											<td><strong>[ 기본 7단위정의 및 용어 ] 계량법 제5조 시행규칙 별표1('87.12) </strong></td>
+										</tr>
+										<tr>
+											<td height="10"></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="700" cellpadding="0" cellspacing="0" border="0" align="center">
+													<tr>
+														<td bgcolor="b59673" height="3"></td>
+													</tr>
+												</table>
+												<table width="700" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="dedbde">
+													<tr bgcolor="efe7de">
+														<td width="8%" height="30" align="center"><strong>양</strong></td>
+														<td width="15%" align="center"><strong>명칭(계량단위)</strong></td>
+														<td width="10%" align="center"><strong>기호(약호</strong>)</td>
+														<td width="51%" align="center"><strong>정 의</strong></td>
+														<td width="16%" align="center"><strong>근 거</strong></td>
+													</tr>
+													<tr bgcolor="#FFFFFF">
+														<td height="30" align="center">길이</td>
+														<td align="center">미터</td>
+														<td align="center">m</td>
+														<td>&nbsp;진공중에서 빛이 1/299,792,458초 동안 진행한 경로길이 </td>
+														<td align="center">17th CGPM, 1983 </td>
+													</tr>
+													<tr bgcolor="#FFFFFF">
+														<td height="30" align="center">질량</td>
+														<td align="center">킬로그램</td>
+														<td align="center">kg </div></td>
+														<td>&nbsp;국제킬로그램원기의 질량 </td>
+														<td align="center">3rd CGPM, 1901 </td>
+													</tr>
+													<tr bgcolor="#FFFFFF">
+														<td  height="50"align="center">시간 </div></td>
+														<td align="center">초 </div></td>
+														<td align="center">s </div></td>
+														<td>&nbsp;133 Cs의 바닥상태의 있는 두 초미세준위간의 전이에<br>
+														&nbsp;대응하는 복사선(전파선)의9,192,631,770 주기의 지속시간 </td>
+														<td align="center">13th CGPM, 1967 </td>
+													</tr>
+													<tr bgcolor="#FFFFFF">
+														<td height="50" align="center">전류 </div></td>
+														<td align="center">암페어 * </div></td>
+														<td align="center">A </div></td>
+														<td>&nbsp;무한장 원형 미소단면적의 평형두도체가 1m간격을 유지될 때,<br>
+														&nbsp;두도체사이에 2×10 -7 N/m의 힘을 생기게하는 전류크기 </td>
+														<td align="center">9th CGPM, 1948 </td>
+													</tr>
+													<tr bgcolor="#FFFFFF">
+														<td height="30" align="center">온도 </div></td>
+														<td align="center">켈빈(도) ** </div></td>
+														<td align="center">K </div></td>
+														<td>&nbsp;물의 삼중점의 열역학온도의 1/273.16 </td>
+														<td align="center">13th CGPM, 1967 </td>
+													</tr>
+													<tr bgcolor="#FFFFFF">
+														<td height="50" align="center">물질량 </div></td>
+														<td align="center">몰 </div></td>
+														<td align="center">mol </div></td>
+														<td>&nbsp;12 C 의 0.012kg에 있는 원자의 개수와 같은 수의 구성요소를<br>
+														&nbsp;포함한 어떤계의 물질량 </td>
+														<td align="center">14th CGPM, 1971 </td>
+													</tr>
+													<tr bgcolor="#FFFFFF">
+														<td height="50" align="center">광도 </div></td>
+														<td align="center">칸델라 </div></td>
+														<td align="center">cd </div></td>
+														<td>&nbsp;주파수 540×10 12 Hz인 단색광을 방출하는 광원의 복사강도가<br>
+														&nbsp;어떤 주어진 방향으로 매 sr당 1/683W일때 이 방향에 대한 강도 </td>
+														<td align="center">16th CGPM, 1979 </td>
+													</tr>
+												</table>
+												<table width="670" height="80" border="0" align="center">
+													<tr>
+														<td>※ 1990. 1. 1부터 Volt 및 ohm은 새로운 표현에 따라, 조셉슨상수 K j90 에 의한 전위(Volt),R j90 에 의한 저항(ohm)값으로<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;보정하여 사용됨 (1988. 10, 국제도량형위원회, CIPM) <br>
+														※ 표준온도계는 표준열전대에서 고온 백금저항온도계로 사용권고(18th, CGPM,1987) </span></div></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="30"></td>
+										</tr>
+										<tr>
+											<td><strong>[ 보충(보조)단위 ]정의 : 계량법시행령 제2조('87. 8. 31)</strong></td>
+										</tr>
+										<tr>
+											<td height="10"></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="700" cellpadding="0" cellspacing="0" border="0" align="center">
+													<tr>
+														<td bgcolor="b59673" height="3"></td>
+													</tr>
+												</table>
+												<table width="700" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="dedbde">
+													<tr bgcolor="efe7de" align="center">
+														<td width="7%" height="30"><strong>양 </strong></td>
+														<td width="10%"><strong>명 칭 </strong></td>
+														<td width="6%"><strong>기호 </strong></td>
+														<td width="44%"><strong>정의 </strong></td>
+														<td width="33%"><strong>비고 </strong></td>
+													</tr>
+													<tr bgcolor="#FFFFFF">
+														<td height="50" align="center">평면각 </div></td>
+														<td align="center">라디안 </td>
+														<td align="center">rad </div></td>
+														<td>&nbsp;한 원의 둘레에서 그원의 반지름과 같은 길이의 호를<br>
+														&nbsp;자르는 두반지름 사이의 평면각 </td>
+														<td>&nbsp;원의 둘레는 반지름의 2π(무차원) <br>
+														&nbsp;- 원의 평면각은 2π rad </td>
+													</tr>
+													<tr bgcolor="#FFFFFF">
+														<td height="50" align="center">입체각 </div></td>
+														<td align="center">스테라디안 </div></td>
+														<td align="center">sr </div></td>
+														<td>&nbsp;한 공의 표면에서 그공의 반지름의 제곱과 같은 넓이의<br>
+														&nbsp;표면을 자르고 그 꼭지점이 공의 중심에 이는 입체각 </td>
+														<td>&nbsp;공의 표면은 반지름의 제곱의 4π(무차원) <br>
+														&nbsp;- 공의 입체각은 4π sr </td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="40"></td>
+										</tr>
+										<tr>
+											<td><strong>[ 특별한 명칭을 가진 SI 유도단위 ]<br>
+														ㆍ용어 : 계량법시행(령), 동규칙 별표1('87. 8. 31. '87. 12. 11) 섭씨도 헨리 웨버 지멘스 와트 </strong></td>
+										</tr>
+										<tr>
+											<td height="10"></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="700" cellpadding="0" cellspacing="0" border="0" align="center">
+													<tr>
+														<td bgcolor="b59673" height="3"></td>
+													</tr>
+												</table>
+												<table width="700" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="dedbde">
+													<tr bgcolor="efe7de" align="center">
+														<td width="26%" height="30"><strong>양 </strong></td>
+														<td width="26%" align="center"><strong>명칭</strong></td>
+														<td width="21%" align="center"><strong>SI 단위 기호</strong></td>
+														<td width="27%" align="center"><strong>다른단위로표시</strong></td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">진동수,주파수 </td>
+														<td>헤르츠 </td>
+														<td>Hz </td>
+														<td>(s -1 ) </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">힘 </td>
+														<td>뉴턴 </td>
+														<td>N </td>
+														<td>(m·kg·s -2 )</td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">압력,응력 </td>
+														<td>파스칼 </td>
+														<td>Pa </td>
+														<td>N/㎡ </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">에너지,일, 열량 </td>
+														<td>줄 </td>
+														<td>J </td>
+														<td>N·m </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">일률,전력 </td>
+														<td>와트 </td>
+														<td>W </td>
+														<td>J/s </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">전하량 </td>
+														<td>쿨롱 </td>
+														<td>C </td>
+														<td>s·A </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">전위차, 기전력 </td>
+														<td>볼트 </td>
+														<td>V </td>
+														<td>W/A </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">전기용량 </td>
+														<td>패럿 </td>
+														<td>F </td>
+														<td>C/V </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">전기저항 </td>
+														<td>옴 </td>
+														<td>Ω </td>
+														<td>V/A </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">전기전도도 </td>
+														<td>지멘스 </td>
+														<td>S </td>
+														<td>A/V </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">자기력선속 </td>
+														<td>웨버 </td>
+														<td>Wb </td>
+														<td>V·s </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">자기력선속밀도 </td>
+														<td>테슬라 </td>
+														<td>T </td>
+														<td>Wb/㎡ </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">인덕턴스 </td>
+														<td>헨리 </td>
+														<td>H </td>
+														<td>Wb/A </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">섭씨온도 </td>
+														<td>섭씨도 </td>
+														<td>℃ </td>
+														<td>K </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">광선속 </td>
+														<td>루멘 </td>
+														<td>lm </td>
+														<td>cd·sr </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">조명도 </td>
+														<td>럭스 </td>
+														<td>lx </td>
+														<td>lm/㎡ </td>
+													</tr>
+												</table>
+												</td>
+										</tr>
+										<tr>
+											<td height="30"></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="700" cellpadding="0" cellspacing="0" border="0" align="center">
+													<tr>
+														<td bgcolor="b59673" height="3"></td>
+													</tr>
+												</table>
+												<table width="700" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="dedbde">
+													<tr bgcolor="efe7de" align="center">
+														<td width="10%" height="30"><strong>인 자</strong> </td>
+														<td width="30%"><strong>접 두 어 </strong></td>
+														<td width="10%"><strong>기 호</strong> </td>
+														<td width="10%"><strong>인 자 </strong></td>
+														<td width="30%"><strong>접 두 어 </strong></td>
+														<td width="10%"><strong>기 호 </strong></td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">10 24 </td>
+														<td>요타(yotta) </td>
+														<td>Y </td>
+														<td>10 -1 </td>
+														<td>데시(deci) </td>
+														<td>d </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">10 21 </td>
+														<td>제타(zetta) </td>
+														<td>Z </td>
+														<td>10 -2 </td>
+														<td>센티(centi) </td>
+														<td>c </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">10 18 </td>
+														<td>엑사(exa) </td>
+														<td>E </td>
+														<td>10 -3 </td>
+														<td>밀리(milli) </td>
+														<td>m </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">10 15 </td>
+														<td>폐타(peta) </td>
+														<td>P </td>
+														<td>10 -6 </td>
+														<td>마이크로( micro) </td>
+														<td>μ </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">10 12 </td>
+														<td>테라(tera) </td>
+														<td>T </td>
+														<td>10 -9 </td>
+														<td>나노(nano) </td>
+														<td>n </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">10 9 </td>
+														<td>기가(giga) </td>
+														<td>G </td>
+														<td>10 -12 </td>
+														<td>피코(pico) </td>
+														<td>p </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">10 6 </td>
+														<td>메가(mega) </td>
+														<td>M </td>
+														<td>10 -15 </td>
+														<td>펨토(femto) </td>
+														<td>f </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">10 3 </td>
+														<td>킬로(kilo) </td>
+														<td>k </td>
+														<td>10 -18 </td>
+														<td>아토(atto) </td>
+														<td>a </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">10 2 </td>
+														<td>헥토(hecto) </td>
+														<td>h </td>
+														<td>10 -21 </td>
+														<td>젭토(zepto) </td>
+														<td>z </td>
+													</tr>
+													<tr bgcolor="#FFFFFF" align="center">
+														<td height="20">10 1 </td>
+														<td>데카(deca) </td>
+														<td>da </td>
+														<td>10 -24 </td>
+														<td>욕토(yocto) </td>
+														<td>y </td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="50"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						<!-- 메뉴콘텐츠내용 끝  -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

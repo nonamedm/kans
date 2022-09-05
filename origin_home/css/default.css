@@ -1,0 +1,674 @@
+BODY {
+	FONT-SIZE: 12px; OVERFLOW-X: hidden; COLOR: #4c5659; FONT-FAMILY: "돋움" ,"Verdana","Arial", "Helvetica", "sans-serif"
+}
+TEXTAREA {
+	FONT-SIZE: 12px; OVERFLOW-X: hidden; COLOR: #4c5659; FONT-FAMILY: "돋움" ,"Verdana","Arial", "Helvetica", "sans-serif"
+}
+BODY {
+	SCROLLBAR-FACE-COLOR: #ffffff; SCROLLBAR-HIGHLIGHT-COLOR: #cccccc; SCROLLBAR-SHADOW-COLOR: #838383; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #838383; SCROLLBAR-TRACK-COLOR: #ffffff; SCROLLBAR-DARKSHADOW-COLOR: #ffffff
+}
+TH {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: "돋움","Verdana"
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #4c5659; LINE-HEIGHT: 16px; FONT-FAMILY: "돋움","Verdana"
+}
+IMG {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+A:link {
+	FONT-SIZE: 12px; COLOR: #4c5659; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: #4c5659; TEXT-DECORATION: none
+}
+A:active {
+	FONT-SIZE: 12px; COLOR: #062256; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 12px; COLOR: #062256; TEXT-DECORATION: underline
+}
+INPUT {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #333333; BORDER-BOTTOM: #cccccc 1px solid; FONT-STYLE: normal; FONT-FAMILY: "돋움" ,"Verdana","Arial", "Helvetica", "sans-serif"; BACKGROUND-COLOR: #ffffff; FONT-VARIANT: normal
+}
+TEXTAREA {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 5px; SCROLLBAR-FACE-COLOR: #f8ede9; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px solid; COLOR: #594d41; SCROLLBAR-ARROW-COLOR: #d3b9b9; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px solid; FONT-STYLE: normal; FONT-FAMILY: "Verdana", "돋움"; BACKGROUND-COLOR: #f8f8f8; FONT-VARIANT: normal
+}
+.tx_01 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; SCROLLBAR-FACE-COLOR: #f8ede9; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; SCROLLBAR-HIGHLIGHT-COLOR: #cccccc; SCROLLBAR-SHADOW-COLOR: #ffffff; COLOR: #e2d7d8; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #d3b9b9; PADDING-TOP: 5px; SCROLLBAR-TRACK-COLOR: #beada3; FONT-STYLE: normal; FONT-FAMILY: "Verdana", "돋움"; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; BACKGROUND-COLOR: #7f7167; FONT-VARIANT: normal
+}
+SELECT {
+	BORDER-RIGHT: #e5e5e5 1px solid; BORDER-TOP: #e5e5e5 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12px; BORDER-LEFT: #e5e5e5 1px solid; COLOR: #333333; BORDER-BOTTOM: #e5e5e5 1px solid; FONT-STYLE: normal; FONT-FAMILY: "돋움","Verdana"; BACKGROUND-COLOR: #ffffff; FONT-VARIANT: normal
+}
+.jump {
+	BORDER-RIGHT: #e5e5e5 1px solid; BORDER-TOP: #e5e5e5 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12px; BORDER-LEFT: #e5e5e5 1px solid; WIDTH: 168px; COLOR: #ffffff; BORDER-BOTTOM: #e5e5e5 1px solid; FONT-STYLE: normal; FONT-FAMILY: "돋움","Verdana"; HEIGHT: 18px; BACKGROUND-COLOR: #000000; FONT-VARIANT: normal
+}
+SELECT {
+	BORDER-RIGHT: #e5e5e5 1px solid; BORDER-TOP: #e5e5e5 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12px; BORDER-LEFT: #e5e5e5 1px solid; COLOR: #333333; BORDER-BOTTOM: #e5e5e5 1px solid; FONT-STYLE: normal; FONT-FAMILY: "돋움","Verdana"; BACKGROUND-COLOR: #ffffff; FONT-VARIANT: normal
+}
+.jump1 {
+	BORDER-RIGHT: #e5e5e5 1px solid; BORDER-TOP: #e5e5e5 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12px; BORDER-LEFT: #e5e5e5 1px solid; WIDTH: 100px; COLOR: #ffffff; BORDER-BOTTOM: #e5e5e5 1px solid; FONT-STYLE: normal; FONT-FAMILY: "돋움","Verdana"; HEIGHT: 18px; BACKGROUND-COLOR: #000000; FONT-VARIANT: normal
+}
+.selectBoxSelectedArea {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #7d838e; LINE-HEIGHT: 17px; PADDING-TOP: 1px; FONT-FAMILY: "돋움"; BACKGROUND-COLOR: #ffffff
+}
+.selectBoxSelectedAreaFocus {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 17px; PADDING-TOP: 1px; FONT-FAMILY: "돋움"; BACKGROUND-COLOR: #ffffff
+}
+.selectBoxOption {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #7d838e; LINE-HEIGHT: 17px; PADDING-TOP: 2px; FONT-FAMILY: "돋움"; BACKGROUND-COLOR: #ffffff
+}
+.selectBoxOptionOver {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 17px; PADDING-TOP: 2px; FONT-FAMILY: "돋움"; BACKGROUND-COLOR: #ffffff
+}
+.selectBoxOptionInnerLayer {
+	BORDER-RIGHT: #e4e4e4 1px solid; BORDER-TOP: #e4e4e4 1px solid; SCROLLBAR-FACE-COLOR: #ffffff; SCROLLBAR-HIGHLIGHT-COLOR: #d3d3d3; OVERFLOW: auto; BORDER-LEFT: #e4e4e4 1px solid; SCROLLBAR-SHADOW-COLOR: #d3d3d3; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #838383; SCROLLBAR-TRACK-COLOR: #eaeaea; BORDER-BOTTOM: #e4e4e4 1px solid; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; BACKGROUND-COLOR: #ffffff
+}
+IMG.outline_g {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid
+}
+.sitemap {
+	PADDING-RIGHT: 5px; FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 18px; FONT-FAMILY: "돋움" ,"Verdana"; LETTER-SPACING: 0px; TEXT-DECORATION: none
+}
+A.sitemap:link {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+A.sitemap:visited {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+A.sitemap:active {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+A.sitemap:hover {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.nevi {
+	PADDING-RIGHT: 5px; FONT-SIZE: 12px; COLOR: #424242; LINE-HEIGHT: 18px; FONT-FAMILY: "돋움" ,"Verdana"; LETTER-SPACING: 0px; TEXT-DECORATION: none
+}
+A.nevi:link {
+	FONT-SIZE: 12px; COLOR: #424242; TEXT-DECORATION: none
+}
+A.nevi:visited {
+	FONT-SIZE: 12px; COLOR: #424242; TEXT-DECORATION: none
+}
+A.nevi:active {
+	FONT-SIZE: 12px; COLOR: #424242; TEXT-DECORATION: none
+}
+A.nevi:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #2184b3; TEXT-DECORATION: underline
+}
+.title_brown_01 {
+	FONT-WEIGHT: bold; COLOR: #ab6607
+}
+.point_orange_01 {
+	COLOR: #ff6600
+}
+.point_green_01 {
+	COLOR: #409135
+}
+.point_red_01 {
+	COLOR: #de2b0d
+}
+.point_purple_01 {
+	COLOR: #b23b9a
+}
+.bigfont_00 {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; COLOR: #000000
+}
+.smallfont_00 {
+	FONT-SIZE: 11px; COLOR: #979193; LINE-HEIGHT: 15px; FONT-FAMILY: "굴림", "굴림체",
+}
+.smallfont_03 {
+	FONT-SIZE: 11px; COLOR: #463e2e; FONT-FAMILY: "굴림", "굴림체",
+}
+.smallfont_01 {
+	FONT-SIZE: 11px; COLOR: #679906; FONT-FAMILY: 
+}
+.color_02 {
+	COLOR: #c13d7e
+}
+.color_03 {
+	COLOR: #3291cd
+}
+.color_03_b {
+	FONT-WEIGHT: bold; COLOR: #3291cd
+}
+.color_04_b {
+	FONT-WEIGHT: bold; COLOR: #f05a00
+}
+BODY {
+	FONT-SIZE: 8pt
+}
+TD {
+	FONT-SIZE: 9pt
+}
+INPUT {
+	FONT-SIZE: 9pt
+}
+BUTTON {
+	FONT-SIZE: 9pt
+}
+DIV {
+	FONT-SIZE: 9pt
+}
+SPAN {
+	FONT-SIZE: 9pt
+}
+SELECT {
+	FONT-SIZE: 9pt
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "굴림"
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+P {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+A:link {
+	COLOR: #4b4b4b; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #4b4b4b; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #4b4b4b; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #4b4b4b; TEXT-DECORATION: none
+}
+.textfield {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #cccccc 1px solid; COLOR: #666666; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: "굴림"; HEIGHT: 17px
+}
+.line_height18 {
+	COLOR: #666666; LINE-HEIGHT: 18px; TEXT-ALIGN: justify
+}
+.textarea {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #999999 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 9pt; PADDING-BOTTOM: 3px; BORDER-LEFT: #999999 1px solid; COLOR: #666666; PADDING-TOP: 3px; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: "굴림"
+}
+.line_justify {
+	FONT-SIZE: 11px; COLOR: #666666; LINE-HEIGHT: 15px; TEXT-ALIGN: justify
+}
+.blackbold {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "굴림"
+}
+.phone_text {
+	FONT-SIZE: 12px; OVERFLOW: hidden; BORDER-TOP-STYLE: none; FONT-FAMILY: "굴림"; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND-COLOR: #daeef2; BORDER-BOTTOM-STYLE: none
+}
+.br2 {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #999999 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 9pt; PADDING-BOTTOM: 3px; BORDER-LEFT: #999999 1px solid; COLOR: #999999; PADDING-TOP: 3px; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: "굴림"
+}
+.photo_left_top {
+	MARGIN-BOTTOM: 8px; MARGIN-RIGHT: 9px
+}
+.back_dotline {
+	BACKGROUND-POSITION: bottom; BACKGROUND-IMAGE: url(../boardimg/DOTLINE.gif); BACKGROUND-REPEAT: repeat-x
+}
+.boxtext {
+	LINE-HEIGHT: 13px; TEXT-ALIGN: justify
+}
+.dotline {
+	BACKGROUND-POSITION: left bottom; BACKGROUND-IMAGE: url(back/bl_05.gif); BACKGROUND-REPEAT: repeat-x
+}
+.back_grayline {
+	BACKGROUND-POSITION: left bottom;
+	BACKGROUND-IMAGE: url(../boardimg/gray.gif);
+	BACKGROUND-REPEAT: repeat-x;
+	HEIGHT: 28px;
+
+
+}
+.back_darkgrayline {
+	BACKGROUND-POSITION: left bottom; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(image/darkgray.gif); COLOR: #666666; BACKGROUND-REPEAT: repeat-x
+}
+.back_boldgrayline {
+	BACKGROUND-POSITION: left bottom; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(back/bl_boldgray.gif); COLOR: #666666; BACKGROUND-REPEAT: repeat-x
+}
+.pinkbold {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff3333; FONT-FAMILY: "굴림"
+}
+.red {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #cc0000; FONT-FAMILY: "굴림"
+}
+.graybold {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #999999; FONT-FAMILY: "굴림"
+}
+.pink14 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff3333; FONT-FAMILY: "굴림"
+}
+.padding_left7 {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 7px; PADDING-TOP: 3px
+}
+.blackbold_dotline {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(back/bl_05.gif); COLOR: #666666; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: "굴림"
+}
+.padding_left_re {
+	PADDING-LEFT: 7px
+}
+.br2copy {
+	BORDER-RIGHT: #999999 solid; BORDER-TOP: #999999 solid; FONT-SIZE: 9pt; BORDER-LEFT: #999999 solid; COLOR: #999999; BORDER-BOTTOM: #999999 solid; FONT-FAMILY: "굴림"
+}
+.lightgray {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #999999; FONT-FAMILY: "굴림"
+}
+.blueboldcopy {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #0099cc; FONT-FAMILY: "굴림"; TEXT-ALIGN: justify
+}
+.whitebold {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: "굴림"
+}
+.yellowboldcopy {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #cc9900; FONT-FAMILY: "굴림"
+}
+.greenboldcopy {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #669966; FONT-FAMILY: "굴림"
+}
+.boardgreen {
+	PADDING-RIGHT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "굴림"
+}
+.green {
+	BACKGROUND-POSITION: left bottom; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(image/green.gif); COLOR: #666666; BACKGROUND-REPEAT: repeat-x
+}
+.poll {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 18px; FONT-FAMILY: "굴림"
+}
+.textfieldemail {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; MARGIN-TOP: 0px; FONT-SIZE: 9pt; BORDER-LEFT: #999999 1px solid; COLOR: #d4e79f; PADDING-TOP: 0px; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: "굴림"; HEIGHT: 17px; TEXT-ALIGN: left
+}
+.boardblue {
+	PADDING-RIGHT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #45b3d7; FONT-FAMILY: "굴림"
+}
+.btn {
+	BORDER-RIGHT: 0px groove; BORDER-TOP: 0px groove; BORDER-LEFT: 0px groove; CURSOR: hand; BORDER-BOTTOM: 0px groove; BACKGROUND-COLOR: transparent
+}
+.box {
+	BORDER-RIGHT: #c5c5c5 1px solid; BORDER-TOP: #c5c5c5 1px solid; BACKGROUND: #f9f9f9; BORDER-LEFT: #c5c5c5 1px solid; BORDER-BOTTOM: #c5c5c5 1px solid
+}
+.pad5 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px
+}
+.pad8 {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px
+}
+.small {
+	FONT-SIZE: 7pt; FONT-FAMILY: small fonts
+}
+.smallb {
+	FONT-WEIGHT: bold; FONT-SIZE: 7pt; FONT-FAMILY: small fonts
+}
+.tahoma7 {
+	FONT-SIZE: 7pt; FONT-FAMILY: tahoma
+}
+.tahoma7b {
+	FONT-WEIGHT: bold; FONT-SIZE: 7pt; FONT-FAMILY: tahoma
+}
+.tahoma8 {
+	FONT-SIZE: 8pt; FONT-FAMILY: tahoma
+}
+.tahoma8b {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; FONT-FAMILY: tahoma
+}
+.cu {
+	WIDTH: 100%; COLOR: white; FONT-FAMILY: tahoma
+}
+.cub {
+	FONT-WEIGHT: bold; WIDTH: 100%; COLOR: white; FONT-FAMILY: tahoma
+}
+.table1 {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#CCFD7B, EndColorStr=#5A8E02)
+}
+.table2 {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FDD679, EndColorStr=#976A02)
+}
+.1bold {
+	FONT-WEIGHT: bold; COLOR: #8fbd53
+}
+.1 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 8px; FONT-WEIGHT: normal; COLOR: #70957c; TEXT-ALIGN: justify
+}
+.2bold {
+	FONT-WEIGHT: bold; COLOR: #999999
+}
+.2 {
+	FONT-WEIGHT: normal; COLOR: #999999
+}
+.3bold {
+	FONT-WEIGHT: bold; COLOR: #e6b244
+}
+.3 {
+	FONT-WEIGHT: normal; COLOR: #c9a152
+}
+.4bold {
+	FONT-WEIGHT: bold; COLOR: #e55956
+}
+.4 {
+	FONT-WEIGHT: normal; COLOR: #d87d7c
+}
+.5bold {
+	FONT-WEIGHT: bold; COLOR: #5fa4a4
+}
+.5 {
+	FONT-WEIGHT: normal; COLOR: #5cb8b8
+}
+.6bold {
+	FONT-WEIGHT: bold; COLOR: #38aeba
+}
+.6 {
+	FONT-WEIGHT: normal; COLOR: #7b9fc0
+}
+.7 {
+	FONT-WEIGHT: normal; COLOR: #bc87c0
+}
+.7bold {
+	FONT-WEIGHT: normal; COLOR: #aa58b1
+}
+.8bold {
+	FONT-WEIGHT: bold; COLOR: #cc3300
+}
+.9bold {
+	FONT-WEIGHT: bold; COLOR: #009999
+}
+.JUSTIFY {
+	PADDING-RIGHT: 3px; FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #848484; LINE-HEIGHT: 16px; TEXT-ALIGN: justify
+}
+.1color {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #99ca3c
+}
+.4color {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #cc8cd2
+}
+.5color {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #00bdf2
+}
+.6color {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: 9ca13d
+}
+.7color {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #ff6699
+}
+.textfieldoneline {
+	BORDER-RIGHT: #eaeae2 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #eaeae2 1px solid; PADDING-LEFT: 6px; FONT-SIZE: 9pt; PADDING-BOTTOM: 6px; BORDER-LEFT: #eaeae2 1px solid; COLOR: #666666; PADDING-TOP: 6px; BORDER-BOTTOM: #eaeae2 1px solid; FONT-FAMILY: "굴림"; HEIGHT: 19px
+}
+.rightline {
+	BACKGROUND-POSITION: right bottom; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../4/boardimg/line.gif); COLOR: #666666; BACKGROUND-REPEAT: repeat-y
+}
+.graylinetable {
+	BACKGROUND-POSITION: left bottom; BACKGROUND-IMAGE: url(../4/boardimg/grayline.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 27px
+}
+.graylinetableCopy {
+	BACKGROUND-POSITION: left bottom; BACKGROUND-IMAGE: url(../4/boardimg/graylinebottom.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 27px
+}
+.ex {
+	FONT-WEIGHT: normal; COLOR: #c75f9e; HEIGHT: 7px
+}
+.subtitle {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 8px; FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #848484; HEIGHT: 20px; TEXT-ALIGN: justify
+}
+.justi2 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 8px; FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #848484; TEXT-ALIGN: justify
+}
+.greenline {
+	PADDING-RIGHT: 5px; BACKGROUND-POSITION: 50% bottom; FONT-WEIGHT: normal; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../1/1-4/img/greenline.gif); COLOR: #8cba56; PADDING-TOP: 6px; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: "굴림"; HEIGHT: 25px
+}
+.grayline {
+	PADDING-RIGHT: 5px; BACKGROUND-POSITION: 50% bottom; FONT-WEIGHT: normal; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../1/1-4/img/grayline.gif); COLOR: #808080; PADDING-TOP: 6px; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: "굴림"; HEIGHT: 25px
+}
+.8color {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #319ac9
+}
+.2color {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #ff8221
+}
+.11pixel {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #999999
+}
+.tablegrayline {
+	PADDING-RIGHT: 2px; BACKGROUND-POSITION: left bottom; PADDING-LEFT: 4px; BACKGROUND-IMAGE: url(../img/leftline.gif); COLOR: #848484; BACKGROUND-REPEAT: repeat-x; HEIGHT: 30px
+}
+.tablegraylineblue {
+	BACKGROUND-POSITION: left bottom; PADDING-LEFT: 0px; BACKGROUND-IMAGE: url(../img/leftline.gif); COLOR: #45bca3; BACKGROUND-REPEAT: repeat-x; HEIGHT: 30px; BACKGROUND-COLOR: #f2faf8
+}
+.tablegraylinegreen {
+	BACKGROUND-POSITION: left bottom; PADDING-LEFT: 0px; BACKGROUND-IMAGE: url(../img/leftline.gif); COLOR: #9eca6d; BACKGROUND-REPEAT: repeat-x; HEIGHT: 30px; BACKGROUND-COLOR: #f8fbf4
+}
+.tablegraylineskyblue {
+	BACKGROUND-POSITION: left bottom; PADDING-LEFT: 0px; BACKGROUND-IMAGE: url(../img/leftline.gif); COLOR: #46c1dd; BACKGROUND-REPEAT: repeat-x; HEIGHT: 30px; BACKGROUND-COLOR: #f2fbfc
+}
+.rightlineCopy {
+	BACKGROUND-POSITION: right bottom; FONT-SIZE: 12px; COLOR: #666666; BACKGROUND-REPEAT: repeat-y
+}
+.1sub {
+	PADDING-LEFT: 8px; FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #999999
+}
+.orangeline {
+	PADDING-RIGHT: 5px; BACKGROUND-POSITION: 50% bottom; FONT-WEIGHT: normal; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../1/1-4/img/grayline.gif); COLOR: #8cba56; PADDING-TOP: 6px; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: "굴림"; HEIGHT: 20px
+}
+.dotline2 {
+	BACKGROUND-POSITION: left bottom; PADDING-LEFT: 4px; BACKGROUND-IMAGE: url(../4/boardimg/dotline.gif); PADDING-TOP: 3px; BACKGROUND-REPEAT: repeat-x
+}
+.popupsub {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; PADDING-BOTTOM: 10px; COLOR: #fc7236
+}
+.popupsub2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; PADDING-BOTTOM: 10px; COLOR: #1db13f
+}
+.popupsub3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; PADDING-BOTTOM: 10px; COLOR: #0b85bf
+}
+.sc01 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #629ac7; FONT-FAMILY: "돋움" ,"Verdana"; LETTER-SPACING: 0px
+}
+.sc02 {
+	FONT-SIZE: 11px; COLOR: #4c4c4c; FONT-FAMILY: "돋움" ,"Verdana"; LETTER-SPACING: 0px
+}
+A.sc02:link {
+	FONT-SIZE: 11px; COLOR: #4c4c4c; TEXT-DECORATION: none
+}
+A.sc02:visited {
+	FONT-SIZE: 11px; COLOR: #4c4c4c; TEXT-DECORATION: none
+}
+A.sc02:active {
+	FONT-SIZE: 11px; COLOR: #000000; TEXT-DECORATION: none
+}
+A.sc02:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #000000; TEXT-DECORATION: none
+}
+.sc03 {
+	FONT-SIZE: 11px; COLOR: #fa003e; FONT-FAMILY: "돋움" ,"Verdana"; LETTER-SPACING: 0px
+}
+.sc04 {
+	FONT-SIZE: 11px; COLOR: #608aef; FONT-FAMILY: "돋움" ,"Verdana"; LETTER-SPACING: 0px
+}
+.sc05 {
+	FONT-SIZE: 11px; COLOR: #4c4c4c; FONT-FAMILY: "돋움" ,"Verdana"; LETTER-SPACING: 0px; TEXT-DECORATION: underline
+}
+A.sc02:link {
+	FONT-SIZE: 11px; COLOR: #4c4c4c; TEXT-DECORATION: none
+}
+A.sc02:visited {
+	FONT-SIZE: 11px; COLOR: #4c4c4c; TEXT-DECORATION: none
+}
+A.sc02:active {
+	FONT-SIZE: 11px; COLOR: #000000; TEXT-DECORATION: none
+}
+A.sc02:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #000000; TEXT-DECORATION: underline
+}
+.3color {
+
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #1eb799
+}
+.graylinepyo {
+	BACKGROUND-POSITION: left bottom;
+	BACKGROUND-IMAGE: url(../img/grayline.gif);
+	BACKGROUND-REPEAT: repeat-x;
+	HEIGHT: 31px;
+	padding-top: 4px;
+
+}
+.bottomcolor {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 11px;
+	COLOR: #666666;
+	line-height: 14px;
+
+}
+
+/*  일반링크 타입*/
+
+A:link {
+	COLOR: #444444; FONT: 9pt/13pt verdana; WORD-SPACING: -0.02em; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #444444; FONT: 9pt/13pt verdana; WORD-SPACING: -0.02em; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #444444; FONT: 9pt/13pt verdana; WORD-SPACING: -0.02em; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #754C24;TEXT-DECORATION: underline
+}
+
+
+/*  테이블배경색 */
+.table_color {
+	BACKGROUND-COLOR:#C9CFD5;
+}
+
+
+
+/*  테이블 타이틀의 중앙정렬의 볼드체 */
+.td_yr_ct_on {
+	COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	FONT-weight: Bold;
+	BACKGROUND-COLOR:#FAF9F2;
+	text-align: center;
+	
+}
+
+/*  테이블 타이틀의 좌측정렬 */
+.td_yr_on {
+	COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#FAF9F2;
+	PADDING-LEFT: 10px;
+	
+}
+
+/*  테이블 세부내용의 좌측정렬의 위아래 오른쪽 모두 여백이 있음 */
+/*  텍스트위주의 설명 */
+.td_yr_10_on{
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	BACKGROUND-COLOR:#FAF9F2;
+	PADDING-left: 10px;
+	PADDING-right: 10px;
+	PADDING-top: 5px;
+	PADDING-bottom: 5px;
+	text-align: justify;
+	line-height: 180%;
+
+}
+
+/*  테이블 타이틀의 좌측정렬의 볼드체 */
+.td_yr_on_b {
+	COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	FONT-weight: Bold;
+	BACKGROUND-COLOR:#FAF9F2;
+	PADDING-LEFT: 10px;
+	
+}
+
+
+
+/*  테이블 세부내용의 좌측정렬 */
+.td_wr_on {
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#FFFFFF;
+	PADDING-LEFT: 10px;
+}
+
+/*  테이블 세부내용의 좌측정렬1 */
+.td_wr_on1 {
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#FFFFFF;
+	PADDING-LEFT: 2px;
+}
+
+
+
+/*  테이블 세부내용의 중앙정렬 */
+.td_wr_ct_on{
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#FFFFFF;
+	text-align: center;
+
+}
+/*  테이블 세부내용의 우측정렬 */
+.td_wr_rt_on{
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#FFFFFF;
+	text-align: right;
+	PADDING-right: 10px;
+
+}
+/*  테이블 세부내용의 좌측정렬의 위아래 오른쪽 모두 여백이 있음 */
+/*  텍스트위주의 설명 */
+.td_wr_10_on{
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	BACKGROUND-COLOR:#FFFFFF;
+	PADDING-left: 10px;
+	PADDING-right: 10px;
+	PADDING-top: 5px;
+	PADDING-bottom: 5px;
+	text-align: justify;
+	line-height: 180%;
+
+}
+
+/*  테이블 세부내용의 좌측정렬의 위아래 오른쪽 모두 여백이 있음 */
+/*  텍스트위주의 설명 */
+.td_cr_10_on{
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	BACKGROUND-COLOR:#FFFFFF;
+	PADDING-left: 10px;
+	PADDING-right: 10px;
+	PADDING-top: 5px;
+	PADDING-bottom: 5px;
+	text-align: center;
+	line-height: 180%;
+
+}

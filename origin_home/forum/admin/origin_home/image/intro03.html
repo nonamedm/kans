@@ -1,0 +1,805 @@
+<%@LANGUAGE="JAVASCRIPT" CODEPAGE="949"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<link href="../css/default.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+<script language=javascript src="../js/drop_menu_sc.js" ></script>
+<script language=javascript src="../js/common.js" ></script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=init();>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr valign="top">
+    <td width="11">&nbsp;</td>
+    <td height="87" colspan="5">
+	<!-- 상단 시작-->
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><img src="../image/top_bar.gif" width="839" height="26" border="0" usemap="#Map2" /></td>
+        </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="14%"><a href="../index.html"><img src="../image/logo_new.gif" width="234" height="60" border="0" /></a></td>
+            <td><table width="100%" height="69" border="0" cellpadding="0" cellspacing="0">
+			  <tr valign="top">
+				<td height="38" background="../image/menu_bag_line.gif"><img src="../image/menu00.gif" width="18" height="38" /><a href="#" onmouseover="msover(1);" onmouseout="msout(1);" onfocus='blur()'><img id="menu1" src="../image/menu01.gif" width="116" height="38" border="0" /></a><img src="../image/menu_bar.gif" width="20" height="38" /><a href="#" onmouseover="msover(2);" onmouseout="msout(2);" onfocus='blur()'><img id="menu2" src="../image/menu02.gif" width="107" height="37" border="0" /></a><img src="../image/menu_bar.gif" width="20" height="38" /><a href="#" onmouseover="msover(3);" onmouseout="msout(3);" onfocus='blur()'><img id="menu3" src="../image/menu03.gif" width="100" height="38" border="0" /></a><img src="../image/menu_bar.gif" width="20" height="38" /><a href="#" onmouseover="msover(4);" onmouseout="msout(4);" onfocus='blur()'><img id="menu4" src="../image/menu04.gif" width="89" height="38" border="0" /></a><img src="../image/menu_s.gif" width="182" height="38" /></td>
+			    </tr>
+			  <tr valign="top">
+				<td height="30"></td>
+			    </tr>
+			</table>			</td>
+          </tr>
+        </table>
+		<script language="javascript">
+		var Tmenuov = "";
+		var Tmenuou = "";
+		
+		function msover(num) {
+			document.all["menu" + num].src = "../image/menu0"+num+".gif";
+		}
+		
+		function msout(num) {
+			document.all["menu" + num].src = "../image/menu0"+num+".gif";
+			Tmenuov = num;
+		}
+		
+		function divmsover() {
+			document.all["menu" + Tmenuov].src = "../image/menu0"+Tmenuov+".gif";
+			Tmenuou = Tmenuov;
+		}
+		
+		function divmsout() {
+			document.all["menu" + Tmenuou].src = "../image/menu0"+Tmenuou+".gif";
+		}
+		</script>
+		<script language=javascript src="../js/drop_menudata.js"></script>		</td>
+      </tr>
+    </table>	
+	<!-- 상단 끝-->	</td>
+  </tr>
+  <tr>
+    <td height="3"></td>
+    <td width="5" height="3"></td>
+    <td colspan="4">	</td>
+  </tr>
+  <tr>
+    <td width="11" rowspan="2" valign="top"><img src="../image/sub_left_bar.gif" width="11" height="134" /></td>
+    <td height="502" rowspan="2">&nbsp;</td>
+    <td width="832" valign="top">
+      <table width="829" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="94" colspan="2"><img src="image/sub_title01.gif" width="185" height="134" /></td>
+          <td width="4" rowspan="4">&nbsp;</td>
+          <td><img src="image/sub_main01.gif" width="640" height="134" /></td>
+          <td width="4" rowspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="94" colspan="2" rowspan="3" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><img src="image/sub_menu01.gif" width="185" height="227" border="0" usemap="#Map" />
+                  <map name="Map" id="Map">
+                    <area shape="rect" coords="3,2,180,28" href="intro01.html" />
+                    <area shape="rect" coords="3,30,180,56" href="intro02.html" />
+                    <area shape="rect" coords="3,57,180,85" href="intro03.html" />
+                    <area shape="rect" coords="3,86,180,113" href="intro04.html" />
+                  </map>                </td>
+              </tr>
+              <tr>
+                <td><div align="center"><img src="../image/c_center.gif" width="170" height="132" /></div></td>
+              </tr>
+            </table></td>
+          <td><img src="image/sub_cate03.gif" width="640" height="59" /></td>
+        </tr>
+        <tr>
+          <td height="148"><table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="25"  background="image/sub_cont_left.gif"><img src="image/sub_cont_left.gif" width="25" height="31" /></td>
+              <td>
+			  <!-- 내용 시작 -->
+			  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td colspan="2" class="td_wr_10_on">| <a href="intro03.html"><strong>원자력 원로 포럼</strong></a> | <a href="intro03_1.html">방사선 체험학습</a> | </td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="td_wr_10_on"><div align="center"></div></td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p align="left">&nbsp; 한국원자력안전아카데미는 원자력 안전이용기술의 확산과 안전문화 창달에 기여하기 위한 여러 가지 사업을 수행하고 있습니다. </p>
+                    <p align="left">&nbsp;「방사선작업종사자 교육, 훈련」사업은 이미 당 아카데미 초창기부터 시행해 왔으며 2004년부터 원자력 계 원로들의 의견수렴의 장으로서 「원자력원로포럼」모임을 정례 화하여 개최하고 있습니다. 또한 2005년도부터는 청소년들에게 원자력과 방사선의 올바른 이해를 돕기 위한 「방사선측정 체험사업」을  수행하고 있습니다. </p>
+                    <p align="left">&nbsp;&nbsp;한국원자력안전아카데미는 이러한 사업수행을 통하여 우리나라 원자력 사업에 대한 국민의 이해증진과 안전문화 창달에 기여할 수 있으리라는 신념을 갖고 있으며 이를 이루기 위해 최선의 노력을 다할 것입니다. </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="2012.1.30.jpg" width="500" height="333" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2012년 1월 30일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="2012.1.30(3).jpg" width="500" height="333" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2012년 1월 30일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="2012.1.30(4).jpg" width="500" height="333" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 패널토의에 참석한 최종배 전략기술개발관,울산과기대 김시환 좌장,유국희 안전정책국장(왼쪽부터) </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="2012.1.30(2).jpg" width="500" height="333" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                    <p>유국희  안전정책국장의&quot;원자력 안전위원회 발족과 원자력안전규제 방향&quot; 주제발표 모습 </p>
+                    </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20111006_forum(1).jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 변준연 한국전력공사 부사장의 “
+
+
+ 후쿠시마 원전사고 후 우리나라의 원전수출 전망
+
+” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20111006_forum(2).jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2011년 10월 06일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/forum(1)_20110722.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 패널토의에 참석한 이레나 이화여대 교수, 김영평 고려대 명예교수, 전광희 충남대 교수 (왼쪽부터) </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/forum(3)_20110722.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 김영평 고려대 명예교수의 “
+
+
+ 후쿠시마 원전사고의 사회과학적 교훈과 정책과제
+
+” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/forum(2)_20110722.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2011년 7월 22일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20110429_forum(2).jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 김병구 한국과학기술원 초빙교수의 “원자력기술 자립과 국제협력” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20110429_forum(1).jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2011년 4월 29일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20110125_forum(2).jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 홍남표 교육과학기술부 원자력국장의 “원자력 전문인력 양성 방향” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20110125_forum(1).jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2011년 1월 25일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20100929forum.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 김종경 한양대학교 교수의 “방사선 이용산업의 활성화 전략” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20100929forum_2.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 변명우 우송대학교 교수의 “방사선이용  융합기술 개발” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20100929forum_1.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2010년 9월 29일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20100714forum_2.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 윤철호 한국원자력안전기술원장의 “원자력수출과 글로벌리더십” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20100714forum_1.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2010년 7월 14일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20100428forum_4.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 강창순 서울대학교  명예교수의 “원자력기술고도화와 원자력의 비젼” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20100428forum_1.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2010년 4월 28일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/2010.1.27_forum.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 원자력 원로포럼을 마친 후 기념촬영</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20100127_forum.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 강영철 교육과학기술부 원자력국장의 “글로벌시대에 대비한 원자력 추진전략” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20100127_forum2.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2010년 1월 27일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/forum20090923_2.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2009년 9월 23일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/forum20090923_1.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2009년 9월 23일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/forum2009.06.23-3.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 원자력 원로포럼을 마친 후 기념촬영</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/forum2009.06.23-2.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 정옥임 한나라당국회의원 의 “한미 원자력 협력의 기회와 난제” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/forum2009.06.23-1.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2009년 6월 23일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/forum2009.03.26-2.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 양명승 원자력연구원장 의 “미래 원자력시스템 개발 계획” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/forum2009.03.26-1.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 양명승 원자력연구원장 의 “미래 원자력시스템 개발 계획” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/forum2009.03.26.jpg" width="500" height="366" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2009년 3월 26일)</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20090121발표자.gif" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 김시환 울산대학교 교수의 “세계원자력시장 : 어떻게 선점 할 것인가?” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20090121인사말.gif" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p> 한국원자력안전아카데미 임 용규 이사장의 인사말 모습 </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20090121원자력원로포럼사진.gif" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2009년 1월 21일) </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/원자력전략과비전발표.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>김진우 에너지경제연구원 전력가스연구실장의 “원자력 전략과 비전” 주제발표 모습</p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/감사패사진.jpg" width="500" height="374" /></div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>연구용 원자로 보존에 노력하신 분들에게 감사패 증정 기념 촬영 <br />
+                        (왼쪽부터 임용규 보존추진위원회 공동위원장, 문병룡 교육과학기술부 원자력국장, 이종훈 전 한국전력공사 사장, 박긍식 전 과학기술처 장관, 안세희 공동위원장) </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/원로포럼사진.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2008년 9월 26일) </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20080703.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>연구용원자로보존추진위원회 안세희, 임용규 공동위원장과 김우식 전 장관 기념사진 </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20080703-2.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>우리나라 최초 연구용원자로보존 관련 감사패 증정(김우식 전 부총리겸과학기술부장관) </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20080703-1.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>김종순 한국원자력의학원 원장의 “원자력과건강” 주제발표 모습<br />
+                      </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20080703-3.jpg" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>서울역삼동 한국과학기술회관에서 열린 원자력 원로포럼 개최 모습(2008년 7월 3일) </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20080321.gif" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>서울팔레스호텔 로얄볼룸에서 열린 원자력 원로포럼 개최 모습(2008년 3월 21일) </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20080129.gif" width="500" height="368" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>서울팔레스호텔 로얄볼룸에서 열린 원자력 원로포럼 개최 모습(2008년 1월 29일) </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p><img src="image/20071018.jpg" width="500" height="400" /></p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>서울팔레스호텔 로얄볼룸에서 열린 원자력 원로포럼 개최 모습(2007년 10월 18일) </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/20071018_1.jpg" width="500" height="374" /></div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>이창건 한국 전력기술기준위원회 위원장의 “원자력의 현재와 미래” 주제발표 모습<br />
+                        (2007년 10월 18일 원자력원로포럼, 서울팔레스 호텔) </p>
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/DSCN2375(500).jpg" width="500" height="374" /></div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">2007년 7월 5일 원자력 원로 포럼</div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/DSCN2377(500).jpg" width="500" height="374" /></div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">2007년 7월 5일 원자력 원로 포럼</div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/DSCN2263(500).jpg" width="500" height="375" /></div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">2007년 4월 5일 원자력 원로 포럼</div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/DSCN2265(500).jpg" width="500" height="375" /></div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">2007년 4월 5일 원자력 원로 포럼</div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/20061211.jpg" width="500" height="374" /></div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">2006년 12월 11일 원자력 원로 포럼</div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/20061211_1.jpg" width="500" height="374" /></div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">신원기 한국원자력안전기술원 원장의 주제 발표 모습 <br />
+                    2006년 12월 11일 원자력 원로 포럼<br />
+                  </div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/DSCN1685.jpg" width="500" height="374" /></div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">2006년 6월 30일 원자력 원로 포럼</div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/DSCN1671.jpg" width="500" height="374" /></div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">황병준 한국수력원자력(주) 방사성폐기물사업본부장의 주제 발표 모습<br />
+                    2006년 6월 30일 원자력 원로 포럼</div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/forum0329.JPG" width="500" height="374" /></div></td>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">2006년 3월 29일 원자력 원로 포럼</div></td>
+                  <td rowspan="7"  class="td_wr_10_on"></td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/forum0329-1.jpg" width="500" height="374" /></div></td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">
+                      <p>이중재 한국수력원자력(주) 사장의 주제 발표 모습<br />
+                        2006년 3월 29일 원자력 원로 포럼<br />
+                      </p>
+                  </div></td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center"><img src="image/20050719_1.JPG" width="500" height="374" /></div></td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on"><div align="center">2005년 7월 19일 원자력 원로 포럼</div></td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_wr_10_on">&nbsp;</td>
+                </tr>
+              </table>
+			  <!-- 내용 끝 -->
+			  </td>
+              <td width="25" background="image/sub_cont_right.gif"><img src="image/sub_cont_right.gif" width="25" height="29" /></td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td><img src="image/sub_cont_bottom.gif" width="640" height="34" /></td>
+        </tr>
+      </table></td>
+    <td width="28" rowspan="2">&nbsp;</td>
+    <!-- 퀵메뉴 시작 -->
+    <?
+		include "../include/quick_menu.html";
+	?>
+	<!-- 퀵메뉴 끝 -->
+    <td width="705" rowspan="2">&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>&nbsp;</td>
+        </tr>
+    </table></td>
+  </tr>
+  
+  <tr>
+    <td colspan="6" background="../image/bottom_bg.gif"><p><img src="../image/bottom.gif" width="907" height="63" border="0" usemap="#Map4" /></td>
+  </tr>
+</table>
+
+
+<map name="Map2" id="Map2"><area shape="rect" coords="639,3,680,23" href="../index.html" /><area shape="rect" coords="691,5,761,23" href="mailto:kans@kans.re.kr" /><area shape="rect" coords="769,4,822,23" href="http://kans.re.kr/sitemap/1.htm" /></map>
+<map name="Map4" id="Map4"><area shape="rect" coords="769,9,844,31" href="mailto:kans@kans.re.kr" /><area shape="rect" coords="845,10,905,30" href="http://kans.re.kr/intro/intro04.html" /></map>
+</body>
+</html>

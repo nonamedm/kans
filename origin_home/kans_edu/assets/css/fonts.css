@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Noto Sans KR M';
+    src: url('/kans_edu/assets/fonts/NotoSans-Medium.eot');
+    src: url('/kans_edu/assets/fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/kans_edu/assets/fonts/NotoSans-Medium.woff') format('woff'),
+    url('/kans_edu/assets/fonts/NotoSans-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR L';
+    src: url('/kans_edu/assets/fonts/NotoSans-Light.eot');
+    src: url('/kans_edu/assets/fonts/NotoSans-Light.eot?#iefix') format('embedded-opentype'),
+    url('/kans_edu/assets/fonts/NotoSans-Light.woff') format('woff'),
+    url('/kans_edu/assets/fonts/NotoSans-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'NanumPen';
+    src: url('/kans_edu/assets/fonts/NanumPen.eot');
+    src: url('/kans_edu/assets/fonts/NanumPen.eot?#iefix') format('embedded-opentype'),
+    url('/kans_edu/assets/fonts/NanumPen.woff') format('woff'),
+    url('/kans_edu/assets/fonts/NanumPen.ttf') format('truetype');
+}
+

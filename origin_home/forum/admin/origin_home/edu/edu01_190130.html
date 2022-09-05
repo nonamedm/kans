@@ -1,0 +1,443 @@
+<?
+include "../conf/dbconn.inc";
+
+$today = getdate(); 
+
+if(!$sYear) {
+	$sYear = $today['year'];
+	$sMonth = $today['mon'];
+	$sDay = $today['mday'];
+}
+
+$display_year = $sYear;
+$display_month = $sMonth;
+$display_day = 1;
+
+if($display_month == 0) {
+	$display_year = $display_year - 1;
+	$display_month = 12;
+}
+if($display_month == 13) {
+	$display_year = $display_year + 1;
+	$display_month = 1;
+}
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="../css/font.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+<script language=javascript src="../js/drop_menu_sc.js"></script>
+<script language=javascript src="../js/common.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/gnb.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=init();>
+<div class="header">
+	<? include "../inc/header.php"; ?>
+</div>
+
+<div class="sub_visual">
+	<img src="../image/sub_visual.jpg">
+</div>
+
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  톱메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+							<!--<tr>-->
+								<!--<td rowspan="2" width="235" height="60"><a href="../index.html"><img src="../image_s/logo.gif" width="235" height="60" /></a></td>-->
+								<!--<td colspan="5" width="789" height="30"></td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td width="540" height="30"></td>-->
+								<!--<td width="60" height="30" align="left"><a href="../index.html">· HOME</a></td>-->
+								<!--<td width="100" height="30" align="left"><a href="mailto:kans@kans.re.kr">· CONTACT US</a></td>-->
+								<!--<td width="70" height="30" align="left"><a href="../map/map01.html">· SITEMAP</a></td>-->
+								<!--<td width="19" height="30"></td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  톱메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  로컬메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" height="60" border="0" cellpadding="0" cellspacing="0">-->
+							<!--<tr>-->
+								<!--<td>-->
+									<!--<div id="flashContent">-->
+										<!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1024" height="60" id="indexmenuA" align="middle">-->
+											<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+											<!--<param name="quality" value="high" />-->
+											<!--<param name="bgcolor" value="#ffffff" />-->
+											<!--<param name="play" value="true" />-->
+											<!--<param name="loop" value="true" />-->
+											<!--<param name="wmode" value="transparent" />-->
+											<!--<param name="scale" value="showall" />-->
+											<!--<param name="menu" value="true" />-->
+											<!--<param name="devicefont" value="false" />-->
+											<!--<param name="salign" value="" />-->
+											<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--<object type="application/x-shockwave-flash" data="../swf/indexmenuA.swf" width="1024" height="60">-->
+												<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+												<!--<param name="quality" value="high" />-->
+												<!--<param name="bgcolor" value="#ffffff" />-->
+												<!--<param name="play" value="true" />-->
+												<!--<param name="loop" value="true" />-->
+												<!--<param name="wmode" value="transparent" />-->
+												<!--<param name="scale" value="showall" />-->
+												<!--<param name="menu" value="true" />-->
+												<!--<param name="devicefont" value="false" />-->
+												<!--<param name="salign" value="" />-->
+												<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+											<!--<a href="http://www.adobe.com/go/getflash">-->
+												<!--<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />-->
+											<!--</a>-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--</object>-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+										<!--</object>-->
+									<!--</div>-->
+								<!--</td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  로컬메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<!--&lt;!&ndash;  상단 끝  &ndash;&gt;-->
+	<!--&lt;!&ndash;  왼쪽메뉴 및 콘텐츠내용 시작  &ndash;&gt;-->
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellpadding="0" cellspacing="0">-->
+				<!--<tr>-->
+					<!--<td><img src="images/edu_title.jpg" width="185"></td>-->
+					<!--<td><img src="images/edu_main_img.jpg" width="839"></td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<tr>
+		<td colspan="5">
+			<!-- 왼쪽메뉴 시작  -->
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<!-- 왼쪽메뉴 시작  -->	
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="edu01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image01','','images/sub_edu01_on.gif',1)"><img src="images/sub_edu01_off.gif" name="Image01" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image02','','images/sub_edu02_on.gif',1)"><img src="images/sub_edu02_off.gif" name="Image02" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image03','','images/sub_edu03_on.gif',1)"><img src="images/sub_edu03_off.gif" name="Image03" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image04','','images/sub_edu04_on.gif',1)"><img src="images/sub_edu04_off.gif" name="Image04" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/account.png"></td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td align="center"><a href="http://www.kans.re.kr/jongsa.hwp" target="_blank"><img src="images/jongsa_downA.png" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td align="center"><a href="http://www.kans.re.kr/bosoo.hwp" target="_blank"><img src="images/bosoo_downA.png" border="0"></a></td>
+							</tr>
+						</table>
+						<!-- 왼쪽메뉴 끝  -->
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/edu_subbar_01.jpg"></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td>
+									<table width="837" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="20"></td>
+											<td>
+												<!-- 내용 시작 -->
+												<script language="javascript">
+
+function cal_view(uid){
+	var theURL='edu01_view.html?uid='+uid;
+	var features='left=280,top=250,width=600,height=350,toolbars=no,menubar=no,scrollbars=auto,status=no,resizable=no';
+	window.open(theURL,"",features);
+}
+
+function cal_submit(sy,sm,sid){
+
+var form=document.calform;
+
+	form.sYear.value = sy;
+	form.sMonth.value = sm;
+	form.group_id.value = sid;
+
+	form.action = 'edu01.html';
+	form.submit()
+}
+
+</script>
+<table cellpadding="0" cellspacing="0" width="100%" border="0">
+	<tr>
+		<td align="center"><img src="images/search_info.gif"></td>
+	</tr>
+	<tr>
+		<td height="10"></td>
+	</tr>
+	<tr>
+		<td align="center"><b><font color="#747474">(<strike>중간선 표시</strike>:교육마감, *표시:기본교육과 연계교육)</font></b></td>
+	</tr>
+	<tr>
+		<td align="center" valign="middle" height="50" style="font-size:12px;font-weight:bold;">
+		&nbsp;
+		<? if ($group_id==''){ ?><img src="images/check_ok.gif"><? } else {?><img src="images/check_no.gif"><? } ?><a href="javascript:void(0);" onclick="cal_submit('<?=$display_year1?>','<?=$display_month?>','');">전체</a>
+<?
+	$sql="select * from edu_calendar_group order by group_id asc";
+	$group_res=mysql_query($sql);
+	$group_total=mysql_affected_rows();
+	for($i=0; $i<$group_total; $i++){
+		$group_row = mysql_fetch_object($group_res);
+?>
+		&nbsp;<? if ($group_id==$group_row->group_id){ ?><img src="images/check_ok.gif"><? } else {?><img src="images/check_no.gif"><? }?><a href="javascript:void(0);" onclick="cal_submit('<?=$display_year1?>','<?=$display_month?>','<?=$group_row->group_id?>');"><?=$group_row->group_name?></a>
+<? } ?>
+		</td>
+	</tr>
+	<tr>
+		<td height="15"></td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" border="0">
+	<tr>
+		<td align="center" style="font-family:verdana;font-size:18px;font-weight:bold;">
+			<a href="javascript:void(0);" onclick="cal_submit('<?=$display_year-1?>','<?=$display_month?>','<?=$group_id?>');"><img align="absmiddle" border="0" src="images/brd_bn_first.gif"></a>
+			<a href="javascript:void(0);" onclick="cal_submit('<?=$display_year?>','<?=$display_month-1?>','<?=$group_id?>');"><img align="absmiddle" border="0" hspace="4" src="images/brd_bn_prev.gif"></a>
+				&nbsp;<?=$display_year?>. <font color="#338ac1"><b><?=$display_month?></b></font>&nbsp;
+			<a href="javascript:void(0);" onclick="cal_submit('<?=$display_year?>','<?=$display_month+1?>','<?=$group_id?>');"><img align="absmiddle" border="0" hspace="4" src="images/brd_bn_next.gif"></a>
+			<a href="javascript:void(0);" onclick="cal_submit('<?=$display_year+1?>','<?=$display_month?>','<?=$group_id?>');"><img align="absmiddle" border="0" src="images/brd_bn_end.gif"></a> 
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>
+			<table border="0" cellpadding="0" cellspacing="1" width="100%" bgcolor="#eff1f4">
+				<tr valign="bottom">
+					<td bgcolor="#ff3333" class="style11" height="22" style="padding-top:4px;" align="center" valign="middle" width="105">&nbsp;일요일</td>
+					<td bgcolor="#ccdbe5" class="style11" height="22" style="padding-top:4px;" align="center" valign="middle" width="105">&nbsp;월요일</td>
+					<td bgcolor="#ccdbe5" class="style11" height="22" style="padding-top:4px;" align="center" valign="middle" width="105">&nbsp;화요일</td>
+					<td bgcolor="#ccdbe5" class="style11" height="22" style="padding-top:4px;" align="center" valign="middle" width="105">&nbsp;수요일</td>
+					<td bgcolor="#ccdbe5" class="style11" height="22" style="padding-top:4px;" align="center" valign="middle" width="105">&nbsp;목요일</td>
+					<td bgcolor="#ccdbe5" class="style11" height="22" style="padding-top:4px;" align="center" valign="middle" width="105">&nbsp;금요일</td>
+					<td bgcolor="#0066ff" class="style11" height="22" style="padding-top:4px;" align="center" valign="middle" width="105">&nbsp;토요일</td>
+				</tr>
+				<tr bgcolor="#F3F1EC" valign="top">
+<?
+	$dayoftheweek = date("w", mktime (0,0,0,$display_month,1,$display_year));
+	for ($i = 1 ; $i <= $dayoftheweek;  $i++) {
+?>
+					<td align="left" bgcolor="#ffffff" height="50" width="105">&nbsp;</td>
+<? } ?>
+<?
+	$lastday=array(0,31,28,31,30,31,30,31,31,30,31,30,31);
+	if ($display_year%4 == 0) $lastday[2] = 29;
+	
+	for ($i = 1 ; $i <= $lastday[$display_month];  $i++) {
+
+		if (date("w", mktime (0,0,0,$display_month,$i,$display_year)) == 0 && $i != 1 ) { ?>
+				</tr>
+				<tr align="left" bgcolor="#ffffc0">
+<?		} ?>
+					<td bgcolor="#ffffff" height="50" valign="top" width="105">
+						<table border="0" cellpadding="0" cellspacing="0" height="15" width="20">
+							<tr>
+								<td align="middle" bgcolor="#ffffff">
+<?
+		if (date("w", mktime (0,0,0,$display_month,$i,$display_year)) == 0 ) {
+			$day_color = "#ff3333";
+		} elseif (date("w", mktime (0,0,0,$display_month,$i,$display_year)) == 6 ) {
+			$day_color = "#0066ff";
+		} else {
+			$day_color = "#000000";
+		}
+?>
+									<font color="<?=$day_color?>"><b><?=$i?></b></font>
+								</td>
+							</tr>
+						</table>
+						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="margin-top:2px" width="100%">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+<?
+	
+	$sel_date = $display_year.sprintf("%02d",$display_month).sprintf("%02d",$i);
+
+	for($j=1; $j<=6; $j++){
+		if($group_id=='') {
+			$sql="select * from edu_calendar A, edu_calendar_group B where A.group_id=B.group_id and A.bbs_id=20 and A.sdate<=$sel_date and A.edate>=$sel_date and view_loc=$j order by A.group_id asc, A.uid desc";
+		} else {
+			$sql="select * from edu_calendar A, edu_calendar_group B where A.group_id=B.group_id and A.bbs_id=20 and A.sdate<=$sel_date and A.edate>=$sel_date and A.view_loc=$j and A.group_id=$group_id order by A.group_id asc, A.uid desc";
+		}
+		$res=mysql_query($sql);
+		$total=mysql_affected_rows();
+
+		if($total<1) {
+?>
+						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="height:15px;" width="100%">
+							<tr>
+								<td style="font-size:11px;">&nbsp;</td>
+							</tr>
+						</table>
+<?		
+		} else {
+			$row = mysql_fetch_object($res);
+?>
+						<table bgcolor="#<?=$row->group_color?>" border="0" cellpadding="0" cellspacing="0" style="height:15px;" width="100%">
+							<tr>
+								<td style="font-size:11px;"><strong>&nbsp;<a href="javascript:cal_view('<?=$row->uid?>')"><?=$row->title?></strong></a></td>
+							</tr>
+						</table>
+<?		} ?>
+
+<?	} ?>
+					</td>
+<? } ?>
+<?
+	if (date("w", mktime (0,0,0,$display_month,$i,$display_year)) != 0) {
+			for ($j = 0 ; $j <= 6-date("w", mktime (0,0,0,$display_month,$i,$display_year));  $j++) { ?>
+					<td align="left" bgcolor="#ffffff" height="50" width="105">&nbsp;</td>
+<?
+			}
+	}
+?>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+												
+												<!-- 내용 끝 -->
+											</td>
+											<td width="20"></td>
+										</tr>
+										<tr>
+											<td colspan="3" height="30"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<form name='calform' method='post'>
+	<input type=hidden name='sYear' value=''>
+	<input type=hidden name='sMonth' value=''>
+	<input type=hidden name='group_id' value=''>
+</form>
+</body>
+</html>

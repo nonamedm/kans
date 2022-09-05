@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="../css/font.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+<script language=javascript src="../js/drop_menu_sc.js"></script>
+<script language=javascript src="../js/common_s.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/gnb.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<div class="header">
+	<? include "../inc/header.php"; ?>
+</div>
+
+<div class="sub_visual">
+	<img src="../image/sub_visual.jpg">
+</div>
+
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  톱메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+							<!--<tr>-->
+								<!--<td rowspan="2" width="235" height="60"><a href="../index.html"><img src="../image_s/logo.gif" width="235" height="60" /></a></td>-->
+								<!--<td colspan="5" width="789" height="30"></td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td width="540" height="30"></td>-->
+								<!--<td width="60" height="30" align="left"><a href="../index.html">· HOME</a></td>-->
+								<!--<td width="100" height="30" align="left"><a href="mailto:kans@kans.re.kr">· CONTACT US</a></td>-->
+								<!--<td width="70" height="30" align="left"><a href="../map/map01.html">· SITEMAP</a></td>-->
+								<!--<td width="19" height="30"></td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  톱메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  로컬메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" height="60" border="0" cellpadding="0" cellspacing="0">-->
+							<!--<tr>-->
+								<!--<td>-->
+									<!--<div id="flashContent">-->
+										<!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1024" height="60" id="indexmenuA" align="middle">-->
+											<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+											<!--<param name="quality" value="high" />-->
+											<!--<param name="bgcolor" value="#ffffff" />-->
+											<!--<param name="play" value="true" />-->
+											<!--<param name="loop" value="true" />-->
+											<!--<param name="wmode" value="transparent" />-->
+											<!--<param name="scale" value="showall" />-->
+											<!--<param name="menu" value="true" />-->
+											<!--<param name="devicefont" value="false" />-->
+											<!--<param name="salign" value="" />-->
+											<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--<object type="application/x-shockwave-flash" data="../swf/indexmenuA.swf" width="1024" height="60">-->
+												<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+												<!--<param name="quality" value="high" />-->
+												<!--<param name="bgcolor" value="#ffffff" />-->
+												<!--<param name="play" value="true" />-->
+												<!--<param name="loop" value="true" />-->
+												<!--<param name="wmode" value="transparent" />-->
+												<!--<param name="scale" value="showall" />-->
+												<!--<param name="menu" value="true" />-->
+												<!--<param name="devicefont" value="false" />-->
+												<!--<param name="salign" value="" />-->
+												<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+											<!--<a href="http://www.adobe.com/go/getflash">-->
+												<!--<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />-->
+											<!--</a>-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--</object>-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+										<!--</object>-->
+									<!--</div>-->
+								<!--</td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  로컬메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<!--&lt;!&ndash;  상단 끝  &ndash;&gt;-->
+	<!--&lt;!&ndash;  왼쪽메뉴 및 콘텐츠내용 시작  &ndash;&gt;-->
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellpadding="0" cellspacing="0">-->
+				<!--<tr>-->
+					<!--<td><img src="images/intro_title.jpg" width="185"></td>-->
+					<!--<td><img src="images/intro_main_img.jpg" width="839"></td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<tr>
+		<td colspan="5">
+			<!-- 왼쪽메뉴 시작  -->
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="intro01.html"><img src="images/sub_intro01_off.gif" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							 <tr>
+								<td align="center">
+									<table width="605" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="18"><img src="images/bar_s.gif"></td>
+											<td><a href="sub01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image01','','images/sub01_on.gif',1)"><img src="images/sub01_off.gif" name="Image01" width="90" height="25" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td><a href="sub02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image02','','images/sub02_on.gif',1)"><img src="images/sub02_off.gif" name="Image02" width="90" height="25" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td><a href="sub03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image03','','images/sub03_on.gif',1)"><img src="images/sub03_off.gif" name="Image03" width="90" height="25" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td><a href="sub04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image04','','images/sub04_on.gif',1)"><img src="images/sub04_off.gif" name="Image04" width="90" height="25" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td><a href="sub05.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image05','','images/sub05_on.gif',1)"><img src="images/sub05_off.gif" name="Image05" width="90" height="25" border="0"></a></td>
+											<td width="17"><img src="images/bar_s.gif"></td>
+										</tr>
+									</table>	
+								</td>
+							</tr>
+							<tr>
+								<td height="40"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/greet01.jpg"></td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td>
+									<table width="700" border="0" cellpadding="0" cellspacing="0" align="center">
+										<td>
+											<td valign="top">
+												<table width="200" border="0" cellpadding="0" cellspacing="0">
+													<tr>
+														<td height="10"></td>
+													</tr>
+													<tr>
+														<td align="center"><!--<img src="images/chairmanB.jpg" width="150" height="190" />--></td>
+													</tr>
+													<tr>
+														<td height="10"></td>
+													</tr>
+													<tr>
+														<td align="center"></td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table width="500" border="0" cellpadding="0" cellspacing="0">
+													<tr>
+														<td height="10"></td>
+													</tr>
+													<tr>
+														<td>
+															존경하는 회원 여러분<br>
+															그리고 그동안 한국원자력안전아카데미에 관심과 성원을 보내주신 관계전문가,<br>
+															관련기관종사자 및 일반국민여러분<br>
+															원자력은 첨단과학기술에 의해서 운용되는 고 집적에너지입니다.<br>
+															그러나 원자력의 에너지 이용과정에서 사고가 나거나 부산물로 발생되는 방사성물질은<br>
+															인간 등 생명체와 환경에 큰 위해를 줄 수 있으므로 조심해서 다루어야 하며,<br>
+															안전성 확보가 전제되어야 합니다.<br>
+															<br>
+															원자력발전은 세계적으로 1960~70년대부터 시설운영이 본격적으로 추진되어 중흥기를<br>
+															맞는듯 했으나 3건의 대형 사고가 발생하므로서 안전에 대한 신뢰 확보와 국민수용성에<br>
+															대한 문제를 떠안고 있습니다. <br>
+															그러나 장기적인 관점에서 보면, 원자력은 지구 환경문제에 대처할 수 있는 에너지이므로<br>
+															관련기술의 발전과 운영경험의 축적으로 그 이용확대의 가능성도 있습니다.<br>
+															한국원자력안전아카데미는 이러한 원자력 이용과정에서 가장 중요한 안전문제를 중점적으로<br>
+															다루는 비영리 기관입니다.<br>
+															<br>
+															그동안 원자력관련 면허자나 종사자에 대한 안전교육을 실시하고 학생, 시민들을 대상으로<br> 
+															체험형 방사선안전 이해확산교육을 충실히 수행해왔으며 원자력계에서 지도적 위치에 계셨던<br>
+															고위전문가를 중심으로 원자력안전문제를 다루기 위한 원자력원로포럼을 개최해왔습니다.<br>
+															그러나 일본 후쿠시마원전사고 이후 원자력안전이나 생활주변 방사선에 대한 사회적인<br>
+															관심이 크게 높아졌고 에너지정책의 조정 등 사회 전반으로 원자력 주변환경에 많은 <br>
+															변화가 있는 상황입니다.<br>
+															<br>
+															따라서 본 아카데미는 과학기술계, 사회 지도층과의 정보교환과 협력 강화 및 일반국민들의 관심을 확대하여
+															원자력안전관련 지식확산은 물론 정보교환과 소통을 위해 노력해나가고자 합니다.<br>
+															<br>
+															저희 한국원자력안전아카데미가 나가고자하는 방향에 대하여 회원 제위님들의<br>
+															적극적인 협조와 지도편달을 바랍니다.<br>
+															<br>
+														</td>
+													</tr>
+													<tr>
+														<td align="right"><b>한국원자력안전아카데미 이사장</b></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

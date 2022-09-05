@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="../css/font.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+<script language=javascript src="../js/drop_menu_sc.js"></script>
+<script language=javascript src="../js/common_s.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/gnb.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<div class="header">
+	<? include "../inc/header.php"; ?>
+</div>
+
+<div class="sub_visual">
+	<img src="../image/sub_visual.jpg">
+</div>
+
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  톱메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+							<!--<tr>-->
+								<!--<td rowspan="2" width="235" height="60"><a href="../index.html"><img src="../image_s/logo.gif" width="235" height="60" /></a></td>-->
+								<!--<td colspan="5" width="789" height="30"></td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td width="540" height="30"></td>-->
+								<!--<td width="60" height="30" align="left"><a href="../index.html">· HOME</a></td>-->
+								<!--<td width="100" height="30" align="left"><a href="mailto:kans@kans.re.kr">· CONTACT US</a></td>-->
+								<!--<td width="70" height="30" align="left"><a href="../map/map01.html">· SITEMAP</a></td>-->
+								<!--<td width="19" height="30"></td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  톱메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  로컬메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" height="60" border="0" cellpadding="0" cellspacing="0">-->
+							<!--<tr>-->
+								<!--<td>-->
+									<!--<div id="flashContent">-->
+										<!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1024" height="60" id="indexmenuA" align="middle">-->
+											<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+											<!--<param name="quality" value="high" />-->
+											<!--<param name="bgcolor" value="#ffffff" />-->
+											<!--<param name="play" value="true" />-->
+											<!--<param name="loop" value="true" />-->
+											<!--<param name="wmode" value="transparent" />-->
+											<!--<param name="scale" value="showall" />-->
+											<!--<param name="menu" value="true" />-->
+											<!--<param name="devicefont" value="false" />-->
+											<!--<param name="salign" value="" />-->
+											<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--<object type="application/x-shockwave-flash" data="../swf/indexmenuA.swf" width="1024" height="60">-->
+												<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+												<!--<param name="quality" value="high" />-->
+												<!--<param name="bgcolor" value="#ffffff" />-->
+												<!--<param name="play" value="true" />-->
+												<!--<param name="loop" value="true" />-->
+												<!--<param name="wmode" value="transparent" />-->
+												<!--<param name="scale" value="showall" />-->
+												<!--<param name="menu" value="true" />-->
+												<!--<param name="devicefont" value="false" />-->
+												<!--<param name="salign" value="" />-->
+												<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+											<!--<a href="http://www.adobe.com/go/getflash">-->
+												<!--<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />-->
+											<!--</a>-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--</object>-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+										<!--</object>-->
+									<!--</div>-->
+								<!--</td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  로컬메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<!--&lt;!&ndash;  상단 끝  &ndash;&gt;-->
+	<!--&lt;!&ndash;  왼쪽메뉴 및 콘텐츠내용 시작  &ndash;&gt;-->
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellpadding="0" cellspacing="0">-->
+				<!--<tr>-->
+					<!--<td><img src="images/intro_title.jpg" width="185"></td>-->
+					<!--<td><img src="images/intro_main_img.jpg" width="839"></td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<tr>
+		<td colspan="5">
+			<!-- 왼쪽메뉴 시작  -->
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="intro01.html"><img src="images/sub_intro01_off.gif" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							 <tr>
+								<td align="center">
+									<table width="605" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="18"><img src="images/bar_s.gif"></td>
+											<td><a href="sub01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image01','','images/sub01_on.gif',1)"><img src="images/sub01_off.gif" name="Image01" width="90" height="25" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td><a href="sub02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image02','','images/sub02_on.gif',1)"><img src="images/sub02_off.gif" name="Image02" width="90" height="25" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td><a href="sub03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image03','','images/sub03_on.gif',1)"><img src="images/sub03_off.gif" name="Image03" width="90" height="25" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td><a href="sub04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image04','','images/sub04_on.gif',1)"><img src="images/sub04_off.gif" name="Image04" width="90" height="25" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td><a href="sub05.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image05','','images/sub05_on.gif',1)"><img src="images/sub05_off.gif" name="Image05" width="90" height="25" border="0"></a></td>
+											<td width="17"><img src="images/bar_s.gif"></td>
+										</tr>
+									</table>	
+								</td>
+							</tr>
+							<tr>
+								<td height="40"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/greet02.jpg"></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							 <tr>
+								<td>
+									<table width="750" border="0" cellpadding="0" cellspacing="0" align="center">
+										<tr>
+											<td width="80" rowspan="11"></td>
+											<td><img src="images/2-1.gif" width="62" height="17" /></td>
+											<td width="45" rowspan="11"></td>
+										</tr>
+										<tr>
+											<td height="10"></td>
+										</tr>
+										<tr>
+											<td>&nbsp;&nbsp;이 법인은 사회 일반의 이익에 공여하기 위하여 민법 제32조 및 공익법인의 설립 운영에 관한 법률의 규정에 따라 <br>
+											&nbsp;&nbsp;원자력에 대한 국민 이해 증진을 도모하고 안전문화확산에 기여함을 목적으로 한다.(정관 제1조)</td>
+										</tr>
+										<tr>
+											<td height="30"></td>
+										</tr>
+										<tr>
+											<td><img src="images/2-2.gif" width="62" height="17" /></td>
+										</tr>
+										<tr>
+											<td height="10"></td>
+										</tr>
+										<tr>
+											<td>
+												&nbsp;&nbsp;본 아카데미는 그 설립목적을 달성하기 위하여 다음과 같은 사업을 수행한다. (정관 제6조)<br><br>
+												&nbsp;&nbsp;1. 원자력관계사업자의 안전관리 역량증진 사업<br>
+												&nbsp;&nbsp;2. 원자력 및 방사선안전 관련 인력양성 및 전문성 강화 사업<br>
+												&nbsp;&nbsp;3. 원자력안전 공동체 구축 및 원자력과 방사선 안전문화확산 사업 <br>
+												&nbsp;&nbsp;4. 원자력 및 방사선안전분야에 관한 연구개발, 조사·분석 및 정책 연구<br>
+												&nbsp;&nbsp;5. 원자력 및 방사선안전분야의 이해를 위한 각종 출판물의 발간<br>
+												&nbsp;&nbsp;6. 원자력 및 방사선분야 안전증진을 위한 국내외 기관과의 기술협력 <br>
+												&nbsp;&nbsp;7. 원자력 및 방사선분야에 관한 국민 이해증진과 안전에 대한 조사, 계몽강습회, 세미나 및 교육<br>
+												&nbsp;&nbsp;8. 원자력 및 방사선안전분야에 관한 정보자료의 수집 및 기술자문<br>
+												&nbsp;&nbsp;9. 참여와 체험학습을 통한 원자력 및 방사선안전 이해증진 관련사업<br>
+												&nbsp;&nbsp;10. 원자력과 방사선안전관련 정부, 유관단체 등으로 부터 위탁되는 수탁사업<br>
+												&nbsp;&nbsp;11. 원자력 및 방사선분야 안전증진 관련 필요경비 충당을 위한 부동산 임대<br>
+												&nbsp;&nbsp;12. 기타 법인의 목적 달성을 위하여 필요한 사업 및 위 각 호의 부대사업<br>
+											</td>
+										</tr>
+										<tr>
+											<td height="30"></td>
+										</tr>
+										<tr>
+											<td><img src="images/2-4.gif" width="75" height="17" /></td>
+										</tr>
+										<tr>
+											<td height="10"></td>
+										</tr>
+										<tr>
+		    				    			<td>
+												&nbsp;&nbsp;<b>이사장 이헌규</b>  전 과학기술부 원자력국장<br><br> 
+												&nbsp;&nbsp;<b>이사 강보선</b>  한국연구재단 국책연구본부 원자력단장<br><br> 
+												&nbsp;&nbsp;<b>이사 강영철</b>  전 교육과학기술부 원자력국장<br><br> 
+												&nbsp;&nbsp;<b>이사 강재열</b>  한국원자력산업협회 상근부회장<br><br> 
+												&nbsp;&nbsp;<b>이사 김서융</b>  대학방사선안전관리협의회 회장<br><br> 
+												&nbsp;&nbsp;<b>이사 김영덕</b>  새한산업(주) 사장<br><br> 
+												&nbsp;&nbsp;<b>이사 이광석</b>  한국원자력연구원 책임연구원<br><br> 
+												&nbsp;&nbsp;<b>이사 이규영</b>  ㈜소야그린텍 이사<br><br> 
+												&nbsp;&nbsp;<b>이사 이상복</b>  ㈜가온원자력 전무이사<br><br> 
+												&nbsp;&nbsp;<b>이사 이승숙</b>  한국원자력의학원 병리과장(전 국가방사선비상진료센터장)<br><br> 
+												&nbsp;&nbsp;<b>이사 정동경</b>  대구보건대학교 방사선과 교수<br><br> 
+												&nbsp;&nbsp;<b>이사 한은옥</b>  여성원자력전문인협회 부회장<br><br> 
+												&nbsp;&nbsp;<b>이사 허상국</b>  한전KPS(주) 총무처장 <br><br> 
+												&nbsp;&nbsp;<b>감사 노병철</b>  전 한국원자력연구원 정책기획단장<br><br> 
+												&nbsp;&nbsp;<b>감사 박태옥</b>  전 한국과학창의재단 감사부장<br><br> 
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

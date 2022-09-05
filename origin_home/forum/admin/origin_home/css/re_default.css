@@ -1,0 +1,358 @@
+BODY {
+	COLOR: #444444; FONT: 9pt verdana ; WORD-SPACING: -0.02em
+}
+TD {
+	COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em
+}
+
+
+/*  테이블배경색 */
+.table_color {
+	BACKGROUND-COLOR:#C9CFD5;
+}
+
+/*  회색배경 테이블 세부내용 우측정렬 */
+.table_colorf2r {
+    COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#f2f2f2;
+	text-align: right;
+	PADDING-right: 10px;
+	PADDING-left: 10px;
+}
+
+/*  회색배경 테이블 세부내용 좌측정렬 */
+.table_colorf2l {
+    COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#f2f2f2;
+	text-align: left;
+	PADDING-left: 10px;
+}
+
+/*  흰색배경 테이블 세부내용 좌측정렬 */
+.table_colorffl {
+    COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#ffffff;
+	text-align: left;
+	PADDING-left: 10px;
+}
+
+/*  회색배경 테이블 세부내용 중앙정렬 */
+.table_colorf2c {
+    COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#f2f2f2;
+	text-align: center;
+}
+
+/*  흰색배경 테이블  세부내용 중앙정렬 */
+.table_colorffc {
+    COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#ffffff;
+	text-align: center;
+}
+
+
+
+/*  리스트를 보여주는 테이블의 1픽셀 라인*/
+.1px{
+        BACKGROUND-COLOR:#C9CFD5; 
+        height:1px;
+  }
+  
+/*  리스트를 보여주는 테이블의 1픽셀 라인*/
+.1px_brown{
+        BACKGROUND-COLOR:#E0D4C0; 
+        height:1px;
+  }
+   
+   
+ /*  테이블가로 1픽셀 라인*/
+.1px_brown_line{
+        BACKGROUND-COLOR:#E0D4C0; 
+       weight:1px;
+  }  
+
+/*  메뉴별컬러라인 */
+.linecolor {
+	BACKGROUND-COLOR:#A78E65;
+	height:3px;
+}
+
+/*  테이블좌우 공백 */
+.td_content_temp {
+	COLOR: #444444; 
+	PADDING-LEFT: 30px;
+	PADDING-right: 15px;
+}
+
+/*  타이틀 글씨체 */
+.td_tt {
+	FONT-weight: Bold;
+	
+}
+
+/*  테이블 타이틀의 중앙정렬의 볼드체 */
+.td_yr_ct_on {
+	COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	FONT-weight: Bold;
+	BACKGROUND-COLOR:#FAF9F2;
+	text-align: center;
+	
+}
+
+/*  테이블 타이틀의 좌측정렬 */
+.td_yr_on {
+	COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#FAF9F2;
+	PADDING-LEFT: 10px;
+	
+}
+
+/*  테이블 세부내용의 좌측정렬의 위아래 오른쪽 모두 여백이 있음 */
+/*  텍스트위주의 설명 */
+.td_yr_10_on{
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	BACKGROUND-COLOR:#FAF9F2;
+	PADDING-left: 10px;
+	PADDING-right: 10px;
+	PADDING-top: 5px;
+	PADDING-bottom: 5px;
+	text-align: justify;
+	line-height: 180%;
+
+}
+
+/*  테이블 타이틀의 좌측정렬의 볼드체 */
+.td_yr_on_b {
+	COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	FONT-weight: Bold;
+	BACKGROUND-COLOR:#FAF9F2;
+	PADDING-LEFT: 10px;
+	
+}
+
+
+
+/*  테이블 세부내용의 좌측정렬 */
+.td_wr_on {
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#FFFFFF;
+	PADDING-LEFT: 10px;
+}
+
+/*  테이블 세부내용의 좌측정렬1 */
+.td_wr_on1 {
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#FFFFFF;
+	PADDING-LEFT: 2px;
+}
+
+
+
+/*  테이블 세부내용의 중앙정렬 */
+.td_wr_ct_on{
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#FFFFFF;
+	text-align: center;
+
+}
+/*  테이블 세부내용의 우측정렬 */
+.td_wr_rt_on{
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#FFFFFF;
+	text-align: right;
+	PADDING-right: 10px;
+
+}
+/*  테이블 세부내용의 좌측정렬의 위아래 오른쪽 모두 여백이 있음 */
+/*  텍스트위주의 설명 */
+.td_wr_10_on{
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	BACKGROUND-COLOR:#FFFFFF;
+	PADDING-left: 10px;
+	PADDING-right: 10px;
+	PADDING-top: 5px;
+	PADDING-bottom: 5px;
+	text-align: justify;
+	line-height: 180%;
+
+}
+
+/*  테이블 세부내용의 콤보박스 우측정렬 */
+.td_wr_rt_form{
+
+        COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#FFFFFF;
+	text-align: right;
+	
+
+}
+
+/*  장례식장의 댓글보기 글내용 */
+.td_br_on{
+
+    COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#F5F1EA;
+	PADDING-left: 10px;
+
+}
+
+/*  장례식장의 댓글보기 아이디 */
+.td_br_on_b{
+
+    COLOR: #444444; 
+	FONT: 9pt verdana; 
+	WORD-SPACING: -0.02em;
+	height:24px;
+	BACKGROUND-COLOR:#F5F1EA;
+	PADDING-left: 10px;
+	FONT-weight: Bold;
+
+}
+
+/*  인풋박스의 타입*/
+.input {
+	BACKGROUND-COLOR:#FFFFFF; 
+	BORDER-BOTTOM: #7F9DB9 1px solid; 
+	BORDER-LEFT: #7F9DB9 1px solid; 
+	BORDER-RIGHT: #7F9DB9 1px solid; 
+	BORDER-TOP: #7F9DB9 1px solid; 
+	COLOR: #444444
+}
+
+/*  일반링크 타입*/
+
+A:link {
+	COLOR: #444444; FONT: 9pt/13pt verdana; WORD-SPACING: -0.02em; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #444444; FONT: 9pt/13pt verdana; WORD-SPACING: -0.02em; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #444444; FONT: 9pt/13pt verdana; WORD-SPACING: -0.02em; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #754C24;TEXT-DECORATION: underline
+}
+
+
+
+
+/*  입력폼의 타입*/
+INPUT {
+	FONT-FAMILY: verdana; WORD-SPACING: -0.02em; FONT-SIZE: 9pt; LINE-HEIGHT: 12pt
+}
+
+TEXTAREA {
+	FONT-FAMILY: verdana; WORD-SPACING: -0.02em; FONT-SIZE: 9pt; LINE-HEIGHT: 12pt
+}
+SELECT {
+	FONT-FAMILY: verdana; WORD-SPACING: -0.02em; FONT-SIZE: 9pt; LINE-HEIGHT: 12pt
+}
+P {
+	FONT-FAMILY: verdana; WORD-SPACING: -0.02em; FONT-SIZE: 9pt; LINE-HEIGHT: 12pt
+}
+OL {
+	FONT-FAMILY: verdana; WORD-SPACING: -0.02em; FONT-SIZE: 9pt; LINE-HEIGHT: 11pt
+}
+UL {
+	FONT-FAMILY: verdana; WORD-SPACING: -0.02em; FONT-SIZE: 9pt; LINE-HEIGHT: 11pt
+}
+LI {
+	FONT-FAMILY: verdana; WORD-SPACING: -0.02em; FONT-SIZE: 9pt; LINE-HEIGHT: 11pt
+}
+
+
+
+
+/*  FAQ 번호*/
+.f_no{
+
+        padding:10 0 7 0;
+}
+.f_qustion{
+
+        padding:10 0 7 10;
+}
+
+.f_answer{
+
+        padding:10 5 10 5;
+        FONT: 9pt/13pt verdana; WORD-SPACING: -0.02em;
+        text-align:justify;
+        BACKGROUND-COLOR:#FDF5F7
+}
+.f_linecolor {
+	BACKGROUND-COLOR:#C3699A;
+	height:2px;
+}
+
+/*  페이지인덱스 배경색 */
+.table_pageindex {
+	BACKGROUND-COLOR:#FAF9F2;
+	height:40px;
+}
+
+
+
+
+
+
+
+
+
+
+

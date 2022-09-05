@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방사선안전이해</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!-- 리포트2.0 로그분석코드 시작 -->
+    <script type="text/javascript">
+      var sTime = new Date().getTime();
+      (function(i,s,o,g,r,a,m){i['webObject']=g;i['webUid']=r;a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+      (window,document,'script','//kans1.weblog.cafe24.com/weblog.js?v='+sTime,'kans1_2');
+      </script>
+    <!-- 리포트2.0 로그분석코드 완료 -->
+    <!-- video modal script Start -->
+    <script>
+      //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+      function autoPlayYouTubeModal(){
+        var trigger = $("body").find('[data-toggle="modal"]');
+        trigger.click(function() {
+          var theModal = $(this).data( "target" ),
+          videoSRC = $(this).attr( "data-theVideo" ), 
+          videoSRCauto = videoSRC+"?autoplay=1" ;
+          $(theModal+' iframe').attr('src', videoSRCauto);
+          $(theModal+' button.close').click(function () {
+              $(theModal+' iframe').attr('src', videoSRC);
+          });
+          $(theModal+' button.btn').click(function () {
+              $(theModal+' iframe').attr('src', videoSRC);
+          });   
+        });
+      }
+
+      $(document).ready(function(){
+        autoPlayYouTubeModal();
+      });
+    </script>
+    <!-- video modal script End -->
+</head>
+<body class="bg-light">
+  <div>
+    <!--header START-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"><img src="../img/kans_logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> 방사선안전이해</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../student/std01.html">초중고</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../industry/indu01.html">산업현장</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../radiation/radi01.html">예비방사선이용자</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--header END-->
+    <div class="container-fluid p-1 p-md-1 m-md-1" >
+      <span>&nbsp;</span>
+    </div>
+    <div class="mb-12 bg-light text-dark border-0">
+      <div class="container">
+        <img src="../img/main_logo_l.png" class="d-block img-fluid w-100 " alt="main">
+        <div class="card-img-overlay">
+          <!--title Start-->
+          <div class="container-fluid p-2 p-md-1 m-md-1" >
+            <span>&nbsp;</span>
+          </div>
+          <div class="alert alert-success" role="alert">
+            <h3 class="alert-heading">예비방사선이용자</h3>
+            <hr>
+            <p class="mb-0">이 페이지는 대학생 등 예비 방사선 이용자를 대상으로 방사선이용기관에서 전문업무 수행시 필요한 실무적 안전지식과 방사선방호 등에
+              관한 정보를 제공하고 있습니다.</p>
+          </div>
+          <!--title End-->
+          <!--contents Start-->
+          <div class="accordion rounded shadow-sm" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg> 1. 생활 속 방사선
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <!--Sub1 Start-->
+                  <div class="accordion" id="accordionSub1">
+                    <div class="card">
+                      <div class="card-body" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSub1One" aria-expanded="true" aria-controls="collapseSub1One">
+                            1-1. 원자력발전
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub1One" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSub1">
+                        <div class="card-body">
+                          <img src="img/radi01-1-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSub1Two" aria-expanded="false" aria-controls="collapseSub1Two">
+                            1-2. 식품의 방사선조사
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub1Two" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSub1">
+                        <div class="card-body">
+                          <img src="img/radi01-2-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#ccollapseSub1Three" aria-expanded="false" aria-controls="ccollapseSub1Three">
+                            1-3. 의료방사선
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="ccollapseSub1Three" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSub1">
+                        <div class="card-body">
+                          <img src="img/radi01-3-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingFour">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#ccollapseSub1Four" aria-expanded="false" aria-controls="ccollapseSub1Four">
+                            1-4. 생활방사선용품
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="ccollapseSub1Four" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSub1">
+                        <div class="card-body">
+                          <img src="img/radi01-4-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Sub1 End-->
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg> 2. 사고
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <!--Sub2 Start-->
+                  <div class="accordion" id="accordionSub2">
+                    <div class="card">
+                      <div class="card-body" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSub2One" aria-expanded="true" aria-controls="collapseSub2One">
+                            2-1. 방사선 사고
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub2One" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSub2">
+                        <div class="card-body">
+                          <img src="img/radi02-1-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSub2Two" aria-expanded="false" aria-controls="collapseSub2Two">
+                            2-2. 방사선원 분실사고
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub2Two" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSub2">
+                        <div class="card-body">
+                          <img src="img/radi02-2-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#ccollapseSub2Three" aria-expanded="false" aria-controls="ccollapseSub2Three">
+                            2-3. 방사선 피폭사고
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="ccollapseSub2Three" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSub2">
+                        <div class="card-body">
+                          <img src="img/radi02-3-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#ccollapseSub2Four" aria-expanded="false" aria-controls="ccollapseSub2Four">
+                            2-4. 방사능오염사고
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="ccollapseSub2Four" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSub2">
+                        <div class="card-body">
+                          <img src="img/radi02-4-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#ccollapseSub2Five" aria-expanded="false" aria-controls="ccollapseSub2Five">
+                            2-5. 방사성물질 운반사고
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="ccollapseSub2Five" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSub2">
+                        <div class="card-body">
+                          <img src="img/radi02-5-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Sub2 End-->
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg> 3. 안전
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <!--Sub3 Start-->
+                  <div class="accordion" id="accordionSub3">
+                    <div class="card">
+                      <div class="card-body" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSub3One" aria-expanded="true" aria-controls="collapseSub3One">
+                            3-1. 방사선 방어
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub3One" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSub3">
+                        <div class="card-body">
+                          <img src="img/radi03-1-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSub3Two" aria-expanded="false" aria-controls="collapseSub3Two">
+                            3-2. 사고시 대처방법
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub3Two" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSub3">
+                        <div class="card-body">
+                          <img src="img/radi03-2-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#ccollapseSub3Three" aria-expanded="false" aria-controls="ccollapseSub3Three">
+                            3-3. 방사선에 대한 오해와 진실
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="ccollapseSub3Three" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSub3">
+                        <div class="card-body">
+                          <img src="img/radi03-3-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#ccollapseSub3Four" aria-expanded="false" aria-controls="ccollapseSub3Four">
+                            3-4. 방사선 안전규제
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="ccollapseSub3Four" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSub3">
+                        <div class="card-body">
+                          <div class="card-body">
+                            <img src="img/radi03-4-0.png" class="img-fluid" alt="Responsive image">
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="card text-center">
+                                <div class="card-body">
+                                  <h5 class="card-title">방사선 안전관리</h5>
+                                  <p class="card-text"><img src="img/radi03-4-1.png" class="img-fluid" alt="Responsive image"></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="card text-center">
+                                <div class="card-body">
+                                  <h5 class="card-title">방사선 이용시설의 안전관리</h5>
+                                  <p class="card-text"><img src="img/radi03-4-2.png" class="img-fluid" alt="Responsive image"></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="card text-center">
+                                <div class="card-body">
+                                  <h5 class="card-title">우리나라의 방사선 안전관리</h5>
+                                  <p class="card-text"><img src="img/radi03-4-3.png" class="img-fluid" alt="Responsive image"></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="card text-center">
+                                <div class="card-body">
+                                  <h5 class="card-title">방사선 안전규제란 무엇인가요?</h5>
+                                  <p class="card-text"><img src="img/radi03-4-4.png" class="img-fluid" alt="Responsive image"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#ccollapseSub3Five" aria-expanded="false" aria-controls="ccollapseSub3Five">
+                            3-5. 방사선작업종사자 안전관리
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="ccollapseSub3Five" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSub3">
+                        <div class="card-body">
+                          <div class="card-body">
+                            <img src="img/radi03-5.png" class="img-fluid" alt="Responsive image">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#ccollapseSub3Six" aria-expanded="false" aria-controls="ccollapseSub3Six">
+                            3-6. 방사선 비상시 국민 행동요령
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="ccollapseSub3Six" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSub3">
+                        <div class="card-body">
+                          <div class="card-body">
+                            <img src="img/radi03-6.png" class="img-fluid" alt="Responsive image">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Sub2 End-->
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingFive">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5A.5.5 0 0 0 4 8z"/>
+                      </svg> 4. 안전일자리
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-header">원자력 관련 업무를 직업군별로 정부기관, 규제기관, 발전회사, 연구기관, 방사선 이용기관 등으로 구분할 수 있습니다.</h5>
+                      <div class="card-body">
+                        <h5 class="card-title">1. 원자력안전규제기관</h5>
+                        <p class="card-text">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>1-1. 원자력안전위원회:</b> 원자력안전에 관한 중요사항 심의 및 의결, 원자력의 위험으로부터 국민과 환경을 보호하기 위하여 법령에 따른 원자력 이용자의 안전관리책임 이행을 규제·감독하고 있습니다.</li>
+                            <li class="list-group-item"><b>1-2. 한국원자력안전기술원:</b> 원자력발전소 및 방사성 폐기물 시설 등에 대한 심사 및 검사, 방사성동위원회 등의 이용에 따른 안전성 확인, 전 국토 및 원전주변 환경방사능 감시, 방사선사고 및 테러 대응 및 감지를 하고 있습니다.</li>
+                            <li class="list-group-item"><b>1-3. 한국원자력통제기술원:</b> 원자력이 평화적으로 이용되도록 핵물질이나 장비 및 기술이 불법적으로 이전되는 것을 방지하고, 소량의 핵물질이라도 평화적 목적으로만 사용되도록 철저히 검증 및 관리하고 있습니다.</li>
+                          </ul>
+                        </p>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">2. 원자력 발전 및 공급산업체</h5>
+                        <p class="card-text">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>2-1. 한국수력원자력주식회사:</b> 전력을 안정적으로 공급하기 위하여 23기 원자력발전소와 35기의 수력발전소, 16기의 양수발전소 그리고 태양광 발전소 등을 운영하여 국내 전력의 약 30%를 생산하고 있어요.</li>
+                            <li class="list-group-item"><b>2-2. 한국전력기술주식회사:</b> 종합설계(부지선정 및 타당성조사, 건설 및 사업관리, 엔지니어링 및 설계, 구매지원 등)와 원자로계통설계(원전의 핵심기술인 핵증기공급계통의 원자로계통설계 기술개발)의 두 가지 역무로 구별, 한국표준형원전 설계를 독자적으로 수행하고 있습니다.</li>
+                            <li class="list-group-item"><b>2-3. 기기공급 및 플랜트 건설:</b> 원자력발전소 건설, 원자력발전설비(원자로, 증기발생기, 냉각기펌프 등) 제작 및 공급을 하고 있습니다.</li>
+                          </ul>
+                        </p>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">3. 원자력연구개발</h5>
+                        <p class="card-text">한국원자력연구원 등이 있습니다.</p>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">4. 방사성동위원소 이용기관</h5>
+                        <p class="card-text">대기업, 중소기업, 학교, 연구소, 병원 및 비파괴검사업체 등 9000여개가 있습니다. </p>
+                      </div>
+                      <div class="card-body">
+                        <img src="img/radi04-1.png" class="img-fluid" alt="Responsive image">
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingSeven">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5A.5.5 0 0 0 4 8z"/>
+                      </svg> 5. 관련영상
+                    </button>
+                  </h2>
+                </div>
+                <!-- modal Start -->
+                <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div>
+                          <iframe width="100%" height="350" src=""></iframe>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- modal End -->
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <h3 class="card-title">교육영상</h3>
+                    <div class="card-body">
+                      <!-- Button trigger modal Start -->
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/C8wE-yZxq_8">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 1. 방사선이란
+                      </button>
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/4HMh1bdvn3w">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 2. 방사선의 종류와 성질
+                      </button>
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/TCRCdSxzRJs">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 3. 방사선 단위
+                      </button>
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/QmbCjw0DrFI">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 4. 방사선에 대한 오해와 진실
+                      </button>
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/rAxF-7OSZgs">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 5. 자연방사선과 인공방사선
+                      </button>
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/lIdbvNuBUXE">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 6. 생활 속 방사선
+                      </button>
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/WrF0Jl2LzFE">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 7. 주변의 방사선량 측정
+                      </button>
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/s1VD2wkezmk">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 8. 방사선 이용 - 농업
+                      </button>
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/eMD-vJU3Pks">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 9. 방사선 이용 - 산업
+                      </button>
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/s5bU1uprWN0">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 10. 방사선 이용 - 의료 및 기타
+                      </button>
+                      <!-- Button trigger modal End -->
+                    </div>
+                  </div>  
+                  <div class="card-body">
+                    <h3 class="card-title">방사선안전공모전</h3>
+                    <div class="card-body">
+                      <h5 class="card-title">일반부</h5>
+                      <!-- Button trigger modal Start -->
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/dDYuafOUXkI">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 최우수상
+                      </button>
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/hcRY-wGY2l0">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 우수상1
+                      </button>
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/r4iVx_KYwDA">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                        </svg> 우수상2
+                      </button>
+                      <!-- Button trigger modal End -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div style="border: 0px solid white; padding: 10px; height: auto; min-height: 80px; overflow: auto;"></div>
+        <!--contents End-->
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER START -->
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-secondary bg-secondary">
+      <footer class="container text-light ">
+        <p>&copy;2020 &middot; <a href="http://www.kans.re.kr" target="_blank" class="text-light stretched-link">KANS</a></p>  
+        <p class="float-right" ><a href="#" class="text-light stretched-link">Back to top</a></p>
+      </footer>
+    </nav>
+    <!-- FOOTER END -->
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

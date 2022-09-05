@@ -1,0 +1,414 @@
+<?
+include "../conf/dbconn.inc";
+
+$today = getdate(); 
+
+if(!$sYear) { $sYear = $today['year']; }
+if(!$sMonth) { $sMonth = $today['mon']; }
+if(!$sDay) { $sDay = $today['mday']; }
+
+$display_year = $sYear;
+$display_month = $sMonth;
+$display_day = 1;
+
+$display_today = date("Y-m-d");
+
+if($display_month == 0) {
+	$display_year = $display_year - 1;
+	$display_month = 12;
+}
+if($display_month == 13) {
+	$display_year = $display_year + 1;
+	$display_month = 1;
+}
+
+if(!$sec){
+	echo"<meta http-equiv=\"Refresh\" content=\"0 ; URL='./edu_on_login.html'\">";
+	exit;
+}
+
+if($keyword != ''){
+	if($search=='title')
+		$sql="select * from sec_board where sec_chk = '1' and title like '%".$keyword."%' and sec ='".$sec."' order by fid desc, thread asc";
+	else
+		$sql="select * from sec_board where sec_chk = '1' and content like '%".$keyword."%' and sec ='".$sec."'' order by fid desc, thread asc";
+}else{
+	
+	$sql="select * from sec_board where sec = '".$sec."' and sec_chk = '1' order by fid desc, thread asc";
+}
+
+$res=mysql_query($sql);
+$total=mysql_affected_rows();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="../css/font.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+<script language=javascript src="../js/drop_menu_sc.js"></script>
+<script language=javascript src="../js/common_s.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/gnb.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</script>
+<script>
+	function loginCheck(){
+	var f = document.edu_on_edu;
+
+	if(f.sec_code.value==''){
+		alert('비밀번호를 입력해 주세요~');
+		f.sec_code.focus();
+		return false;
+	}
+		
+	return true;
+	}
+
+	function logOut(){
+		document.location.href="./logout.php";
+	}
+
+	function main(){
+		document.location.href="./edu_on_list.html";
+	}
+
+	
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<div class="header">
+	<? include "../inc/header.php"; ?>
+</div>
+
+<div class="sub_visual">
+	<img src="../image/sub_visual.jpg">
+</div>
+
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td colspan="5">
+			<!-- 왼쪽메뉴 시작  -->
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<!-- 왼쪽메뉴 시작  -->	
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="edu01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image01','','images/sub_edu01_on.gif',1)"><img src="images/sub_edu01_off.gif" name="Image01" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image02','','images/sub_edu02_on.gif',1)"><img src="images/sub_edu02_off.gif" name="Image02" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image03','','images/sub_edu03_on.gif',1)"><img src="images/sub_edu03_off.gif" name="Image03" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image04','','images/sub_edu04_on.gif',1)"><img src="images/sub_edu04_off.gif" name="Image04" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/account.png"></td>
+							</tr>
+						</table>
+						<!-- 왼쪽메뉴 끝  -->
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/edu_subbar_07.jpg"></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table width="605" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td align="center"><a href="edu03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image08','','images/sub07_on.gif',1)"><img src="images/sub07_off.gif" name="Image08" width="112" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td align="center"><a href="edu_sub_05.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image06','','images/sub04_on.gif',1)"><img src="images/sub04_off.gif" name="Image06" width="112" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td align="center"><a href="edu_sub_04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image05','','images/sub05_on.gif',1)"><img src="images/sub05_off.gif" name="Image05" width="112" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+											<td align="center"><a href="edu_sub_06.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image07','','images/sub06_on.gif',1)"><img src="images/sub06_off.gif" name="Image07" width="135" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s.gif"></td>
+										</tr>
+									</table>	
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<!-- 내용 시작 -->
+									<table width="650" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td></td>
+										</tr>
+										<tr>
+											<td>환영합니다. KANS 온라인 교육장입니다.<br>
+												온라인교육은 신청자에 한해 정해진 일시(<font color='red'><b>교육당일 10:00~16:00</b></font>)에만 수강이 가능합니다.<br>
+												 &nbsp; - 교육 당일에 수강을 완료할 수 없는 사정이 생기면 관리자(010-3488-3308)에게 연락주세요. <br><br>
+												 &nbsp; - <b>아래 강좌를 1강 부터 4강 까지 차례대로 수강하시면 됩니다.</b><br><br>
+												 &nbsp; - 과제물은 9문제 이상의 답을 적으셔야 합니다. <br><br>
+												 &nbsp;&nbsp;&nbsp;※ 과제물 작성용지 다운로드 (<img src="http://www.kans.re.kr/edu/images/236705_1_1_s.jpg"><a href='http://www.kans.re.kr/양식_온라인교육_과제물(교육전_프린트하여_자필_작성).pdf' target="_blank"><b>과제물 양식다운로드</b></a>)
+												 
+											</td>
+										</tr>
+										<tr>
+											<td><br></td>
+										</tr>
+										<tr>
+											<table width="590" border="0" cellspacing="0" cellpadding="0" align="center">
+												<tr>
+												  <td width="180" height="2" bgcolor="#6AA49E"></td>
+												</tr>
+												<tr>
+												  <td height="21" bgcolor="F7F7F7"><table width="590" border="0" align="center" cellpadding="0" cellspacing="0">
+													  <tr align="center" valign="middle" bgcolor="4a8dd9" class="text20">
+														<td width="45" height="25" bgcolor="#B5D2CF"><font color="#FFFFFF">번호</font></td>
+														<td width="304" height="25" bgcolor="#B5D2CF"><font color="#FFFFFF">제목</font></td>
+														<td width="65" height="25" bgcolor="#B5D2CF"><font color="#FFFFFF">글쓴이</font></td>
+														<td width="54" height="25" bgcolor="#B5D2CF"><font color="#FFFFFF">자료</font></td>
+														<td width="85" height="25" bgcolor="#B5D2CF"><font color="#FFFFFF">날짜</font></td>
+													  </tr>
+												  </table></td>
+												</tr>
+												<tr>
+												  <td height="1" bgcolor="#6AA49E"></td>
+												</tr>
+											  </table>
+												<table width="590" border="0" align="center" cellpadding="0" cellspacing="0">
+												  <?
+													if($total<1)
+													{
+														echo" <tr align='center'><td height='25' colspan=5> 등록된 게시물이 없습니다. </td></tr>
+														<tr align='left' class='text20'>
+																			<td height='1' colspan='5' align='center'  background='./images/jom01.gif'></td>
+																		</tr>";
+													}
+													/***** 페이지 카운트 관련 기본값 설정 **********************************************/
+													
+													// 한 페이지에 리스트 시킬 레코드 수
+													
+													if($list == ''){
+														$list=10;		
+													}
+													//현재 페이지 값 설정
+													if(!$page)	$page = 1;   
+													
+													// 전체 페이지 값 얻기
+													if(($total%$list)== 0)	$totalpage =  intval($total / $list);
+													else	$totalpage = intval($total / $list) + 1;
+													
+													// 페이지 그룹 값 설정(페이지 카운터를 몇 개까지 출력할 것인지 설정)
+													
+													if(($page%10) == 0)	$pagelist = intval($page / 10);
+													else	$pagelist = intval($page / 10) + 1;
+													
+													$start = ($page-1)* $list;												// 현재 페이지에서 시작 레코드 값 설정
+													$end = ($page) * $list;													// 현재 페이지에서 마지막 레코드 값 설정
+													
+													if($end > $total) 	$end = $total;
+													
+													// 현재 페이지에서 리스트의 레코드 시작 레코드로 이동
+													
+													if ($page > 1) mysql_data_seek($res, $start);
+													
+													/***** 페이지 카운트 관련 기본값 설정 끝 *******************************************/
+													$cpage=$page - 1;
+													$n = $total - $cpage*$list ;
+													
+													/***** 리스트 출력  // 현재 페이지에 해당 하는 리스트만 출력**********************************************/
+													for($i=$start; $i<$end; $i++){
+														$row = mysql_fetch_object($res);			//한 열씩 객체형택로 가져온다
+													
+														$length=strlen($row->thread);
+														if($length>1)	$re="<img src='./images/aline.gif' border=0>";
+														else	$re='';
+														$length=$length.'0';
+														$now=mktime();
+														$now=date(Y.'-'.m.'-'.d,$now);
+														$regdate = $row->regdate;
+														if($regdate == $now) $new_img = "<img src='./images/icon_new.gif' width='20' height='9'>";
+																			else  $new_img = "";
+														
+													?>
+												  <tr align="left" class="text20">
+													<td width="45" height="25" align="center"><span class="back_grayline">
+													  <?=$n?>
+													</span></td>
+													<td width="304" align="left"><table border="0" cellpadding="0" cellspacing="0" width="299">
+														<tr>
+														  <td width='21'>&nbsp;</td>
+														  <td width="289">
+															  <a href="edu_on_view.html?n=<?=$n?>&uid=<?=$row->uid?>&page=<?=$page?>&search=<?=$search?>&keyword=<?=$keyword?>"><?=$row->title?></a>
+															<?=$new_img?></td>
+														</tr>
+														<tr> </tr>
+													</table></td>
+													<td width="65" align="center"><span class="back_grayline">
+													  <?=$row->writer?>
+													</span></td>
+													<td width="54" align="center">
+													<?
+													  if($row->filename) echo "있음";
+													  else echo "없음";
+													?>				  </td>
+													<td width="85" align="center"><span class="back_grayline">
+													  <?=$display_today?>
+													</span></td>
+												  </tr>
+												  <tr align="left" class="text20">
+													<td height="1" colspan="6" align="center"  background="./images/jom01.gif"></td>
+												  </tr>
+												  <?
+														$n = $n-1;
+													}
+												  ?>
+												</table>
+												<table width="590" border="0" align="center" cellpadding="0" cellspacing="0">
+												  <tr align="center">
+													<td width="100%" height="30" align="center" valign="middle"><?
+														/****************************** 페이지 카운터 출력 ***********************************/
+														if($pagelist > 1)																										// 페이지 그룹단위로 앞으로 이동
+														{
+															$p_page = (($pagelist -1)*11-1);
+															echo "<a href=edu_on_list.html?bid=$bid&page=$p_page&search=$search&keyword=$keyword><img src='./images/icon_back.gif' width='11' height='11' border=0></a>";
+														} 
+														
+														$startpage = ($pagelist-1)*10+1;
+														$endpage = $pagelist*10;
+														if ($totalpage < $pagelist*10) $endpage = $totalpage;
+														for ($i=$startpage; $i<=$endpage; $i++) {																				// 현재 페이지
+															if ($i==$page) { 
+															echo " [$i] ";
+															}else{
+															echo " <a href=edu_on_list.html?bid=$bid&page=$i&search=$search&keyword=$keyword>[$i]</a> ";
+															} 
+														}
+														if ($pagelist*10 < $totalpage) {																						// 페이지 그룹단위로 뒤로 이동
+															$n_page = ($pagelist*10+1);
+															echo "<a href=edu_on_list.html?bid=$bid&page=$n_page&search=$search&keyword=$keyword><img src='./images/icon_next.gif' width='11' height='11' border=0></a>";
+														}
+														/****************************** 페이지 카운터 출력  끝***********************************/
+														?>                  
+													</td>
+												  </tr>
+												</table>
+												<table width="590" border="0" align="center" cellpadding="0" cellspacing="0">
+												  <tr>
+													<td width="430"><form action='./edu_on_list.html' method='post' name='frm' id="frm">
+														<input type='hidden' name='sec' value='<?=$sec?>' />
+														<table width="240" border="0" align="right" cellpadding="0" cellspacing="0">
+														  <tr>
+															<td width="60"><select name="search">
+																<option value='title'>제목</option>
+																<option value='content'>내용</option>
+															  </select>                          </td>
+															<td width="105"><input name="keyword" type="text" size="15" /></td>
+															<td valign="middle"><div align="center">
+																<input name="image" type='image' src="./images/btt_search.gif" width="54" height="18" border="0" />
+															</div></td>
+														  </tr>
+														</table>
+													</form></td>
+													<td>
+													</td>
+												  </tr>
+												</table>
+										</tr>
+										<tr>
+											<td align="center">
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

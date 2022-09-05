@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방사선안전이해</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!-- 리포트2.0 로그분석코드 시작 -->
+    <script type="text/javascript">
+      var sTime = new Date().getTime();
+      (function(i,s,o,g,r,a,m){i['webObject']=g;i['webUid']=r;a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+      (window,document,'script','//kans1.weblog.cafe24.com/weblog.js?v='+sTime,'kans1_2');
+      </script>
+    <!-- 리포트2.0 로그분석코드 완료 -->
+    <!-- video modal script Start -->
+    <script>
+      //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+      function autoPlayYouTubeModal(){
+        var trigger = $("body").find('[data-toggle="modal"]');
+        trigger.click(function() {
+          var theModal = $(this).data( "target" ),
+          videoSRC = $(this).attr( "data-theVideo" ), 
+          videoSRCauto = videoSRC+"?autoplay=1" ;
+          $(theModal+' iframe').attr('src', videoSRCauto);
+          $(theModal+' button.close').click(function () {
+              $(theModal+' iframe').attr('src', videoSRC);
+          });
+          $(theModal+' button.btn').click(function () {
+              $(theModal+' iframe').attr('src', videoSRC);
+          });   
+        });
+      }
+
+      $(document).ready(function(){
+        autoPlayYouTubeModal();
+      });
+    </script>
+    <!-- video modal script End -->
+</head>
+<body class="bg-light">
+  <div>
+    <!--header START-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"><img src="../img/kans_logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> 방사선안전이해</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../industry/indu01.html">산업현장</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../radiation/radi01.html">예비방사선이용자</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--header END-->
+    <div class="container-fluid p-1 p-md-1 m-md-1" >
+      <span>&nbsp;</span>
+    </div>
+    <div class="mb-12 bg-light text-dark border-0">
+      <div class="container">
+        <img src="../img/main_logo_l.png" class="d-block img-fluid w-100 " alt="main">
+        <div class="card-img-overlay">
+          <!--title Start-->
+          <div class="container-fluid p-2 p-md-1 m-md-1" >
+            <span>&nbsp;</span>
+          </div>
+          <div class="alert alert-primary" role="alert">
+            <h3 class="alert-heading">산업현장</h3>
+            <hr>
+            <p class="mb-0">이 페이지는 방사선이용 신고기관 등 교육기회가 부족한 방사선취급자를 주 대상으로 방사선안전에 대한 이해도 및 안전의식 제고를 위한
+              정보를 제공하고 있습니다.</p>
+          </div>
+          <!--title End-->
+          <!--contents-->
+
+          <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg> 1. 방사선 안전규제
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <!--Sub1 Start-->
+                  <div class="accordion" id="accordionSub1">
+                    <div class="card">
+                      <div class="card-body" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left type="button" data-toggle="collapse" data-target="#collapseSub1One" aria-expanded="true" aria-controls="collapseSub1One">
+                              1-1. 방사선 안전규제
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub1One" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSub1">
+                        <div class="card-body">
+                          <h5 class="card-title">우리나라의 원자력 및 방사선안전규제</h5>
+                          <p class="card-text">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item"><b>1) 원자력법</b><br>
+                                현행 원자력안전법의 모법이라 할 수 있는 원자력법은 1958년 3월 11일 법률 제 483호로 제정·공포되었습니다. 제정 당시의 원자력법은 미국에서 교육훈련 및 연구를 위하여 제공하는 TRIGA(Training, Research, Isotope, General Atomic) 원자로의 설치 및 운영을 위한 제반조치에 중점을 두었으며, 그밖에 원자력에 관한 기초연구와 방사성동위원소 등의 이용에 따른 안전관리에 관한 사항이 함께 규정되었습니다. 이후, 1970년대에 들어와 에너지의 안정적 공급을 위한 원자력발전 사업이 본격적으로 추진됨에 따라 이를 뒷받침하기 위한 안전규제제도의 확립을 위하여 원자력법의 대폭적인 개정이 이루어졌으며, 최근에는 일본 후쿠시마 원전 사고에 적극적으로 대처하기 위하여 2011년 원자력법을 원자력안전법, 원자력진흥법 및 원자력안전위원회 설치 및 운영에 관한 법률로 분리하여 원자력 및 방사선안전규제업무를 효율적으로 수행하기 위한 기반을 구축하였습니다.
+                              </li>
+                              <li class="list-group-item"><b>1) 규제기관</b><br>
+                                원자력안전에 관한 규제업무는 중앙행정기관의 하나인 원자력안전위원회가 담당하고 있습니다. 원자력안전위원회는 2011년 7월 제정된 원자력안전위원회 설치 및 운영에 관한 법률에 근거하여 2011년 10월 설립되었으며, 원자력의 생산과 이용에 따른 방사선재해로부터 국민을 보호하고, 공공의 안전과 환경보전에 이바지함을 목적으로 합니다.
+
+                              </li>
+                            </ul>
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">방사선안전규제의 내용 및 체계</h5>
+                          <p class="card-text">우리나라의 원자력 및 방사선 안전규제는 정부조직의 하나인 원자력안전위원회가 담당하고 있습니다. 또한, 규제업무의 전문성과 특수성을 감안하여 산하에 한국원자력안전기술원 및 한국원자력통제기술원을 설치하여 업무의 적시성과 정확성을 도모하고 있습니다.
+                            규제업무는 크게 안전심사 및 안전검사로 나누어 이루어지고 있습니다.</p>
+                          <p class="card-text">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item"><b>1) 안전심사</b><br> 안전심사는 방사선을 이용하고자 하는 사람이 원자력안전법에 따라 제출한 허가신청서류를 검토하여 안전성을 확인하는 절차입니다. 대상 서류는 주로 시설의 안전성을 확인하는 방사선안전보고서와 운영의 적합성을 확인하는 안전관리규정으로 구분됩니다.검토과정에서 적합하지 않은 내용에 대해서는 보완을 요구하기도 합니다.
+                              </li>
+                              <li class="list-group-item"><b>2) 안전검사</b><br> 안전검사는 방사선이용에 수반하는 제반 규정의 준수 및 결과를 확인하는 절차입니다. 따라서, 방사선이용과 관련하여 원자력안전법에서 규정한 각종 기록을 중심으로 이루어집니다. 검사주기는 방사선의 사용방법 및 사용량에 따라 1년·3년 ·5년으로 구분하여 시행되며, 부적합한 사항에 대해서는 지적을 하고, 이의 시정을 요구하는 방법으로 현장의 안전관리 향상을 유도합니다.
+                              </li>
+                              <li class="list-group-item"><b>3) 기타</b><br> 안전심사 및 검사이외에 현장의 문제점을 사전에 파악하기 위한 방법으로 주기적으로 규제기관에 보고를 하는 의무를 부과하고 있으며, 일부 중요한 지적사항에 대해서는 과징금을 부과하는 등의 징벌적 조치가 시행되기도 합니다.
+                              </li>
+                              <li class="list-group-item"><b>4) 비파괴검사 안전</b><br> 비파괴검사(nondestructive testing, NDT)는 제조 분야에서 공작물의 제품완전성이나 표면상태를 변형시키지 않고 검사하는 방법인데, 높은 에너지를 가진 방사선을 이용합니다. 재료를 파괴하지 않고도 검사할 수 있다는 특성 때문에 항공기 부품, 고철, 배 등과 같은 고가의 부품 검사에 주로 사용된다. 높은 에너지를 사용하기 때문에 안전관리가 철저하지 않으면 인체에 문제가 될 수 있습니다. 따라서 원자력안전법에 의해 반드시 교육을 이수한 방사선작업종사자만 비파괴검사를 할 수 있습니다. 원자력안전법에서는 18세 미만의 자는 방사선업무를 할 수 없도록 규정하고 있습니다. 학생은 어떤 경우라도 비파괴검사 업무에 참여할 수 없습니다.
+                              </li>
+                            </ul>
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">중저준위 방사성폐기물 및 처분시설의 안전규제</h5>
+                          <p class="card-text">
+                            <img src="img/indu01-1-1.png" class="img-fluid" alt="Responsive image">
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">수입화물 및 재활용고철에 대한 방사선 감시체계</h5>
+                          <p class="card-text">
+                            <img src="img/indu01-1-2.png" class="img-fluid" alt="Responsive image">
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">방사성동위원소 · 방사선 발생장치 사용 등의 허가</h5>
+                          <p class="card-text">
+                              방사성동위원소 또는 방사선발생장치를 생산·판매 ·사용 또는 이동 사용하려면 원자력안전위원회에 신고하거나, 원자력안전위원회로부터 허가를 받아야 합니다. 원자력안전법 제5장 제53조
+                              허가를 받으려는 경우, 허가신청서에 안전성분석보고서, 품질보증계획서, 방사선안전보고서 및 안전관리규정 등의 서류를 원자력안전위원회에 제출해야 합니다. (단, 안전성분석보고서 및 품질보증계획서는 방사성동위원소 생산허가를 받으려는 경우에만 해당됩니다.)
+                              <br><img src="img/indu01-1-3.png" class="img-fluid"" alt="Responsive image">
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">발주자의 안전조치 의무</h5>
+                          <p class="card-text">방사선투과검사를 위하여 방사성동위원소 등을 이동 사용하는 경우, 방사선투과검사를 의뢰한 발주자는 발주자의 사업장에서 방사선 작업종사자가 과도한 방사선에 노출되지 않도록, 안전한 작업환경을 제공하여야 합니다. 원자력안전법 제59조의 2
+                            원자력안전위원회는 발주자에게 방사선장해 방지 조치에 적합한 전용작업장과 방사선방호를 위한 차폐시설이나 차폐물 등, 안전설비의 설치 또는 보완을 명령할 수 있습니다. 발주자가 안전설비 설치 도는 보완명령을 위반했을 때에는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처할 수 있습니다. 
+                            설치 또는 보완 명령이 내려졌음에도 발주자가 이를 제대로 수행하지 않아 방사선작업종사자의 안전이 위협받을 경우, 작업 중지 명령이 내려질 수 있습니다. 작업 중지 명령을 무시하고 계속 작업하다 적발될 경우, 3년 이하의 징역 도는 3천만원 이하의 벌금형에 처해지게 됩니다. 
+                            </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">방사성폐기물 관리</h5>
+                          <p class="card-text">방사성폐기물은 원자력 발전소 또는 방사성동위원소를 이용하는 병원, 연구기관, 산업체 등에서 발생합니다. 작업자들이 썼던 장갑이나 방호복부터 원자로에서 나온 사용후핵연료까지, 원자력을 이용하는 과정에서 발생한 모든 폐기물은 방사선 위험을 제거할 수 있도록 저장, 처리, 처분됩니다. 방사성폐기물 관리시설은 폐기물을 안전하게 관리하기 위한 시설로, 원자력안전위원회의 안전관리 대상입니다. 
+                            <br><img src="img/indu01-1-4.png" class="img-fluid"" alt="Responsive image">
+                            <br><img src="img/indu01-1-5.png" class="img-fluid"" alt="Responsive image">
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">방사선기기 안전규제</h5>
+                          <p class="card-text">규제기관은 방사선발생장치 또는 방사성동위원소가 내장된 방사선기기의 설계승인 심사 및 검사를 통하여 방사선기기 자체의 안전성을 심도있게 확인한다.
+                            <br><img src="img/indu01-1-6.png" class="img-fluid"" alt="Responsive image">
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">방사선작업종사자의 피폭과 안전규제</h5>
+                          <p class="card-text">방사선관리구역 내에서는 방사선 준위와 작업종사자의 방사선 피폭량 및 외부로 반출하는 장비의 오염도 등이 별도로 관리된다. 이를 방사선장해 방지 조치라고 하는데, 방사선량 및 방사성오염의 측정, 건강진단, 피폭관리, 방사성물질의 방출량 및 피폭방사선량을 가능한 한 합리적으로 낮게 유지하기 위하여 필요한 조치를 말한다.
+                            <br><img src="img/indu01-1-7.png" class="img-fluid"" alt="Responsive image">
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">방사성물질의 운반·관리와 안전규제</h5>
+                          <p class="card-text">방사성물질은 법령에 정해진 기술기준에 적합하게 운반하여야 하고, 운반물을 담는 용기도 법령에 따라 정해진 기준을 따라야 한다. 여러 종류의 방사성물질을 운반물로 포장할 수 있는 한도량은 각 방사성물질별로 정해진다. 원자력관계사업자가 방사성물질을 당해 사업소 외의 장소나 외국으로부터 국내의 당해 사업소로 운반하고자 할 때에는 규제기관에 신고하고, 검사를 받도록 되어 있다.
+                            또 각 종류별 운반용기의 기술기준은 원자력안전위원회고시에서 정하고 있으며, 규제기관의 설계승인과 제작검사 및 사용검사를 받아야 한다.                              
+                            <br><img src="img/indu01-1-8.png" class="img-fluid"" alt="Responsive image">
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">방사선 피폭선량 측정과 관리</h5>
+                          <p class="card-text">외부피폭선량을 측정하는 방법으로 필름선량계, 열형광선량계, 포켓선량계 등 개인선량계를 사용하고 있으며 법적 기록 관리용으로는 필름 또는 열형광선량계가, 보조 도구로서는 포켓선량계 또는 전자개인선량계가 주로 이용되고 있다.
+                            이들 중 열형광선량계의 원리는 방사선을 쪼이면, 쪼이는 방사선의 양을 물질 특성으로 축적하고 있다가 나중에 다시 빛의 형태로 내보내서 누적된 방사선 피폭의 양을 측정할 수 있도록 해준다.
+                            개인선량계는 방사선원 및 방사성물질로부터의 개인 피폭을 측정, 평가하는 데 사용하는 도구이다. 종사자의 몸통 전체가 방사선에 노출되었을 경우에는 전신을 대표하고, 인체의 일부분만 노출되었을 경우에는 그 부분을 대표할 수 있도록 개인선량계를 착용하여야 한다.                              
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <img src="img/indu01-1-9.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="card-body">
+                          <img src="img/indu01-1-10.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSub1Two" aria-expanded="false" aria-controls="collapseSub1Two">
+                              1-2. 방사선사고시 조치
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub1Two" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSub1">
+                        <div class="card-body">
+                          <h5 class="card-title">사고 확대방지 조치</h5>
+                          <p class="card-text">사고 확대방지 조치란 연쇄사고 또는 2차 사고를 막고, 본격적인 사고수습 이전에 행해야 할 꼭 필요한 응급처치활동, 사고의 영향최소화를 위해 해야 할 조치라고 할 수 있다. 이때 염두에 두어야 할 것은 인명구조 및 더 큰 사고로의 이행을 막기 위한 꼭 필요한 조치만 취해야 하며 사고원인 규명을 위한 증거나 단서까지 인멸해서는 안 된다. 사고 확대방지 조치에는 4가지 원칙이 존재한다. 4가지 원칙이란 첫재, 응급조치, 둘째, 사고의 통보, 셋째, 이상피폭시 조치, 넷째, 오염방지 원칙이다. 
+                          </p>
+                          <p class="card-text">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item"><b>1) 응급조치의 원칙</b><br> 
+                                ‘원자력시설 등의 방호 및 방사능방재대책법 시행규칙 제 14조(응급조치등) ① 원자력사업자는 법 제21조제1항제4호의 규정에 의하여 방사선사고확대방지를 위한 응급조치를 하는 경우에는 영 제22조제1항제5호 및 이 규칙 별포3 제5호의 규정에 의한 응급조치를 하여야 한다.’라고 명시하고 있다.
+                                법에서 말하는 응급조치의 원칙은 방사선시설에서 폭발, 지진, 화재 등에 의한 이상사태나 오염, 피폭 등의 방사선사고가 발생하거나 발생할 우려가 있을 때에는 다음 원칙에 따라 임시응급처치를 하여야 한다. 
+                                첫째, 안전보호의 원칙이다. 인느 인명구조를 최우선으로 하고 물질의 손상배려는 차선으로 하는 것이다. 둘째는 통보의 원칙으로서 인근 사람, 책인자 등 사고의 신속한 전파가 두 번재로 취해야 할 원칙이고 세번째로는 확대 방지의 원칙으로 오염확산 등의 방지를 중점으로 하며 이때 방사선피폭을 고려하고, 화재시에는 초기 소화에 노력하는 것이다. 마지막으로 과대평가의 원칙인데 이는 비상대응시 사고의 영향이나 결과를 과소평가하지 말고 가능한 최대한의 피해를 염두에 두어야 한다는 뜻이다.
+                              </li>
+                              <li class="list-group-item"><b>2) 사고의 통보</b><br> 
+                                사고의 통보는 먼저 방사성물질 취급 사업소 내 통보와 사업소 외 통보를 하는 것이다. 이상사태의 발견자는 언제 어디서 어떤 사고(인명사고, 화재사고, 방사선사고) 어떻게 발생했는가(발생상황, 사상자 유무, 피폭가능성, 오염의 유무, 사고의 확대성 유무)를 통보원칙에 따라 관계자에게 알린다. 또한 정보원을 명확하게 파악하고, 그 후의 연락을 보전하기 위해 통보자의 성명, 소재(전화번호)를 알린다. 통보를 받은 관계자는 필요에 따라 소내 관계자와 상급자에게 보고한다.
+                                사업소외 통보는 원자력안전법 제74조, 제92조, 제97조에 따라 원자력안전위원회에 보고하도록 규정하고 있다. 이는 사고의 경중에 따라 1시간 내지 4시간 이내에 유선상으로 구두보고를 하고 24시간 이내에 초기 서면보고 그리고 몇 개월 이내에 상세서면보고를 하도록 규정하고 있다.                                 
+                              </li>
+                              <li class="list-group-item"><b>3) 이상 피폭시 조치</b><br> 
+                                이상피폭이 발생할 우려가 생기면 즉시 다음 조치를 취한다. (1) 사고가 실내에서 발생했다면 같은 방에 있는 사람에게 이상 가능성을 알리고 즉시 실외로 피난시킨다. 실외라면 공동작업자에게 이상 사실을 알린다. (2) 본인이 이상발생 통보를 하거나 근처에 잇는 사람에게 통보를 의뢰한다. 통보처나 통보방법을 방사성동위원소를 사용하는 장소에 상시 게시해두면 이상사태 발생시에 도움이 된다. (3) 방의 문을 닫고 다른 사람들의 피폭을 막기 위해 출입금지 등의 조치를 취한다. 실외라면 로프 등으로 출입금지 구역을 설정하고 주의 사항을 표시한다. 다음에는 방사선안전관리자나 담당자의 지시에 따라 피폭을 발생시키는 원인을 제거하기 위한 작업을 한다.
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item"><b>- 화재, 지진 발생시의 조치</b><br>
+                                    화재시에는 초기 소화로 손해를 최소화하고 방사능오염 확대방지와 소방대에 정확한 정보를 제공하며, 신속히 방사선 위험구역을 설정해야 한다. 진화 후에는 방사성물질 및 위험물을 우선적으로 옮기고 잔량을 확인해야 하며 오염범위 확인 후 출입금지 구역을 설정하고 출입을 금지시켜야 한다.
+                                    지진 발생시에는 열원과 전기, 가스를 차단하고 진동 종료 후 사람들의 신변의 안전을 확인한 후 주위의 상황을 점검한다. 필요할 경우, 초기 소화를 실시하고 방사성용액 등의 누출시 오염확대 방지, 제2의 지진에 대비하여 안전한 장소로 사람들을 소개시킨다.
+                                  </li>
+                                  <li class="list-group-item"><b>- 선원 분실시의 조치</b><br>
+                                    이리듐(Ir-92) 및 코발드(Co-60) 등이 내장된 비파괴 검사용 조사기 분실시에는 사고대응절차에 따라 안전관리자, 관계기관(원자력안전위원회, KINS), 관할경찰서에 즉시 신고 및 보고를 하고 전문가의 협조 하에 수색활동 및 언론매체를 통한 분실과 주의사항을 홍보한다. 그리고 회수된 조사기는 표면과 주변에 대한 선량률 측정을 실시하여 누설이 없는지 확인하고 안전관리자의 감독하에 운반과 저장을 한다. 방사선작업 도중 선원을 분실하였다면 즉시 사고 장소에서 대피하여 출입금지 조치를 취하고 방사선안전관리자와 관계기관에 보고를 한다. 이후 사용 가능성이 있는 장소부터 선원을 탐색하고 발견여부와 관계없이 분실사유를 규명해야 한다.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="list-group-item"><b>4) 오염방지 원칙</b><br> 
+                                오염 사고시에는 오염방지 원칙에 따라 조치하여야 한다. 오염사고는 표면오염, 공기오염, 인체 피부오염 및 인체 내부오염이 있을 수 있으며 관리구역 외부로의 누설이 발생할 수 있으므로 신속하고 적절한 조치가 요구된다. 먼저 오염의 범위와 정도, 확대 가능성을 가늠해 보고 유리성, 부유성 오염여부, 공기오염 가능성을 확인한다. 오염핵종과 물리적 화학적 특성을 고려하여 오염밀도와 오염량을 평가하고 발생원인, 시기 등을 파악해야 한다. 제일 먼저 취해야 할 조치는 일반인들에 대한 출입통제이다. 두 번째로는 오염구역 설정 및 오염구역내 관련자들에 대한 통제이고 세 번째로는 경찰을 비롯한 통제요원을 선발하여 지속적으로 오염확산을 방지해야 한다. 그리고 제염 등의 수습조치를 취해야 한다.
+                                <br><img src="img/indu01-2-1.png" class="img-fluid"" alt="Responsive image">
+                              </li>
+                            </ul>
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">사고 기록의 작성과 유지</h5>
+                          <p class="card-text">
+                            방사선사고로부터 교훈을 얻고 방사선작업 순서나 관리의 개선방안을 찾기 위해서는 기록이 반드시 필요하며 방사선장해발생 가능성이나 제반법규 및 행정상의 규제에 대한 입증을 위해서라도 기록은 꼭 필요하다. 아울러 유사 사고의 재발방지에 좋은 교훈과 반면교사로도 활용할 수 있다. 그리고 사고의 기록은 숨기지 말고 가능하면 많은 사람들에게 알리고, 국가의 기록으로도 유지될 필요가 있다. 기록에 관한 항목은 법령과 고시에 지정된 방법에 따라 작성해야 한다.
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">법 집행 및 범죄 수사</h5>
+                          <p class="card-text">
+                            방사선테러의 경우, 테러리스트나 범죄 용의자가 사고 현장의 일반인들 중에 있을 수 있으며 치료나 방사선감시를 수행하는 사람들에게 위협이 될 수도 있다. 사고 현장에서 발견되거나 회수된 물품을 증거로 취급하지 않으면 결정적인 정보를 잃어버릴 가능성이 존재하므로 주의해야 하고 대피장소 또는 집결지가 테러리스트나 범죄 집단의 이상적인 표적이 될 수 있다는 점도 염두에 두어야 한다. 초동대응 요원들의 대응활동이 범죄수사의 증거를 파괴할 수 있다는 것을 인식하지 못하여 중요한 범죄수사 증거를 잃어버리거나 파괴되는 경우도 있다. 
+                          </p>
+                        </div>
+                        <div class="card-body">
+                          <img src="img/indu01-2-2.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="card-body">
+                          <img src="img/indu01-2-3.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Sub1 End-->
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg> 2. 사고 1
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <!--Sub2 Start-->
+                  <div class="accordion" id="accordionSub2">
+                    <div class="card">
+                      <div class="card-body" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSub2One" aria-expanded="true" aria-controls="collapseSub2One">
+                            2-1. 방사선사고의 정의와 선량한도
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub2One" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSub2">
+                        <div class="card-body">
+                          <img src="img/indu02-1-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSub2Two" aria-expanded="true" aria-controls="collapseSub2Two">
+                            2-2. 방사선사고의 유형과 구분
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub2Two" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSub2">
+                        <div class="card-body">
+                          <img src="img/indu02-2-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="card-body">
+                          <img src="img/indu02-2-2.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Sub2 End-->
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg> 3. 사고 2
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <!--Sub3 Start-->
+                  <div class="accordion" id="accordionSub3">
+                    <div class="card">
+                      <div class="card-body" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSub3One" aria-expanded="true" aria-controls="collapseSub3One">
+                            3-1. 국외의 원자력발전소와 재처리시설 사고
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub3One" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSub3">
+                        <div class="card-body">
+                          <img src="img/indu03-1-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="card-body">
+                          <img src="img/indu03-1-2.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSub3Two" aria-expanded="true" aria-controls="collapseSub3Two">
+                            3-2. 국내 · 외 방사능테러 사건
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub3Two" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSub3">
+                        <div class="card-body">
+                          <img src="img/indu03-1-2.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSub3Three" aria-expanded="true" aria-controls="collapseSub3Three">
+                            3-3. 방사선원에 의한 사고사례 (국내)
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub3Three" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSub3">
+                        <div class="card-body">
+                          <img src="img/indu03-3-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSub3Four" aria-expanded="true" aria-controls="collapseSub3Four">
+                            3-4. 방사선원에 의한 사고사례 (국외)
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub3Four" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSub3">
+                        <div class="card-body">
+                          <img src="img/indu03-4-1.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSub3Five" aria-expanded="true" aria-controls="collapseSub3Five">
+                            3-5. 관련사이트
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSub3Five" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSub3">
+                        <!--Start-->
+                        <div class="card w-100">
+                          <div class="card-body">
+                            <h5 class="card-title">원자력안전정보공개센터</h5>
+                            <p class="card-text">사고·고장현황</p>
+                            <a href="http://nsic.nssc.go.kr/dta/accidentList.do" target="_blank" class="btn btn-primary">바로가기</a>
+                          </div>
+                        </div>
+                        <!--End-->
+                      </div>
+                    </div>
+                  </div>
+                  <!--Sub3 End-->
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingSeven">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5A.5.5 0 0 0 4 8z"/>
+                      </svg> 4. 관련영상
+                    </button>
+                  </h2>
+                </div>
+                <!-- modal Start -->
+                <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div>
+                          <iframe width="100%" height="350" src=""></iframe>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- modal End -->
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <h5 class="card-title">교육영상 1</h5>
+                    <!-- Button trigger modal Start -->
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/e8nqO8enCrk">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 선량한도
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/xIyaql7IkYU">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 검출기효율
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/KWd30-XfDlo">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 오염측정
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/4so8eZXgJUU">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 제거성오염 측정
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/_AyuwYt3i-M">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 고착성오염 측정
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/biNf5AG0OXg">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 밀봉선원 취급
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/jBIX7Kh3pNU">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 밀봉소선원과 대선원
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/K8Rk1Tzmyog">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 코발트-60 조사실 안전
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/IcFZrywJsBo">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 방사선투과검사 현장 안전
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/L0fKArQE2KE">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 개봉선원 취급
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/yJVl1DYC16Y">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 개봉선원 이용 작업
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/3bdDExyIzzE">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 신규구입 개봉선원 취급
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/_S9CCF8ZRpE">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 개봉선원 작업 준비
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/2d1owv-toGo">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 개봉선원 작업 종료후
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/RQ_iVUA1_t4">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 방사성액체 엎질렀을때 조치
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/VTfVoKWB-Ho">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> ALARA원칙
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/qp31Q0n6aOc">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 방사성폐기물 관리
+                    </button>
+                    <!-- Button trigger modal End -->
+                  </div>
+                  <div class="card-body"> 
+                    <h5 class="card-title">교육영상 2</h5>
+                    <!-- Button trigger modal Start -->
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/yjo1Af5Ayj0">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 방사선이용 - 연기감지기
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/UFMRokIh608">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 방사선이용 - 공업 방사선멸균
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/RXOqAbSLZIQ">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 방사선이용 - 공업 비파괴검사
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/5YcojerRvmk">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 방사선이용 - 공업 플라스틱재질 개선
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/bqrPwXBSWkg">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 방사선이용 - 공업 준위계
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/Q1gHm5QIStE">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 방사선이용 - 공업 두께계
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/ku2UgiGQflk">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 방사선이용 - 농업분야
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/nHFhApDpEQQ">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 방사선이용 - 의료분야
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/IhyMB6of00M">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
+                      </svg> 원자력이용 분야
+                    </button>
+                    <!-- Button trigger modal End -->
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+          <div style="border: 0px solid white; padding: 10px; height: auto; min-height: 80px; overflow: auto;"></div>
+        <!--contents End-->
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER START -->
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-secondary bg-secondary">
+      <footer class="container text-light ">
+        <p>&copy;2020 &middot; <a href="http://www.kans.re.kr" target="_blank" class="text-light stretched-link">KANS</a></p>  
+        <p class="float-right" ><a href="#" class="text-light stretched-link">Back to top</a></p>
+      </footer>
+    </nav>
+    <!-- FOOTER END -->
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

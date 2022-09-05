@@ -1,0 +1,76 @@
+<?
+include "../conf/dbconn.inc";
+
+if($uid !=''){
+	$sql = "update edu_calendar set visit=visit+1 where  uid=$uid";
+	mysql_query($sql);
+
+	$sql="select * from edu_calendar where uid=$uid";
+	$res=mysql_query($sql);
+	$row=mysql_fetch_object($res);
+	$group_id = $row->group_id;
+}
+
+$sql="select * from edu_calendar_group order by  group_id asc";
+$res2=mysql_query($sql);
+$total=mysql_affected_rows();
+
+?>
+<html>
+<head>
+<title>±≥¿∞¿œ¡§æ»≥ª</title>
+<style TYPE="text/css">
+<!--
+td {font-family:±º∏≤; font-size:10pt; text-decoration:none}
+table {font-family:±º∏≤; font-size:10pt; text-decoration:none}
+A:link { font-size:10pt; font-face:"±º∏≤"; text-decoration:none;}
+A:visited { font-size:10pt; font-face:"±º∏≤"; text-decoration:none;}
+A:hover  { font-size:10pt; text-decoration:underline;}
+//-->
+</style>
+
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table border="0" cellpadding="0" cellspacing="0" align="center" width="600">
+	<tr>
+		<td height="10" colspan="3"></td>
+	</tr>
+	<tr>
+		<td width="10"></td>
+		<td>
+			<table border="0" cellpadding="1" cellspacing="1" align="center" width="580" bgcolor="#333333">
+				<tr>
+					<td bgcolor="#c0d8f0" align="center" width="100" height="30">¿€&nbsp;&nbsp;º∫&nbsp;&nbsp;¿⁄</td>
+					<td bgcolor="#ffffff">&nbsp;<?=$row->writer?></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c0d8f0" align="center" width="100" height="30">±≥¿∞¿œ¡§</td>
+					<td bgcolor="#ffffff">&nbsp;<?=$row->sdate?> ~ <?=$row->edate?></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c0d8f0" align="center" width="100" height="30">¡¶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∏Ò</td>
+					<td bgcolor="#ffffff">&nbsp;<?=$row->title?></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c0d8f0" align="center">≥ª&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;øÎ</td>
+					<td bgcolor="#ffffff">&nbsp;<?=nl2br($row->content)?></td>
+				</tr>
+			</table>
+		</td>
+		<td width="10"></td>
+	</tr>
+	<tr>
+		<td height="10" colspan="3"></td>
+	</tr>
+	<tr>
+		<td width="10"></td>
+		<td height="30" align="right"><input type="button" onclick="javascript:window.close();" value="close" style="background-color:#FFF0F5;border-width:1; border-style:solid;"></td>
+		<td width="10"></td>
+	</tr>
+	<tr>
+		<td height="10" colspan="3"></td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<?
+include "../conf/dbconn.inc";
+
+$today = getdate(); 
+
+if(!$sYear) { $sYear = $today['year']; }
+if(!$sMonth) { $sMonth = $today['mon']; }
+if(!$sDay) { $sDay = $today['mday']; }
+
+$display_year = $sYear;
+$display_month = $sMonth;
+$display_day = 1;
+
+if($display_month == 0) {
+	$display_year = $display_year - 1;
+	$display_month = 12;
+}
+if($display_month == 13) {
+	$display_year = $display_year + 1;
+	$display_month = 1;
+}
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="../css/font.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+<script language=javascript src="../js/drop_menu_sc.js"></script>
+<script language=javascript src="../js/common_s.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/gnb.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<div class="header">
+	<? include "../inc/header.php"; ?>
+</div>
+
+<div class="sub_visual">
+	<img src="../image/sub_visual.jpg">
+</div>
+
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  톱메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" border="0" cellspacing="0" cellpadding="0">-->
+							<!--<tr>-->
+								<!--<td rowspan="2" width="235" height="60"><a href="../index.html"><img src="../image_s/logo.gif" width="235" height="60" /></a></td>-->
+								<!--<td colspan="5" width="789" height="30"></td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td width="540" height="30"></td>-->
+								<!--<td width="60" height="30" align="left"><a href="../index.html">· HOME</a></td>-->
+								<!--<td width="100" height="30" align="left"><a href="mailto:kans@kans.re.kr">· CONTACT US</a></td>-->
+								<!--<td width="70" height="30" align="left"><a href="../map/map01.html">· SITEMAP</a></td>-->
+								<!--<td width="19" height="30"></td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  톱메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--&lt;!&ndash;  로컬메뉴 시작  &ndash;&gt;-->
+						<!--<table width="1024" height="60" border="0" cellpadding="0" cellspacing="0">-->
+							<!--<tr>-->
+								<!--<td>-->
+									<!--<div id="flashContent">-->
+										<!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1024" height="60" id="indexmenuA" align="middle">-->
+											<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+											<!--<param name="quality" value="high" />-->
+											<!--<param name="bgcolor" value="#ffffff" />-->
+											<!--<param name="play" value="true" />-->
+											<!--<param name="loop" value="true" />-->
+											<!--<param name="wmode" value="transparent" />-->
+											<!--<param name="scale" value="showall" />-->
+											<!--<param name="menu" value="true" />-->
+											<!--<param name="devicefont" value="false" />-->
+											<!--<param name="salign" value="" />-->
+											<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--<object type="application/x-shockwave-flash" data="../swf/indexmenuA.swf" width="1024" height="60">-->
+												<!--<param name="movie" value="../swf/indexmenuA.swf" />-->
+												<!--<param name="quality" value="high" />-->
+												<!--<param name="bgcolor" value="#ffffff" />-->
+												<!--<param name="play" value="true" />-->
+												<!--<param name="loop" value="true" />-->
+												<!--<param name="wmode" value="transparent" />-->
+												<!--<param name="scale" value="showall" />-->
+												<!--<param name="menu" value="true" />-->
+												<!--<param name="devicefont" value="false" />-->
+												<!--<param name="salign" value="" />-->
+												<!--<param name="allowScriptAccess" value="sameDomain" />-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+											<!--<a href="http://www.adobe.com/go/getflash">-->
+												<!--<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />-->
+											<!--</a>-->
+											<!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+											<!--</object>-->
+											<!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+										<!--</object>-->
+									<!--</div>-->
+								<!--</td>-->
+							<!--</tr>-->
+						<!--</table>-->
+						<!--&lt;!&ndash;  로컬메뉴 끝  &ndash;&gt;-->
+					<!--</td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<!--&lt;!&ndash;  상단 끝  &ndash;&gt;-->
+	<!--&lt;!&ndash;  왼쪽메뉴 및 콘텐츠내용 시작  &ndash;&gt;-->
+	<!--<tr>-->
+		<!--<td colspan="5">-->
+			<!--<table width="1024" border="0" cellpadding="0" cellspacing="0">-->
+				<!--<tr>-->
+					<!--<td><img src="images/edu_title.jpg" width="185"></td>-->
+					<!--<td><img src="images/edu_main_img.jpg" width="839"></td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<tr>
+		<td colspan="5">
+			<!-- 왼쪽메뉴 시작  -->
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<!-- 왼쪽메뉴 시작  -->	
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="edu01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image01','','images/sub_edu01_on.gif',1)"><img src="images/sub_edu01_off.gif" name="Image01" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image02','','images/sub_edu02_on.gif',1)"><img src="images/sub_edu02_off.gif" name="Image02" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image03','','images/sub_edu03_on.gif',1)"><img src="images/sub_edu03_off.gif" name="Image03" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image04','','images/sub_edu04_on.gif',1)"><img src="images/sub_edu04_off.gif" name="Image04" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/account.png"></td>
+							</tr>
+						</table>
+						<!-- 왼쪽메뉴 끝  -->
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/edu_subbar_10.jpg"></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table width="671" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="30"><img src="images/bar_s_a.gif"></td>
+											<td><a href="edu02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image05','','images/sub01_on.gif',1)"><img src="images/sub01_off.gif" name="Image05" width="219" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s_a.gif"></td>
+											<td><a href="edu_sub_02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image06','','images/sub02_on.gif',1)"><img src="images/sub02_off.gif" name="Image06" width="180" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s_a.gif"></td>
+											<td><a href="edu_sub_08.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image08','','images/sub08_on.gif',1)"><img src="images/sub08_off.gif" name="Image08" width="160" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s_a.gif"></td>
+											<td><a href="edu_sub_03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image07','','images/sub03_on.gif',1)"><img src="images/sub03_off.gif" name="Image07" width="112" height="35" border="0"></a></td>
+											<td width="30"><img src="images/bar_s_a.gif"></td>
+										</tr>
+									</table>	
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<!-- 내용 시작 -->
+									<table width="671" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td><img src="images/edusub08_title.gif"></td>
+										</tr>
+										<tr>
+											<td height="10"></td>
+										</tr>
+										<tr>
+											<td>우리 한국원자력안전아카데미는 방사선사에 대한 보수교육기관으로 지정 받았습니다. (방사협 제2015-10호, 2015.1.15)<br>
+											위와 관련하여 방사선사 보수교육을 아래와 같이 실시합니다.</td>
+										</tr>
+										<tr>
+											<td height="20"></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="650" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+													<tr align="center" bgcolor="#e1e1e1">
+														<td width="150" height="24">구 분</td>
+														<td width="500">내 용</td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>교육시간</strong></td>
+														<td bgcolor="#ffffff"><br>&nbsp;&nbsp;&nbsp;3시간 이상 (방사선사 보수교육 인정시간 2시간)<br><br></td>
+													</tr>
+																										<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>교육내용</strong></td>
+														<td bgcolor="#ffffff"><br>&nbsp;&nbsp;&nbsp;의료기관 방사선안전관리 및 취급에 관한 사항 등<br><br></td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>교육일정</td>
+														<td bgcolor="#ffffff"><br>
+<br>
+&nbsp;&nbsp;- 원자력안전아카데미에서 실시하는 모든 방사선작업종사자 직장교육 및 면허자보수교육 수료시 학점 인정됩니다.<br><br>
+&nbsp;&nbsp;- 단, 교육 신청시 사전에 방사선사 면허번호를 포함하여 신청하신 분에 한하여 인정됩니다. (교육공지사항 참조)<br><br>
+&nbsp;&nbsp;- 12월 초까지 방사선사 면허보수교육 학점인정을 신청해주시면 학점인정 가능합니다. 12월 15일 이후 추가 접수 불가합니다.<br><br>
+<br>
+* 자세한 교육일정은 교육안내>교육일정 페이지를 참조<br>
+
+													<br>
+														</td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>교육비(1인당) </strong></td>
+														<td bgcolor="#ffffff"><br><font color="#0000ff">&nbsp;&nbsp;&nbsp;<b>각 해당 교육비 참조(별도 추가비용 없음)</b></font><br><br></td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>신청방법</strong></td>
+														<td bgcolor="#ffffff"><br>&nbsp;&nbsp;① 당 아카데미 <font color="#0066ff">수강신청서를 작성</font>하여 <b><font color="#666666">e-mail</font></b> : <a href="mailto:kans@kans.re.kr">kans@kans.re.kr</a> 로 신청<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(우편 및 fax도 가능)<br><br>
+														&nbsp;&nbsp;<b><font color="#3366ff">② 수강료는 온라인으로 납부해 주시기 바랍니다.</font></b></font><br><br>
+														&nbsp;&nbsp;<b><font color="#ff0000">- 한국 씨티은행 102-53627-246 (사)한국원자력안전아카데미</font></b><br>
+														&nbsp;&nbsp;<font color="#990000" >※ 교육비는 교육 3일전까지 납부하여 주시기 바랍니다.</font><br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(입금자명 : 교육받는분 또는 회사명으로 입금 해주시면 됩니다.)<br><br>
+														&nbsp;&nbsp;③ 입금 및 접수결과<br>
+														&nbsp;&nbsp;※ 입금하신 교육비에 대하여 계산서나 영수증이 필요하신 경우<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e-mail 또는 전화로 요청하시면 됩니다.<br><br>
+														&nbsp;&nbsp;- 교육 문의 : 전화(02-554-7330) 또는 메일(kans@kans.re.kr)<br><br></td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#F7F7F7"><strong>유의사항</strong></td>
+														<td bgcolor="#ffffff"><br>&nbsp;&nbsp;◎ 보수교육 인정을 위한 과정<br>
+														&nbsp;&nbsp;* 교육 참석시 출석부 비고란에 "방사선사"라고 표기<br>
+														&nbsp;&nbsp;* 교육 후 방사선작업종사자 직장교육 수료확인서와<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;별도로 "방사선사 보수교육 이수확인서" 발급 및 대한방사선사협회에 이수자 명단 송부<br><br>
+														&nbsp;&nbsp;(참고1) "방사선작업종사자 직장교육"과 "방사선사 보수교육" 중복이수 가능<br>
+														&nbsp;&nbsp;(참고2) 해당교육은 "RI면허 보수교육"과 관계없는 별도의 교육입니다.<br>
+														&nbsp;&nbsp;(참고3) 수료정보는 12월중순 방사선사협회로 명단이 이관됩니다. 그 이전에 방사선사협회에 수료내역이 확인되지 않습니다.<br>
+														<br> </td>
+													</tr>
+													<tr>
+														<td align="center" bgcolor="#ffffff" colspan="2"><br>
+															<table width="650" border="0" cellpadding="0" cellspacing="0">
+																<tr>
+																	<td align="center"><a href="http://www.kans.re.kr/jongsa.hwp"><img src="images/jongsaA_down.png" border="0"></a></td>
+																</tr>
+																<tr>
+																	<td align="center"><br>※일정기간동안 방사선작업종사자 교육신청서와 방사선사보수교육 교육신청서를 같이 사용합니다.<br>
+																	신청서 다운로드 후 착오없으시길 바랍니다.<br></td>
+																</tr>
+																<tr>
+																	<td height="10"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="30"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

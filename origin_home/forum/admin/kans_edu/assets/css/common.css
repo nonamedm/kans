@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/* common */
+body, html{font-family: 'Noto Sans KR M', sans-serif;font-size: 16px;color: #3f79bb;letter-spacing: 0;}
+.clearFix{*zoom: 1;}
+.clearFix:after{content: "";display: block;clear: both;}
+.hidden{margin: 0;padding: 0;width: 0;height: 0;overflow: hidden;font-size: 0;line-height: 0;}
+span{display: inline-block;}
+
+.fl-l{float: left;}
+.fl-r{float: right;}
+
+.mar-t{margin-top: 25px;}
+.mar-lBr{margin-left: 70px;}

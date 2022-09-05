@@ -1,0 +1,298 @@
+<?
+include "../conf/dbconn.inc";
+//include "../conf/connchk.inc";
+
+$now=mktime();
+$year=date(Y,$now);
+
+if($cyear != ''){
+	$sql="SELECT * FROM jongsa_cert_d where year = '".$cyear."' and name = '".$cname."'  and birth = '".$cbirth."'  ";
+	$ress=mysql_query($sql);
+	$total=mysql_affected_rows();
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="../css/font.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+<script language=javascript src="../js/drop_menu_sc.js"></script>
+<script language=javascript src="../js/common_s.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script language="javascript">
+function click() {
+	if (event.button==2) {
+	alert('마우스 오른클릭을 사용하실 수 없습니다.');
+	return false;
+	} 
+} 
+
+document.onmousedown=click 
+
+
+function viewPrint(lno){
+	var theURL='./edu07_cert_view.html?lno='+lno;
+	var features='left=280,top=250,width=700,height=550,toolbars=no,menubar=no,scrollbars=yes,status=no,resizable=no';
+	window.open(theURL,"",features);
+}
+
+
+function passwdCheck(){
+
+var form=document.checkFrm;
+
+	if(form.pw.value==''){
+		alert('비밀번호를 입력하세요!');
+		form.pw.focus();
+		return;
+	}
+
+	form.action = './edu03_board_check_ok.php';
+	form.submit()
+}
+
+</script>
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+.style2 {
+	color: #4B4B4B;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<!--  톱메뉴 시작  -->
+						<table width="1024" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td rowspan="2" width="235" height="60"><a href="../index.html"><img src="../image_s/logo.gif" width="235" height="60" /></a></td>
+								<td colspan="5" width="789" height="30"></td>
+							</tr>
+							<tr>
+								<td width="540" height="30"></td>
+								<td width="60" height="30" align="left"><a href="../index.html">· HOME</a></td>
+								<td width="100" height="30" align="left"><a href="mailto:kans@kans.re.kr">· CONTACT US</a></td>
+								<td width="70" height="30" align="left"><a href="../map/map01.html">· SITEMAP</a></td>
+								<td width="19" height="30"></td>
+							</tr>
+						</table>
+						<!--  톱메뉴 끝  -->
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!--  로컬메뉴 시작  -->
+						<table width="1024" height="60" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td>
+									<div id="flashContent">
+										<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1024" height="60" id="indexmenuA" align="middle">
+											<param name="movie" value="../swf/indexmenuA.swf" />
+											<param name="quality" value="high" />
+											<param name="bgcolor" value="#ffffff" />
+											<param name="play" value="true" />
+											<param name="loop" value="true" />
+											<param name="wmode" value="transparent" />
+											<param name="scale" value="showall" />
+											<param name="menu" value="true" />
+											<param name="devicefont" value="false" />
+											<param name="salign" value="" />
+											<param name="allowScriptAccess" value="sameDomain" />
+											<!--[if !IE]>-->
+											<object type="application/x-shockwave-flash" data="../swf/indexmenuA.swf" width="1024" height="60">
+												<param name="movie" value="../swf/indexmenuA.swf" />
+												<param name="quality" value="high" />
+												<param name="bgcolor" value="#ffffff" />
+												<param name="play" value="true" />
+												<param name="loop" value="true" />
+												<param name="wmode" value="transparent" />
+												<param name="scale" value="showall" />
+												<param name="menu" value="true" />
+												<param name="devicefont" value="false" />
+												<param name="salign" value="" />
+												<param name="allowScriptAccess" value="sameDomain" />
+											<!--<![endif]-->
+											<a href="http://www.adobe.com/go/getflash">
+												<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+											</a>
+											<!--[if !IE]>-->
+											</object>
+											<!--<![endif]-->
+										</object>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<!--  로컬메뉴 끝  -->
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!--  상단 끝  -->
+	<!--  왼쪽메뉴 및 콘텐츠내용 시작  -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><img src="images/edu_title.jpg" width="185"></td>
+					<td><img src="images/edu_main_img.jpg" width="839"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<!-- 왼쪽메뉴 시작  -->
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<!-- 왼쪽메뉴 시작  -->	
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="edu01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image01','','images/sub_edu01_on.gif',1)"><img src="images/sub_edu01_off.gif" name="Image01" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image02','','images/sub_edu02_on.gif',1)"><img src="images/sub_edu02_off.gif" name="Image02" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image03','','images/sub_edu03_on.gif',1)"><img src="images/sub_edu03_off.gif" name="Image03" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="edu04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image04','','images/sub_edu04_on.gif',1)"><img src="images/sub_edu04_off.gif" name="Image04" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+						</table>
+						<!-- 왼쪽메뉴 끝  -->
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/edu_subbar_03.jpg"></td>
+							</tr>
+							<tr>
+								<td height="100"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<!-- 내용 시작 -->
+									<table width="600" height="200" border="0" align="center" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="13" align="center"><strong>&lt;&lt; 통신교육 비밀번호 확인 &gt;&gt;</strong></td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<td>
+												<form name="checkFrm" method='post' enctype="multipart/form-data">
+												<input type="hidden" name="uid" value="<?=$uid?>">
+												<input type="hidden" name="search" value="<?=$search?>">
+												<input type="hidden" name="keyword" value="<?=$keyword?>">
+													<table width="324" border="0" align="center" cellpadding="1" cellspacing="1">
+														<tr>
+															<td><div align="center"><strong>비밀번호</strong></div></td>
+															<td>&nbsp;
+																<input type="text" size='20' name='pw' maxlength='12' style="border-width:1;border-color:#6d6d6d; border-style:solid;" tabindex="1" /></td>
+															<td width="50"><a href="javascript:passwdCheck();">확인</a></td>
+														</tr>
+													</table>
+												</form>
+												<p>&nbsp;</p>
+												<p>&nbsp;</p></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
+<?
+include "../conf/dbconn_close.inc";
+?>

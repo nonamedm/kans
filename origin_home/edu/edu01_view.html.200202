@@ -1,0 +1,115 @@
+<?
+include "../conf/dbconn.inc";
+
+if($uid !=''){
+	$sql = "update edu_calendar set visit=visit+1 where  uid=$uid";
+	mysql_query($sql);
+
+	$sql="select * from edu_calendar where uid=$uid";
+	$res=mysql_query($sql);
+	$row=mysql_fetch_object($res);
+	$group_id = $row->group_id;
+
+	$sql5="select * from edu_rev where uid=$uid and date_format(sysdate(),'%Y%m%d') between rsdate and redate and max_user > 0";
+	$res5=mysql_query($sql5);
+	$row5=mysql_fetch_object($res5);
+	$total5=mysql_affected_rows();
+}
+
+$sql="select * from edu_calendar_group order by  group_id asc";
+$res2=mysql_query($sql);
+$total=mysql_affected_rows();
+
+?>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>교육일정안내</title>
+<style TYPE="text/css">
+<!--
+td {font-family:굴림; font-size:10pt; text-decoration:none}
+table {font-family:굴림; font-size:10pt; text-decoration:none}
+A:link { font-size:10pt; font-face:"굴림"; text-decoration:none;}
+A:visited { font-size:10pt; font-face:"굴림"; text-decoration:none;}
+A:hover  { font-size:10pt; text-decoration:underline;}
+//-->
+</style>
+
+</head>
+<script language="javascript">
+	/*
+	document.onmousedown=click; 
+	
+	function click() {
+		if (event.button==2) {
+		alert('마우스 오른클릭을 사용하실 수 없습니다.');
+		return false;
+		} 
+	*/
+	function goRev(){
+		opener.window.location.href='edu_rev_appy.html?rx=<?=$uid?>';
+		self.close();
+	}
+
+</script>
+
+<body leftmargin="0" topmargin="0">
+<form name="f1" method="post" enctype='multipart/form-data'>
+<table border="0" cellpadding="0" cellspacing="0" align="center" width="600">
+	<tr>
+		<td height="10" colspan="3"></td>
+	</tr>
+	<tr>
+		<td width="10"></td>
+		<td>
+			<table border="0" cellpadding="1" cellspacing="1" align="center" width="580" bgcolor="#333333">
+				<tr>
+					<td bgcolor="#c0d8f0" align="center" width="100" height="30">작&nbsp;&nbsp;성&nbsp;&nbsp;자</td>
+					<td bgcolor="#ffffff">&nbsp;<?=$row->writer?></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c0d8f0" align="center" width="100" height="30">교육일정</td>
+					<td bgcolor="#ffffff">&nbsp;<?=$row->sdate?> ~ <?=$row->edate?></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c0d8f0" align="center" width="100" height="30">제&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;목</td>
+					<td bgcolor="#ffffff">&nbsp;<?=$row->title?></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c0d8f0" align="center">내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;용</td>
+					<td bgcolor="#ffffff">&nbsp;<?=nl2br($row->content)?></td>
+				</tr>
+			</table>
+		</td>
+		<td width="10"></td>
+	</tr>
+	<tr>
+		<td height="10" colspan="3"></td>
+	</tr>
+	<tr>
+		<td width="10"></td>
+		<td height="30" align="center">
+			<? 
+				if($total5>0){
+			?>
+				<input type="button" value="교육신청서 작성하기" onclick="javascript:goRev();">
+			<?
+				}
+			?>
+		</td>
+		<td width="10"></td>
+	</tr>
+	<tr>
+		<td width="10"></td>
+			<td height="30" align="right">
+					<input type="button" onclick="javascript:window.close();" value="close" style="background-color:#FFF0F5;border-width:1; border-style:solid;">
+			</td>
+		<td width="10"></td>
+	</tr>
+	<tr>
+		<td height="10" colspan="3"></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,70 @@
+.submenu {
+width:350px;
+padding-left:10px;
+display:none;
+}
+td.mtDropdown{ FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY:verdana;  letter-spacing:-1; }
+.mtDropdownMenu {
+    LEFT: -1000px; OVERFLOW: hidden; POSITION: absolute; TOP: -1000px
+}
+.mtDropdownMenu .content {
+    POSITION: absolute
+}
+.mtDropdownMenu .items {
+    BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; Z-INDEX: 2; LEFT: 0px; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; TOP: 0px
+}
+.top .items {
+    BORDER-TOP: medium none
+}
+.mtDropdownMenu .item {
+    BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 12px; BORDER-LEFT: medium none; CURSOR: hand; COLOR: #4a4b4b; BORDER-BOTTOM: medium none; FONT-FAMILY: ±¼¸²; TEXT-DECORATION: none
+}
+.mtDropdownMenu .background {
+    Z-INDEX: 1; LEFT: 0px; POSITION: absolute; TOP: 0px; moz-opacity: .8
+}
+.mtDropdownMenu .shadowRight {
+    Z-INDEX: 3; FILTER: alpha(opacity=40); WIDTH: 2px; POSITION: absolute; TOP: 3px; moz-opacity: .4
+}
+.mtDropdownMenu .shadowBottom {
+    Z-INDEX: 1; FILTER: alpha(opacity=40); LEFT: 3px; POSITION: absolute; HEIGHT: 2px; moz-opacity: .4
+}
+.mtDropdownMenu .hover {
+    BACKGROUND: #F5F5F5; font-weight: bold; 
+}
+
+#floater {position:absolute; visibility:visible} 
+
+#nav {
+height:36px; position:relative; font-family:arial, verdana, sans-serif; font-size:14px;z-index:500;
+}
+#nav .select {
+margin:0; padding:0; list-style:none; white-space:nowrap; 
+}
+#nav li {
+float:left; background:url(../image_s/blank_over_p.jpg); width:140px; height:35px;
+}
+#nav .select a {
+display:block; height:36px; float:center; background: url(../image_s/blank_p.jpg); padding:0 0 0 15px; text-decoration:none; line-height:35px; white-space:nowrap; 
+}
+#nav .select a b {
+display:block; padding:0 30px 10px 15px; background:url(../image_s/blank_p.jpg) right top;
+}
+#nav .select li:hover a {
+background: url(../image_s/blank_over_p.gif); padding:0 0 0 15px; line-height:35px; cursor:pointer;
+}
+#nav .select li:hover a b {
+display:block; padding:0 30px 9px 15px; background:url(../image_s/blank_over_p.jpg) right top; cursor:pointer;
+}
+#nav .sub {
+display:none; margin:0; padding:0 0 0 60px;list-style:none;
+}
+#nav .sub li {background:transparent;}
+#nav .select li:hover .sub {
+height:20px; display:block; position:absolute; float:left; width:750px; top:37px; left:0; text-align:center;
+}
+#nav .select li:hover .sub li a {
+display:block;height:20px; line-height:16px; float:left; background:transparent url(transparent.gif); padding:0 16px; margin:0; white-space:nowrap; border:0px solid #000; border-color:#888 #777 #666 #ddd; color:#888;font-size:11px;
+}
+#nav .select li:hover .sub li a:hover {
+color:#000; background:#e8e8e8; border-color: #fff #333 #000 #fff; line-height:15px;
+}

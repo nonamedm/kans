@@ -1,0 +1,443 @@
+<?
+include "../conf/dbconn.inc";
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=16 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,3 ";
+	$pho_res=mysql_query($sql);
+	$pho_total = mysql_affected_rows();
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=14 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$notice_res=mysql_query($sql);
+	$notice_total =mysql_affected_rows();
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=15 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$edu_res=mysql_query($sql);
+	$edu_total = mysql_affected_rows();
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=18 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$rec_res=mysql_query($sql);
+	$rec_total = mysql_affected_rows();	
+$sql = "select * from board_config A, board B where A.bbs_id=B.bbs_id and A.bbs_id=4 order by  B.fid desc, B.thread asc";
+$sql = $sql." limit 0,5 ";
+	$pds_res=mysql_query($sql);
+	$pds_total = mysql_affected_rows();
+
+	
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<link href="../css/font.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<title>▒▒ 한국원자력안전아카데미 ▒▒</title>
+
+<script language=javascript src="../js/drop_menu_sc.js" ></script>
+<script language=javascript src="../js/common_s.js" ></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload=fillup();init();>
+<table width="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<!--  톱메뉴 시작  -->
+						<table width="1024" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td rowspan="2" width="235" height="60"><a href="../index.html"><img src="../image_s/logo.gif" width="235" height="60" /></a></td>
+								<td colspan="5" width="789" height="30"></td>
+							</tr>
+							<tr>
+								<td width="540" height="30"></td>
+								<td width="60" height="30" align="left"><a href="../index.html">· HOME</a></td>
+								<td width="100" height="30" align="left"><a href="mailto:kans@kans.re.kr">· CONTACT US</a></td>
+								<td width="70" height="30" align="left"><a href="../map/map01.html">· SITEMAP</a></td>
+								<td width="19" height="30"></td>
+							</tr>
+						</table>
+						<!--  톱메뉴 끝  -->
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!--  로컬메뉴 시작  -->
+						<table width="1024" height="60" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td>
+									<div id="flashContent">
+										<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1024" height="60" id="indexmenuA" align="middle">
+											<param name="movie" value="../swf/indexmenuA.swf" />
+											<param name="quality" value="high" />
+											<param name="bgcolor" value="#ffffff" />
+											<param name="play" value="true" />
+											<param name="loop" value="true" />
+											<param name="wmode" value="transparent" />
+											<param name="scale" value="showall" />
+											<param name="menu" value="true" />
+											<param name="devicefont" value="false" />
+											<param name="salign" value="" />
+											<param name="allowScriptAccess" value="sameDomain" />
+											<!--[if !IE]>-->
+											<object type="application/x-shockwave-flash" data="../swf/indexmenuA.swf" width="1024" height="60">
+												<param name="movie" value="../swf/indexmenuA.swf" />
+												<param name="quality" value="high" />
+												<param name="bgcolor" value="#ffffff" />
+												<param name="play" value="true" />
+												<param name="loop" value="true" />
+												<param name="wmode" value="transparent" />
+												<param name="scale" value="showall" />
+												<param name="menu" value="true" />
+												<param name="devicefont" value="false" />
+												<param name="salign" value="" />
+												<param name="allowScriptAccess" value="sameDomain" />
+											<!--<![endif]-->
+											<a href="http://www.adobe.com/go/getflash">
+												<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+											</a>
+											<!--[if !IE]>-->
+											</object>
+											<!--<![endif]-->
+										</object>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<!--  로컬메뉴 끝  -->
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!--  상단 끝  -->
+	<!--  왼쪽메뉴 및 메뉴콘텐츠내용 시작  -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><img src="images/data_title.jpg" width="185"></td>
+					<td><img src="images/data_main_img.jpg" width="839"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" background="images/leftline_bg.gif">
+						<!-- 왼쪽메뉴 시작  -->	
+						<table width="185" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="data01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image01','','images/sub_data01_on.gif',1)"><img src="images/sub_data01_off.gif" name="Image01" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image02','','images/sub_data02_on.gif',1)"><img src="images/sub_data02_off.gif" name="Image02" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image03','','images/sub_data03_on.gif',1)"><img src="images/sub_data03_off.gif" name="Image03" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data04.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image04','','images/sub_data04_on.gif',1)"><img src="images/sub_data04_off.gif" name="Image04" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data05.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image05','','images/sub_data05_on.gif',1)"><img src="images/sub_data05_off.gif" name="Image05" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data08.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image06','','images/sub_data06_on.gif',1)"><img src="images/sub_data06_off.gif" name="Image06" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="data07.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image07','','images/sub_data07_on.gif',1)"><img src="images/sub_data07_off.gif" name="Image07" width="185" height="35" border="0"></a></td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+							</tr>
+							<tr>
+								<td align="center"><img src="images/sub_call.png"></td>
+							</tr>
+						</table>
+						<!-- 왼쪽메뉴 끝  -->
+					</td>
+					<td valign="top" background="images/rightline_bg.gif">
+						<!-- 메뉴콘텐츠내용 시작  -->
+						<table width="839" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="40" align="center"><img src="images/data_subbar_07.jpg"></td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table width="600" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="110"></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="100" align="center"><a href="data07_sub01.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image08','','images/sub01_on.gif',1)"><img src="images/sub01_off.gif" name="Image08" width="90" height="25" border="0"></a></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="100" align="center"><a href="data07_sub02.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image09','','images/sub02_on.gif',1)"><img src="images/sub02_off.gif" name="Image09" width="90" height="25" border="0"></a></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="100" align="center"><a href="data07_sub03.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/sub03_on.gif',1)"><img src="images/sub03_off.gif" name="Image10" width="90" height="25" border="0"></a></td>
+											<td width="20"><img src="images/bar_s.gif"></td>
+											<td width="110"></td>
+										</tr>
+									</table>	
+								</td>
+							</tr>
+							<tr>
+								<td height="40"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<!-- 내용 시작 -->
+									<table width="650" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td class="JUSTIFY">방사선에 대한 기본용어를 정리하였습니다. <br>
+											[ Ctrl+F ] Key를 눌러서 원하시는 용어를 쉽게 검색할 수 있습니다. </td>
+										</tr>
+										<tr>
+											<td height="30"></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="650" border="0" cellpadding="0" cellspacing="1" align="center" bgcolor="#CCCCCC">
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;원자력</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;원자핵 변화의 과정에 있어서 원자핵으로부터 방출되는 모든 종류의 에너지 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;핵물질</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;핵연료물질 및 핵원료물질 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;핵연료물질</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;우라늄·토륨등 원자력을 발생할 수 있는 물질로서 대통령령이 정하는 것 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;핵원료물질</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;우라늄광·토륨광 기타 핵연료물질의 원료가 되는 물질로서 대통령령이 정하는 것 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;방사성물질</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;핵연료물질·사용후핵연료·방사성동위원소 및 원자핵분열생성물 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;방사성동위원소</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;방사선을 방출하는 동위원소와 그 화합물중 대통령령이 정하는 것 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;방사선</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;전자파 또는 입자선중 직접 또는 간접으로 공기를 전리하는 능력을 가진 것으로서<br>
+														&nbsp;&nbsp;대통령령이 정하는 것 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;원자로</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;핵연료물질을 연료로 사용하는 장치(대통령령이 정하는 것은 제외) </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;방사선발생장치</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;하전입자를 가속시켜 방사선을 발생시키는 장치로서 대통령령이 정하는 것 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;관계시설</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;원자로의 안전에 관계되는 시설로서 대통령령이 정하는 것 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;방사선관리구역</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;외부의 방사선량률, 공기중의 방사성물질의 농도 또는 방사성물질에 따라 오염된<br>
+														&nbsp;&nbsp;물질의 표면의 오염도가 원자력안전위원회 규칙으로 정하는 값을 초과할 우려가 있는 곳<br>
+														&nbsp;&nbsp;으로서 방사선의 안전관리를 위하여 사람의 출입을 관리하고 출입자에 대하여 방사선의<br>
+														&nbsp;&nbsp;장해를 방지하기 위한 조치가 필요한 구역<br><br></td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;방사성폐기물</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;방사성물질 또는 그에 의하여 오염된 물질로서 폐기의 대상이 되는 물질<br>
+														&nbsp;&nbsp;(사용후핵연료 포함) </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;피폭방사선량</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;사람의 신체의 외부 또는 내부에 피폭하는 방사선량을 말한다. 다만, 진료를 위하여<br>
+														&nbsp;&nbsp;피폭하는 방사선량과 인위적으로 증가시키지 아니하는 자연방사선량은 제외한다. <br>
+														&nbsp;&nbsp;이 경우 방사선량의 종류 및 적용기준은 원자력안전위원회가 정하여 고시<br><br> </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;방사선작업종사자</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;원자력이용시설의 운전·이용 또는 보전이나 방사성물질등의 사용·취급·저장·보관·처리·<br>
+														&nbsp;&nbsp;배출·처분·운반 기타 관리 또는 오염제거 등 방사선에 피폭 하거나 그 우려가 있는 업무에<br>
+														&nbsp;&nbsp;종사하는 자<br><br> </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;고준위방사성폐기물</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;방사성폐기물중 그 방사능농도 및 열발생률이 원자력안전위원회가 정하는 값 이상인<br>
+														&nbsp;&nbsp;방사성폐기물을 말하고, &quot;중·저준위방사성폐기물&quot;이란 고준위방사성폐기물 외의<br>
+														&nbsp;&nbsp;방사성폐기물<br><br> </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;밀봉된 방사성동위원소</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;기계적인 강도가 충분하여 파손될 우려가 없고, 부식되기 어려운 재료로 된 용기에<br>
+														&nbsp;&nbsp;넣은 방사성동위원소로서 사용할 때에 방사선은 용기외부로 방출 하지만 방사성동위원소<br>
+														&nbsp;&nbsp;는 누출하지 못하도록 되어 있는 것<br><br></td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;선량한도</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;외부에 피폭하는 방사선량과 내부에 피폭하는 방사선량을 합한 피폭방사 선량의 상한값 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;허용표면오염도</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;물체 또는 인체 표면의 방사성오염도로서 원자력안전위원회가 정하는 허용오염도 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;제한구역</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;방사선관리구역 및 보전구역의 주변의 구역으로서 그 구역경계에서의 피폭방사선량이<br>
+														&nbsp;&nbsp;원자력안전위원회가 정하는 값을 초과할 우려가 있는 장소 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;수시출입자</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;방사선관리구역에 업무상 출입하는 자(일시적으로 출입하는 자를 제외 한다)로서<br>
+														&nbsp;&nbsp;방사선작업종사자외의 자 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;특수형방사성물질</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;견고한 고체형 방사성물질 또는 캡슐에 봉입된 방사성물질로서 원자력안전위원회가<br>
+														&nbsp;&nbsp;정하는 운반기준에 적합한 것 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;자체처분</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;원자력관계사업자(이하 &quot;원자력관계사업자&quot; 라 한다)가 발생시킨 방사성폐기물중<br>
+														&nbsp;&nbsp;원자력안전위원회가 정하는 값 미만의 방사성폐기물을 당해 원자력관계사업자가<br>
+														&nbsp;&nbsp;소각·매립 또는 재활용 등의 방법으로 처분<br><br> </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;배출</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;방사성물질 또는 그에 의하여 오염된 물질(이하 &quot;방사성물질등&quot;이라 한다) 로서<br>
+														&nbsp;&nbsp;원자로이용시설에서 정상운전중에 발생한 액체상 또는 기체상의 방사성물질등을<br>
+														&nbsp;&nbsp;원자력안전위원회가 정하는 제한값 이내에서 배수시설 또는 배기시설을 통하여<br>
+														&nbsp;&nbsp;계획적이고 통제된 상태하에서 외부로 내보내는 것<br><br> </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;연간섭취한도</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;방사선작업종사자가 1년동안 섭취할 경우 피폭방사선량이 선량한도에 이를 것으로<br>
+														&nbsp;&nbsp;보이는 방사능의 양으로서 원자력안전위원회가 정하는 값을 말한다.<br>
+														&nbsp;&nbsp;&quot;유도공기중농도&quot;라 함은 방사선작업종사자가 1년동안 흡입할 경우 방사능 섭취량이<br>
+														&nbsp;&nbsp;연간섭 취한도에 이를 것으로 보이는 공기중의 농도로서 원자력안전위원회가 정하는 값<br><br> </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;표면방사선량률<br>
+														&nbsp;&nbsp;&nbsp;(表面放射線量率)</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;방사성물질, 방사성 물질을 내장한 용기 또는 장치, 방사선발생장치 및<br>
+														&nbsp;&nbsp;방사선차폐체 (放射線遮蔽體) 등 방사선이 나오는 물체의 표면으로부터 10센티미터의<br>
+														&nbsp;&nbsp;거리에서 측정한 방사선량률 <br><br></td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;핵분열성물질</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;우라늄 233, 우라늄 235, 플루토늄 239, 플루토늄 241 또는 이들의 혼합물(조사(照射)되지<br>
+														&nbsp;&nbsp;아니한 천연(天然)우라늄 또는 감손(減損)우라늄이나 열중성자로에서 조사된 천연우라늄<br>
+														&nbsp;&nbsp;또는 감손우라늄 제외)<br><br> </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;배기설비</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp;배기정화장치·배풍기·배기관 등 기체상태의 방사성물질 또는 그에 의하여 오염된 공기를<br>
+														&nbsp;&nbsp;정화하거나 배출하는 설비 </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;조사선량</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;X-선 또는 감마방사선에 의하여 공기 단위질량당 생성된 전하량 <br>
+														&nbsp;&nbsp;단위:C/kg 또는 렌트겐(roentgen, R) <br>
+														&nbsp;&nbsp;1R = 2.58×10-4C/kg <br><br> </td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;흡수선량</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp;방사선에 피폭되는 물질의 단위질량당 흡수된 방사선의 에너지 <br>
+														&nbsp;&nbsp;단위:그레이(gray, Gy) <br>
+														&nbsp;&nbsp;1 Gy = 1J/Kg <br><br></td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;등가선량</strong></td>
+														<td width="490" bgcolor="#ffffff">&nbsp;&nbsp; 방인체의 피폭선량을 나타낼 때 흡수선량에 당해 방사선의 방사선 가중 치를 곱한 양 <br />
+														&nbsp;&nbsp;단위 : 시버트(sivert, Sv)</td>
+													</tr>
+													<tr bgcolor="#F7F7F7">
+														<td width="160" height="60">&nbsp;&nbsp;<img src="images/dot.gif" width="10" height="10"><strong>&nbsp;유효선량</strong></td>
+														<td width="490" bgcolor="#ffffff"><br>&nbsp;&nbsp; 인체내 조직간 선량분포에 따른 위험 정도를 하나의 양으로 나타내기 위하여 각 조직의<br>
+														&nbsp;&nbsp;등가선량에 해당 조직의 조직가중치를 곱하여 &nbsp;&nbsp;피폭한 모든 조직에 대해 합산한 양 <br>
+														&nbsp;&nbsp;단위 : 시버트(sivert, Sv)<br><br></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="50"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						<!-- 메뉴콘텐츠내용 끝  -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="images/bottomline_bg.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="10"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- footer 영역 시작 -->
+	<tr>
+		<td colspan="5">
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="4"><img src="../image_s/footer_line.gif"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td width="89"></td>
+					<td><img src="../image_s/logo_g.gif"></td>
+					<td><img src="../image_s/add.gif"></td>
+					<td width="79"></td>
+				</tr>
+				<tr>
+					<td colspan="4" height="5"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><img src="../image_s/copy.gif"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

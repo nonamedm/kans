@@ -171,10 +171,10 @@
 			</li>
 		</ul>
 		<ol>
-			<li onclick="javascript:alert('준비중인 페이지입니다.')"><a href="#n"><h4><?=$s1_2_1_1_name;?></h4></a></li>
+			<li><a href="<?=$s1_4_1_1_url;?>"><h4><?=$s1_2_1_1_name;?></h4></a></li>
 		<!-- 	<li><a href="http://kans3.cafe24.com/admin/auth/login" target="blank"><h4><?=$s1_2_1_3_name;?></h4></a></li> -->
 			<li><a href=" http://kans3.cafe24.com/auth/login " target="blank"><h4><?=$s1_2_1_3_name;?></h4></a></li>
-			<li onclick="javascript:alert('준비중인 페이지입니다.')"><a href="#n"><h4><?=$s1_2_1_6_name;?><!-- 전자계산서<br>발급 --></h4></a></li>
+			<li><a href="<?=$s1_4_2_1_url;?>"><h4><?=$s1_2_1_6_name;?><!-- 전자계산서<br>발급 --></h4></a></li>
 		</ol>
 	</article>
 </section>

@@ -8,7 +8,10 @@
 	$representative = "";
 	
 	// 개인회원일 경우
-	if($member["mb_level"] == "2"){ $representative = "-"; }
+	if($member["mb_level"] == "2"){
+		if($member['mb_2']){ $representative = "{$member['mb_2']} 대표자"; }
+		else{ $representative = "-"; }
+	}
 	// 단체회원일 경우
 	// else if($member["mb_level"] == "3"){ $representative = "{$member['mb_2']} {$member['mb_nick']}"; }
 	else if($member["mb_level"] == "3"){ $representative = "{$member['mb_2']} 대표자"; } // 20220902 메신저로 요청

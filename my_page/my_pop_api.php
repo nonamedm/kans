@@ -38,12 +38,14 @@
 	if($info['SERVICEEND_DATE'] && $info['SERVICESTART_DATE'] == $info['SERVICEEND_DATE']){
 		$pro_day = date("Y년 m월 d일", strtotime($info['SERVICESTART_DATE']));
 		$finsh_day = date("Y년 m월 d일", strtotime($info['SERVICESTART_DATE']));
-		$finsh_year = date("y", strtotime($info['SERVICESTART_DATE']));
+		// $finsh_year = date("y", strtotime($info['SERVICESTART_DATE']));
+		$finsh_year = date("Y", strtotime($info['SERVICESTART_DATE'])); // 2022.09.29 요청
 	}
 	else{
 		$pro_day = date("Y년 m월 d일", strtotime($info['SERVICESTART_DATE']))." ~ ".date("Y년 m월 d일", strtotime($info['SERVICEEND_DATE']));
 		$finsh_day = date("Y년 m월 d일", strtotime($info['SERVICEEND_DATE']));
-		$finsh_year = date("y", strtotime($info['SERVICEEND_DATE']));
+		// $finsh_year = date("y", strtotime($info['SERVICEEND_DATE']));
+		$finsh_year = date("Y", strtotime($info['SERVICEEND_DATE'])); // 2022.09.29 요청
 	}
 
 	$pro_day = substr($info['COMPLETE_DATE'], 0, 4).".".substr($info['COMPLETE_DATE'], 4, 2).".".substr($info['COMPLETE_DATE'], 6, 2);
@@ -84,7 +86,7 @@
 				</li>
 				<li>
 					<h6><span>교 육 명</span> :</h6>
-					<p><?php echo $info['CATE2']; ?> <?php echo $info['CATE3']; ?></p>
+					<p><?php echo $info['CATE2']; ?> - <?php echo $info['CATE3']; ?></p>
 				</li>
 				<li>
 					<h6><span>교 육 일</span> :</h6>

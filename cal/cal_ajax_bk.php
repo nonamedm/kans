@@ -118,13 +118,11 @@ if($cases==1){//load cal
 					$result_info = get_status($bo_table, $row2['wr_id']);
 					if($result_info['status'] == '마감'){}
 					else{
-						if(strstr($_SERVER['REMOTE_ADDR'], "211.170.81") || strstr($_SERVER['REMOTE_ADDR'], "192.168.45.13") || strstr($_SERVER['REMOTE_ADDR'], "58.124.26.184")){
 						if($is_member){ $load_subject .= "<input type='button' value='신청하기' class='btn_request' data-val='".$row2['wr_id']."'> "; }
 						else{ $load_subject .= "<input type='button' value='신청하기' class='' onclick='goToLogin();' > "; }
-						}
 					}
 
-					
+//                    $load_subject .= "<input type='button' value='신청하기' class='btn_request' data-val='".$row2['wr_id']."'> ";
 				//	$load_subject .= "<input type='button' value='신청하기' onclick=document.location.href='".$btn_href."';>";
 					$load_subject .= "</div>";
 					$load_subject .= "</a></div>";

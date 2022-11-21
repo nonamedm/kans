@@ -36,28 +36,32 @@
 
 		<table class="my_info" >
 			<tr>
+				<th>소속</th>
+				<td colspan="3">
+					<?php echo $member['mb_2']; ?></td>
+				<th>이름</th>
+				<td colspan="3">
+					<?php echo $member['mb_name']; ?></td>
+			</tr>
+			<tr>
 				<th>연락처</th>
-				<td><?php echo ($member['mb_hp'] ? $member['mb_hp'] : '미등록'); ?></td>	
+				<td colspan="3">
+				  <?php echo ($member['mb_hp'] ? $member['mb_hp'] : '미등록'); ?></td>	
 				<th>E-Mail</th>
-				<td><?php echo ($member['mb_email'] ? $member['mb_email'] : '미등록'); ?></td>
+				<td colspan="3">
+				  <?php echo ($member['mb_email'] ? $member['mb_email'] : '미등록'); ?></td>
 			</tr>
 			<tr>
 				<th>최종접속일시</th>
-				<td><?php echo $member['mb_today_login']; ?></td>	
-				<th>회원가입일시</th>
-				<td><?php echo $member['mb_datetime']; ?></td>
-			</tr>
-			<tr>
-				<th>소속</th>
 				<td colspan="3">
-					<?php echo $member['mb_2']; ?>
-
-				</td>
+				  <?php echo $member['mb_today_login']; ?></td>	
+				<th>회원가입일시</th>
+				<td colspan="3">
+				  <?php echo $member['mb_datetime']; ?></td>
 			</tr>
 		</table>
 	</article>
 	
-	<?php if(strstr($_SERVER['REMOTE_ADDR'], "211.170.81") || strstr($_SERVER['REMOTE_ADDR'], "192.168.45.13") || strstr($_SERVER['REMOTE_ADDR'], "58.124.26.184")){ ?>
 	<article class="arti2">
 		<p>※ 무통장 결제시 담당자 확인 후 결제변경이 진행됩니다</p>
 		<?php
@@ -201,20 +205,20 @@
 					<colgroup>
 						<col width="50px">
 						<col width="50px">
-						<col width="200px">
-						<col width="150px">
-						<col width="150px">
 						<col width="150px">
 						<col width="100px">
+						<col width="80px">
+						<col width="150px">
+						<col width="80px">
+						<col width="80px">
+						<col width="80px">
+						<col width="80px">
+						<col width="170px">
 						<col width="100px">
 						<col width="100px">
 						<col width="100px">
-						<col width="180px">
 						<col width="100px">
-						<col width="100px">
-						<col width="100px">
-						<col width="100px">
-						<col width="100px">
+						<col width="70px">
 					</colgroup>
 					<tr>
 						<th><input type="checkbox" id="chkall" onclick="if (this.checked) all_checked(true); else all_checked(false);" ></th>
@@ -254,7 +258,8 @@
 						if(isset($temp_file[0]['source']) && $temp_file[0]['source']){ $down_href = $temp_file[0]['href']; }
 						
 						// 교육 수료 있는지 체크
-						if($list[$i]['wr_17'] == '결제완료' && $list[$i]['wr_18'] == '교육수료'){ $is_offi_doc = true; }
+						// if($list[$i]['wr_17'] == '결제완료' && $list[$i]['wr_18'] == '교육수료'){ $is_offi_doc = true; }
+						if($list[$i]['wr_18'] == '교육수료'){ $is_offi_doc = true; } // 2022.09.29 요청
 						
 						// 수료번호 처리
 						if($list[$i]['api_check']){ $wr_26_text = $list[$i]["wr_26"]; }
@@ -262,8 +267,12 @@
 							if($list[$i]["wr_26"]){
 								$finsh_year = "";
 								// 교육일정이 같은날일 경우
-								if($pro_info['wr_4'] && $pro_info['wr_3'] == $pro_info['wr_4']){ $finsh_year = date("y", strtotime($pro_info['wr_3'])); }
-								else{ $finsh_year = date("y", strtotime($pro_info['wr_4'])); }
+								/* if($pro_info['wr_4'] && $pro_info['wr_3'] == $pro_info['wr_4']){ $finsh_year = date("y", strtotime($pro_info['wr_3'])); }
+								else{ $finsh_year = date("y", strtotime($pro_info['wr_4'])); } */
+								// 2022.09.29 요청
+								if($pro_info['wr_4'] && $pro_info['wr_3'] == $pro_info['wr_4']){ $finsh_year = date("Y", strtotime($pro_info['wr_3'])); }
+								else{ $finsh_year = date("Y", strtotime($pro_info['wr_4'])); }
+
 								// 수료증 번호 추가 처리
 								$add_text = "";
 
@@ -406,8 +415,6 @@
 			</div>
 		</form>
 	</article>
-	<?php } ?>
-
 </section>
 
 <!-- 수료증 공문서 변수 -->

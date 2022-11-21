@@ -90,7 +90,17 @@ $s1_name = "교육안내";
 
 		$s1_3_6_name = "울산";	
 			$s1_3_6_1_name = "울산대학교";								$s1_3_6_1_url = "/s1/s1_3_6_1.php";
-   
+		
+		
+		$s1_4_name = "교육신청";									
+			$s1_4_1_name = "교육 신청 절차";							
+				$s1_4_1_1_name = "집합교육";								$s1_4_1_1_url = "/s1/s1_4_1_1.php";	
+				$s1_4_1_2_name = "온라인 교육";							$s1_4_1_2_url = "/s1/s1_4_1_2.php";	
+			$s1_4_2_name = "전자계산서 발급";			
+				$s1_4_2_1_name = "전자계산서 발행 안내";		$s1_4_2_1_url = "/s1/s1_4_2_1.php";	
+				$s1_4_2_2_name = "교육비 환불규정";					$s1_4_2_2_url = "/s1/s1_4_2_2.php";	
+
+
 $s2_name = "정보광장";			
 	$s2_1_name = "교육공지사항";											$s2_1_url = "/bbs/board.php?bo_table=s2_1";
 	$s2_2_name = "일반공지사항";											$s2_2_url = "/bbs/board.php?bo_table=s2_2";
@@ -215,6 +225,14 @@ if($cate_num == "1") {
 
 		if($page_num == "3" && $spage_num == "7"  ){$spage_name = $s1_3_7_name;}
 			if($page_num == "3" && $spage_num == "7" && $sspage_num == "1"  ){$sspage_name = $s1_3_7_1_name;}
+		
+		if($page_num == "4"){   $page_name = $s1_4_name;}
+			if($page_num == "4" && $spage_num == "1"  ){$spage_name = $s1_4_1_name;}
+				if($page_num == "4" && $spage_num == "1" && $sspage_num == "1"  ){$sspage_name = $s1_1_4_1_name;}
+				if($page_num == "4" && $spage_num == "1" && $sspage_num == "5"  ){$sspage_name = $s1_1_4_2_name;}
+			if($page_num == "4" && $spage_num == "2"  ){$spage_name = $s1_4_2_name;}
+				if($page_num == "4" && $spage_num == "2" && $sspage_num == "1"  ){$sspage_name = $s1_1_4_1_name;}
+				if($page_num == "4" && $spage_num == "2" && $sspage_num == "3"  ){$sspage_name = $s1_1_4_2_name;}
 
 }else if($cate_num == "2"){
 	if($page_num == "1"){   $page_name = $s2_1_name;}

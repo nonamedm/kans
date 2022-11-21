@@ -126,7 +126,7 @@ while($data=sql_fetch_array($result)) { ?>
 		$finsh_year = "";
 		// 교육일정이 같은날일 경우
 		if($pro_info['wr_4'] && $pro_info['wr_3'] == $pro_info['wr_4']){ $finsh_year = date("y", strtotime($pro_info['wr_3'])); }
-		else{ $finsh_year = date("y", strtotime($pro_info['wr_4'])); }
+		else{ $finsh_year = date("Y", strtotime($pro_info['wr_4'])); }
 		// 수료증 번호 추가 처리
 		$add_text = "";
 
@@ -175,7 +175,9 @@ while($data=sql_fetch_array($result)) { ?>
 			$data['wr_4'] = substr($data_[$i]["BIRTHDAY"], 2, 6)."-".$data_[$i]["mb_4"];	// 생년월일
 			$data['wr_5'] = $data_[$i]["mb_hp"];	// 핸드폰번호
 			$data['wr_subject'] = $data_[$i]["EDU_NM"];	// 교육명
-			$data['date1'] = date("Y.m.d", strtotime($data_[$i]["SERVICESTART_DATE"]))." ~ ".date("Y.m.d", strtotime($data_[$i]["SERVICEEND_DATE"]));
+			// $data['date1'] = date("Y.m.d", strtotime($data_[$i]["SERVICESTART_DATE"]))." ~ ".date("Y.m.d", strtotime($data_[$i]["SERVICEEND_DATE"]));
+			if($data_[$i]["COMPLETE_DATE"] != "null"){ $data['date1'] = date("Y.m.d", strtotime($data_[$i]["COMPLETE_DATE"])); }
+			else{ $data['date1'] = ""; }
 			$data['time'] = $data_[$i]["LEARNING_TIME"]."시간";
 			$data['wr_17'] = $data_[$i]["PAYMENT_STATUS"];
 			$data['wr_18'] = ($data_[$i]["ENROLL_STATUS"] == "수료")?"교육수료":$data_[$i]["ENROLL_STATUS"];

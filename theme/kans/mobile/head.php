@@ -13,9 +13,6 @@
 			<?}else{?>
 				<li class="hd_login"><a href="<?php echo G5_BBS_URL; ?>/login.php">로그인</a></li>
 				<li class="hd_register"><a href="<?php echo G5_BBS_URL; ?>/register.php">교육 회원가입</a></li>
-		
-			
-		
 			<?}?>
 			</ul>
 		</div> 
@@ -50,6 +47,16 @@
 										<li class="<?=$sln_btn2;?>"><a href="<?=$s1_1_2_1_url;?>"><span><?=$s1_1_2_name;?></span></a></li>
 									</ul>
 								</li>
+
+							
+								<li class="<?=$ln_btn4;?>"><a href="<?=$s1_4_1_1_url;?>"><span><?=$s1_4_name;?></span></a>
+									<ul class="dep3">
+										<li class="<?=$sln_btn1;?>"><a href="<?=$s1_4_1_1_url;?>"><span><?=$s1_4_1_name;?></span></a></li>
+										<li class="<?=$sln_btn2;?>"><a href="<?=$s1_4_2_1_url;?>"><span><?=$s1_4_2_name;?></span></a></li>
+									</ul>
+								</li>
+
+
 								<li class="<?=$ln_btn2;?>"><a href="<?=$s1_2_2_url;?>"><span><?=$s1_2_name;?></span></a>
 								<!-- <li class="<?=$ln_btn2;?>"><a href="<?=$s1_2_1_url;?>"><span><?=$s1_2_name;?></span></a> -->
 
@@ -225,6 +232,20 @@
 			<ul class="dep_4 ct1">
 				<li class="<?=$ssln_btn1;?>"><a href="<?=$s1_3_5_1_url;?>"><span><?=$s1_3_5_1_name;?></span></a></li>
 				<li class="<?=$ssln_btn2;?>"><a href="<?=$s1_3_5_2_url;?>"><span><?=$s1_3_5_2_name;?></span></a></li>
+			</ul>
+		</div>
+		<?}else if($cate_num==1 && $page_num==4 && $spage_num==1 ) {?>
+		<div class="dep_4_wrap">
+			<ul class="dep_4 ct1">
+				<li class="<?=$ssln_btn1;?>"><a href="<?=$s1_4_1_1_url;?>"><span><?=$s1_4_1_1_name;?></span></a></li>
+				<li class="<?=$ssln_btn2;?>"><a href="<?=$s1_4_1_2_url;?>"><span><?=$s1_4_1_2_name;?></span></a></li>
+			</ul>
+		</div>
+		<?}else if($cate_num==1 && $page_num==4 && $spage_num==2 ) {?>
+		<div class="dep_4_wrap">
+			<ul class="dep_4 ct1">
+				<li class="<?=$ssln_btn1;?>"><a href="<?=$s1_4_2_1_url;?>"><span><?=$s1_4_2_1_name;?></span></a></li>
+				<li class="<?=$ssln_btn2;?>"><a href="<?=$s1_4_2_2_url;?>"><span><?=$s1_4_2_2_name;?></span></a></li>
 			</ul>
 		</div>
 		<?}else{?>

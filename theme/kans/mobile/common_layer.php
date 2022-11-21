@@ -281,7 +281,7 @@ function fwrite_search_layer(){
 		dataType: "html",
 		cache: false,
 		async: false,
-		success: function(htm) { 
+		success: function(htm) {
 			$(f).find("div.stbl_wrap").html(htm);
 		},
 		error: function(){

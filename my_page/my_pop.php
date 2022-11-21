@@ -54,12 +54,14 @@
 	if($program_info['wr_4'] && $program_info['wr_3'] == $program_info['wr_4']){
 		$pro_day = date("Y년 m월 d일", strtotime($program_info['wr_3']));
 		$finsh_day = date("Y년 m월 d일", strtotime($program_info['wr_3']));
-		$finsh_year = date("y", strtotime($program_info['wr_3']));
+		// $finsh_year = date("y", strtotime($program_info['wr_3']));
+		$finsh_year = date("Y", strtotime($program_info['wr_3'])); // 2022.09.29 요청
 	}
 	else{
 		$pro_day = date("Y년 m월 d일", strtotime($program_info['wr_3']))." ~ ".date("Y년 m월 d일", strtotime($program_info['wr_4']));
 		$finsh_day = date("Y년 m월 d일", strtotime($program_info['wr_4']));
-		$finsh_year = date("y", strtotime($program_info['wr_4']));
+		// $finsh_year = date("y", strtotime($program_info['wr_4']));
+		$finsh_year = date("Y", strtotime($program_info['wr_4'])); // 2022.09.29 요청
 	}
 
 	// 수료증 번호 추가 처리
@@ -95,6 +97,24 @@
 		
 	}
 	$wr_26_ .= $temp_26_;
+
+	// 교육명 처리 - 2022.09.29 요청
+	// 교육명
+	$program_name = $program_info["wr_subject"];
+
+	// 직작교육일 경우
+	if($program_info["wr_1"] == '10'){
+		$program_name = "방사선작업종사자 직장교육 - ";
+		switch($program_info["wr_2"]){
+			case "1010": $program_name .= "일반신규"; break;
+			case "1020": $program_name .= "일반정기"; break;
+			case "1030": $program_name .= "비파괴신규"; break;
+			case "1040": $program_name .= "비파괴정기"; break;
+			default: $program_name = $program_info["wr_subject"]; break;
+		}
+	}
+	// 보수교육일 경우
+	else if($program_info["wr_1"] == '20'){ $program_name = "면허소지자 보수교육"; }
 ?>
 
 <div class="my_print_wrap">
@@ -120,7 +140,7 @@
 				</li>
 				<li>
 					<h6><span>교 육 명</span> :</h6>
-					<p><?php echo $program_info['wr_subject']; ?></p>
+					<p><?php echo $program_name; ?></p>
 				</li>
 				<li>
 					<h6><span>교 육 일</span> :</h6>

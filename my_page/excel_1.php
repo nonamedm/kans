@@ -100,7 +100,7 @@ while($data=sql_fetch_array($result)) { ?>
 		$finsh_year = "";
 		// 교육일정이 같은날일 경우
 		if($pro_info['wr_4'] && $pro_info['wr_3'] == $pro_info['wr_4']){ $finsh_year = date("y", strtotime($pro_info['wr_3'])); }
-		else{ $finsh_year = date("y", strtotime($pro_info['wr_4'])); }
+		else{ $finsh_year = date("Y", strtotime($pro_info['wr_4'])); }
 		// 수료증 번호 추가 처리
 		$add_text = "";
 
@@ -143,7 +143,9 @@ while($data=sql_fetch_array($result)) { ?>
 			$data['mb_id'] = $data_[$i]["mb_id"];	// 회원계정
 
 			$data['wr_subject'] = $data_[$i]["EDU_NM"];	// 교육명
-			$data['date1'] = date("Y.m.d", strtotime($data_[$i]["SERVICESTART_DATE"]))." ~ ".date("Y.m.d", strtotime($data_[$i]["SERVICEEND_DATE"]));
+			// $data['date1'] = date("Y.m.d", strtotime($data_[$i]["SERVICESTART_DATE"]))." ~ ".date("Y.m.d", strtotime($data_[$i]["SERVICEEND_DATE"]));
+			if($data_[$i]["COMPLETE_DATE"] != "null"){ $data['date1'] = date("Y.m.d", strtotime($data_[$i]["COMPLETE_DATE"])); }
+			else{ $data['date1'] = ""; }
 			$data['time'] = $data_[$i]["LEARNING_TIME"]."시간";
 			$data['wr_17'] = $data_[$i]["PAYMENT_STATUS"];
 			$data['wr_18'] = ($data_[$i]["ENROLL_STATUS"] == "수료")?"교육수료":$data_[$i]["ENROLL_STATUS"];
@@ -155,11 +157,11 @@ while($data=sql_fetch_array($result)) { ?>
 				<td class='txt'><?php echo $data['wr_subject']; ?></td><!-- 교육명 -->
 				<td class='txt'><?php echo $data['date1']; ?></td><!-- 교육일 -->
 				<td class='txt'><?php echo $data['time']; ?></td><!-- 교육시간 -->
-				<td class='txt'></td><!-- 교육장소 -->
+				<td class='txt'></td><?php echo $pro_info['wr_content']; ?><!-- 교육장소 -->
 				<td class='txt'><?php echo $data['wr_18']?></td><!-- 진행상태 -->
 				<td class='txt'><?php echo ($data['wr_17'])?$data['wr_17']:"미결제";; ?></td><!-- 결제상태 -->
 				<td class='txt'></td><!-- 금액 -->
-				<td class='txt'><?php $data['wr_26']?></td><!-- 수료증 번호 -->
+				<td class='txt'><?php echo $data['wr_26']?></td><!-- 수료증 번호 -->
 				<td class='txt'></td><!-- 비고 -->
 				<td class='txt'></td><!-- 등록일 -->
 			</tr>

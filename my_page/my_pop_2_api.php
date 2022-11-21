@@ -35,12 +35,14 @@
 	if($info['SERVICEEND_DATE'] && $info['SERVICESTART_DATE'] == $info['SERVICEEND_DATE']){
 		$pro_day = date("Y년 m월 d일", strtotime($info['SERVICESTART_DATE']));
 		$finsh_day = date("Y년 m월 d일", strtotime($info['SERVICESTART_DATE']));
-		$finsh_year = date("y", strtotime($info['SERVICESTART_DATE']));
+		// $finsh_year = date("y", strtotime($info['SERVICESTART_DATE']));
+		$finsh_year = date("Y", strtotime($info['SERVICESTART_DATE'])); // 2022.09.29 요청
 	}
 	else{
 		$pro_day = date("Y년 m월 d일", strtotime($info['SERVICESTART_DATE']))." ~ ".date("Y년 m월 d일", strtotime($info['SERVICEEND_DATE']));
 		$finsh_day = date("Y년 m월 d일", strtotime($info['SERVICEEND_DATE']));
-		$finsh_year = date("y", strtotime($info['SERVICEEND_DATE']));
+		// $finsh_year = date("y", strtotime($info['SERVICEEND_DATE']));
+		$finsh_year = date("Y", strtotime($info['SERVICEEND_DATE'])); // 2022.09.29 요청
 	}
 
 	$pro_day = substr($info['COMPLETE_DATE'], 0, 4).".".substr($info['COMPLETE_DATE'], 4, 2).".".substr($info['COMPLETE_DATE'], 6, 2);
@@ -58,6 +60,7 @@
 ?>
 
 <div class="my_print_wrap">
+  <div class="center_logo"><img src="<? echo G5_URL ?>/my_page/img/print_bg.png" alt=""></div>
 	<div class="my_print">
 		<div class="my_print_hd">
 			<p class="print_num"></p>
@@ -67,7 +70,7 @@
 			<ul>
 				<li>
 					<h6><span>교육과정</span> :</h6>
-					<p><?php echo $info['CATE2']; ?> <?php echo $info['CATE3']; ?></p>
+					<p><?php echo $info['CATE2']; ?> - <?php echo $info['CATE3']; ?></p>
 				</li>
 				<li>
 					<h6><span>교 육 일</span> :</h6>
@@ -92,13 +95,19 @@
 					<h6><span>납 부 일</span> :</h6>
 					<p><?php echo $pay_date; ?></p>
 				</li>
+				<li>
+					<h6><span>주문번호</span> :</h6>
+					<p><?php echo $info['IMP_UID']; ?></p>
+				</li>
+				<li>
+					<h6><span>결제수단</span> :</h6>
+					<p><?php echo $info['PAY_METHOD']; ?></p>
+				</li>
 			</ul>
-			
 			<div class="text_area">
 				<p>위와 같이 납부하였음을 확인함.</p>
 				<h4><?php echo $finsh_day; ?></h4>
 			</div>
-
 			<div class="sign">
 				<img src="<? echo G5_URL ?>/my_page/img/print_sign.png" alt="">
 			</div>
@@ -120,10 +129,10 @@
     font-style: normal;
 	}
 
+  .center_logo{position: absolute; left: 50%; top: 50%; transform:translate(-50%, -50%); z-index: -1;}
 	.my_print_wrap{max-width:730px; box-sizing: border-box; padding: 30px; margin: 0 auto;}
-	.my_print{height: 970px; border: 1px solid #000; background: url(./img/print_bg.png) center no-repeat; box-sizing: border-box; padding: 55px 50px 0; }
-	.my_print .my_print_hd .print_num{font-size: 18px; line-height: 1; color: #454545; letter-spacing: -0.03em;}
-	.my_print .my_print_hd .my_print_tit{font-family: 'GyeonggiBatang'; font-size: 50px; line-height: 1; font-weight: 700; color: #111; text-align: center; margin-top: 87px;  margin-bottom: 83px; letter-spacing: 0;}
+	.my_print{height: 970px; border: 1px solid #000;/* background: url(./img/print_bg.png) center no-repeat;  */box-sizing: border-box; padding: 55px 50px 0; }
+	.my_print .my_print_hd .my_print_tit{font-family: 'GyeonggiBatang'; font-size: 35px; line-height: 1; font-weight: 700; color: #111; text-align: center; margin-top: 87px;  margin-bottom: 83px; letter-spacing: 0;}
 	.my_print .my_print_cnt ul > li{display: flex; line-height: 22px; align-items: flex-start;}
 	.my_print .my_print_cnt ul > li h6{width: 80px; display: inline-block; font-size: 16px; color: #111; font-weight: 500; }
 	.my_print .my_print_cnt ul > li h6 span{display: inline-table; font-size: 16px; color: #111; font-weight: 500; text-align: justify; width: 57px; letter-spacing: -0.03em; line-height: 1; margin-right: 10px;}
@@ -132,7 +141,7 @@
 	.my_print .my_print_cnt ul > li > .day_box{width: calc(100% - 73px); display: flex; }
 	.my_print .my_print_cnt ul > li > .day_box b{font-size: 16px; font-weight: 500; color: #014693;}
 	.my_print .text_area {text-align: center;}
-	.my_print .text_area p{font-size: 16px; line-height: 32px; letter-spacing: -0.03em; color: #111; margin: 94px 0 111px;}
+	.my_print .text_area p{font-size: 16px; line-height: 1px; letter-spacing: -0.03em; color: #111; margin: 94px 0 111px;}
 	.my_print .text_area h4{font-size: 18px; line-height: 1; color: #111; letter-spacing: -0.03em; font-weight: 400; margin-bottom: 51px;}
 	.my_print  .sign{text-align: right; padding-right: 23px;}
 	body{min-width:0px !important; }

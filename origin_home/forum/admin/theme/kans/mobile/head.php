@@ -16,7 +16,11 @@
 	<div class="hd_nav clear">
 		<div class="hd_bottom ct2 clear">
 			<h1 class="logo" style="float: left; width: 227px;">
-                <a href="http://www.kans.re.kr/origin_home/forum/admin/">방사선안전관리자포럼</a></h1>
+                <!-- <a href="http://www.kans.re.kr/origin_home/forum/admin/">방사선안전관리자포럼</a></h1> -->
+                <a href="http://www.kans.re.kr/origin_home/forum/admin/" style="display: list-item;list-style: none;text-align: center;">
+					<img src="http://www.kans.re.kr/img/forum_logo.png" style="vertical-align: middle;"/>
+				</a>
+			</h1>
 			<nav class="gnb" style="margin-left: 0px;">
 				<ul class="clear">
 					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'forum_info'> 

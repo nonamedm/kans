@@ -22,6 +22,13 @@ $total_page  = ceil($total_count / $rows);  // 전체 페이지 계산
 if ($page < 1) $page = 1; // 페이지가 없으면 첫 페이지 (1 페이지)
 $from_record = ($page - 1) * $rows; // 시작 열을 구함
 
+if ($member['mb_level'] < 5) {
+    if ($member['mb_id'])
+        alert('목록을 볼 권한이 없습니다.', G5_URL);
+    else
+        alert('목록을 볼 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.', './login.php?'.$qstr.'&url='.urlencode(G5_BBS_URL.'/board.php?bo_table='.$bo_table.($qstr?'&amp;':'')));
+}
+
 $g5['title'] = '포럼 신청목록';
 include_once('/kans1/www/origin_home/forum/admin/theme/kans/mobile/head.php');
 add_stylesheet('<link rel="stylesheet" href="http://www.kans.re.kr/theme/kans/mobile/skin/board/wt_comment/style.css">', 0);

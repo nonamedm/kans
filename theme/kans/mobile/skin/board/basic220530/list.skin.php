@@ -13,12 +13,12 @@
 ?>
 
 <?php if($bo_table == "newsletter"){ ?>
-<div class="head_color" style="background: #8ED663;">
+<div class="head_color" style="background: #9AD6FF;">
     <h1 class="head_text" style="color:#000 !important;"><?php echo $board['bo_subject'] ?></h1>
 	<img class="head_img" src="<?php echo G5_URL;?>/img/소식지.png" title="search">
 </div>
 <?php } else {?>
-<div class="head_color" style="background: #59BCFF;">
+<div class="head_color" style="background: #9AD6FF;">
     <h1 class="head_text" ><?php echo $board['bo_subject'] ?></h1>
 	<img class="head_img" src="<?php echo G5_URL;?>/img/포럼기록.png" title="search">
 </div>

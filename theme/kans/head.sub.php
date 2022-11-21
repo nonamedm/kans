@@ -60,7 +60,7 @@ if($config['cf_add_meta'])
 ?>
 <title><?php if($site_row['sc_title']){ echo $site_row['sc_title']; }else{ echo $g5_head_title; } ?></title>
 <link rel="stylesheet" href="https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css">
-<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css"> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css"> 
 <!-- <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"> -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
@@ -82,14 +82,16 @@ if($config['cf_add_meta'])
 	if (defined('_SHOP_')) $shop_css = '_shop';
 	//echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').$shop_css.'.css">'.PHP_EOL;
 	if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "newsletter" || $bo_table == "community"){
-		echo '<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/common.css">'.PHP_EOL;
-		echo '<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/layout.css">'.PHP_EOL;
-		echo '<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/main.css">'.PHP_EOL;
-		echo '<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/sub.css">'.PHP_EOL;
-		echo '<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/template.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/common.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/layout.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/carousel.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/main.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/sub.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/template.css">'.PHP_EOL;
 	} else {
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/common'.$shop_css.'.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/layout'.$shop_css.'.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/carousel.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/main'.$shop_css.'.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/sub'.$shop_css.'.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/template'.$shop_css.'.css">'.PHP_EOL;
@@ -102,9 +104,10 @@ if($config['cf_add_meta'])
 <link rel="stylesheet" href="<?php echo G5_THEME_URL ?>/css/mobile/hover.css">
 
 <!-- 네이버 메타태그 -->
-<meta name="naver-site-verification" content="e37fb67beb91001a0392bc9983b9be63fc95e222"/>
+<meta name="naver-site-verification" content="<?php echo $site_row[sc_author]; ?>"/>
 
 <!-- 일반 메타태그 -->
+<meta name="keywords" content="<?php echo $site_row[sc_keyword]; ?>" />
 <meta name="description" content="<?php echo $site_row[sc_description]; ?>" />
 <link rel="canonical" href="<?php echo $site_row[sc_copyright]; ?>" />
 

@@ -21,6 +21,14 @@ $from_record = ($page - 1) * $rows; // 시작 열을 구함
 $g5['title'] = '회원 전체목록';
 include_once('/kans1/www/origin_home/forum/admin/theme/kans/mobile/head.php');
 add_stylesheet('<link rel="stylesheet" href="http://www.kans.re.kr/theme/kans/mobile/skin/board/wt_comment/style.css">', 0);
+
+
+if ($member['mb_level'] < 5) {
+    if ($member['mb_id'])
+        alert('목록을 볼 권한이 없습니다.', G5_URL);
+    else
+        alert('목록을 볼 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.', './login.php?'.$qstr.'&url='.urlencode(G5_BBS_URL.'/board.php?bo_table='.$bo_table.($qstr?'&amp;':'')));
+}
 ?>
 
 
@@ -43,6 +51,11 @@ select {
     background:url('http://www.kans.re.kr/img/down.png') no-repeat 97% 50%/15px auto;
     padding: 0% 5%;
 }
+.tbl_wrap table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 1200px;
+}
 </style>
 
 <div class="head_color" style="background: #9AD6FF;">
@@ -52,7 +65,7 @@ select {
 
 <div id="member_list" class="respon_l" style="max-width: 1200px; margin: auto;">
     <div class="member_total">총회원수 : <?php echo number_format($total_count) ?>명</div>
-    <div class="tbl_head01 tbl_wrap">
+    <div class="tbl_head01 tbl_wrap" style="overflow:auto;">
         <table>
         <caption><?php echo $g5['title']; ?> 목록</caption>
         <thead>

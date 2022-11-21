@@ -16,15 +16,10 @@
 
 	if(!$is_member){ alert("로그인 후 이용해주세요.", G5_BBS_URL."/login.php"); }
 
-	// // 관리자이면서 교육담당자회원(단체)이 아닐 경우
-	// if(!$is_admin && $member['mb_level'] < 3){ goto_url("./my_1.php"); }
-
 	$colspan = 17;
 
 	include_once("script.php");
 
-	// // 수료증 공문서 변수
-	// $is_offi_doc = false;
 ?>
 
 <section class="s<?=$cate_num;?> s<?=$cate_num;?>0<?=$page_num;?> my_page_new clear ct2" style="height:700px;">
@@ -43,6 +38,8 @@
 			<tr>
 				<th>이름</th>
 				<td><?php echo ($member['mb_name'] ? $member['mb_name'] : '미등록'); ?></td>	
+			</tr>
+			<tr>
 				<th>회원번호</th>
 				<td><?php echo ($member['mb_no'] ? $member['mb_no'] : '미등록'); ?></td>
 			</tr>
@@ -62,10 +59,8 @@
 		render:"canvas",
 		width:100,
 		height:100,
-		text:"http://kans.re.kr/origin_home/forum/admin/"
-	})
+		text:"http://kans.re.kr/origin_home/forum/admin/" // qr코드 찍었을때 이동하는 페이지 url
+	});
 </script>
-<!-- 수료증 공문서 변수 -->
-<!-- <input type="hidden" name="is_offi_doc" id="is_offi_doc" value="<?php echo $is_offi_doc; ?>" /> -->
 
 <?php include_once(G5_THEME_PATH.'/tail.php'); ?>

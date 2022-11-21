@@ -12,7 +12,7 @@
 	// 교육일정 정보
 	$tmp_write_table = $g5['write_prefix'] . substr($bo_table, 0, -2);
 	$program_info = sql_fetch(" SELECT * FROM ".$tmp_write_table." WHERE wr_id = '".$view['wr_1']."' ");
-	
+
 	// 분류명 가져오기
 	$ca_info = get_category_info(substr($bo_table, 0, -2), $program_info['wr_1']);
 	$ca_text = $ca_info['ca_name'];

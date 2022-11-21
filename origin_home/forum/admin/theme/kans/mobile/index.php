@@ -118,8 +118,8 @@
         </li>
         <li style="display: flex;flex-direction: column;justify-content: space-between;">
             <div style="width: 100%;height: 45%;display: flex;justify-content: space-between;">
-                <a href="/bbs/board.php?bo_table=forum_info" id="forum_info" style="width: 47.5%;background-color: #014594;background-image: url('http://www.kans.re.kr/img/schedule.png')"></a>
-                <a href="/bbs/board.php?bo_table=forum" id="forum" style="width: 47.5%;background-color: #014594;background-image: url('http://www.kans.re.kr/img/apply.png')"></a>
+                <a href="/bbs/board.php?bo_table=forum_info" id="forum_info" style="width: 47.5%;background-color: #014594;background-image: url('http://www.kans.re.kr/img/schedule.png') background-repeat: round;"></a>
+                <a href="/bbs/board.php?bo_table=forum" id="forum" style="width: 47.5%;background-color: #014594;background-image: url('http://www.kans.re.kr/img/apply.png') background-repeat: round;"></a>
             </div>            
             <div id="exp" style="width:100%;background-color: #9AD6FF;height: 45%;"></div>
         </li>

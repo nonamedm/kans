@@ -58,9 +58,9 @@ select {
 }
 </style>
 
-<div class="head_color" style="background: #9AD6FF;">
-    <h1 class="head_text"><?php echo "회원관리" ?></h1>
-	<img class="head_img" src="http://www.kans.re.kr/img/포럼안내.png" title="search">
+<div class="head_color" style="background: #767171;">
+    <h1 class="head_text"><?php echo "회원 관리" ?></h1>
+	
 </div>
 
 <div id="member_list" class="respon_l" style="max-width: 1200px; margin: auto;">
@@ -99,19 +99,19 @@ select {
 				echo '<select id="member_gd_ch" onchange="changeMemberGrade(this)">
                 <option value="관리자" selected>관리자</option>
                 <option value="정회원" >정회원</option>
-                <option value="준회원" >준회원</option>
+                <option value="일반회원" >일반회원</option>
                 </select>';
 			}else if ($row['mb_level']==2){
 				echo '<select id="member_gd_ch" onchange="changeMemberGrade(this)">
                 <option value="관리자" >관리자</option>
                 <option value="정회원" selected>정회원</option>
-                <option value="준회원" >준회원</option>
+                <option value="일반회원" >일반회원</option>
                 </select>';
 			} else {
 				echo '<select id="member_gd_ch" onchange="changeMemberGrade(this)">
                 <option value="관리자" >관리자</option>
                 <option value="정회원" >정회원</option>
-                <option value="준회원" selected>준회원</option>
+                <option value="일반회원" selected>일반회원</option>
                 </select>';
 			}; 
 			?></td>

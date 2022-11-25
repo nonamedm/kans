@@ -34,7 +34,7 @@
 <meta charset="utf-8">
 <?php
 if (G5_IS_MOBILE) {
-	if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "newsletter" || $bo_table == "community"){
+	if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "forum_info2" || $bo_table == "newsletter" || $bo_table == "community"){
 		echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;
 	} else {
 		echo '<meta name="viewport" content="width=1400">'.PHP_EOL;
@@ -81,7 +81,7 @@ if($config['cf_add_meta'])
 	$shop_css = '';
 	if (defined('_SHOP_')) $shop_css = '_shop';
 	//echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').$shop_css.'.css">'.PHP_EOL;
-	if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "newsletter" || $bo_table == "community"){
+	if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "forum_info2" || $bo_table == "newsletter" || $bo_table == "community"){
 		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/common.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/layout.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/carousel.css">'.PHP_EOL;

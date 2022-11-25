@@ -2,7 +2,7 @@
 	if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 	if (G5_IS_MOBILE) {
-		if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "newsletter" || $bo_table == "community"){
+		if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "forum_info2" ||$bo_table == "newsletter" || $bo_table == "community"){
 			include_once('/kans1/www/origin_home/forum/admin/theme/kans/mobile/head.php');
 		}else{
 			include_once(G5_THEME_MOBILE_PATH.'/head.php');

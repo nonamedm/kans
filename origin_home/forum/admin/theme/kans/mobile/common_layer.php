@@ -83,15 +83,16 @@
 		.layer_box .email_area .email_box { padding:30px; }
 		.layer_box .email_area .email_box .big_txt { font-size:1em; }
 		.layer_email { max-height:300px; }
+		.gnb {display:none;}
+		.site_map {display:block;}
+		.hd_right ul {display:none;}
 	}
 
 	@media(max-width:800px){
 		.layer_box.layer_sitemap .div_outline_padding{box-sizing: border-box; padding: 0 20px;}
 		.layer_box .sitemap{width: 49%; margin-right: 2%; overflow: hidden; overflow-y: auto;}
 		.layer_box .sitemap:nth-child(2n+2){margin-right:  0;}
-		.site_map {display:block;}
-		.hd_right ul {display:none;}
-		.gnb {display:none;}
+		
 	}
 
 	@media(max-width:640px){

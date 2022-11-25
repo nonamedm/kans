@@ -23,8 +23,11 @@
 			</h1>
 			<nav class="gnb" style="margin-left: 0px;">
 				<ul class="clear">
+					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'forum_info2'> 
+						<a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum_info2">일정</a>
+					</li>
 					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'forum_info'> 
-						<a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum_info"><?=$s1_name?></a>
+						<a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum_info">신청</a>
 					</li>
 					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'forum'>
 						<a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum"><?=$s2_name?></a>
@@ -79,7 +82,7 @@
 					<figure><img src="<? echo G5_THEME_URL ?>/images/layout/hd_sch.png" /></figure>
 					<div class="cnt"><? include_once('hd_sch.php'); ?></div>
 				</div>-->
-				<a href="" class="site_map btn_sitemap" style="top: 30px;right: 30px;"><img src="<? echo G5_THEME_URL ?>/images/layout/hd_site.png" /></a>
+				<a href="" class="site_map btn_sitemap" style="top: 0px;right: 30px;"><img src="<? echo G5_THEME_URL ?>/images/layout/hd_site.png" /></a>
 			</div>
 		</div>
 	</div>

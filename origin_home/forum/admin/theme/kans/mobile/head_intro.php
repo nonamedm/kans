@@ -30,7 +30,7 @@
 	$ssln_btn = "ssln_btn".$sspage_num;		$$ssln_btn = "current"; }
 
 //네임연동
-$s1_name = "포럼안내";    
+$s1_name = "일정";    
 	$s1_1_name = "교육소개";									
 		$s1_1_1_name = "법정교육";										
 			$s1_1_1_1_name = "방사선작업종사자 직장교육";			$s1_1_1_1_url = "bbs/board.php?bo_table=forum";
@@ -91,7 +91,7 @@ $s1_name = "포럼안내";
 		$s1_3_6_name = "울산";	
 			$s1_3_6_1_name = "울산대학교";								$s1_3_6_1_url = "/s1/s1_3_6_1.php";
    
-$s2_name = "포럼기록";			
+$s2_name = "News";			
 	$s2_1_name = "교육공지사항";											$s2_1_url = "bbs/board.php?bo_table=forum_info";
 	$s2_2_name = "일반공지사항";											$s2_2_url = "/bbs/board.php?bo_table=s2_2";
 	$s2_3_name = "자료실";												$s2_3_url = "/bbs/board.php?bo_table=s2_3";
@@ -112,7 +112,7 @@ $s3_name = "커뮤니티";
 	//	$s3_3_2_name = "양과단위";							$s3_3_2_url = "/s3/s3_3_2.php";
 	//	$s3_3_3_name = "용어정리";							$s3_3_3_url = "/s3/s3_3_3.php";
      
-$s4_name = "소식지"; 
+$s4_name = "고급 News"; 
 	$s4_1_name = "정회원 가입 안내 및 혜택";					$s4_1_url = "/bbs/board.php?bo_table=newsletter";
 	$s4_2_name = "정회원 현황";									$s4_2_url = "/s4/s4_2.php";
 

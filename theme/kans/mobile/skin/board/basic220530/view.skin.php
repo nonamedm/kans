@@ -13,7 +13,7 @@
 
 <?php if($bo_table == "newsletter"){ ?>
 <div class="head_color" style="background: #9AD6FF;">
-    <h1 class="head_text" style="color:#000 !important;"><?php echo $board['bo_subject'] ?></h1>
+    <h1 class="head_text" style=""><?php echo $board['bo_subject'] ?></h1>
 	<img class="head_img" src="<?php echo G5_URL;?>/img/소식지.png" title="search">
 </div>
 <?php } else {?>

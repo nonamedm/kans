@@ -56,9 +56,9 @@ select {
 }
 </style>
 
-<div class="head_color" style="background: #9AD6FF;">
-    <h1 class="head_text"><?php echo "포럼 신청 관리" ?></h1>
-	<img class="head_img" src="http://www.kans.re.kr/img/포럼안내.png" title="search">
+<div class="head_color" style="background: #767171;">
+    <h1 class="head_text"><?php echo "신청 관리" ?></h1>
+	
 </div>
 
 <div id="member_list" class="respon_l" style="max-width: 1200px; margin: auto;">

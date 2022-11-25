@@ -144,7 +144,7 @@ if (isset($wr_id) && $wr_id) {
         else
 //            alert('목록을 볼 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.', './login.php?'.$qstr.'&url='.urlencode(G5_BBS_URL.'/board.php?bo_table='.$bo_table.($qstr?'&amp;':'')));
 //            alert('목록을 볼 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오!!.',G5_ADMIN_URL.'in/login.php?url=');
-            if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "newsletter" || $bo_table == "community"){
+            if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "forum_info2" ||$bo_table == "newsletter" || $bo_table == "community"){
                 alert('목록을 볼 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.');
             }else{
                 alert('목록을 볼 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.');

@@ -54,7 +54,7 @@
       });
 
 	setTimeout(function() {
-		$('#calendar').css("display", "none");
+		// $('#calendar').css("display", "none");
 	},100);
 
 	  function calander_toggle(){
@@ -78,11 +78,13 @@
 			</ul>
 		</nav>
 	<?php } ?>
+	
 
-	<div class="bo_fx" style="border-top: solid 1px black; border-bottom: solid 1px black;">
+	<?php if ($bo_table=='forum_info2') { ?>
+	<!-- <div class="bo_fx" style="border-top: solid 1px black; border-bottom: solid 1px black;">
 		<div id="bo_list_total">
-			<!--<span>Total <?php echo number_format($total_count) ?>건</span>
-			<?php echo $page ?> 페이지-->
+			<span>Total <?php echo number_format($total_count) ?>건</span>
+			<?php echo $page ?> 페이지
 			캘린더로 보기<span><img src="<?php echo G5_URL;?>/img/icon_arrow_down.png" style="padding: 6px; cursor: pointer;" onclick="calander_toggle()"></span>
 		</div>
 
@@ -90,13 +92,13 @@
 			<ul class="btn_bo_user">
 				<?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b01">RSS</a></li><?php } ?>
 				<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin">관리자</a></li><?php } ?>
-				<?php if ($write_href) { ?><!-- <li><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a></li> --><?php } ?>
+				<?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a></li><?php } ?>
 			</ul>
 		<?php } ?>
-	</div>
+	</div> -->
 	<div id="calendar"></div>
 	<br>
-
+	<?php } else { ?>
 	<form name="fboardlist" id="fboardlist" action="./board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
 		<input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
 		<input type="hidden" name="sfl" value="<?php echo $sfl ?>">
@@ -189,6 +191,7 @@
 			</div>
 		<?php } ?>
 	</form>
+	<?php } ?>
 </div>
 
 <?php if($is_checkbox) { ?>
@@ -199,7 +202,7 @@
 
 <!-- 페이지 -->
 <?php echo $write_pages; ?>
-
+<?php if ($bo_table=='forum_info') { ?>
 <div class="bd_search ct1">
 	<fieldset id="bo_sch">
 		<legend>게시물 검색</legend>
@@ -221,6 +224,8 @@
 		</form>
 	</fieldset>
 </div>
+<?php } else {?>
+<?php } ?>
 <script>
     $(document).ready(function () {
         stx_sh();

@@ -1,5 +1,6 @@
 <?
 	include_once('./_common.php');
+	add_stylesheet('<link rel="stylesheet" href="http://www.kans.re.kr/theme/kans/mobile/skin/board/wt_comment/style.css">', 0);
 
 	//화면의 성격
 	$user_division = "user";	$screen_div = "sub"; //main, sub	$frame_div = "two";  //one, two
@@ -22,17 +23,14 @@
 
 ?>
 
+<div class="head_color" style="background: #014594;">
+    <h1 class="head_text"><?php echo "마이페이지" ?></h1>
+	<img class="head_img" src="http://www.kans.re.kr/img/마이페이지.png" title="search">
+</div>
+
 <section class="s<?=$cate_num;?> s<?=$cate_num;?>0<?=$page_num;?> my_page_new clear ct2" style="height:700px;">
 	<article class="arti1">
-		<ul class="smb_my_act">
-			<li><a href="<?php echo $s1_2_2_url; ?>" class="btn02" style="background: #0094dc; border: 1px solid #0094dc;">단체신청</a></li>
-			<? if($member[mb_1]){ //회원종류를 비교하는것 이유 요양기관인경우!! ?>
-				<li><a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=register_form.php?reg_type=pb" class="btn02">회원정보수정</a></li>
-			<? }else{ ?>
-				<li><a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=register_form.php" class="btn02">회원정보수정</a></li>
-			<? } ?>
-			<li><a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=member_leave.php" onclick="return member_leave();" class="btn02">회원탈퇴</a></li>
-		</ul>
+		
 
 		<table class="my_info" >
 			<tr>
@@ -54,6 +52,7 @@
 	</article>
 
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js" integrity="sha512-NFUcDlm4V+a2sjPX7gREIXgCSFja9cHtKPOL1zj6QhnE0vcY695MODehqkaGYTLyL2wxe/wtr4Z49SvqXq12UQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 	 $("#qrImg").qrcode({
 		render:"canvas",

@@ -82,7 +82,7 @@
             <ul class="forum_titile">
                 <li style="color:white;">News</li>
                 <li>
-                    <a class="slick-next" href="http://www.kans.re.kr/bbs/board.php?bo_table=newsletter">
+                    <a class="slick-next" href="http://www.kans.re.kr/bbs/board.php?bo_table=forum">
                     </a>
                 </li>
             </ul>
@@ -94,7 +94,7 @@
                                 wr_subject,
                                 REPLACE(REPLACE(wr_content,'<p>',''),'</p>','') AS wr_content,
                                 substring(wr_last, 1, 10) AS wr_last
-                                FROM g5_write_forum_info ORDER BY wr_id desc limit 5;";
+                                FROM g5_write_forum ORDER BY wr_id desc limit 5;";
                     $datarow= sql_query($sql);
 
                     for ($i=0; $i<$row=sql_fetch_array($datarow); $i++){
@@ -103,7 +103,7 @@
                             <div class="fr_li_box">
 
                                 <span class="fr_sp fr_tit">
-                                    <a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum_info&wr_id=<?php echo $row['wr_id'] ?>"><?php echo $row['wr_subject'] ?></a>
+                                    <a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum&wr_id=<?php echo $row['wr_id'] ?>"><?php echo $row['wr_subject'] ?></a>
                                 </span>
                                 <span class="fr_day"><?php echo $row['wr_last'] ?></span>
                                 <span class="fr_sp fr_con"><?php echo $row['wr_content'] ?></span>
@@ -118,10 +118,14 @@
         </li>
         <li style="display: flex;flex-direction: column;justify-content: space-between;">
             <div style="width: 100%;height: 45%;display: flex;justify-content: space-between;">
-                <a href="/bbs/board.php?bo_table=forum_info" id="forum_info" style="width: 47.5%;background-color: #014594;background-image: url('http://www.kans.re.kr/img/schedule.png'); background-repeat:no-repeat; background-position:center;"></a>
-                <a href="/bbs/board.php?bo_table=forum" id="forum" style="width: 47.5%;background-color: #014594;background-image: url('http://www.kans.re.kr/img/apply.png'); background-repeat:no-repeat; background-position:center;"></a>
+                <a href="/bbs/board.php?bo_table=forum_info2" id="forum_info" style="width: 47.5%;background-color: #014594;background-image: url('http://www.kans.re.kr/img/schedule.png'); background-repeat:no-repeat; background-position:center;"></a>
+                <a href="/bbs/board.php?bo_table=forum_info" id="forum" style="width: 47.5%;background-color: #014594;background-image: url('http://www.kans.re.kr/img/apply.png'); background-repeat:no-repeat; background-position:center;"></a>
             </div>            
-            <div id="exp" style="width:100%;background-color: #9AD6FF;height: 45%;"></div>
+            <div id="exp" style="width:100%;background-color: #9AD6FF;height: 45%;text-align: center;display: flex;align-items: center;justify-content: center;">
+                <h2 style="color: black;">
+                    <span style="">체험관</span>
+                </h2>
+            </div>
         </li>
     </ul>
 </div>

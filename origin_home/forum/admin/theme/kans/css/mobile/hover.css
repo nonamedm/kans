@@ -7,5 +7,5 @@
 		font-weight: 700;
 		padding: -2px;
 		display: inline-block;}
-	
+	.header .gnb .dep2 > ul > li:hover > a{font-weight: 500; color: #1d9bea; }
 }

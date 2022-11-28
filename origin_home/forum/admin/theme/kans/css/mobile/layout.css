@@ -30,14 +30,14 @@
 
 .header .gnb > ul > li > a{font-size: 18px; line-height: 95px; color: #111; font-weight: 700; transition:.1s; font-family: 'Noto Sans CJK Korean';}
 /*.header .gnb > ul > li > a:hover{color:#000;font-weight: 900;}*/
-.header .gnb .dep2 {display: none; position: absolute; left: 0; top: 95px; width: 100%; text-align: center; padding-top: 36px; box-sizing: border-box; border-left: 1px solid #dfdfdf;	height: 363px;} 
+.header .gnb .dep2 {display: none; position: absolute; left: 0; top: 95px; width: 100%; text-align: center; padding-top: 36px; box-sizing: border-box; border-left: 1px solid #dfdfdf;	height: 200px;} 
 .header .gnb > ul > li:last-child >  .dep2{border-right: 1px solid #dfdfdf;} 
 .header .gnb .dep2 > ul > li > a{font-size: 16px; line-height: 36px; color: #666; transition:.3s;}
 .header .gnb .dep3{display: none;}
 
-.hd_2dep_bg{position: fixed; display: none; top: 149px; top: 97px; left: 0; width: 100%; height: 363px; background: rgba(246,246,246,0.95); z-index: -1;}
+.hd_2dep_bg{position: fixed; display: none; top: 149px; top: 97px; left: 0; width: 100%; height: 200px; background: rgba(246,246,246,0.95); z-index: -1;}
 
-.header .hd_right{float: right; line-height:95px;font-size: 18px;}
+.header .hd_right{float: right; line-height:95px;font-size: 18px; margin-top: 39px;}
 .header .hd_right > *{position: relative; float: left;}
 .header .hd_right > ul {float: left;}
 .header .hd_right > ul >li {float: left;color:#1d9bea;}

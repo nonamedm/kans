@@ -23,35 +23,56 @@
 			</h1>
 			<nav class="gnb" style="margin-left: 0px;">
 				<ul class="clear">
-					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'forum_info2'> 
-						<a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum_info2">일정</a>
+					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList"> 
+						<a href="">정보광장</a>
+						<div id="subm1" class="dep2 clear">
+							<ul class="af">
+								<li class="<?=$ln_btn1;?>"><a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum_info2"><span>일정</span></a>
+								</li>
+								<li class="<?=$ln_btn4;?>"><a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum_info"><span>신청</span></a>
+								</li>
+								<li class="<?=$ln_btn4;?>"><a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum"><span>News</span></a>
+								</li>
+								<li class="<?=$ln_btn4;?>"><a href=""><span>체험관</span></a>
+								</li>
+							</ul>
+						</div>
+					
 					</li>
-					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'forum_info'> 
-						<a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum_info">신청</a>
-					</li>
-					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'forum'>
-						<a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum"><?=$s2_name?></a>
-					</li>
-					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'community'>
+
+					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList">
 						<a href="http://www.kans.re.kr/bbs/board.php?bo_table=community"><?=$s3_name?></a>
 					</li>
-					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'newsletter'>
-						<a href="http://www.kans.re.kr/bbs/board.php?bo_table=newsletter"><?=$s4_name?></a>
+					
+					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList">
+						<a href="http://www.kans.re.kr/bbs/board.php?bo_table=community">회원광장</a>
+						<div id="subm2" class="dep2 clear">
+							<ul class="af">
+								<li class="<?=$ln_btn1;?>">
+									<a href="http://www.kans.re.kr/bbs/board.php?bo_table=newsletter">
+										<span>고급News</span>
+									</a>
+								</li>
+								<?php if($is_member){?>
+									<li class="<?=$ln_btn1;?>">
+										<a href="http://www.kans.re.kr/origin_home/forum/admin/my_page/my_page.php">
+											<span><?=$s5_name?></span>
+										</a>
+									</li>
+									<?php
+									}
+								?>
+							</ul>
+						</div>
 					</li>
-					<?php
-                	if($is_member){?>
-					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'my_page'>
-						<a href="http://www.kans.re.kr/origin_home/forum/admin/my_page/my_page.php"><?=$s5_name?></a>
-					</li>
-					<?php
-                	}
-					?>
+
+					
 					<?php
                 	if($member['mb_level']>4){?>
-					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'forum_list'>
+					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList">
 						<a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/forum_list.php">포럼관리</a>
 					</li>
-					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList" data-active = 'member_list'>
+					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList">
 						<a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/member_list.php">회원관리</a>
 					</li>
 					<?php
@@ -86,30 +107,30 @@
 			</div>
 		</div>
 	</div>
-
+	<div class="hd_2dep_bg"></div>					
 </header>
 
 <script>
 $(document).ready(function(){
-	$('.headerList').on('click', function() {
-		if(!$(this).hasClass('active')){
-			$('.headerList').removeClass('active');
-			$(this).addClass('active');
-		}
-	});
+	// $('.headerList').on('click', function() {
+	// 	if(!$(this).hasClass('active')){
+	// 		$('.headerList').removeClass('active');
+	// 		$(this).addClass('active');
+	// 	}
+	// });
 	
-	//var _where = window.location.search;
-	var where1 = window.location.pathname;
-	var where2 = window.location.search;
-	var where3 = '';
-	if (where1 == '/bbs/board.php') {
-		where3 = where2.substr(10);
-		document.querySelector('[data-active = "'+where3+'"]').classList.add('active');
-	} else if(where1.indexOf('.php')!=-1) {
-		var splitStr = where1.split('/');
-		where3 = splitStr[5].replace('.php','');
-		document.querySelector('[data-active = "'+where3+'"]').classList.add('active');
-	}
+	// //var _where = window.location.search;
+	// var where1 = window.location.pathname;
+	// var where2 = window.location.search;
+	// var where3 = '';
+	// if (where1 == '/bbs/board.php') {
+	// 	where3 = where2.substr(10);
+	// 	document.querySelector('[data-active = "'+where3+'"]').classList.add('active');
+	// } else if(where1.indexOf('.php')!=-1) {
+	// 	var splitStr = where1.split('/');
+	// 	where3 = splitStr[5].replace('.php','');
+	// 	document.querySelector('[data-active = "'+where3+'"]').classList.add('active');
+	// }
 })
 </script>
 

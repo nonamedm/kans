@@ -44,7 +44,7 @@
 	.layer_box .sitemap dt span{position: relative;}
 	.layer_box .sitemap dd {padding:0;}
 	.layer_box .sitemap dd .dep2{width: 100%;}
-	.layer_box .sitemap dd .dep2 > ul {height:250px !important;}
+	.layer_box .sitemap dd .dep2 > ul {height:120px !important;}
 	.layer_box .sitemap:nth-child(4) dd .dep2 > ul,
 	.layer_box .sitemap:nth-child(5) dd .dep2 > ul{height:150px;}
 	.layer_box .sitemap dd .dep2 > ul > li > a {padding:0;font-size:16px;line-height:36px;font-weight:350;color:#fff;text-align:center;border-bottom:0;transition:0.4s;} 
@@ -173,19 +173,11 @@
 	<div class="div_outline_padding">
 		<dl class="sitemap sitemap_1st">
 			<dt class="<?=$gn_btn1;?>">
-				<a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum_info"><span>
-					<?=$s1_name?></span>
+				<a href=""><span>
+					정보광장</span>
 				</a>
 			</dt>
 			<dd class="s_depth_menu siteul_1" id=""></dd>
-		</dl>
-		<dl class="sitemap sitemap_1st">
-			<dt class="<?=$gn_btn2;?>">
-				<a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum"><span>
-					<?=$s2_name?></span>
-				</a>
-			</dt>
-			<dd class="s_depth_menu siteul_2" id=""></dd>
 		</dl>
 		<dl class="sitemap sitemap_1st">
 			<dt class="<?=$gn_btn3;?>">
@@ -196,6 +188,14 @@
 			<dd class="s_depth_menu siteul_3" id=""></dd>
 		</dl>
 		<dl class="sitemap sitemap_1st">
+			<dt class="<?=$gn_btn2;?>">
+				<a href="http://www.kans.re.kr/bbs/board.php?bo_table=forum"><span>
+					회원광장</span>
+				</a>
+			</dt>
+			<dd class="s_depth_menu siteul_2" id=""></dd>
+		</dl>
+		<dl class="sitemap sitemap_1st">
 			<dt class="<?=$gn_btn4;?>">
 				<a href="http://www.kans.re.kr/bbs/board.php?bo_table=newsletter"><span>
 					<?=$s4_name?></span>
@@ -203,18 +203,8 @@
 			</dt>
 			<dd class="s_depth_menu siteul_4" id=""></dd>
 		</dl>
+		
 		<?php
-				if($is_member){?>
-		<dl class="sitemap sitemap_1st">
-			<dt class="<?=$gn_btn5;?>">
-				<a href="http://www.kans.re.kr/origin_home/forum/admin/my_page/my_page.php"><span>
-					<?=$s5_name?></span>
-				</a>
-			</dt>
-			<dd class="s_depth_menu siteul_5" id=""></dd>
-		</dl>
-		<?php
-				}
 				if($member['mb_level']>4) {
 		?>
 		<dl class="sitemap sitemap_1st">

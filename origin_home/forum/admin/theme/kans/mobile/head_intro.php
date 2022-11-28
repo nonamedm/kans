@@ -116,7 +116,7 @@ $s4_name = "고급 News";
 	$s4_1_name = "정회원 가입 안내 및 혜택";					$s4_1_url = "/bbs/board.php?bo_table=newsletter";
 	$s4_2_name = "정회원 현황";									$s4_2_url = "/s4/s4_2.php";
 
-$s5_name = "회원정보";					
+$s5_name = "마이페이지";					
 	$s5_1_name = "인사말";										$s5_1_url = "/s5/s5_1.php";
 	$s5_2_name = "단체 개요";									$s5_2_url = "/s5/s5_2.php";
 	$s5_3_name = "연혁 및 조직";								$s5_3_url = "/s5/s5_3.php";

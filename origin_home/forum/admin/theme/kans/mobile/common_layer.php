@@ -84,7 +84,7 @@
 		.layer_box .email_area .email_box .big_txt { font-size:1em; }
 		.layer_email { max-height:300px; }
 		.gnb {display:none;}
-		.site_map {display:block;}
+		.site_map {display:block; margin-top:-39px;}
 		.hd_right ul {display:none;}
 	}
 
@@ -195,14 +195,7 @@
 			</dt>
 			<dd class="s_depth_menu siteul_2" id=""></dd>
 		</dl>
-		<dl class="sitemap sitemap_1st">
-			<dt class="<?=$gn_btn4;?>">
-				<a href="http://www.kans.re.kr/bbs/board.php?bo_table=newsletter"><span>
-					<?=$s4_name?></span>
-				</a>
-			</dt>
-			<dd class="s_depth_menu siteul_4" id=""></dd>
-		</dl>
+		
 		
 		<?php
 				if($member['mb_level']>4) {
@@ -229,7 +222,7 @@
 		?>		
 		<dl class="sitemap sitemap_1st">
 			<dt class="<?=$gn_btn8;?>">
-				<a href="http://www.kans.re.kr/admin/login.php"><span>
+				<a href="http://www.kans.re.kr/origin_home/forum/admin/admin/login.php"><span>
 					로그인</span>
 				</a>
 			</dt>

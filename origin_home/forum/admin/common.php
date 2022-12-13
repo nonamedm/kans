@@ -46,9 +46,9 @@ function g5_path()
 }
 
 $g5_path = g5_path();
-echo '<script>';
-echo 'console.dir('. json_encode( $g5_path ) .')';
-echo '</script>';
+// echo '<script>';
+// echo 'console.dir('. json_encode( $g5_path ) .')';
+// echo '</script>';
 include_once($g5_path['path'].'/config.php');   // 설정 파일
 
 unset($g5_path);

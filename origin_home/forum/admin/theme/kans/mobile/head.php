@@ -84,21 +84,24 @@
 			<div class="hd_right">
                 <?php
                 if(!$is_member){?>
-                <ul>
-                    <li><a href="http://www.kans.re.kr/admin/login.php">로그인</a></li>
+                <ul style="margin-top:-39px;">
+                    <li><a href="http://www.kans.re.kr/origin_home/forum/admin/admin/login.php">로그인</a></li>
                     <li>/</li>
                     <li><a href="">회원가입</a></li>
-                </ul>
                 <?php
                 }else{
                     ?>
-                    <ul>
-                        <li><a href="<?php echo G5_URL?>/bbs/logout.php">로그아웃</a></li>
-                    </ul>
-                    <?
+                    <ul style="margin-top:-39px;">
+                        <li><a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/logout.php">로그아웃</a></li>
+						<?
                 }
                 ?>
-
+					<li style="margin-left: 40px;">
+						<a href="http://kans.re.kr">
+							<img src="http://www.kans.re.kr/img/kans_logo.png">
+						</a>
+					</li>
+				</ul>
 				<!--<div class="hd_sch">
 					<figure><img src="<? echo G5_THEME_URL ?>/images/layout/hd_sch.png" /></figure>
 					<div class="cnt"><? include_once('hd_sch.php'); ?></div>

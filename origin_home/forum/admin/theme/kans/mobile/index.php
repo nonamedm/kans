@@ -140,7 +140,7 @@
 			loop : false,
 			margin : 0,
 			autoplay : false,
-			autoplayTimeout : 8000,
+			autoplayTimeout : 3000,
 			//autoplayHoverPause : true,
 			dots : false,
 			nav : false,

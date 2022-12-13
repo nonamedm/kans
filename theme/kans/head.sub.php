@@ -37,14 +37,15 @@ if (G5_IS_MOBILE) {
 	if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "forum_info2" || $bo_table == "newsletter" || $bo_table == "community"){
 		echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;
 	} else {
-		echo '<meta name="viewport" content="width=1400">'.PHP_EOL;
+		echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;
+		//echo '<meta name="viewport" content="width=1400">'.PHP_EOL;
 	}
     echo '<meta name="HandheldFriendly" content="true">'.PHP_EOL;
     echo '<meta name="format-detection" content="telephone=no">'.PHP_EOL;
      echo '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">'.PHP_EOL;
 } else {
-//	echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;
-	echo '<meta name="viewport" content="width=1400">'.PHP_EOL;
+	echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;
+	// echo '<meta name="viewport" content="width=1400">'.PHP_EOL;
     echo '<meta http-equiv="imagetoolbar" content="no">'.PHP_EOL;
     echo '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">'.PHP_EOL;
 }
@@ -91,7 +92,6 @@ if($config['cf_add_meta'])
 	} else {
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/common'.$shop_css.'.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/layout'.$shop_css.'.css">'.PHP_EOL;
-		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/carousel.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/main'.$shop_css.'.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/sub'.$shop_css.'.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/template'.$shop_css.'.css">'.PHP_EOL;

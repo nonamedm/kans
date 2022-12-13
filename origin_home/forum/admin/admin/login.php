@@ -28,7 +28,7 @@ $login_action_url = G5_HTTPS_BBS_URL."/login_check.php";
 		<div class="login_box">
 			<input type="hidden" name="url" value="<?php echo $login_url ?>" />
 			<div class="login_cnt">
-				<strong>ADMINISTRATOR</strong>
+				<strong>RASA 로그인</strong>
 				<a href="http://inpiad.com" target="_blank" class="link">계정정보를 잊으셨다면 인피아드 고객센터로 연락 바랍니다.</a>
 				<ul class="login_obj">
 					<li>

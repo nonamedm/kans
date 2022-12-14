@@ -114,11 +114,11 @@
 		.layer_box > h3{font-size: 5vw !important; font-weight: 500 !important;}
 		.layer_box textarea{font-size: 3.2vw; line-height: 1.7;}
 		.layer_box .email_area .email_box .normal_txt{font-size: 3.2vw; text-align: center; line-height: 1.7;}
-		.layer_box .sitemap dd{overflow: hidden; overflow-y: scroll !important;}
+		.layer_box .sitemap dd{overflow: hidden; }
 		.layer_box .sitemap dd > ul{overflow: hidden; overflow-y: scroll !important;}
 		.layer_box .sitemap dd > ul > li > a{line-height: 2;}
 		.layer_box .sitemap{overflow: hidden; overflow-y: scroll !important;}
-		.layer_box .sitemap dd{height: 5vw; overflow-y: scroll !important;}
+		.layer_box .sitemap dd{height: 25vw; }
 		.layer_box .sitemap:nth-child(3) dd,
 		.layer_box .sitemap:nth-child(4) dd{height: 5vw;}
 		.layer_box.layer_sitemap .btn_close {width: 45px; height: 45px;}

@@ -81,6 +81,7 @@ if($config['cf_add_meta'])
 	//echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').$shop_css.'.css">'.PHP_EOL;
 	echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/common'.$shop_css.'.css">'.PHP_EOL;
 	echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/layout'.$shop_css.'.css">'.PHP_EOL;
+	echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/carousel.css">'.PHP_EOL;
 	echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/main'.$shop_css.'.css">'.PHP_EOL;
 	echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/sub'.$shop_css.'.css">'.PHP_EOL;
 	echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/template'.$shop_css.'.css">'.PHP_EOL;

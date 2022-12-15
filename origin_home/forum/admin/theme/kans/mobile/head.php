@@ -2,10 +2,7 @@
 
 <style>
 .header .gnb > ul > li:hover  {
-	border-bottom: 5px solid #4195d7;
-}
-.active  {
-    border-bottom: 5px solid #4195d7;
+	border-bottom: 5px solid #014594;
 }
 </style>
 
@@ -86,8 +83,8 @@
                 if(!$is_member){?>
                 <ul style="margin-top:-39px;">
                     <li><a href="http://www.kans.re.kr/origin_home/forum/admin/admin/login.php">로그인</a></li>
-                    <li>/</li>
-                    <li><a href="">회원가입</a></li>
+                    <!-- <li>/</li>
+                    <li><a href="">회원가입</a></li> -->
                 <?php
                 }else{
                     ?>

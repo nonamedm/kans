@@ -3,7 +3,8 @@
 include_once "../common.php";
 include_once G5_MANAGE_INCLUDE_PATH . "/admin.head.sub.php";	//html 기본정보
 
-$url = $_GET['url'];
+// $url = $_GET['url'];
+$url = "https://www.kans.re.kr/origin_home/forum/admin";
 
 // url 체크
 check_url_host($url);

@@ -156,14 +156,14 @@ select {
         var data = {
             attend_yn : attend_yn,
             gd_id : gd_id,
-            wr_id : wr_id
+            wr_id : wr_id,
+            level : <?php echo $member['mb_level'] ?>,
         // 		subject : "<?php echo $view['wr_subject'] ?>",
         // 		content : "<?php echo $view['wr_content'] ?>",
         // 		id  : "<?php echo $member['mb_id'] ?>",
         // 		hp  : "<?php echo $member['mb_hp'] ?>",
         // 		name : "<?php echo $member['mb_name'] ?>",
         // 		email : "<?php echo $member['mb_email'] ?>",
-        // 		level : <?php echo $member['mb_level'] ?>,
         // 		group : "<?php echo $member['mb_2'] ?>"
         };
         
@@ -177,7 +177,7 @@ select {
                 data: data,
                 success: function(result){
                     if(result=='fail'){
-                        alert('오류');
+                        alert('오류 : 참석자와 포럼정보를 확인하여 주시길 바랍니다.');
                     } else{
                         console.log(result);
                         alert('변경 되었습니다.');

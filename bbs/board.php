@@ -46,10 +46,20 @@ if (isset($wr_id) && $wr_id) {
 
     // 로그인된 회원의 권한이 설정된 읽기 권한보다 작다면
     if ($member['mb_level'] < $board['bo_read_level']) {
-        if ($is_member)
-            alert('글을 읽을 권한이 없습니다.', G5_URL);
-        else
-            alert('글을 읽을 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.', './login.php?wr_id='.$wr_id.$qstr.'&amp;url='.urlencode(G5_BBS_URL.'/board.php?bo_table='.$bo_table.'&amp;wr_id='.$wr_id.$qstr));
+        if ($is_member) {
+            if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "forum_info2" ||$bo_table == "newsletter" || $bo_table == "community"){
+                alert('글을 읽을 권한이 없습니다.', 'http://www.kans.re.kr/origin_home/forum/admin/');
+            }else{                
+                alert('글을 읽을 권한이 없습니다.', G5_URL);
+            }
+
+        } else {
+            if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "forum_info2" ||$bo_table == "newsletter" || $bo_table == "community"){
+                alert('글을 읽을 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.', 'http://www.kans.re.kr/origin_home/forum/admin/admin/login.php?'.$qstr.'&url='.urlencode(G5_BBS_URL.'/board.php?bo_table='.$bo_table.($qstr?'&amp;':'')));
+            }else{
+                alert('글을 읽을 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.', './login.php?wr_id='.$wr_id.$qstr.'&amp;url='.urlencode(G5_BBS_URL.'/board.php?bo_table='.$bo_table.'&amp;wr_id='.$wr_id.$qstr));
+            }
+        }
     }
 
     // 본인확인을 사용한다면

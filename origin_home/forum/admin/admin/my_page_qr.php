@@ -24,6 +24,8 @@
 
     $user_id = $_GET['userId'];
     $user_name = $_GET['userName'];
+	$user_name = urldecode($user_name);
+	
 	
 	($member['mb_id'] ? $member['mb_id'] : '미등록');
 	($member['mb_level'] ? $member['mb_level'] : '미등록');

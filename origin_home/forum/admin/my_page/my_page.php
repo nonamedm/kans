@@ -62,7 +62,8 @@
 	?>
 	
 	var user_id = "<?php echo ($member['mb_id'] ? $member['mb_id'] : '미등록'); ?>";
-	var user_name = "<?php echo ($member['mb_name'] ? $member['mb_name'] : '미등록'); ?>";
+	var user_name = "<?php echo ($member['mb_name'] ? urlencode($member['mb_name']) : urlencode('미등록')); ?>";
+	
 	 $("#qrImg").qrcode({
 		render:"canvas",
 		width:100,

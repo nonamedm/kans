@@ -11,7 +11,7 @@
 
 <script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
 
-<div class="head_color" style="background: #DBEFA1;">
+<div class="head_color" style="background: #439BE4;">
     <h1 class="head_text"><?php echo $board['bo_subject'] ?></h1>
 	<img class="head_img" src="<?php echo G5_URL;?>/img/커뮤니티.png" title="search">
 </div>

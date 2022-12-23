@@ -16,6 +16,8 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
         $comment_id = $list[$i]['wr_id'];
         $cmt_depth = ""; // 댓글단계
         $cmt_depth = strlen($list[$i]['wr_comment_reply']) * 20;
+        $datetime_str = $list[i]['datetime'];
+
             $str = $list[$i]['content'];
             if (strstr($list[$i]['wr_option'], "secret"))
                 $str = $str;
@@ -39,10 +41,11 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
 
         <!-- 댓글 출력 -->
         <div style="display:flex;">
-            <div class="comment_inline" style="width: 15%; background: #F4FBFF; color: grey; text-align: left; padding: 5px;"><?php echo $list[$i]['name'] ?></div>
+            <div class="comment_inline" style="width: 15%; color: grey; text-align: left; padding: 5px;"><?php echo $list[$i]['name'] ?></div>
             <!--<div><?php if (strstr($list[$i]['wr_option'], "secret")) ?></div>-->
-            <div class="comment_inline" style="width: 65%; text-align: left; padding: 5px;"><?php echo $str ?></div>
-            <div class="comment_inline" style="width: 17%; background: #F4FBFF; color: grey; text-align: center; padding: 5px;"><span><?php echo $list[$i]['datetime'] ?></span></div>
+            <div class="comment_inline" style="width: 65%; color: grey; text-align: left; padding: 5px;"><span><?php echo $str ?></span></div>
+            <div class="comment_inline" style="width: 17%; color: grey; text-align: center; padding: 5px;"><span><?php echo $list[$i]['datetime'] ?></span></div>
+            <div class="comment_inline" style="width: 3%; color: grey; text-align: center; padding: 5px; cursor:pointer;" onclick="comment_delete('<?php echo $list[$i]['mb_id'] ?>','<?php echo $comment_id ?>');"><span>X</span></div>
         </div>
 
 
@@ -68,11 +71,7 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
             $c_edit_href = './board.php?'.$query_string.'&amp;c_id='.$comment_id.'&amp;w=cu#bo_vc_w';
         ?>
         <footer>
-            <!--<ul class="bo_vc_act">
-                <?php if ($list[$i]['is_reply']) { ?><li><a href="<?php echo $c_reply_href; ?>" onclick="comment_box('<?php echo $comment_id ?>', 'c'); return false;">답변</a></li><?php } ?>
-                <?php if ($list[$i]['is_edit']) { ?><li><a href="<?php echo $c_edit_href; ?>" onclick="comment_box('<?php echo $comment_id ?>', 'cu'); return false;">수정</a></li><?php } ?>
-                <?php if ($list[$i]['is_del'])  { ?><li><a href="<?php echo $list[$i]['del_link']; ?>" onclick="return comment_delete();">삭제</a></li><?php } ?>
-            </ul>-->
+            
         </footer>
         <?php } ?>
     </article>
@@ -307,9 +306,21 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
         }
     }
 
-    function comment_delete()
-    {
-        return confirm("이 댓글을 삭제하시겠습니까?");
+    function comment_delete(id, idx) {
+        var confirmText = confirm(id+", "+idx+" : 이 댓글을 삭제하시겠습니까?");
+        
+        if(confirmText) {
+            if((<?php echo $member['mb_level'] ?> >= 5) || ("<?php echo $member['mb_id'] ?>"==id)) {
+                alert("짜파게티 요리사");
+                // $sql = "";
+                // $cmt = sql_fetch($sql);
+            } else {
+                alert("작성자만 삭제할 수 있습니다");
+            }
+        } else {
+            
+        }
+
     }
 
     comment_box('', 'c'); // 댓글 입력폼이 보이도록 처리하기위해서 추가 (root님)

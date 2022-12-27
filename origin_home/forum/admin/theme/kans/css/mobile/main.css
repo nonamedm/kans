@@ -191,6 +191,9 @@
 .mcnt2_new_i > .rbx .gr_b ul > li:nth-child(2) figure{padding-top: 5px;}
 .mcnt2_new_i > .rbx .gr_b ul > li > a{height: 87px; box-sizing: border-box; padding-top: 2px;}
 
+#sqBox {width: 100%;height: 45%;display: flex;justify-content: space-between;}
+#exp {width:100%;background-color: #9AD6FF;height: 45%;text-align: center;display: flex;align-items: center;justify-content: center;}
+
 /*1024px 전까지*/
 @media all and (max-width: 1023px){
     /*메인이미지*/
@@ -199,9 +202,9 @@
     .main_forum2>.img{display: block;position: relative;width: 95%;margin: 0 5%;top: 258px;left: 4%;}
     .main_forum2>.img>img{position: absolute;width: 100%;right: 0;}
     .main_forum_titile{font-size: 0.97em;line-height: 1.6em;font-weight: 400;color: #fff;}
-
+    .forum_con { height:270px;}
     .forum_box {width:90%;height: 1020px;padding: 0 5% 0 5%;}
-    .forum_box >ul >li {width: 100%;height:516px;float: left;}
+    .forum_box >ul >li {width: 100%;height:345px;float: left;}
     .forum_box >ul >li:nth-child(1) {margin-bottom: 5%;margin-left: 0; background: linear-gradient(100deg, #014594, #9AD6FF);}
     .forum_box >ul >li:nth-child(2) {/*margin-left: 2%;*/}
     .forum_con > ul > li > .fr_li_box > .fr_day{float: right;font-size: 0.7em;font-weight: 600; font-family: 'Noto Sans CJK Korean';width:20%;}
@@ -211,6 +214,9 @@
     .forum_con > ul > li > .fr_li_box > .fr_con > a{float: left; margin-right: 2px;font-weight: 500;color:#000;}
     .forum_con > ul > li > .fr_li_box > .fr_con > a:hover{color:#dbefa1; font-weight: 500;}
     .forum_con > ul > li > .fr_li_box > .fr_tit > a{width: 80%;font-size: 1.01em;font-weight: 700; font-family: 'Noto Sans CJK Korean';color:#000;}
+
+    #sqBox {height:55%;}
+    #exp {height:40%;}
 }
 /*1024px 크게*/
 @media all and (min-width: 1024px){

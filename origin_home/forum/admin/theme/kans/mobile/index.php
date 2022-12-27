@@ -86,7 +86,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="forum_con">
+            <div class="forum_con" style="overflow:hidden;">
                 <ul>
                     <?php
                     $sql="  SELECT 
@@ -117,11 +117,11 @@
             </div>
         </li>
         <li style="display: flex;flex-direction: column;justify-content: space-between;">
-            <div style="width: 100%;height: 45%;display: flex;justify-content: space-between;">
+            <div id="sqBox" style="">
                 <a href="/bbs/board.php?bo_table=forum_info2" id="forum_info" style="width: 47.5%;background-color: #014594;background-image: url('http://www.kans.re.kr/img/schedule.png'); background-repeat:no-repeat; background-position:center;"></a>
                 <a href="/bbs/board.php?bo_table=forum_info" id="forum" style="width: 47.5%;background-color: #014594;background-image: url('http://www.kans.re.kr/img/apply.png'); background-repeat:no-repeat; background-position:center;"></a>
             </div>            
-            <div id="exp" style="width:100%;background-color: #9AD6FF;height: 45%;text-align: center;display: flex;align-items: center;justify-content: center;">
+            <div id="exp" style="">
                 <h2 style="color: black;">
                     <span style="">체험관</span>
                 </h2>

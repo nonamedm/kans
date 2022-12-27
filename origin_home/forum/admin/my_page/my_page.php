@@ -68,7 +68,7 @@
 		render:"canvas",
 		width:100,
 		height:100,
-		text:"https://www.kans.re.kr/origin_home/forum/admin/admin/my_page_qr.php?userId="+user_id+"&userName="+user_name // qr코드 찍었을때 이동하는 페이지 url
+		text:"https://www.kans.re.kr/origin_home/safety/admin/my_page_qr.php?userId="+user_id+"&userName="+user_name // qr코드 찍었을때 이동하는 페이지 url
 	});
 </script>
 

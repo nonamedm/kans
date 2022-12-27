@@ -54,11 +54,11 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_1&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60546',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60546',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_1&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60546',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60546',
     'icon_new' => '',
-    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
+    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
     'icon_secret' => '',
     'link' => 
     array (
@@ -67,8 +67,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60546&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60546&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60546&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60546&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -132,11 +132,11 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_1&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60545',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60545',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_1&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60545',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60545',
     'icon_new' => '',
-    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
+    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
     'icon_secret' => '',
     'link' => 
     array (
@@ -145,8 +145,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60545&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60545&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60545&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60545&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -210,11 +210,11 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_1&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60544',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60544',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_1&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60544',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_1&amp;wr_id=60544',
     'icon_new' => '',
-    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
+    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
     'icon_secret' => '',
     'link' => 
     array (
@@ -223,8 +223,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60544&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60544&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60544&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_1&amp;wr_id=60544&amp;no=2',
     ),
     'link_hit' => 
     array (

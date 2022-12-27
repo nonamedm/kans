@@ -53,10 +53,10 @@ $list=array (
     'name' => '<span class="sv_member">kans</span>',
     'reply' => 0,
     'icon_reply' => '',
-    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=18',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=18',
+    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=18',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=18',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -67,8 +67,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=18&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=18&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=18&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=18&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -79,7 +79,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
   ),
   1 => 
   array (
@@ -132,10 +132,10 @@ $list=array (
     'name' => '<span class="sv_member">kans</span>',
     'reply' => 0,
     'icon_reply' => '',
-    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=17',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=17',
+    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=17',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=17',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -146,8 +146,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=17&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=17&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=17&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=17&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -158,7 +158,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
   ),
   2 => 
   array (
@@ -211,10 +211,10 @@ $list=array (
     'name' => '<span class="sv_member">관리자</span>',
     'reply' => 0,
     'icon_reply' => '',
-    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=16',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=16',
+    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=16',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=16',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -225,8 +225,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=16&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=16&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=16&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=16&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -237,7 +237,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
   ),
   3 => 
   array (
@@ -290,10 +290,10 @@ $list=array (
     'name' => '<span class="sv_member">관리자</span>',
     'reply' => 0,
     'icon_reply' => '',
-    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=15',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=15',
+    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=15',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=15',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -304,8 +304,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=15&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=15&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=15&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=15&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -316,7 +316,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
   ),
   4 => 
   array (
@@ -369,10 +369,10 @@ $list=array (
     'name' => '<span class="sv_member">관리자</span>',
     'reply' => 0,
     'icon_reply' => '',
-    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=14',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=14',
+    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=14',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=14',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -383,8 +383,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=14&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=14&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=14&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=14&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -395,7 +395,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
   ),
   5 => 
   array (
@@ -448,10 +448,10 @@ $list=array (
     'name' => '<span class="sv_member">관리자</span>',
     'reply' => 0,
     'icon_reply' => '',
-    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=13',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=13',
+    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=13',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=13',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -462,8 +462,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=13&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=13&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=13&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=13&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -474,7 +474,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
   ),
   6 => 
   array (
@@ -527,10 +527,10 @@ $list=array (
     'name' => '<span class="sv_member">관리자</span>',
     'reply' => 0,
     'icon_reply' => '',
-    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=12',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=12',
+    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=12',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=12',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -541,8 +541,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=12&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=12&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=12&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=12&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -553,7 +553,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
   ),
   7 => 
   array (
@@ -606,10 +606,10 @@ $list=array (
     'name' => '<span class="sv_member">관리자</span>',
     'reply' => 0,
     'icon_reply' => '',
-    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=11',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=11',
+    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=11',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=11',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -620,8 +620,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=11&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=11&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=11&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=11&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -632,7 +632,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
   ),
   8 => 
   array (
@@ -685,10 +685,10 @@ $list=array (
     'name' => '<span class="sv_member">관리자</span>',
     'reply' => 0,
     'icon_reply' => '',
-    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=7',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=7',
+    'icon_link' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_link.gif" alt="관련링크">',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=7',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=bottom_banner&amp;wr_id=7',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -699,8 +699,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=7&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=7&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=7&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=bottom_banner&amp;wr_id=7&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -711,6 +711,6 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_bottom_banner/img/icon_file.gif" alt="첨부파일">',
   ),
 )?>

@@ -64,16 +64,16 @@ if($config['cf_add_meta'])
 <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/css/font-awesome.min.css">
-<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/css/jquery-ui.css">
-<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/css/jquery.bxslider.css">
-<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/owl.carousel.min.css">
-<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/owl.theme.default.min.css">
-<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/swiper/swiper.css">
-<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/wow/animate.css">
+<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/safety/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/safety/css/jquery-ui.css">
+<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/safety/css/jquery.bxslider.css">
+<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/owl.carousel.min.css">
+<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/owl.theme.default.min.css">
+<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/swiper/swiper.css">
+<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/wow/animate.css">
 
-<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/slick/slick.css">
-<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/slick/slick-theme.css">
+<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/slick/slick.css">
+<link rel="stylesheet" href="http://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/slick/slick-theme.css">
 
 <?php
 	$shop_css = '';
@@ -81,7 +81,7 @@ if($config['cf_add_meta'])
 	//echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').$shop_css.'.css">'.PHP_EOL;
 	echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/common'.$shop_css.'.css">'.PHP_EOL;
 	echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/layout'.$shop_css.'.css">'.PHP_EOL;
-	echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/carousel.css">'.PHP_EOL;
+	echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/carousel.css">'.PHP_EOL;
 	echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/main'.$shop_css.'.css">'.PHP_EOL;
 	echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/sub'.$shop_css.'.css">'.PHP_EOL;
 	echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/template'.$shop_css.'.css">'.PHP_EOL;
@@ -117,8 +117,8 @@ if($config['cf_add_meta'])
 <![endif]-->
 <script>
 // 자바스크립트에서 사용하는 전역변수 선언
-var g5_url       = "http://www.kans.re.kr/origin_home/forum/admin";
-var g5_bbs_url   = "http://www.kans.re.kr/origin_home/forum/admin/bbs";
+var g5_url       = "http://www.kans.re.kr/origin_home/safety";
+var g5_bbs_url   = "http://www.kans.re.kr/origin_home/safety/bbs";
 var g5_is_member = "<?php echo isset($is_member)?$is_member:''; ?>";
 var g5_is_admin  = "<?php echo isset($is_admin)?$is_admin:''; ?>";
 var g5_is_mobile = "<?php echo G5_IS_MOBILE ?>";

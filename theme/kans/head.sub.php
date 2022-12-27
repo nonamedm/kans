@@ -82,16 +82,16 @@ if($config['cf_add_meta'])
 	if (defined('_SHOP_')) $shop_css = '_shop';
 	//echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').$shop_css.'.css">'.PHP_EOL;
 	if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "forum_info2" || $bo_table == "newsletter" || $bo_table == "community"){
-		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/common.css">'.PHP_EOL;
-		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/layout.css">'.PHP_EOL;
-		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/carousel.css">'.PHP_EOL;
-		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/main.css">'.PHP_EOL;
-		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/sub.css">'.PHP_EOL;
-		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/template.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/common.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/layout.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/carousel.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/main.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/sub.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/template.css">'.PHP_EOL;
 	} else {
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/common'.$shop_css.'.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/layout'.$shop_css.'.css">'.PHP_EOL;
-		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/forum/admin/theme/kans/css/mobile/carousel.css">'.PHP_EOL;
+		echo '<link rel="stylesheet" href="https://www.kans.re.kr/origin_home/safety/theme/kans/css/mobile/carousel.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/main'.$shop_css.'.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/sub'.$shop_css.'.css">'.PHP_EOL;
 		echo '<link rel="stylesheet" href="'.G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'/template'.$shop_css.'.css">'.PHP_EOL;

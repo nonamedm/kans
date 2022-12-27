@@ -54,9 +54,9 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;sca=',
-    'href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=47',
-    'comment_href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=47',
+    'ca_name_href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;sca=',
+    'href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=47',
+    'comment_href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=47',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -67,8 +67,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=47&amp;no=1',
-      2 => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=47&amp;no=2',
+      1 => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=47&amp;no=1',
+      2 => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=47&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -132,9 +132,9 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;sca=',
-    'href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=46',
-    'comment_href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=46',
+    'ca_name_href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;sca=',
+    'href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=46',
+    'comment_href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=46',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -145,8 +145,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=46&amp;no=1',
-      2 => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=46&amp;no=2',
+      1 => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=46&amp;no=1',
+      2 => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=46&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -210,9 +210,9 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;sca=',
-    'href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=45',
-    'comment_href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=45',
+    'ca_name_href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;sca=',
+    'href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=45',
+    'comment_href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=45',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -223,8 +223,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=45&amp;no=1',
-      2 => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=45&amp;no=2',
+      1 => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=45&amp;no=1',
+      2 => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=45&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -288,9 +288,9 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;sca=',
-    'href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=44',
-    'comment_href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=44',
+    'ca_name_href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;sca=',
+    'href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=44',
+    'comment_href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=44',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -301,8 +301,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=44&amp;no=1',
-      2 => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=44&amp;no=2',
+      1 => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=44&amp;no=1',
+      2 => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=44&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -366,9 +366,9 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;sca=',
-    'href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=43',
-    'comment_href' => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=43',
+    'ca_name_href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;sca=',
+    'href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=43',
+    'comment_href' => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/board.php?bo_table=s1_2_2&amp;wr_id=43',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -379,8 +379,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=43&amp;no=1',
-      2 => 'https://kans1.cafe24.com:443/origin_home/forum/admin/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=43&amp;no=2',
+      1 => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=43&amp;no=1',
+      2 => 'https://kans1.cafe24.com:443/origin_home/safety/dev/bbs/link.php?bo_table=s1_2_2&amp;wr_id=43&amp;no=2',
     ),
     'link_hit' => 
     array (

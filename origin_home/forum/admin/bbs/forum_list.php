@@ -30,7 +30,7 @@ if ($member['mb_level'] < 5) {
 }
 
 $g5['title'] = '포럼 신청목록';
-include_once('/kans1/www/origin_home/forum/admin/theme/kans/mobile/head.php');
+include_once('/kans1/www/origin_home/safety/theme/kans/mobile/head.php');
 add_stylesheet('<link rel="stylesheet" href="http://www.kans.re.kr/theme/kans/mobile/skin/board/wt_comment/style.css">', 0);
 ?>
 
@@ -171,7 +171,7 @@ select {
         
         if(proposal == true){
             $.ajax({
-                url: "http://www.kans.re.kr/origin_home/forum/admin/bbs/forum_attendance_change.php",
+                url: "http://www.kans.re.kr/origin_home/safety/bbs/forum_attendance_change.php",
                 type: "POST",
                 //dataType: "json",
                 data: data,
@@ -197,9 +197,9 @@ select {
         var data = {
             wr_id : wr_id
         }
-        location.href = "http://www.kans.re.kr/origin_home/forum/admin/bbs/forum_list.php?wr_id="+wr_id;
+        location.href = "http://www.kans.re.kr/origin_home/safety/bbs/forum_list.php?wr_id="+wr_id;
         // $.ajax({
-        //         url: "http://www.kans.re.kr/origin_home/forum/admin/bbs/forum_list.php",
+        //         url: "http://www.kans.re.kr/origin_home/safety/bbs/forum_list.php",
         //         type: "GET",
         //         //dataType: "json",
         //         data: data,

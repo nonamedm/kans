@@ -19,7 +19,7 @@ if ($page < 1) $page = 1; // 페이지가 없으면 첫 페이지 (1 페이지)
 $from_record = ($page - 1) * $rows; // 시작 열을 구함
 
 $g5['title'] = '회원 전체목록';
-include_once('/kans1/www/origin_home/forum/admin/theme/kans/mobile/head.php');
+include_once('/kans1/www/origin_home/safety/theme/kans/mobile/head.php');
 add_stylesheet('<link rel="stylesheet" href="http://www.kans.re.kr/theme/kans/mobile/skin/board/wt_comment/style.css">', 0);
 ?>
 
@@ -133,7 +133,7 @@ select {
         
         if(proposal == true){
             $.ajax({
-                url: "http://www.kans.re.kr/origin_home/forum/admin/bbs/member_gd_change.php",
+                url: "http://www.kans.re.kr/origin_home/safety/bbs/member_gd_change.php",
                 type: "POST",
                 //dataType: "json",
                 data: data,

@@ -1,11 +1,11 @@
-<? include_once('/kans1/www/origin_home/forum/admin/theme/kans/mobile/head_intro.php'); ?>
+<? include_once('/kans1/www/origin_home/safety/theme/kans/mobile/head_intro.php'); ?>
 
 <!-- 컨텐츠 : 시작 -->
 <header class="header">
 	
 	<div class="hd_nav clear">
 		<div class="hd_bottom ct1 clear">
-			<h1 class="logo" style="float: left; width: 227px;"><a href="http://www.kans.re.kr/origin_home/forum/admin/" style="text-align: center; font-weight: 900; height: 95px; line-height: 95px; font-size: 20px; color: #1d9bea; background: none !important;">방사선안전관리자포럼</a></h1>
+			<h1 class="logo" style="float: left; width: 227px;"><a href="http://www.kans.re.kr/origin_home/safety/" style="text-align: center; font-weight: 900; height: 95px; line-height: 95px; font-size: 20px; color: #1d9bea; background: none !important;">방사선안전관리자포럼</a></h1>
 			<nav class="gnb" style="margin-left: 0px;">
 				<ul class="clear">
 					<li style="position: relative; float: left; width: 100px; text-align: center;"> 

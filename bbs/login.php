@@ -13,7 +13,7 @@ check_url_host($url);
 if ($is_member) {
     if ($url)
         goto_url($url);
-//        goto_url(G5_URL.'/origin_home/forum/admin/');
+//        goto_url(G5_URL.'/origin_home/safety/');
     else
         goto_url(G5_URL);
 }

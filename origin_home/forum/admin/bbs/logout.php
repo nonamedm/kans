@@ -23,7 +23,7 @@ if ($url) {
 } else if ($bo_table) {
     $link = G5_BBS_URL.'/board.php?bo_table='.$bo_table;
 } else {
-    $link = "http://www.kans.re.kr/origin_home/forum/admin/";
+    $link = "http://www.kans.re.kr/origin_home/safety/";
 }
 
 goto_url($link);

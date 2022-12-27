@@ -1,4 +1,4 @@
-<? include_once('/kans1/www/origin_home/forum/admin/theme/kans/mobile/head_intro.php'); ?>
+<? include_once('/kans1/www/origin_home/safety/theme/kans/mobile/head_intro.php'); ?>
 
 <style>
 .header .gnb > ul > li:hover  {
@@ -13,8 +13,8 @@
 	<div class="hd_nav clear">
 		<div class="hd_bottom ct2 clear">
 			<h1 class="logo" style="float: left; width: 227px;">
-                <!-- <a href="http://www.kans.re.kr/origin_home/forum/admin/">방사선안전관리자포럼</a></h1> -->
-                <a href="http://www.kans.re.kr/origin_home/forum/admin/" style="display: list-item;list-style: none;text-align: center;">
+                <!-- <a href="http://www.kans.re.kr/origin_home/safety/">방사선안전관리자포럼</a></h1> -->
+                <a href="http://www.kans.re.kr/origin_home/safety/" style="display: list-item;list-style: none;text-align: center;">
 					<img src="http://www.kans.re.kr/img/forum_logo.png" style="vertical-align: middle;"/>
 				</a>
 			</h1>
@@ -52,7 +52,7 @@
 								</li>
 								<?php if($is_member){?>
 									<li class="<?=$ln_btn1;?>">
-										<a href="http://www.kans.re.kr/origin_home/forum/admin/my_page/my_page.php">
+										<a href="http://www.kans.re.kr/origin_home/safety/my_page/my_page.php">
 											<span><?=$s5_name?></span>
 										</a>
 									</li>
@@ -67,10 +67,10 @@
 					<?php
                 	if($member['mb_level']>4){?>
 					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList">
-						<a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/forum_list.php">신청관리</a>
+						<a href="http://www.kans.re.kr/origin_home/safety/bbs/forum_list.php">신청관리</a>
 					</li>
 					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList">
-						<a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/member_list.php">회원관리</a>
+						<a href="http://www.kans.re.kr/origin_home/safety/bbs/member_list.php">회원관리</a>
 					</li>
 					<?php
                 	}
@@ -82,14 +82,14 @@
                 <?php
                 if(!$is_member){?>
                 <ul style="margin-top:-39px;">
-                    <li><a href="http://www.kans.re.kr/origin_home/forum/admin/admin/login.php">로그인</a></li>
+                    <li><a href="http://www.kans.re.kr/origin_home/safety/admin/login.php">로그인</a></li>
                     <!-- <li>/</li>
                     <li><a href="">회원가입</a></li> -->
                 <?php
                 }else{
                     ?>
                     <ul style="margin-top:-39px;">
-                        <li><a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/logout.php">로그아웃</a></li>
+                        <li><a href="http://www.kans.re.kr/origin_home/safety/bbs/logout.php">로그아웃</a></li>
 						<?
                 }
                 ?>

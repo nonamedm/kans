@@ -10,8 +10,8 @@
 	}
 	.layer_email{width: 700px; height: 500px; } 
 	.layer_box > h3 { margin-bottom:40px; font-size:30px; color:#111; font-weight:700; }
-	.layer_box .btn_close { position:absolute; display:block; width:60px; height:56px; right:-60px; top:0; background:url(http://www.kans.re.kr/origin_home/forum/admin/theme/kans/images/template/btn_close.png) no-repeat center center; overflow:hidden; font-size:0;line-height:0;}
-	.layer_box.layer_sitemap .btn_close {right:0; left: auto; width: 6%;  height: 6%;  margin-right: 10%;  margin-top: 10%; border: 1px solid rgba(255,255,255,0.15); background:url(http://www.kans.re.kr/origin_home/forum/admin/theme/kans/images/template/btn_close.png) no-repeat center center;}	
+	.layer_box .btn_close { position:absolute; display:block; width:60px; height:56px; right:-60px; top:0; background:url(http://www.kans.re.kr/origin_home/safety/theme/kans/images/template/btn_close.png) no-repeat center center; overflow:hidden; font-size:0;line-height:0;}
+	.layer_box.layer_sitemap .btn_close {right:0; left: auto; width: 6%;  height: 6%;  margin-right: 10%;  margin-top: 10%; border: 1px solid rgba(255,255,255,0.15); background:url(http://www.kans.re.kr/origin_home/safety/theme/kans/images/template/btn_close.png) no-repeat center center;}	
 	/*.layer_box.layer_sitemap .btn_close:after{position: absolute; content:''; left: 0; top: 0; width:140px; height:140px;  background:url(<? echo G5_THEME_URL ?>/images/template/btn_close.png) no-repeat center center;  transform:rotate(90deg);  transition:.8s; }*/
 	.layer_box.layer_sitemap .btn_close:hover{transform:rotate(360deg);}
 	.layer_box .div_outline { display:block; /*height:360px; overflow-y:auto;*/ border:1px solid #ddd; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; }
@@ -202,7 +202,7 @@
 		?>
 		<dl class="sitemap sitemap_1st">
 			<dt class="<?=$gn_btn6;?>">
-				<a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/forum_list.php"><span>
+				<a href="http://www.kans.re.kr/origin_home/safety/bbs/forum_list.php"><span>
 					신청관리</span>
 				</a>
 			</dt>
@@ -210,7 +210,7 @@
 		</dl>
 		<dl class="sitemap sitemap_1st">
 			<dt class="<?=$gn_btn7;?>">
-				<a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/member_list.php"><span>
+				<a href="http://www.kans.re.kr/origin_home/safety/bbs/member_list.php"><span>
 					회원관리</span>
 				</a>
 			</dt>
@@ -222,7 +222,7 @@
 		?>		
 		<dl class="sitemap sitemap_1st">
 			<dt class="<?=$gn_btn8;?>">
-				<a href="http://www.kans.re.kr/origin_home/forum/admin/admin/login.php"><span>
+				<a href="http://www.kans.re.kr/origin_home/safety/admin/login.php"><span>
 					로그인</span>
 				</a>
 			</dt>

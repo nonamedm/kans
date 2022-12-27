@@ -20,7 +20,7 @@
 
 	include_once("script.php");
 
-	if(!$is_member){ alert("로그인 후 이용해주세요.", "https://www.kans.re.kr/origin_home/forum/admin/admin/login.php"); }
+	if(!$is_member){ alert("로그인 후 이용해주세요.", "https://www.kans.re.kr/origin_home/safety/admin/login.php"); }
 
     $user_id = $_GET['userId'];
     $user_name = $_GET['userName'];
@@ -34,7 +34,7 @@
 		//출석수행
 		
 	} else {
-		alert("권한이 없습니다.", "https://www.kans.re.kr/origin_home/forum/admin/");
+		alert("권한이 없습니다.", "https://www.kans.re.kr/origin_home/safety/");
 	}
 ?>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/css/select2.min.css" rel="stylesheet" />
@@ -161,7 +161,7 @@
         
         if(proposal == true){
             $.ajax({
-                url: "https://www.kans.re.kr/origin_home/forum/admin/bbs/forum_attendance_change.php",
+                url: "https://www.kans.re.kr/origin_home/safety/bbs/forum_attendance_change.php",
                 type: "POST",
                 //dataType: "json",
                 data: data,

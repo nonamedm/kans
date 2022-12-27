@@ -54,11 +54,11 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_3&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59816',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59816',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_3&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59816',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59816',
     'icon_new' => '',
-    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
+    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
     'icon_secret' => '',
     'link' => 
     array (
@@ -67,8 +67,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59816&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59816&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59816&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59816&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -79,7 +79,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_file.gif" alt="첨부파일">',
   ),
   1 => 
   array (
@@ -145,11 +145,11 @@ word-break:break-hangul;punctuation-wrap:hanging"><span style="letter-spacing: -
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_3&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59815',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59815',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_3&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59815',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59815',
     'icon_new' => '',
-    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
+    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
     'icon_secret' => '',
     'link' => 
     array (
@@ -158,8 +158,8 @@ word-break:break-hangul;punctuation-wrap:hanging"><span style="letter-spacing: -
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59815&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59815&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59815&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59815&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -235,11 +235,11 @@ word-break:break-hangul;punctuation-wrap:hanging"><span style="letter-spacing: -
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_3&amp;sca=',
-    'href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59814',
-    'comment_href' => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59814',
+    'ca_name_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_3&amp;sca=',
+    'href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59814',
+    'comment_href' => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/board.php?bo_table=s2_3&amp;wr_id=59814',
     'icon_new' => '',
-    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
+    'icon_hot' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_hot.gif" alt="인기글">',
     'icon_secret' => '',
     'link' => 
     array (
@@ -248,8 +248,8 @@ word-break:break-hangul;punctuation-wrap:hanging"><span style="letter-spacing: -
     ),
     'link_href' => 
     array (
-      1 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59814&amp;no=1',
-      2 => 'http://www.kans.re.kr/origin_home/forum/admin/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59814&amp;no=2',
+      1 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59814&amp;no=1',
+      2 => 'http://www.kans.re.kr/origin_home/safety/dev/bbs/link.php?bo_table=s2_3&amp;wr_id=59814&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -260,6 +260,6 @@ word-break:break-hangul;punctuation-wrap:hanging"><span style="letter-spacing: -
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/forum/admin/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://www.kans.re.kr/origin_home/safety/dev/theme/kans/mobile/skin/latest/main_basic/img/icon_file.gif" alt="첨부파일">',
   ),
 )?>

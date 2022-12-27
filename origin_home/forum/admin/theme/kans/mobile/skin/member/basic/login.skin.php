@@ -5,7 +5,7 @@
 	add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 0);
 
 	if(!strstr($_SERVER['REMOTE_ADDR'], "211.170.81")){
-		goto_url("http://www.kans.re.kr/origin_home/forum/admin/");
+		goto_url("http://www.kans.re.kr/origin_home/safety/");
 	}
 ?>
 

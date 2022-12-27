@@ -67,7 +67,7 @@
 					<?php
                 	if($member['mb_level']>4){?>
 					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList">
-						<a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/forum_list.php">포럼관리</a>
+						<a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/forum_list.php">신청관리</a>
 					</li>
 					<li style="position: relative; float: left; width: 100px; text-align: center;" class=" headerList">
 						<a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/member_list.php">회원관리</a>

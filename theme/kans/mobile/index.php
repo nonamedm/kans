@@ -172,10 +172,10 @@
 		</ul>
 		<ol>
 			<li><a href="<?=$s1_4_1_1_url;?>"><h4><?=$s1_2_1_1_name;?></h4></a></li>
-		<!-- 	<li><a href="http://kans3.cafe24.com/admin/auth/login" target="blank"><h4><?=$s1_2_1_3_name;?></h4></a></li> -->
-			<li><a href=" http://kans3.cafe24.com/auth/login " target="blank"><h4><?=$s1_2_1_3_name;?></h4></a></li>
+			<!--<li><a href=" https://kans3.cafe24.com/auth/login " target="blank"><h4><?=$s1_2_1_3_name;?></h4></a></li>-->
+			<li><a href=" https://kans3.cafe24.com/auth/login " target="blank"><h4>2002~2022<br/>수료증</h4></a></li>
 			<li><a href="<?=$s1_4_2_1_url;?>"><h4><?=$s1_2_1_6_name;?><!-- 전자계산서<br>발급 --></h4></a></li>
-		</ol>
+        </ol>
 	</article>
 </section>
 
@@ -266,7 +266,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="http://kans.re.kr/origin_home/safety/index.html ">
+						<a href="http://kans.re.kr/origin_home/safety/ ">
 							<figure><img src="<? echo G5_THEME_URL ?>/images/main/bg_type_n33.png" /></figure>
 							<figcaption>안전관리자 포럼</figcaption>
 						</a>
@@ -374,9 +374,8 @@
 		});
 	});
 
-	
-</script>
 
+</script>
 
 <!-- 컨텐츠 : 종료 -->
 <?php include_once(G5_THEME_MOBILE_PATH.'/tail.php'); ?>

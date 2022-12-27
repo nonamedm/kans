@@ -159,7 +159,7 @@
 .mcnt2_new_i > .rbx .gr_b ul > li:hover:last-child{border: 2px solid #00704d;}
 .mcnt2_new_i > .rbx .gr_b ul > li figure{padding: 0px 0 0px;}
 .mcnt2_new_i > .rbx .gr_b ul > li:last-child figure{padding-top: 1px; padding-bottom: 2px;}
-.mcnt2_new_i > .rbx .gr_b ul > li figcaption{color: #fff; font-size: 13px; line-height: 1; font-weight: 500; margin-top: 2px;}
+.mcnt2_new_i > .rbx .gr_b ul > li figcaption{color: #fff; font-size: 13px; line-height: 1; font-weight: 500; margin-top: -13px;}
 .mcnt2_new_i > .rbx .gr_b ul > li:first-child figure{padding-top: 8px;}
 .mcnt2_new_i > .rbx .gr_b ul > li:nth-child(2) figure{padding-top: 5px;}
 .mcnt2_new_i > .rbx .gr_b ul > li > a{height: 87px; box-sizing: border-box; padding-top: 2px;}

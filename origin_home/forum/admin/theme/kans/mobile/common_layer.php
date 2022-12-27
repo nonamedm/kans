@@ -203,7 +203,7 @@
 		<dl class="sitemap sitemap_1st">
 			<dt class="<?=$gn_btn6;?>">
 				<a href="http://www.kans.re.kr/origin_home/forum/admin/bbs/forum_list.php"><span>
-					포럼관리</span>
+					신청관리</span>
 				</a>
 			</dt>
 			<dd class="s_depth_menu siteul_6" id=""></dd>

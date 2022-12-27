@@ -19,8 +19,8 @@
 	<div class="cnt_box">
 		<article class="arti1">
 			<ul class="s3_col3">
-				<li><a href="http://kans.re.kr/origin_home/safety/index.html" target="blank"><p>안전관리자 포럼<span></span></p></a></li>
-				<li><a href="http://kans.re.kr/origin_home/safety/index.html" target="blank"><p>방사선안전이해<span></span></p></a></li>
+				<li><a href="http://kans.re.kr/origin_home/safety/" target="blank"><p>안전관리자 포럼<span></span></p></a></li>
+				<li><a href="http://kans.re.kr/origin_home/safety/" target="blank"><p>방사선안전이해<span></span></p></a></li>
 				<li><a href="http://kans.re.kr/origin_home/kans_edu/html/kr/kans_edu_guide.html" target="blank"><p>방사선과 안전규제와의 만남<span></span></p></a></li>
 
 				<!-- <li><a href="http://kans.re.kr/safety/index.html" target="blank"><p>방사선안전이해<span></span></p></a></li>

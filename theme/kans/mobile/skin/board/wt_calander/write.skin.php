@@ -8,10 +8,17 @@
 <link href='<?php echo $board_skin_url ?>/datepicker/jquery.datetimepicker.css' rel='stylesheet' />
 <script src='<?php echo $board_skin_url ?>/datepicker/jquery.ui.datepicker-ko.js'></script>
 
+<?php if ($bo_table=='forum_info') { ?>
 <div class="head_color" style="background: #9AD6FF;">
     <h1 class="head_text"><?php echo $board['bo_subject'] ?></h1>
 	<img class="head_img" src="<?php echo G5_URL;?>/img/포럼안내.png" title="search">
 </div>
+<?php } else { ?>
+<div class="head_color" style="background: #9AD6FF;">
+    <h1 class="head_text"><?php echo $board['bo_subject'] ?></h1>
+	<img class="head_img" src="<?php echo G5_URL;?>/img/포럼기록.png" title="search">
+</div>
+<? } ?>
 
 <section id="bo_w" class="respon_w ct1" style="max-width: 1200px; margin: auto; margin-bottom: 20px;">
 	<h2 id="container_title"><?php echo $g5['title'] ?></h2>

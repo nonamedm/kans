@@ -11,10 +11,17 @@
 
 <script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
 
+<?php if ($bo_table=='forum_info') { ?>
 <div class="head_color" style="background: #9AD6FF;">
     <h1 class="head_text"><?php echo $board['bo_subject'] ?></h1>
 	<img class="head_img" src="<?php echo G5_URL;?>/img/포럼안내.png" title="search">
 </div>
+<?php } else { ?>
+<div class="head_color" style="background: #9AD6FF;">
+    <h1 class="head_text"><?php echo $board['bo_subject'] ?></h1>
+	<img class="head_img" src="<?php echo G5_URL;?>/img/포럼기록.png" title="search">
+</div>
+<? } ?>
 
 <div id="bo_v_table" style="max-width: 1320px; margin: auto;">
 	<?php echo ($board['bo_mobile_subject'] ? $board['bo_mobile_subject'] : $board['bo_subject']); ?>

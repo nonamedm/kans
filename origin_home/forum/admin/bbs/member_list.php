@@ -101,17 +101,17 @@ select {
                 <option value="정회원" >정회원</option>
                 <option value="일반회원" >일반회원</option>
                 </select>';
-			}else if ($row['mb_level']==2){
-				echo '<select id="member_gd_ch" onchange="changeMemberGrade(this)">
-                <option value="관리자" >관리자</option>
-                <option value="정회원" selected>정회원</option>
-                <option value="일반회원" >일반회원</option>
-                </select>';
-			} else {
+			}else if ($row['mb_level']<=2){
 				echo '<select id="member_gd_ch" onchange="changeMemberGrade(this)">
                 <option value="관리자" >관리자</option>
                 <option value="정회원" >정회원</option>
                 <option value="일반회원" selected>일반회원</option>
+                </select>';
+			} else {
+				echo '<select id="member_gd_ch" onchange="changeMemberGrade(this)">
+                <option value="관리자" >관리자</option>
+                <option value="정회원" selected>정회원</option>
+                <option value="일반회원" >일반회원</option>
                 </select>';
 			}; 
 			?></td>

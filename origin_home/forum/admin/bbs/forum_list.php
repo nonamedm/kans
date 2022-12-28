@@ -64,7 +64,7 @@ select {
 <div id="member_list" class="respon_l" style="max-width: 1200px; margin: auto;">
     
     <div class="member_total" style="display: flex; flex-direction: row; justify-content: flex-start;">
-        <div style="width: 110px; padding-left: 70px;">포럼명 </div>
+        <div style="width: 180px; padding-left: 70px;">포럼명 </div>
         <div style="width: 500px;">
             <!-- <div id="forum_subject" class="ui fluid search selection dropdown">
                 <input type="hidden" name="country">
@@ -105,9 +105,9 @@ select {
             <th>소속</th>
             <th>이름</th>
             <th>등급</th>
-            <th>핸드폰 번호</th>
+            <th>핸드폰<br>번호</th>
             <th>이메일</th>
-            <th>출석 여부</th>
+            <th>출석<br>여부</th>
             <th style="display:none;">포럼id</th>
         </tr>
         </thead>

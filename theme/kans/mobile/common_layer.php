@@ -163,7 +163,7 @@
 </div>
 
 <div class="layer_box layer_sitemap">
-	<h3 class="pop_name">사이트맵</h3>
+	<!-- <h3 class="pop_name">사이트맵</h3> -->
 	<div class="div_outline_padding">
 		<dl class="sitemap sitemap_1st">
 			<dt class="<?=$gn_btn1;?>"><span><?=$s1_name?></span></dt>

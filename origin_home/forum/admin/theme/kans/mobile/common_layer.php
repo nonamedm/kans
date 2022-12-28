@@ -233,7 +233,7 @@
 		?>
 		<dl class="sitemap sitemap_1st">
 			<dt class="<?=$gn_btn9;?>">
-				<a href="<?php echo G5_URL?>/bbs/logout.php"><span>
+				<a href="http://www.kans.re.kr/origin_home/safety/bbs/logout.php"><span>
 					로그아웃</span>
 				</a>
 			</dt>

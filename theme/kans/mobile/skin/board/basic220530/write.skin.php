@@ -425,6 +425,16 @@
 
 		document.getElementById("btn_submit").disabled = "disabled";
 
+		$.ajax({
+            type: "POST",
+            url: "https://www.kans.re.kr/bbs/send_push.php",
+            data: { type: "news" },
+            dataType: "json",
+            success: function(data) {
+                console.log("PUSH 전송완료");
+            }
+        });
+
 		return true;
 	}
 </script>

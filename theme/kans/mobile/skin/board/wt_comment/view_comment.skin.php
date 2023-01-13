@@ -292,6 +292,27 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
 
     }
 
+    function report(){
+        if(!confirm("해당 글을 신고하시겠습니까?")){
+            alert("취소하셨습니다.")
+        } else {
+            $("#reportPopup").css("display","block");
+            //alert("신고되었습니다.")
+        }
+    }
+    function submitReport(){
+        if(!confirm("제출하시겠습니까?")){
+            alert("취소하셨습니다.");
+            $("#reportPopup").css("display","none");
+        } else {
+            alert("신고되었습니다.") 
+            $("#reportPopup").css("display","none");
+        }
+    }
+    function cancelReport(){
+        $("#reportPopup").css("display","none");
+    }
+
     comment_box('', 'c'); // 댓글 입력폼이 보이도록 처리하기위해서 추가 (root님)
 
     <?php if($board['bo_use_sns'] && ($config['cf_facebook_appid'] || $config['cf_twitter_key'])) { ?>

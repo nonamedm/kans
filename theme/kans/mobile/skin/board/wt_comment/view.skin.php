@@ -19,16 +19,23 @@
 <div id="bo_v_table" style="max-width: 1320px; margin: auto;">
 	<?php echo ($board['bo_mobile_subject'] ? $board['bo_mobile_subject'] : $board['bo_subject']); ?>
 </div>
-
 <article id="bo_v" style="width:<?php echo $width; ?>" class="respon_v ct1">
-	<header>
-		<h1 id="bo_v_title">
+	<header style="display:flex;">
+		<h1 id="bo_v_title" style="width:100%;">
 			<?php
 			if ($category_name) echo ($category_name ? $view['ca_name'].' | ' : ''); // 분류 출력 끝
 			echo cut_str(get_text($view['wr_subject']), 70); // 글제목 출력
 			?>
+			<img id="report" alt="report" src="<?php echo G5_URL;?>/img/siren.png" style="width:20px; float:right;cursor:pointer;" onclick="report();">
 		</h1>
 	</header>
+	<div id="reportPopup" style="width:300px; height:200px; margin:0 auto; display:none;">
+	<br>
+		<textarea placeholder="신고사유를 적어주세요" style="width:275px; height:100px;"></textarea>
+		<br>
+		<button class="wt_btn" onclick="submitReport()">제출</button>
+		<button class="wt_btn" onclick="cancelReport()">취소</button>
+	</div>
 
 	<section id="bo_v_info">
 		<h2>페이지 정보</h2>

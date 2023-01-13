@@ -424,7 +424,7 @@
 		<?php }?>
 
 		document.getElementById("btn_submit").disabled = "disabled";
-
+		<?php if($bo_table=='forum'){?>
 		$.ajax({
             type: "POST",
             url: "https://www.kans.re.kr/bbs/send_push.php",
@@ -434,6 +434,7 @@
                 console.log("PUSH 전송완료");
             }
         });
+		<?php }?>
 
 		return true;
 	}

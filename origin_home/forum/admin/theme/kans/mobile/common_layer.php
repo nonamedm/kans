@@ -117,7 +117,7 @@
 		.layer_box .sitemap dd{overflow: hidden; }
 		.layer_box .sitemap dd > ul{overflow: hidden; overflow-y: scroll !important;}
 		.layer_box .sitemap dd > ul > li > a{line-height: 2;}
-		.layer_box .sitemap{overflow: hidden; overflow-y: scroll !important;}
+		.layer_box .sitemap{overflow: hidden;}
 		.layer_box .sitemap dd{height: 25vw; }
 		.layer_box .sitemap:nth-child(3) dd,
 		.layer_box .sitemap:nth-child(4) dd{height: 25vw;}

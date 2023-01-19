@@ -14,21 +14,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- 컨텐츠 : 시작 -->
-    <!-- <section id="wrap" class="main_forum2_wrap" style="margin-top: 125px;">
-        <div class="main_forum2">
-            <div class="img"><img src="http://www.kans.re.kr/img/main_img.png"/></div>
-            <div class="mv_slog" style="padding: 40px;">
-                <p class="t2 main_forum_titile">
-                    이곳은 <strong>"언제나, 어디서나, 간편하게"<br>
-                    방사선 안전에 관하여 알아볼 수 있는 정보의 장</strong>입니다.<br>
-                    자주 방문하셔서 방사선안전에 관한 궁금증을 해소하시고<br>
-                    방사선안전문화 확신에 동점해주세요.<br>
-                    <br>
-                    <strong>원자력안전아카데미</strong>
-                </p>
-            </div>
-        </div>
-    </section> -->
     <section id="wrap" class="main_forum2_wrap" style="margin-top: 95px;">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -146,7 +131,16 @@
 			nav : false,
 			mouseDrag:false
 		});	
+        
+        setTimeout(function(){
+            webkit.messageHandlers.cordova_iab.postMessage(JSON.stringify({"action": "getpushid","callback": "get_pushid"}));
+		},500);
 	});
+    
+    function get_pushid(pushid) {
+        //푸시아이디 확인(푸시아이디 저장처리등의 로직이 들어가면 됨)
+        console.log(pushid);  //푸시아이디 확인(테스트용)
+    }
 
 </script>
 

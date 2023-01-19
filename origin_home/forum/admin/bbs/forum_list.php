@@ -64,16 +64,8 @@ select {
 <div id="member_list" class="respon_l" style="max-width: 1200px; margin: auto;">
     
     <div class="member_total" style="display: flex; flex-direction: row; justify-content: flex-start;">
-        <div style="width: 180px; padding-left: 70px;">포럼명 </div>
-        <div style="width: 500px;">
-            <!-- <div id="forum_subject" class="ui fluid search selection dropdown">
-                <input type="hidden" name="country">
-                <i class="dropdown icon"></i>
-                <div class="default text">Select Country</div>
-                <div class="menu">
-                    <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
-                </div>
-            </div> -->
+        <div style="width: 100px; padding-left: 10px;">포럼명 </div>
+        <div style="width: 300px;">
             <select id="forum_subject" onchange="changeForumSubject(this)">
             <?php
             $sql = "select * from g5_write_forum_info order by wr_id desc";
@@ -95,6 +87,7 @@ select {
             <?php } ?>
             </select>
         </div>
+        <div id="qrCameraCall" onclick="qr_camera_call()"><img src="http://www.kans.re.kr/img/qrload.png" alt="QR코드호출" style="cursor:pointer; width:30px;"></div>
     </div>
     <div class="tbl_head01 tbl_wrap">
         <table>
@@ -149,6 +142,20 @@ select {
 </div>
 
 <script>
+    $(function() {
+        if(navigator.userAgent.toLowerCase().indexOf('mobileapp') != -1){
+            //앱
+        }else {
+            //웹
+            $("#qrCameraCall").css("display","none");
+        }
+    });
+    function qr_camera_call() {
+        var param = {
+            action:"qrcamera"
+        };
+        webkit.messageHandlers.cordova_iab.postMessage(JSON.stringify(param));
+    }
 	function changeForumAttendant(e) {
         var attend_yn = e.value;
         var gd_id = e.parentNode.parentNode.children[0].innerText;

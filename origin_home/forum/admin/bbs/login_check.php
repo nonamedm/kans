@@ -5,11 +5,17 @@ $g5['title'] = "로그인 검사";
 
 $mb_id       = trim($_POST['mb_id']);
 $mb_password = trim($_POST['mb_password']);
+$mb_10 = trim($_POST['mb_10']);
 
 if (!$mb_id || !$mb_password)
-    alert('회원아이디나 비밀번호가 공백이면 안됩니다.');
+alert('회원아이디나 비밀번호가 공백이면 안됩니다.gg');
 
 $mb = get_member($mb_id);
+
+
+//로그인 시 pushid 저장
+$sql= " update {$g5['member_table']} set mb_10 = '$mb_10' where mb_id = '{$mb['mb_id']}' ";
+sql_query($sql);
 
 // 가입된 회원이 아니다. 비밀번호가 틀리다. 라는 메세지를 따로 보여주지 않는 이유는
 // 회원아이디를 입력해 보고 맞으면 또 비밀번호를 입력해보는 경우를 방지하기 위해서입니다.

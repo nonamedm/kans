@@ -138,8 +138,16 @@
 	});
     
     function get_pushid(pushid) {
-        //푸시아이디 확인(푸시아이디 저장처리등의 로직이 들어가면 됨)
-        console.log(pushid);  //푸시아이디 확인(테스트용)
+        $.ajax({
+            type: "GET",
+			url: "http://www.kans.re.kr/origin_home/safety/bbs/save_token.php?token="+pushid,
+			success: function(txt){
+                console.log("PushID 전송완료",pushid);  //푸시아이디 확인(테스트용)
+			},
+			error: function(xhr, status, error) {
+				alert(error);
+			}  
+		});
     }
 
 </script>

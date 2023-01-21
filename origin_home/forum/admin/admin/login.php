@@ -30,11 +30,12 @@ $login_action_url = G5_HTTPS_BBS_URL."/login_check.php";
 			<input type="hidden" name="url" value="<?php echo $login_url ?>" />
 			<div class="login_cnt">
 				<strong>RASA 로그인</strong>
-				<a href="http://inpiad.com" target="_blank" class="link">계정정보를 잊으셨다면 인피아드 고객센터로 연락 바랍니다.</a>
+				<!-- <a href="http://inpiad.com" target="_blank" class="link">계정정보를 잊으셨다면 인피아드 고객센터로 연락 바랍니다.</a> -->
 				<ul class="login_obj">
 					<li>
 						<span class="head">아이디</span>
 						<input type="text" id="mb_id" name="mb_id" value="" placeholder="User ID" />
+						<input type="hidden" id="mb_10" name="mb_10" value="" placeholder="Push ID" />
 					</li>
 					<li>
 						<span class="head">패스워드</span>
@@ -49,9 +50,13 @@ $login_action_url = G5_HTTPS_BBS_URL."/login_check.php";
 </div>
 
 
-<script type="text/javascript" ><!--
+<script type="text/javascript" >
 
 	$(function(){
+		setTimeout(function(){
+			webkit.messageHandlers.cordova_iab.postMessage(JSON.stringify({"action": "getpushid","callback": "get_pushid"}));
+		},500);
+
 		$("#login_auto_login").click(function(){
 			if (this.checked) {
 				this.checked = confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?");
@@ -65,7 +70,12 @@ $login_action_url = G5_HTTPS_BBS_URL."/login_check.php";
 	{
 		return true;
 	}
-//--></script>
+
+	function get_pushid(pushid) {
+		console.log(pushid);  //푸시아이디 확인(테스트용)
+		$("#mb_10").val(pushid);
+	}
+</script>
 
 <?php
 

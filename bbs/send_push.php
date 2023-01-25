@@ -5,63 +5,71 @@
     header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
     include_once('./_common.php');
 
-    $title = '';
-    $body = '';
-    if ($pushType == 'forum') {
+    $title = '포럼 D-day 알림';
+    $body = '신청하신 포럼 일정을 확인하세요!';
+    /*if ($pushType == 'forum') {
         $title = '신규 포럼일정 등록';
         $body = '사이트를 확인하세요!';
     } else if ($pushType == 'news') {
         $title = '신규 포럼정보 등록';
         $body = '사이트를 확인하세요!';
-    }
+    }*/
     $toDay = date('Y-m-d'); //오늘
-    $sql = "SELECT mb_id FROM g5_write_forum_req WHERE wr_id = (SELECT wr_id FROM g5_write_forum_info WHERE wr_1 = '$toDay' LIMIT 1)";
+    $sql = 'SELECT mb.mb_10 FROM g5_member mb, g5_write_forum_req fr WHERE mb.mb_id = fr.mb_id AND fr.wr_id = (SELECT wr_id FROM g5_write_forum_info WHERE wr_1 = "'.$toDay.'" LIMIT 1)';
+    echo '<script>';
+    echo 'console.log('."$sql".')';
+    echo '</script>';
     $count = sql_query($sql);
-    
 
+
+
+    $headings = array("en" => $title);
+    $content = array("en" => $body);
+    $data = array("custom_url" => '');
+    $ios_attachments = array("id1" => '');
+    $include_player_ids = array();
     for($i=0; $countValue = sql_fetch_array($count); $i++){
-        echo $countValue['token'];
-        //하나씩 curl 날리기
-        $fields = array(
-            'to' => $countValue['token'],
-            'title' => $title,
-            'body' => $body
-        );
-        $postdata = http_build_query($fields);
-        $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL, 'https://api.expo.dev/v2/push/send');
-        curl_setopt($ch,CURLOPT_POST, true);
-        curl_setopt($ch,CURLOPT_POSTFIELDS, $postdata);
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
-        echo $result;
+        if($countValue['mb_10']!=''){
+            array_push($include_player_ids, $countValue['mb_10']);
+        }
+
     }
-    
-    
-    // async function sendPush(tokenValue) {
+    echo "<pre>\n";
+    print_r($include_player_ids);
+    echo "</pre>\n";
+    $fields = array(
+        'app_id' => 'b215f7a3-e6fc-43a0-9b60-0bab7c7bad07',
+        'included_segments' => '', //전체사용자 -> 비어있음
+        'include_player_ids' => $include_player_ids,
+        'headings' => $headings, //푸시 타이틀
+        'contents' => $content, //푸시 내용
+        'data' => $data,
+        'small_icon' => 'icon_48', //상태바 표시 icon
+        'big_picture' => '', //안드로이드 푸시 이미지
+        'ios_attachments'=> $ios_attachments, //iOS 푸시 이미지
+        'ios_badgeType' => 'Increase', //ios badge counter
+        'ios_badgeCount' => 1, //ios badge counter by 1
+    );
+    $fields = json_encode($fields);
 
-        
-    //     await fetch('https://api.expo.dev/v2/push/send', {
-    //         method: 'POST',
-    //         cache: 'no-cache',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({
-    //             to: tokenValue,
-    //             title: '무야호',
-    //             body: '그만큼 신나시는거지'
-    //         })
-    //     }).then((response) => response.json()).then((data) => {
-    //         console.log(data);
-    //     });
 
-    // }
+    //$postdata = http_build_query($fields);
+    $ch = curl_init();
+    curl_setopt($ch,CURLOPT_URL, 'https://onesignal.com/api/v1/notifications');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=utf-8','Authorization: Basic NTFlYTliZmMtYzA4YS00MGUxLWEyZGMtOWZjMWNlMjYzMzU0'));
 
-    echo 'success';
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch, CURLOPT_HEADER, FALSE);
+    curl_setopt($ch, CURLOPT_POST, TRUE);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);    
+
+    $result = curl_exec($ch);
+    curl_close($ch);
+    echo $result;
+    
+
+    echo '<br>success';
     
     
-    
-    
-    // echo $token;
 ?>

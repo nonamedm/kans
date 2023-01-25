@@ -5,7 +5,6 @@
     header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
     include_once('./_common.php');
 
-    $pushType = $_POST['type'];
     $title = '';
     $body = '';
     if ($pushType == 'forum') {
@@ -15,8 +14,8 @@
         $title = '신규 포럼정보 등록';
         $body = '사이트를 확인하세요!';
     }
-
-    $sql = "SELECT * FROM savetoken";
+    $toDay = date('Y-m-d'); //오늘
+    $sql = "SELECT mb_id FROM g5_write_forum_req WHERE wr_id = (SELECT wr_id FROM g5_write_forum_info WHERE wr_1 = '$toDay' LIMIT 1)";
     $count = sql_query($sql);
     
 

@@ -85,11 +85,12 @@
 
 </style>
 
-<div id="wrap">
+<div id="wrap" style="background: linear-gradient(100deg, #014594, #9AD6FF);">
 	<form>
 		<div class="login_box">
 			<input type="hidden" name="url" value="<?php echo $login_url ?>" />
 			<div class="login_cnt">
+				<a href="javascript:history.back();" style="text-align: center;font-size: 13px;color: #8c8f95;position: absolute;"><img src="/img/back.png" style="width: 20px;">이전</a>
 				<strong>포럼 참석 확인</strong>
 				<a class="link">참석 확인할 포럼을 선택하세요.</a>
 				<ul class="login_obj">

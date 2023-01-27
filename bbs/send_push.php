@@ -56,7 +56,7 @@
         //$postdata = http_build_query($fields);
         $ch = curl_init();
         curl_setopt($ch,CURLOPT_URL, 'https://onesignal.com/api/v1/notifications');
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=utf-8','Authorization: Basic NTFlYTliZmMtYzA4YS00MGUxLWEyZGMtOWZjMWNlMjYzMzU0'));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=utf-8','Authorization: Basic NjYzM2ExN2EtN2RkMy00MjBlLWFmM2EtY2RiMDI5YzQ4Yjkz'));
     
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_HEADER, FALSE);

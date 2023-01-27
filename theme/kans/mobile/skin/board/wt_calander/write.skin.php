@@ -490,7 +490,7 @@
 	function push_send(data_param, push_target_all, player_id_array, img_url) {
 		//실제 푸시발송 id
 		var app_id = "b215f7a3-e6fc-43a0-9b60-0bab7c7bad07";
-		var restapi_key = "NTFlYTliZmMtYzA4YS00MGUxLWEyZGMtOWZjMWNlMjYzMzU0"; //고정값
+		var restapi_key = "NjYzM2ExN2EtN2RkMy00MjBlLWFmM2EtY2RiMDI5YzQ4Yjkz"; //고정값
 		var push_title = '신규 포럼정보 등록';
 		var push_content = '사이트를 확인하세요!';
 		var big_picture = "";

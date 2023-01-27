@@ -73,7 +73,7 @@
 /*** top이동버튼 ***/
 .top_bt{position: fixed; box-sizing: border-box;bottom: 80px; right:91px;width:60px;height: 60px;font-size:15px;line-height: 58px;color: #fff;font-weight: 600;text-align: center;text-transform: uppercase;background: #fff; border: 1px solid #ddd; cursor: pointer; opacity: 0; transition:.3s; z-index: 1000;}
 .top_bt.sc{opacity: 1;}
-.top_bt img{margin-top: 22px;}
+.top_bt img{margin-top: 0px;}
 
 
 /* .top_bt:hover{background: #db2a2e;} */

@@ -74,7 +74,7 @@
 </div>
 <? } ?>
 <!-- 게시판 목록 시작 -->
-<div id="bo_list<?php if ($is_admin) echo "_admin"; ?>" class="respon_l" style="max-width: 1200px; margin: auto;">
+<div id="bo_list_admin" class="respon_l" style="max-width: 1200px; margin: auto;">
 	<?php if ($is_category) { ?>
 		<nav id="bo_cate">
 			<h2><?php echo ($board['bo_mobile_subject'] ? $board['bo_mobile_subject'] : $board['bo_subject']) ?> 카테고리</h2>

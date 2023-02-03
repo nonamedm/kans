@@ -40,11 +40,22 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
         </header>-->
 
         <!-- 댓글 출력 -->
-        <div style="display:flex;">
+        <div id="replyPrint" style="display:flex;">
             <div class="comment_inline" style="width: 15%; color: grey; text-align: left; padding: 5px;"><?php echo $list[$i]['name'] ?></div>
             <!--<div><?php if (strstr($list[$i]['wr_option'], "secret")) ?></div>-->
             <div class="comment_inline" style="width: 65%; color: grey; text-align: left; padding: 5px;"><span><?php echo $str ?></span></div>
-            <div class="comment_inline" style="width: 17%; color: grey; text-align: center; padding: 5px;"><span><?php echo $list[$i]['datetime'] ?></span></div>
+            <div class="comment_inline" style="width: 17%; color: grey; text-align: center; padding: 5px;"><span>
+                <?php 
+                    $toDay = substr(date('Y-m-d'),2,8); //오늘
+                    $dateString = substr($list[$i]['datetime'],0,8);
+                    if($toDay==$dateString) {
+                        echo substr($list[$i]['datetime'],9,14);
+                    } else {
+                        echo substr($list[$i]['datetime'],0,8);
+                    }
+                    // echo $toDay;
+                ?></span>
+            </div>
             <div class="comment_inline" style="width: 3%; color: grey; text-align: center; padding: 5px; cursor:pointer;" onclick="comment_delete('<?php echo $list[$i]['mb_id'] ?>','<?php echo $comment_id ?>');"><span>X</span></div>
         </div>
 
@@ -269,7 +280,7 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
         var dataText = {"wrId" : idx}
         if(confirmText) {
             //debugger;
-            if((<?php echo $member['mb_level'] ?> >= 5) || ("<?php echo $member['$mbId'] ?>"==id)) {
+            if((<?php echo $member['mb_level'] ?> >= 5) || ("<?php echo $member['mb_id'] ?>"==id)) {
                 $.ajax({
                     url: './delete_comment_by.php',
                     type: "POST",

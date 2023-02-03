@@ -87,6 +87,9 @@
 		.site_map {display:block; margin-top:-39px;}
 		.hd_right ul {display:none;}
 	}
+	@media(max-width:500px){
+		#replyPrint {font-size:5px;}
+	}
 
 	@media(max-width:800px){
 		.layer_box.layer_sitemap .div_outline_padding{box-sizing: border-box; padding: 0 20px;}

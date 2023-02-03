@@ -451,90 +451,47 @@
 
 
 	function push_send_check() {
-		var push_title = '신규 포럼일정 등록';
-		var push_content = '일정 게시판을 확인하세요!';
 		var push_target = '1';	// 전체=1, 특정=2
 		var push_url = '';		// 이동url
 		var push_id = '';		// 특정일때 id
 		var img_url = '';		// img url
 
 
-		if (push_title.length == 0 || push_content.length == 0) {
-			alert('푸시제목과 내용을 모두 입력해주세요.');
+		if (push_url.length == 0) {
+			var data_param = {};
 		} else {
-			if (push_url.length == 0) {
-				var data_param = {};
-			} else {
-				var data_param = {
-					'custom_url': push_url
-				};
-			}
+			var data_param = {
+				'custom_url': push_url
+			};
+		}
 
-			if (push_target.toString() == '2') {
-				if (push_id.length == 0) {
-					alert('대상자 push id를 입력해주세요.');
-				} else {
-					//특정푸시아이디로 발신이라면
-					var player_id_array = new Array();
-					player_id_array.push(push_id); //배열변수에 추가.
-					var push_target_all = '';
-					push_send(data_param, push_target_all, player_id_array, img_url);
-				}
+		if (push_target.toString() == '2') {
+			if (push_id.length == 0) {
+				alert('대상자 push id를 입력해주세요.');
 			} else {
+				//특정푸시아이디로 발신이라면
 				var player_id_array = new Array();
-				var push_target_all = 'All';
+				player_id_array.push(push_id); //배열변수에 추가.
+				var push_target_all = '';
 				push_send(data_param, push_target_all, player_id_array, img_url);
 			}
+		} else {
+			var player_id_array = new Array();
+			var push_target_all = 'All';
+			push_send(data_param, push_target_all, player_id_array, img_url);
 		}
 	}
 	function push_send(data_param, push_target_all, player_id_array, img_url) {
 		//실제 푸시발송 id
-		var app_id = "b215f7a3-e6fc-43a0-9b60-0bab7c7bad07";
-		var restapi_key = "NjYzM2ExN2EtN2RkMy00MjBlLWFmM2EtY2RiMDI5YzQ4Yjkz"; //고정값
-		var push_title = '신규 포럼정보 등록';
-		var push_content = '사이트를 확인하세요!';
-		var big_picture = "";
-		if (img_url.length > 5) {
-			big_picture = img_url;
-		}
 		$.ajax({
-			url: 'https://onesignal.com/api/v1/notifications',
-			type: 'POST',
-			dataType: "json",
-			//contentType: "application/json; charset=utf-8",
-			data: {
-				"app_id": app_id,
-				"included_segments": push_target_all, //전체사용자에게 푸시발송, *iclude_segments or include_player_ids 둘중 하나만 사용가능.
-				"include_player_ids": player_id_array,
-				"headings": {
-					"en": push_title
-				}, //푸시 타이틀
-				"contents": {
-					"en": push_content
-				}, //푸시 내용
-				"data": data_param,
-				// "large_icon": "icon_96", //표시 icon
-				"small_icon": "icon_48", //상태바 표시 icon
-				"big_picture": big_picture, //안드로이드 푸시 이미지
-				"ios_attachments": {
-					"id1": big_picture
-				}, //iOS 푸시 이미지
-				"ios_badgeType": "Increase", //ios badge counter
-				"ios_badgeCount": 1, //ios badge counter by 1
-			},
-			beforeSend: function(xhr) {
-				//xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
-				xhr.setRequestHeader("Authorization", "Basic " + restapi_key);
-			},
-			success: function(response) {
-				// alert('푸시가 발송되었습니다.');
-				console.log(JSON.stringify(response));
-			},
-			error: function(xhr) {
-				alert('오류가 발생했습니다.\n\nerror : ' + JSON.stringify(xhr));
-				//console.log("ERROR : " + JSON.stringify(xhr));
-			}
-		});
+            type: "POST",
+            url: "https://www.kans.re.kr/bbs/send_push.php",
+            data: { type: "forum" },
+            dataType: "json",
+            success: function(data) {
+                console.log("PUSH 전송완료");
+            }
+        });
 	}
 </script>
 

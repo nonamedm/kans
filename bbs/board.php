@@ -150,12 +150,14 @@ if (isset($wr_id) && $wr_id) {
 } else {
     if ($member['mb_level'] < $board['bo_list_level']) {
         if ($member['mb_id'])
-            alert('목록을 볼 권한이 없습니다.', G5_URL);
-            //            alert('목록을 볼 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오!!.',G5_ADMIN_URL.'in/login.php?url=');
+            if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "forum_info2" ||$bo_table == "newsletter" || $bo_table == "community"){
+                alert('목록을 볼 권한이 없습니다.', 'http://www.kans.re.kr/origin_home/safety/admin/login.php?'.$qstr.'&url='.urlencode(G5_BBS_URL.'/board.php?bo_table='.$bo_table.($qstr?'&amp;':'')));
+            } else {
+                alert('목록을 볼 권한이 없습니다.', G5_URL);
+            }
         else
             if($bo_table == "forum" || $bo_table == "forum_info" || $bo_table == "forum_info2" ||$bo_table == "newsletter" || $bo_table == "community"){
                 alert('목록을 볼 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.', 'http://www.kans.re.kr/origin_home/safety/admin/login.php?'.$qstr.'&url='.urlencode(G5_BBS_URL.'/board.php?bo_table='.$bo_table.($qstr?'&amp;':'')));
-                // alert('목록을 볼 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.ㅁㄴㅇㄹㄴㅇㅁㄹ');
             }else{
                 alert('목록을 볼 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.');
             }

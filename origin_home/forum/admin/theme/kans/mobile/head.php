@@ -112,38 +112,24 @@
 
 <script>
 $(document).ready(function(){
-	// $('.headerList').on('click', function() {
-	// 	if(!$(this).hasClass('active')){
-	// 		$('.headerList').removeClass('active');
-	// 		$(this).addClass('active');
-	// 	}
-	// });
 	
-	// //var _where = window.location.search;
-	// var where1 = window.location.pathname;
-	// var where2 = window.location.search;
-	// var where3 = '';
-	// if (where1 == '/bbs/board.php') {
-	// 	where3 = where2.substr(10);
-	// 	document.querySelector('[data-active = "'+where3+'"]').classList.add('active');
-	// } else if(where1.indexOf('.php')!=-1) {
-	// 	var splitStr = where1.split('/');
-	// 	where3 = splitStr[5].replace('.php','');
-	// 	document.querySelector('[data-active = "'+where3+'"]').classList.add('active');
-	// }
-})
+});
+function fileDownload(filepath,filename) {
+	if(navigator.userAgent.toLowerCase().indexOf('mobileapp') != -1 || navigator.userAgent.toLowerCase().indexOf('iosapp') != -1){
+      //앱으로의 호출시 가이드드린 파일다운로드 방식으로 호출 로직 적용
+      
+      var param = {
+         action:"filedownload",
+         downloadurl:filepath,
+         filename:filename //다운받는 파일명 지정
+      };
+      webkit.messageHandlers.cordova_iab.postMessage(JSON.stringify(param));
+      
+   } else {	
+      window.open(filepath,"_blank");
+   }
+}
 </script>
 
-<!--<?if($screen_div=="sub"){?>
- 	<div id="wrap" class="sub_wrap">
-		<div class="sv_wrap" >
-			<div class="sv_sec sv0<?=$cate_num;?> sv0<?=$cate_num;?>">
-				<div class="tit_box ct1">
-					<span class="robo">KANS</span>
-					<h4 class="nq"><?=$cate_name;?></h4>
-				</div>
-			</div>
-		</div>
-	</div>
-<?}?>-->
+
 

@@ -88,7 +88,7 @@
 		.hd_right ul {display:none;}
 	}
 	@media(max-width:500px){
-		#replyPrint {font-size:5px;}
+		#replyPrint {font-size:10px;}
 	}
 
 	@media(max-width:800px){

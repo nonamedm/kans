@@ -72,7 +72,7 @@
 				<li>
 					<a href="<?php echo $view['file'][$i]['href'];  ?>" class="view_file_download"><img src="<?php echo $board_skin_url ?>/img/icon_file.png" alt="첨부"><strong><?php echo $view['file'][$i]['source'] ?></strong><?php echo $view['file'][$i]['content'] ?> (<?php echo $view['file'][$i]['size'] ?>)</a>
 					<a href="/data/file/forum_info/<?php echo $view['file'][$i]['file'];  ?>" class="view_file_download download_preview">　바로보기</a>
-					<a href="" class="view_file_download download_preview" onclick="fileDownload('<?php echo $view['file'][$i]['href'];  ?>','<?php echo $view['file'][$i]['source'] ?>');">　다운로드</a>
+					<a href="" class="view_file_download download_preview" onclick="fileDownload('https://www.kans.re.kr/data/file/forum_info/<?php echo $view['file'][$i]['file'];  ?>','<?php echo $view['file'][$i]['source'] ?>');">　다운로드</a>
 					<!-- <a href="<?php echo $view['file'][$i]['href'];  ?>" class="view_file_download download_preview">　다운로드</a> -->
 					<!--<span class="bo_v_file_cnt"><?php echo $view['file'][$i]['download'] ?>회 다운로드</span>
 					<span>DATE : <?php echo $view['file'][$i]['datetime'] ?></span>-->
